@@ -1,6 +1,19 @@
 import { supabase, isConfigured } from "./supabaseClient.js";
 import { toast } from "./toast.js";
 
+// JSON.stringify with keys sorted at every level, so two objects with the
+// same content but different key insertion order compare equal. Needed
+// because Postgres JSONB does not preserve key order on round-trip - a
+// snapshot fetched back from the DB can have different key order than the
+// in-memory object that was inserted, even though the content is identical.
+function stableStringify(value) {
+  if (Array.isArray(value)) return `[${value.map(stableStringify).join(",")}]`;
+  if (value && typeof value === "object") {
+    return `{${Object.keys(value).sort().map((k) => `${JSON.stringify(k)}:${stableStringify(value[k])}`).join(",")}}`;
+  }
+  return JSON.stringify(value);
+}
+
 // In-memory cache of everything the app needs. Reference tables are refreshed
 // via loadReferenceData() (called on load and on "Resync"); transactional
 // tables are refreshed on demand by each page after a write.
@@ -125,7 +138,7 @@ export async function maybeInsertVersion(changeId, stage, actionLabel, snapshot)
       .filter((v) => v.change_id === changeId)
       .sort((a, b) => a.version_no - b.version_no);
     const last = prior[prior.length - 1];
-    if (last && JSON.stringify(last.snapshot) === JSON.stringify(snapshot)) return null;
+    if (last && stableStringify(last.snapshot) === stableStringify(snapshot)) return null;
     const { data, error } = await supabase.from("ef_proposal_versions").insert({
       change_id: changeId,
       version_no: prior.length + 1,
