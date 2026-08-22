@@ -17,3 +17,6 @@ Thumbs.db
 
 # Node
 node_modules/
+
+# Claude Code harness state
+.claude/scheduled_tasks.lock

@@ -6,7 +6,7 @@ A first architecture mock-up of the EF Tracker tool described in the requirement
 
 ## Architecture
 
-- **Frontend**: static HTML/CSS/vanilla JS (`app/`), no build step. Hosted free on GitHub Pages.
+- **Frontend**: static HTML/CSS/vanilla JS (`docs/`), no build step. Hosted free on GitHub Pages.
 - **Backend**: [Supabase](https://supabase.com) free tier - Postgres database + auto-generated REST API, called directly from the browser via the Supabase JS client.
 - No real authentication - a "Logged in as" switcher in the sidebar simulates different users/roles for the workshop. Row Level Security is wide open (`backend/schema.sql`) since this holds only synthetic demo data. **Do not reuse this RLS setup for a tool holding real confidential data.**
 
@@ -16,9 +16,9 @@ A first architecture mock-up of the EF Tracker tool described in the requirement
 2. **Run the schema**: open your project's SQL Editor, paste the entire contents of `backend/schema.sql`, click Run. This creates all tables, the derived `product_mapping` view, and RLS policies.
 3. **Import the demo data**: for each CSV in `backend/csv/`, go to Table Editor -> the matching table -> Insert -> Import data from CSV, and import it (table names match file names exactly).
 4. **Get your API credentials**: Project Settings -> API -> copy the "Project URL" and the "anon public" key.
-5. **Configure the frontend**: edit `app/js/config.js` and paste in those two values.
-6. **Run locally** to test: from `app/`, run a static server, e.g. `py -m http.server 8000` (ES modules need to be served over http, not opened as a `file://` path), then open `http://localhost:8000`.
-7. **Deploy for free**: push this repo to GitHub, enable GitHub Pages (Settings -> Pages -> deploy from branch, folder `/app`), share the resulting URL.
+5. **Configure the frontend**: edit `docs/js/config.js` and paste in those two values.
+6. **Run locally** to test: from `docs/`, run a static server, e.g. `py -m http.server 8000` (ES modules need to be served over http, not opened as a `file://` path), then open `http://localhost:8000`.
+7. **Deploy for free**: push this repo to GitHub, enable GitHub Pages (Settings -> Pages -> deploy from branch, branch `main`, folder `/docs` - GitHub Pages only supports `/(root)` or `/docs`, hence that folder name), share the resulting URL.
 
 ## Replacing the reference data later
 
