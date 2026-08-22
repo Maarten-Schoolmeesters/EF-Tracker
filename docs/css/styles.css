@@ -1,22 +1,24 @@
 :root {
-  --bg: #f5f7f8;
+  --bg: #f7f5f4;
   --surface: #ffffff;
-  --border: #dde3e6;
-  --text: #1c2a2e;
-  --muted: #6b7c80;
-  --primary: #0f7a6b;
-  --primary-dark: #0b5c50;
-  --primary-light: #e3f3f0;
-  --accent: #1f9d8a;
+  --border: #e5ded9;
+  --text: #2a211d;
+  --muted: #7a6e68;
+  /* Orange family based on #f09b7d - deepened for solid fills/text contrast,
+     the exact base hex reserved for lighter accents (icons, chart, highlights) */
+  --primary: #d97952;
+  --primary-dark: #b85f3c;
+  --primary-light: #fbe4d8;
+  --accent: #f09b7d;
   --amber: #b8791b;
   --amber-bg: #fbf1de;
   --red: #b0402f;
   --red-bg: #fbeae7;
   --green-bg: #e6f4ec;
   --green: #1f7a4d;
-  --gray-bg: #eef1f2;
+  --gray-bg: #f1ece9;
   --radius: 10px;
-  --shadow: 0 1px 2px rgba(20, 40, 40, 0.06), 0 2px 8px rgba(20, 40, 40, 0.04);
+  --shadow: 0 1px 2px rgba(40, 25, 15, 0.06), 0 2px 8px rgba(40, 25, 15, 0.04);
 }
 
 * { box-sizing: border-box; }
@@ -192,6 +194,47 @@ td.empty, .empty { color: var(--muted); text-align: center; padding: 24px; }
 .checklist { display: flex; flex-direction: column; gap: 8px; }
 .checklist label { display: flex; gap: 8px; align-items: flex-start; font-size: 13px; padding: 8px 10px; border: 1px solid var(--border); border-radius: 8px; }
 .checklist input { margin-top: 3px; }
+
+/* ---------------- Impact panel: keep it from ballooning the page ---------------- */
+#impactArea { max-height: 420px; overflow-y: auto; }
+#impactArea table { font-size: 12px; }
+
+/* ---------------- Checklist progress ring ---------------- */
+.checklist-progress { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.checklist-progress svg { flex-shrink: 0; }
+.checklist-progress .caption { font-size: 12.5px; color: var(--muted); }
+
+/* ---------------- Custom styled dropdown ---------------- */
+.styled-dropdown { position: relative; }
+.styled-dropdown-btn {
+  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  padding: 8px 10px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface);
+  font-size: 13px; color: var(--text); cursor: pointer; text-align: left; font-family: inherit;
+}
+.styled-dropdown-btn .placeholder { color: var(--muted); }
+.styled-dropdown-btn .chev { color: var(--muted); flex-shrink: 0; }
+.styled-dropdown.disabled .styled-dropdown-btn { opacity: .6; cursor: not-allowed; }
+.styled-dropdown-panel {
+  position: absolute; top: calc(100% + 4px); left: 0; right: 0; z-index: 20;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(40,25,15,.14); max-height: 280px; overflow-y: auto;
+}
+.styled-dropdown-option { display: flex; flex-direction: column; gap: 1px; padding: 8px 10px; cursor: pointer; border-bottom: 1px solid var(--border); }
+.styled-dropdown-option:last-child { border-bottom: none; }
+.styled-dropdown-option:hover { background: var(--gray-bg); }
+.styled-dropdown-option.active { background: var(--primary-light); }
+.styled-dropdown-option .opt-label { font-size: 13px; color: var(--text); }
+.styled-dropdown-option .opt-label.placeholder { color: var(--muted); font-style: italic; }
+.styled-dropdown-option .opt-desc { font-size: 11.5px; color: var(--muted); }
+
+/* ---------------- Version history ---------------- */
+.version-table-wrap { max-height: 220px; overflow-y: auto; margin-bottom: 16px; border: 1px solid var(--border); border-radius: 8px; }
+.version-table-wrap table { font-size: 12px; }
+.version-table-wrap tr.selected-version { background: var(--primary-light); }
+.version-table-wrap tr { cursor: pointer; }
+.derived-row.changed { background: var(--primary-light); border-radius: 6px; padding: 8px 8px; margin: 0 -8px 4px; border-bottom: none; }
+.derived-row.changed .k { color: var(--primary-dark); font-weight: 600; }
+.derived-row .was { font-size: 11px; color: var(--muted); text-decoration: line-through; }
 
 .actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 18px; }
 .empty-state { text-align: center; padding: 60px 20px; color: var(--muted); }

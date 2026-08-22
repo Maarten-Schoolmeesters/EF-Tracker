@@ -1,9 +1,16 @@
 // Generic "Excel-like" interconnected checkbox filter group.
-// Selecting/deselecting a value in one facet box recomputes the available
-// checkbox options in every other facet box (based on rows matching all
-// *other* current selections), matching the requirement:
-// "doing selection in one box gives as result that other boxes only display
-//  those values linked to it".
+//
+// Behavior contract:
+// - Selecting/deselecting a value in one facet box recomputes the available
+//   checkbox options in every other facet box (based on rows matching all
+//   *other* current selections).
+// - Any selection that becomes inconsistent with the combined state of every
+//   other box is automatically pruned (not just hidden) - this runs to a
+//   fixed point after every change, so it holds regardless of which box was
+//   touched, how many boxes have multiple selections, or the order values
+//   were picked in. Without this, stale selections could survive in one box
+//   while making every other box show "no matching values" with no way to
+//   recover except clearing the whole form.
 
 function uniqueSorted(rows, key) {
   const set = new Set();
@@ -33,6 +40,28 @@ export function createFacetFilterGroup({ container, rows, facets, initialSelecti
 
   function matchingRows() {
     return rowsMatchingExcept(null);
+  }
+
+  // Prune every facet's selections down to values still reachable given every
+  // other facet's current selections, repeating until nothing changes -
+  // pruning one facet can invalidate another, so a single pass isn't enough.
+  function pruneToFixedPoint() {
+    let changed = true;
+    let guard = 0;
+    while (changed && guard < facets.length + 5) {
+      changed = false;
+      guard++;
+      for (const f of facets) {
+        if (selections[f.key].size === 0) continue;
+        const valid = new Set(uniqueSorted(rowsMatchingExcept(f.key), f.key));
+        for (const v of [...selections[f.key]]) {
+          if (!valid.has(v)) {
+            selections[f.key].delete(v);
+            changed = true;
+          }
+        }
+      }
+    }
   }
 
   function render() {
@@ -89,6 +118,7 @@ export function createFacetFilterGroup({ container, rows, facets, initialSelecti
       cb.addEventListener("change", () => {
         if (cb.checked) selections[f.key].add(value);
         else selections[f.key].delete(value);
+        pruneToFixedPoint();
         render();
         onChange && onChange(getSelections(), matchingRows());
       });
@@ -106,6 +136,7 @@ export function createFacetFilterGroup({ container, rows, facets, initialSelecti
     return out;
   }
 
+  pruneToFixedPoint(); // in case initialSelections came in already inconsistent (e.g. reopening a draft)
   render();
   return { getSelections, getMatchingRows: matchingRows, rerender: render };
 }

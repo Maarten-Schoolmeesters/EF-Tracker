@@ -210,6 +210,7 @@ create table ef_proposal_versions (
   change_id text references ef_proposals(change_id) on delete cascade,
   version_no int not null,
   stage text not null,
+  action_label text,                   -- e.g. 'Create draft', 'Submit for review', 'Return for revision'
   snapshot jsonb not null,             -- full copy of ef_proposals row at time of transition
   changed_by text references users(user_id),
   changed_at timestamptz not null default now()

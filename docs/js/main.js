@@ -16,16 +16,23 @@ const PAGE_META = {
   audit: ["Audit log", "Every important action, tracked by user and timestamp"],
 };
 
+let currentPage = "dashboard";
+
+function renderCurrentPage() {
+  if (currentPage === "dashboard") renderDashboard();
+  if (currentPage === "ef-log") renderEfLog();
+  if (currentPage === "reference") renderActiveTab();
+  if (currentPage === "audit") renderAudit();
+}
+
 function showPage(pageKey) {
+  currentPage = pageKey;
   document.querySelectorAll(".nav button").forEach((b) => b.classList.toggle("active", b.dataset.page === pageKey));
   document.querySelectorAll(".page").forEach((p) => p.classList.toggle("active", p.id === `page-${pageKey}`));
   const [title, subtitle] = PAGE_META[pageKey];
   document.getElementById("topTitle").textContent = title;
   document.getElementById("topSubtitle").textContent = subtitle;
-  if (pageKey === "dashboard") renderDashboard();
-  if (pageKey === "ef-log") renderEfLog();
-  if (pageKey === "reference") renderActiveTab();
-  if (pageKey === "audit") renderAudit();
+  renderCurrentPage();
 }
 
 function wireNav() {
@@ -44,7 +51,7 @@ function populateUserSelect() {
   sel.addEventListener("change", () => {
     store.currentUserId = sel.value;
     renderNotifBadge();
-    renderDashboard();
+    renderCurrentPage();
   });
 }
 
@@ -54,7 +61,7 @@ async function resync() {
   await loadTransactionalData();
   populateUserSelect();
   renderNotifBadge();
-  renderDashboard();
+  renderCurrentPage();
   toast("Reference data resynced", "success");
 }
 

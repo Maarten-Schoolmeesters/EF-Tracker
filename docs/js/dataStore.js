@@ -113,6 +113,38 @@ export async function logAudit(action, objectType, objectId, oldValue, newValue)
   });
 }
 
+// Inserts a new version snapshot only if it actually differs from the most
+// recent one on record for this change_id - repeated no-op "Save Draft"
+// clicks shouldn't spam the version history.
+// Deliberately swallows its own errors (logged, not thrown): version history
+// is a secondary record of what happened, and a failure writing it (e.g. a
+// schema not yet migrated) must never abort saving the actual proposal.
+export async function maybeInsertVersion(changeId, stage, actionLabel, snapshot) {
+  try {
+    const prior = store.efProposalVersions
+      .filter((v) => v.change_id === changeId)
+      .sort((a, b) => a.version_no - b.version_no);
+    const last = prior[prior.length - 1];
+    if (last && JSON.stringify(last.snapshot) === JSON.stringify(snapshot)) return null;
+    const { data, error } = await supabase.from("ef_proposal_versions").insert({
+      change_id: changeId,
+      version_no: prior.length + 1,
+      stage,
+      action_label: actionLabel,
+      snapshot,
+      changed_by: store.currentUserId,
+    }).select();
+    if (error) throw error;
+    const row = data[0];
+    store.efProposalVersions.push(row);
+    return row;
+  } catch (e) {
+    console.error("maybeInsertVersion failed (non-fatal):", e);
+    toast("Couldn't save a version-history entry (see console) - the proposal itself was saved fine.", "error");
+    return null;
+  }
+}
+
 export async function adjustUserCount(userId, field, delta) {
   if (!userId) return;
   const user = store.users.find((u) => u.user_id === userId);

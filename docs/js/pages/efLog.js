@@ -90,6 +90,45 @@ function stagePillClass(status) {
   return "gray";
 }
 
+// Flattens the parts of a snapshot worth comparing between versions into a
+// simple path -> displayable-value map (facets, always-fields, derived
+// summary, checklist progress) so version-to-version diffs are meaningful
+// without hand-writing a comparator per field.
+function flattenSnapshot(s) {
+  const out = { Status: s.status };
+  const facets = s.fields?.facets || {};
+  Object.entries(facets).forEach(([k, v]) => {
+    const val = (v || []).join(", ");
+    if (val) out[`Facet: ${k}`] = val;
+  });
+  if (s.fields?.newEfValue !== undefined && s.fields?.newEfValue !== null) out["New EF Value"] = s.fields.newEfValue;
+  if (s.fields?.newEfUnit) out["New EF Unit"] = s.fields.newEfUnit;
+  if (s.fields?.unitMass !== undefined && s.fields?.unitMass !== null) out["Unit Mass (kg)"] = s.fields.unitMass;
+  if (s.common_fields?.source) out["Source"] = s.common_fields.source;
+  if (s.common_fields?.methodology) out["Methodology"] = s.common_fields.methodology;
+  if (s.common_fields?.assurance) out["Assurance"] = s.common_fields.assurance;
+  if (s.common_fields?.evidence) out["Evidence"] = s.common_fields.evidence;
+  if (s.common_fields?.comment) out["Proposer comment"] = s.common_fields.comment;
+  if (s.derived?.newEfName) out["New EF Name"] = s.derived.newEfName;
+  if (s.derived?.reviewerName) out["Reviewer"] = s.derived.reviewerName;
+  if (s.derived?.approverName) out["Approver"] = s.derived.approverName;
+  if (s.review_steps?.length) out["Checklist progress"] = `${s.review_steps.filter((r) => r.done).length}/${s.review_steps.length}`;
+  return out;
+}
+
+function diffKeys(prevSnapshot, curSnapshot) {
+  const a = prevSnapshot ? flattenSnapshot(prevSnapshot) : {};
+  const b = flattenSnapshot(curSnapshot);
+  const keys = new Set([...Object.keys(a), ...Object.keys(b)]);
+  const changed = [];
+  for (const k of keys) if (String(a[k] ?? "") !== String(b[k] ?? "")) changed.push(k);
+  return changed;
+}
+
+function userName(userId) {
+  return (store.users.find((u) => u.user_id === userId) || {}).name || userId || "—";
+}
+
 function showVersionHistory(changeId) {
   const versions = (store.efProposalVersions || []).filter((v) => v.change_id === changeId).sort((a, b) => a.version_no - b.version_no);
   let idx = versions.length - 1;
@@ -102,19 +141,56 @@ function showVersionHistory(changeId) {
       return;
     }
     const v = versions[idx];
+    const prev = versions[idx - 1] || null;
+    const changed = diffKeys(prev?.snapshot, v.snapshot);
+    const prevFlat = prev ? flattenSnapshot(prev.snapshot) : {};
+    const curFlat = flattenSnapshot(v.snapshot);
+
+    const tableRows = versions.map((ver, i) => {
+      const changedVsPrior = diffKeys((versions[i - 1] || {}).snapshot, ver.snapshot);
+      return `<tr class="${i === idx ? "selected-version" : ""}" data-idx="${i}">
+        <td>v${ver.version_no}</td>
+        <td><span class="pill ${stagePillClass(ver.stage)}">${ver.stage}</span></td>
+        <td>${ver.action_label || "—"}</td>
+        <td>${userName(ver.changed_by)}</td>
+        <td>${new Date(ver.changed_at).toLocaleString()}</td>
+        <td>${i === 0 ? "Initial version" : (changedVsPrior.length ? changedVsPrior.join(", ") : "No change")}</td>
+      </tr>`;
+    }).join("");
+
+    const detailRows = Object.keys(curFlat).map((k) => {
+      const isChanged = changed.includes(k);
+      const wasVal = prevFlat[k];
+      return `<div class="derived-row${isChanged ? " changed" : ""}">
+        <div class="k">${k}</div>
+        <div class="v">${curFlat[k]}</div>
+        ${isChanged && wasVal !== undefined ? `<div class="was">was: ${wasVal}</div>` : ""}
+      </div>`;
+    }).join("");
+
     root.innerHTML = `
-      <div class="modal-backdrop"><div class="modal">
+      <div class="modal-backdrop"><div class="modal" style="width:min(880px,94vw)">
         <div class="modal-head"><h3>${changeId} · Version History</h3><button class="icon-btn" id="closeHist">✕</button></div>
+
+        <div class="version-table-wrap"><table>
+          <thead><tr><th>Version</th><th>Stage</th><th>Action</th><th>Changed by</th><th>When</th><th>What changed</th></tr></thead>
+          <tbody>${tableRows}</tbody>
+        </table></div>
+
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
           <button class="btn" id="prevV" ${idx === 0 ? "disabled" : ""}>← Older</button>
-          <span class="pill gray">Version ${v.version_no} · ${v.stage} · ${new Date(v.changed_at).toLocaleString()}</span>
+          <span class="pill gray">Version ${v.version_no} · ${v.stage}${v.action_label ? " · " + v.action_label : ""} · ${new Date(v.changed_at).toLocaleString()}</span>
           <button class="btn" id="nextV" ${idx === versions.length - 1 ? "disabled" : ""}>Newer →</button>
         </div>
-        <pre style="white-space:pre-wrap;font-size:12px;background:var(--gray-bg);padding:12px;border-radius:8px;max-height:50vh;overflow:auto">${JSON.stringify(v.snapshot, null, 2)}</pre>
+        <div style="max-height:40vh;overflow-y:auto">${detailRows}</div>
       </div></div>`;
+
     document.getElementById("closeHist").addEventListener("click", () => (root.innerHTML = ""));
     document.getElementById("prevV").addEventListener("click", () => { idx--; render(); });
     document.getElementById("nextV").addEventListener("click", () => { idx++; render(); });
+    root.querySelectorAll(".version-table-wrap tr[data-idx]").forEach((tr) => {
+      tr.addEventListener("click", () => { idx = Number(tr.dataset.idx); render(); });
+    });
   }
   render();
 }

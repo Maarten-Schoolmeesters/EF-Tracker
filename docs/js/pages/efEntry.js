@@ -1,5 +1,6 @@
-import { store, currentUser, insertRow, updateRow, logAudit, notify, loadTransactionalData, adjustUserCount } from "../dataStore.js";
+import { store, currentUser, insertRow, updateRow, logAudit, notify, loadTransactionalData, adjustUserCount, maybeInsertVersion } from "../dataStore.js";
 import { createFacetFilterGroup } from "../facetFilter.js";
+import { createStyledDropdown } from "../styledDropdown.js";
 import { toast } from "../toast.js";
 import {
   STAGES, EF_TYPES, REVIEW_STEPS, generateChangeId, lookupCurrentEf, pctChange,
@@ -9,6 +10,7 @@ import {
 let draft = null; // in-memory proposal being edited/viewed
 let activeStageView = "E1-Draft";
 let facetGroup = null;
+let sourceDropdown = null, methodDropdown = null, assuranceDropdown = null;
 
 function esmaOptions(category) {
   return store.efSourcesMethodsAssurance.filter((r) => r.category === category);
@@ -159,8 +161,13 @@ function renderE1(el) {
     draft.fields = {};
     renderTypeSpecific();
   });
-  renderTypeSpecific();
+  // Always-fields must render BEFORE type-specific, since type-specific's
+  // first updateDerivedAndImpact() call reads the always-fields' current DOM
+  // values via readFormIntoDraft() - rendering them after would read from
+  // not-yet-existing elements and silently wipe a reopened draft's
+  // Source/Methodology/Assurance/Evidence/Comment back to blank.
   renderAlwaysFields();
+  renderTypeSpecific();
 
   document.getElementById("clearBtn").addEventListener("click", () => {
     draft = blankDraft();
@@ -257,35 +264,60 @@ function renderE1(el) {
     area.innerHTML = `
       <div class="section-title"><h4>Source, methodology & evidence</h4></div>
       <div class="field-grid">
-        <div class="field"><label>Source of new EF <span class="req">*</span></label>
-          <select id="sourceSelect"><option value="">Select source</option>${esmaOptions("EF Source").map((o) => `<option ${draft.common_fields.source === o.option_label ? "selected" : ""}>${o.option_label}</option>`).join("")}</select></div>
-        <div class="field"><label>Methodology standard <span class="req">*</span></label>
-          <select id="methodSelect"><option value="">Select methodology</option>${esmaOptions("EF Methodology").map((o) => `<option ${draft.common_fields.methodology === o.option_label ? "selected" : ""}>${o.option_label}</option>`).join("")}</select></div>
-        <div class="field"><label>Assurance <span class="req">*</span></label>
-          <select id="assuranceSelect"><option value="">Select assurance</option>${esmaOptions("EF Assurance").map((o) => `<option ${draft.common_fields.assurance === o.option_label ? "selected" : ""}>${o.option_label}</option>`).join("")}</select></div>
+        <div class="field"><label>Source of new EF <span class="req">*</span></label><div id="sourceDropdownMount"></div></div>
+        <div class="field"><label>Methodology standard <span class="req">*</span></label><div id="methodDropdownMount"></div></div>
+        <div class="field"><label>Assurance <span class="req">*</span></label><div id="assuranceDropdownMount"></div></div>
         <div class="field span-2"><label>Evidence link to SharePoint <span class="req">*</span></label><input type="url" id="evidenceInput" placeholder="https://…" value="${draft.common_fields.evidence || ""}"></div>
         <div class="field span-2"><label>Proposer comment</label><textarea id="commentInput">${draft.common_fields.comment || ""}</textarea></div>
       </div>
     `;
-    ["sourceSelect", "methodSelect", "assuranceSelect", "evidenceInput", "commentInput"].forEach((id) => {
+
+    sourceDropdown?.destroy();
+    methodDropdown?.destroy();
+    assuranceDropdown?.destroy();
+
+    const toOptions = (category) => esmaOptions(category).map((o) => ({ value: o.option_label, label: o.option_label, description: o.includes_text }));
+
+    sourceDropdown = createStyledDropdown({
+      container: document.getElementById("sourceDropdownMount"),
+      options: toOptions("EF Source"), value: draft.common_fields.source, placeholder: "Select source",
+      required: true, disabled: frozen, onChange: () => updateDerivedAndImpact(),
+    });
+    methodDropdown = createStyledDropdown({
+      container: document.getElementById("methodDropdownMount"),
+      options: toOptions("EF Methodology"), value: draft.common_fields.methodology, placeholder: "Select methodology",
+      required: true, disabled: frozen, onChange: () => updateDerivedAndImpact(),
+    });
+    assuranceDropdown = createStyledDropdown({
+      container: document.getElementById("assuranceDropdownMount"),
+      options: toOptions("EF Assurance"), value: draft.common_fields.assurance, placeholder: "Select assurance",
+      required: true, disabled: frozen, onChange: () => updateDerivedAndImpact(),
+    });
+
+    ["evidenceInput", "commentInput"].forEach((id) => {
       document.getElementById(id).addEventListener("input", () => updateDerivedAndImpact());
     });
-    if (frozen) area.querySelectorAll("input,select,textarea").forEach((n) => (n.disabled = true));
+    if (frozen) area.querySelectorAll("input,textarea").forEach((n) => (n.disabled = true));
   }
 }
 
 function readFormIntoDraft() {
   const facets = facetGroup ? facetGroup.getSelections() : {};
   draft.fields.facets = facets;
-  const val = (id) => document.getElementById(id)?.value;
-  draft.fields.newEfValue = val("newEfValue") ? Number(val("newEfValue")) : null;
-  draft.fields.newEfUnit = val("newEfUnit") || null;
-  draft.fields.unitMass = val("unitMass") ? Number(val("unitMass")) : null;
-  draft.common_fields.source = val("sourceSelect") || "";
-  draft.common_fields.methodology = val("methodSelect") || "";
-  draft.common_fields.assurance = val("assuranceSelect") || "";
-  draft.common_fields.evidence = val("evidenceInput") || "";
-  draft.common_fields.comment = val("commentInput") || "";
+  // Defensive: only overwrite a field when its control actually exists yet.
+  // (Guards against the render-order class of bug even if it recurs later -
+  // reading a not-yet-rendered field should leave the stored value alone,
+  // never silently blank it out.)
+  const el = (id) => document.getElementById(id);
+  const val = (id) => el(id)?.value;
+  if (el("newEfValue")) draft.fields.newEfValue = val("newEfValue") ? Number(val("newEfValue")) : null;
+  if (el("newEfUnit")) draft.fields.newEfUnit = val("newEfUnit") || null;
+  if (el("unitMass")) draft.fields.unitMass = val("unitMass") ? Number(val("unitMass")) : null;
+  if (sourceDropdown) draft.common_fields.source = sourceDropdown.getValue() || "";
+  if (methodDropdown) draft.common_fields.methodology = methodDropdown.getValue() || "";
+  if (assuranceDropdown) draft.common_fields.assurance = assuranceDropdown.getValue() || "";
+  if (el("evidenceInput")) draft.common_fields.evidence = val("evidenceInput") || "";
+  if (el("commentInput")) draft.common_fields.comment = val("commentInput") || "";
 }
 
 function updateDerivedAndImpact() {
@@ -353,6 +385,9 @@ function updateDerivedAndImpact() {
   `;
 
   renderImpact({ materialCodes, supplierNumber, commonId1s, classifications, matchingRows });
+
+  const submitBtn = document.getElementById("submitReviewBtn");
+  if (submitBtn) submitBtn.disabled = draft.frozen || validateMandatory().length > 0;
 }
 
 function derivedRow(k, v) {
@@ -492,19 +527,21 @@ async function saveDraft(submitForReview) {
     if (isFirstSave) {
       await insertRow("ef_proposals", payload);
       await logAudit("Create draft", "ef_proposal", draft.change_id, null, payload);
+      await maybeInsertVersion(draft.change_id, "E1-Draft", "Create draft", { ...payload, status: "E1-Draft", frozen: false });
       if (submitForReview) await logAudit("Submit for review", "ef_proposal", draft.change_id, { status: "E1-Draft" }, { status: "E2-Review" });
     } else {
       await updateRow("ef_proposals", "change_id", draft.change_id, payload);
       await logAudit(submitForReview ? "Submit for review" : "Save draft", "ef_proposal", draft.change_id, null, payload);
     }
     if (submitForReview) {
-      await insertRow("ef_proposal_versions", { change_id: draft.change_id, version_no: 1, stage: "E2-Review", snapshot: payload, changed_by: store.currentUserId });
+      await maybeInsertVersion(draft.change_id, "E2-Review", "Submit for review", payload);
       if (reviewer) {
         await adjustUserCount(reviewer.user_id, "open_ef_reviews", 1);
         await notify(reviewer.user_id, `You were assigned to review ${draft.change_id}`, draft.change_id);
       }
       toast(`${draft.change_id} submitted for review`, "success");
     } else {
+      await maybeInsertVersion(draft.change_id, "E1-Draft", "Save draft", payload);
       toast(`${draft.change_id} saved as draft`, "success");
     }
     Object.assign(draft, payload);
@@ -535,17 +572,35 @@ function summaryRows(p) {
   return rows.map(([k, v]) => derivedRow(k, v ?? "—")).join("");
 }
 
+function checklistPieSvg(doneCount, total) {
+  const pct = total ? Math.round((doneCount / total) * 100) : 0;
+  const r = 34, circ = 2 * Math.PI * r;
+  const dash = (pct / 100) * circ;
+  return `<svg width="88" height="88" viewBox="0 0 88 88">
+    <circle cx="44" cy="44" r="${r}" fill="none" stroke="var(--gray-bg)" stroke-width="12"/>
+    <circle cx="44" cy="44" r="${r}" fill="none" stroke="var(--primary)" stroke-width="12"
+      stroke-dasharray="${dash.toFixed(1)} ${(circ - dash).toFixed(1)}" stroke-linecap="round" transform="rotate(-90 44 44)"/>
+    <text x="44" y="49" text-anchor="middle" font-size="17" font-weight="700" fill="var(--text)">${pct}%</text>
+  </svg>`;
+}
+
 function renderE2(el) {
   const p = draft;
   const card = document.createElement("div");
   card.className = "card";
   const canAct = p.status === "E2-Review";
+  const doneCount = () => (p.review_steps || []).filter((s) => s.done).length;
+  const total = (p.review_steps || []).length;
   card.innerHTML = `
     <div class="card-head"><div><h2>EF Entry · E2 Review<span class="tbd-tag">Details TBD w/ LCA team</span></h2><p>Reviewer validates the proposal against EF Expert Guidance before it can move to Approval.</p></div></div>
     <div class="grid two-col">
       <div>${summaryRows(p)}</div>
       <div>
         <h3>EF Expert Guidance checklist</h3>
+        <div class="checklist-progress">
+          <div id="checklistPie">${checklistPieSvg(doneCount(), total)}</div>
+          <span class="caption" id="checklistCaption">${doneCount()} of ${total} steps complete</span>
+        </div>
         <div class="checklist" id="checklist">
           ${(p.review_steps || []).map((s, i) => `<label><input type="checkbox" data-i="${i}" ${s.done ? "checked" : ""} ${canAct ? "" : "disabled"}> ${s.text}</label>`).join("")}
         </div>
@@ -555,12 +610,17 @@ function renderE2(el) {
       <button class="btn ghost danger" id="onHoldBtn" ${canAct ? "" : "disabled"}>Put On Hold</button>
       <button class="btn ghost danger" id="cancelBtn" ${canAct ? "" : "disabled"}>Cancel</button>
       <button class="btn ghost danger" id="returnDraftBtn" ${canAct ? "" : "disabled"}>Return for Revision</button>
-      <button class="btn primary" id="submitApprovalBtn" ${canAct ? "" : "disabled"}>Submit for Approval</button>
+      <button class="btn primary" id="submitApprovalBtn" ${canAct && doneCount() === total ? "" : "disabled"}>Submit for Approval</button>
     </div>
   `;
   el.appendChild(card);
   card.querySelectorAll('#checklist input[type="checkbox"]').forEach((cb) => {
-    cb.addEventListener("change", () => { p.review_steps[Number(cb.dataset.i)].done = cb.checked; });
+    cb.addEventListener("change", () => {
+      p.review_steps[Number(cb.dataset.i)].done = cb.checked;
+      document.getElementById("checklistPie").innerHTML = checklistPieSvg(doneCount(), total);
+      document.getElementById("checklistCaption").textContent = `${doneCount()} of ${total} steps complete`;
+      document.getElementById("submitApprovalBtn").disabled = !(canAct && doneCount() === total);
+    });
   });
   document.getElementById("returnDraftBtn").addEventListener("click", () => transitionStage("E1-Draft", { frozen: false }, "Return for revision", [[p.reviewer_id, "open_ef_reviews", -1]]));
   document.getElementById("submitApprovalBtn").addEventListener("click", () => {
@@ -655,8 +715,7 @@ async function transitionStage(newStatus, patch, actionLabel, countAdjustments =
     await updateRow("ef_proposals", "change_id", p.change_id, updated);
     Object.assign(p, updated);
     for (const [userId, field, delta] of countAdjustments) await adjustUserCount(userId, field, delta);
-    const priorVersions = store.efProposalVersions.filter((v) => v.change_id === p.change_id).length;
-    await insertRow("ef_proposal_versions", { change_id: p.change_id, version_no: priorVersions + 1, stage: newStatus, snapshot: { ...p, ...updated }, changed_by: store.currentUserId });
+    await maybeInsertVersion(p.change_id, newStatus, actionLabel, { ...p, ...updated });
     await logAudit(actionLabel, "ef_proposal", p.change_id, { status: oldStatus }, { status: newStatus });
     const notifyTargets = [p.proposer_id, p.reviewer_id, p.approver_id].filter((x, i, a) => x && a.indexOf(x) === i);
     for (const uid of notifyTargets) await notify(uid, `${p.change_id} moved from ${oldStatus} to ${newStatus} (${actionLabel})`, p.change_id);
