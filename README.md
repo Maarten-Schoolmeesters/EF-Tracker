@@ -2,7 +2,7 @@
 
 A first architecture mock-up of the EF Tracker tool described in the requirements deck, built for free design-workshop demos.
 
-**No real company data is used anywhere in this repo.** The Excel files anonymized by the company's own tooling still leaked real relationships and lost the relationships needed for the demo (see git history / conversation), so all reference data here is entirely invented (fictional pharma-style materials, suppliers, products) - see `data-generation/generate_data.py`.
+**No real company data is used anywhere in this repo.** All reference data here is entirely invented (fictional pharma-style materials, suppliers, products) - see `data-generation/generate_data.py`.
 
 ## Architecture
 
