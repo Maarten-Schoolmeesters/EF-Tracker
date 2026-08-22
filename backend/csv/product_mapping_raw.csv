@@ -1,0 +1,2001 @@
+year_of_exercise,product_name,product_brand,material_id_code,material_description,business_division,site
+2024,Zolvarin,Zolvarin,MAT-20139,Water for Injection,Consumer Healthcare,Eastgate Site
+2025,Brenzolix,Brenzolix,MAT-20029,Lab Reagent Kit,Pharmaceuticals,Northfield Site
+2025,Brenzolix,Brenzolix,MAT-20029,Lab Reagent Kit,Pharmaceuticals,Northfield Site
+2026,Norvelin,Norvelin,MAT-20046,Patient Information Leaflet,Pharmaceuticals,Rivermill Site
+2025,Sentrivax,Sentrivax,MAT-20144,Folding Carton,Specialty Care,Meadowbrook Site
+2026,Brenzolix,Brenzolix,MAT-20071,Sodium Benzoate,Specialty Care,Bridgeholm Site
+2026,Immunara,Immunara,MAT-20045,Corrugated Shipping Box,Vaccines,Solaris Park Site
+2024,Wintrelis,Wintrelis,MAT-20073,Water for Injection,Consumer Healthcare,Kingsley Site
+2025,Xantivo,Xantivo,MAT-20071,Sodium Benzoate,Pharmaceuticals,Northfield Site
+2025,Norvelin,Norvelin,MAT-20046,Patient Information Leaflet,Specialty Care,Eastgate Site
+2025,Lumivax,Lumivax,MAT-20084,Custom Synthesis Batch,Vaccines,Eastgate Site
+2025,Vezanta,Vezanta,MAT-20113,Pressure-sensitive Label,Pharmaceuticals,Ashford Site
+2025,Glucovex,Glucovex,MAT-20135,Microcrystalline Cellulose,Consumer Healthcare,Eastgate Site
+2024,Norvelin,Norvelin,MAT-20144,Folding Carton,Pharmaceuticals,Ashford Site
+2025,Sentrivax,Sentrivax,MAT-20021,Inbound Road Freight - Pallet,Pharmaceuticals,Eastgate Site
+2026,Wintrelis,Wintrelis,MAT-20002,Synthetic Peptide Concentrate,Vaccines,Solaris Park Site
+2025,Kaldrin,Kaldrin,MAT-20058,Cold Storage - Warehouse Pallet Slot,Pharmaceuticals,Northfield Site
+2024,Yenzura,Yenzura,MAT-20129,Pipette Tips (case),Specialty Care,Northfield Site
+2024,Mendovia,Mendovia,MAT-20113,Pressure-sensitive Label,Specialty Care,Bridgeholm Site
+2024,Immunara,Immunara,MAT-20138,Isopropyl Alcohol,Vaccines,Rivermill Site
+2025,Calmera,Calmera,MAT-20137,Methylparaben,Specialty Care,Solaris Park Site
+2026,Estrivon,Estrivon,MAT-20143,HDPE Bottle 250ml,Consumer Healthcare,Fenwick Site
+2025,Pulmatrix,Pulmatrix,MAT-20004,Enteric Coating Blend,Specialty Care,Fenwick Site
+2024,Torvexa,Torvexa,MAT-20002,Synthetic Peptide Concentrate,Vaccines,Kingsley Site
+2026,Yenzura,Yenzura,MAT-20018,Custom Synthesis Batch,Consumer Healthcare,Eastgate Site
+2024,Norvelin,Norvelin,MAT-20052,Aseptic Fill & Finish Service,Vaccines,Clearwater Site
+2024,Wintrelis,Wintrelis,MAT-20016,Stretch Pallet Wrap,Vaccines,Ashford Site
+2025,Mendovia,Mendovia,MAT-20020,Contract Packaging Service,Vaccines,Rivermill Site
+2025,Immunara,Immunara,MAT-20140,Freeze-dried Vaccine Vial,Pharmaceuticals,Kingsley Site
+2024,Estrivon,Estrivon,MAT-20046,Patient Information Leaflet,Pharmaceuticals,Rivermill Site
+2024,Mendovia,Mendovia,MAT-20100,Recombinant Protein Concentrate,Pharmaceuticals,Eastgate Site
+2025,Glucovex,Glucovex,MAT-20069,Microcrystalline Cellulose,Vaccines,Rivermill Site
+2026,Vezanta,Vezanta,MAT-20033,Paracetamol API,Pharmaceuticals,Fenwick Site
+2024,Renovex,Renovex,MAT-20021,Inbound Road Freight - Pallet,Specialty Care,Northfield Site
+2025,Wintrelis,Wintrelis,MAT-20012,Folding Carton,Specialty Care,Rivermill Site
+2024,Zolvarin,Zolvarin,MAT-20091,Cold Storage - Warehouse Pallet Slot,Vaccines,Bridgeholm Site
+2025,Mendovia,Mendovia,MAT-20020,Contract Packaging Service,Pharmaceuticals,Kingsley Site
+2026,Lumivax,Lumivax,MAT-20114,Reusable Shipping Tote,Specialty Care,Eastgate Site
+2026,Xantivo,Xantivo,MAT-20030,Single-use Bioreactor Bag,Specialty Care,Bridgeholm Site
+2024,Renovex,Renovex,MAT-20045,Corrugated Shipping Box,Consumer Healthcare,Solaris Park Site
+2026,Quilava,Quilava,MAT-20013,Patient Information Leaflet,Vaccines,Rivermill Site
+2025,Sentrivax,Sentrivax,MAT-20021,Inbound Road Freight - Pallet,Specialty Care,Eastgate Site
+2025,Renovex,Renovex,MAT-20059,Stainless Steel Reactor Component,Consumer Healthcare,Northfield Site
+2024,Wintrelis,Wintrelis,MAT-20052,Aseptic Fill & Finish Service,Vaccines,Eastgate Site
+2025,Yenzura,Yenzura,MAT-20072,Ethanol (Pharma Grade),Pharmaceuticals,Northfield Site
+2026,Florivex,Florivex,MAT-20092,Stainless Steel Reactor Component,Consumer Healthcare,Bridgeholm Site
+2026,Estrivon,Estrivon,MAT-20103,Enteric Coating Blend,Vaccines,Eastgate Site
+2025,Brenzolix,Brenzolix,MAT-20065,Clinical Trial Kit,Consumer Healthcare,Meadowbrook Site
+2025,Quilava,Quilava,MAT-20075,PVC Blister Pack,Vaccines,Bridgeholm Site
+2024,Yenzura,Yenzura,MAT-20129,Pipette Tips (case),Specialty Care,Fenwick Site
+2026,Torvexa,Torvexa,MAT-20106,Water for Injection,Pharmaceuticals,Eastgate Site
+2026,Yenzura,Yenzura,MAT-20129,Pipette Tips (case),Vaccines,Northfield Site
+2024,Vezanta,Vezanta,MAT-20113,Pressure-sensitive Label,Consumer Healthcare,Eastgate Site
+2024,Hemazol,Hemazol,MAT-20109,Prefilled Syringe 2.25ml,Specialty Care,Ashford Site
+2024,Mendovia,Mendovia,MAT-20070,Film Coating Powder,Vaccines,Fenwick Site
+2024,Xantivo,Xantivo,MAT-20148,Stretch Pallet Wrap,Vaccines,Bridgeholm Site
+2025,Calmera,Calmera,MAT-20079,Patient Information Leaflet,Pharmaceuticals,Clearwater Site
+2025,Immunara,Immunara,MAT-20128,Lab Reagent Kit,Pharmaceuticals,Northfield Site
+2026,Mendovia,Mendovia,MAT-20093,Filling Line Spare Parts,Vaccines,Ashford Site
+2025,Pulmatrix,Pulmatrix,MAT-20129,Pipette Tips (case),Specialty Care,Kingsley Site
+2026,Dermafyx,Dermafyx,MAT-20085,Aseptic Fill & Finish Service,Vaccines,Rivermill Site
+2024,Wintrelis,Wintrelis,MAT-20002,Synthetic Peptide Concentrate,Pharmaceuticals,Clearwater Site
+2026,Wintrelis,Wintrelis,MAT-20012,Folding Carton,Specialty Care,Meadowbrook Site
+2026,Norvelin,Norvelin,MAT-20040,Water for Injection,Vaccines,Kingsley Site
+2026,Yenzura,Yenzura,MAT-20072,Ethanol (Pharma Grade),Pharmaceuticals,Northfield Site
+2024,Immunara,Immunara,MAT-20045,Corrugated Shipping Box,Consumer Healthcare,Rivermill Site
+2025,Ulvatrix,Ulvatrix,MAT-20072,Ethanol (Pharma Grade),Vaccines,Eastgate Site
+2024,Torvexa,Torvexa,MAT-20106,Water for Injection,Pharmaceuticals,Clearwater Site
+2024,Quilava,Quilava,MAT-20013,Patient Information Leaflet,Pharmaceuticals,Fenwick Site
+2026,Norvelin,Norvelin,MAT-20144,Folding Carton,Specialty Care,Clearwater Site
+2024,Pulmatrix,Pulmatrix,MAT-20099,Ibuprofen API,Vaccines,Clearwater Site
+2024,Estrivon,Estrivon,MAT-20017,Fermentation Batch Service,Specialty Care,Fenwick Site
+2024,Mendovia,Mendovia,MAT-20092,Stainless Steel Reactor Component,Consumer Healthcare,Meadowbrook Site
+2026,Kaldrin,Kaldrin,MAT-20058,Cold Storage - Warehouse Pallet Slot,Specialty Care,Clearwater Site
+2024,Norvelin,Norvelin,MAT-20008,Glass Vial 2ml,Consumer Healthcare,Kingsley Site
+2024,Zolvarin,Zolvarin,MAT-20086,Contract Packaging Service,Specialty Care,Fenwick Site
+2025,Advelra,Advelra,MAT-20146,Pressure-sensitive Label,Vaccines,Ashford Site
+2024,Glucovex,Glucovex,MAT-20107,Freeze-dried Vaccine Vial,Specialty Care,Eastgate Site
+2024,Ostreva,Ostreva,MAT-20083,Fermentation Batch Service,Consumer Healthcare,Eastgate Site
+2024,Immunara,Immunara,MAT-20140,Freeze-dried Vaccine Vial,Vaccines,Fenwick Site
+2026,Vezanta,Vezanta,MAT-20012,Folding Carton,Consumer Healthcare,Eastgate Site
+2026,Dermafyx,Dermafyx,MAT-20066,Ibuprofen API,Specialty Care,Kingsley Site
+2026,Wintrelis,Wintrelis,MAT-20012,Folding Carton,Specialty Care,Eastgate Site
+2024,Vezanta,Vezanta,MAT-20140,Freeze-dried Vaccine Vial,Pharmaceuticals,Kingsley Site
+2026,Torvexa,Torvexa,MAT-20081,Corrugated Shipping Case,Consumer Healthcare,Solaris Park Site
+2026,Glucovex,Glucovex,MAT-20135,Microcrystalline Cellulose,Vaccines,Eastgate Site
+2025,Yenzura,Yenzura,MAT-20018,Custom Synthesis Batch,Vaccines,Fenwick Site
+2024,Wintrelis,Wintrelis,MAT-20055,Inbound Air Freight - Temperature Controlled,Vaccines,Solaris Park Site
+2025,Hemazol,Hemazol,MAT-20114,Reusable Shipping Tote,Pharmaceuticals,Solaris Park Site
+2024,Calmera,Calmera,MAT-20079,Patient Information Leaflet,Specialty Care,Clearwater Site
+2025,Advelra,Advelra,MAT-20105,Isopropyl Alcohol,Consumer Healthcare,Ashford Site
+2026,Zolvarin,Zolvarin,MAT-20091,Cold Storage - Warehouse Pallet Slot,Consumer Healthcare,Ashford Site
+2025,Lumivax,Lumivax,MAT-20114,Reusable Shipping Tote,Consumer Healthcare,Fenwick Site
+2025,Glucovex,Glucovex,MAT-20107,Freeze-dried Vaccine Vial,Specialty Care,Fenwick Site
+2025,Torvexa,Torvexa,MAT-20012,Folding Carton,Specialty Care,Clearwater Site
+2026,Yenzura,Yenzura,MAT-20018,Custom Synthesis Batch,Pharmaceuticals,Clearwater Site
+2025,Glucovex,Glucovex,MAT-20107,Freeze-dried Vaccine Vial,Pharmaceuticals,Eastgate Site
+2025,Lumivax,Lumivax,MAT-20013,Patient Information Leaflet,Pharmaceuticals,Bridgeholm Site
+2024,Xantivo,Xantivo,MAT-20032,Clinical Trial Kit,Consumer Healthcare,Bridgeholm Site
+2025,Calmera,Calmera,MAT-20036,Microcrystalline Cellulose,Specialty Care,Kingsley Site
+2025,Estrivon,Estrivon,MAT-20056,Inbound Ocean Freight - Container,Specialty Care,Clearwater Site
+2025,Kaldrin,Kaldrin,MAT-20097,Comparator Drug Batch,Pharmaceuticals,Solaris Park Site
+2025,Advelra,Advelra,MAT-20105,Isopropyl Alcohol,Vaccines,Solaris Park Site
+2026,Mendovia,Mendovia,MAT-20093,Filling Line Spare Parts,Pharmaceuticals,Meadowbrook Site
+2025,Florivex,Florivex,MAT-20054,Inbound Road Freight - Pallet,Consumer Healthcare,Northfield Site
+2025,Wintrelis,Wintrelis,MAT-20052,Aseptic Fill & Finish Service,Vaccines,Solaris Park Site
+2025,Florivex,Florivex,MAT-20054,Inbound Road Freight - Pallet,Consumer Healthcare,Fenwick Site
+2024,Kaldrin,Kaldrin,MAT-20138,Isopropyl Alcohol,Pharmaceuticals,Ashford Site
+2025,Torvexa,Torvexa,MAT-20106,Water for Injection,Specialty Care,Solaris Park Site
+2026,Dermafyx,Dermafyx,MAT-20066,Ibuprofen API,Pharmaceuticals,Bridgeholm Site
+2026,Vezanta,Vezanta,MAT-20048,Reusable Shipping Tote,Specialty Care,Bridgeholm Site
+2024,Mendovia,Mendovia,MAT-20012,Folding Carton,Pharmaceuticals,Rivermill Site
+2026,Mendovia,Mendovia,MAT-20020,Contract Packaging Service,Specialty Care,Rivermill Site
+2025,Sentrivax,Sentrivax,MAT-20112,Patient Information Leaflet,Vaccines,Solaris Park Site
+2026,Mendovia,Mendovia,MAT-20092,Stainless Steel Reactor Component,Vaccines,Clearwater Site
+2025,Renovex,Renovex,MAT-20094,HPLC Consumable Kit,Consumer Healthcare,Ashford Site
+2024,Brenzolix,Brenzolix,MAT-20029,Lab Reagent Kit,Vaccines,Eastgate Site
+2026,Vezanta,Vezanta,MAT-20113,Pressure-sensitive Label,Specialty Care,Fenwick Site
+2024,Yenzura,Yenzura,MAT-20072,Ethanol (Pharma Grade),Specialty Care,Ashford Site
+2024,Pulmatrix,Pulmatrix,MAT-20099,Ibuprofen API,Specialty Care,Fenwick Site
+2024,Ostreva,Ostreva,MAT-20027,Filling Line Spare Parts,Specialty Care,Northfield Site
+2025,Dermafyx,Dermafyx,MAT-20066,Ibuprofen API,Pharmaceuticals,Fenwick Site
+2025,Estrivon,Estrivon,MAT-20017,Fermentation Batch Service,Pharmaceuticals,Northfield Site
+2025,Mendovia,Mendovia,MAT-20020,Contract Packaging Service,Pharmaceuticals,Northfield Site
+2024,Advelra,Advelra,MAT-20054,Inbound Road Freight - Pallet,Vaccines,Eastgate Site
+2025,Calmera,Calmera,MAT-20036,Microcrystalline Cellulose,Consumer Healthcare,Ashford Site
+2024,Wintrelis,Wintrelis,MAT-20012,Folding Carton,Specialty Care,Northfield Site
+2025,Ulvatrix,Ulvatrix,MAT-20112,Patient Information Leaflet,Pharmaceuticals,Solaris Park Site
+2025,Zolvarin,Zolvarin,MAT-20024,Cold Chain Transport - 2-8C,Specialty Care,Eastgate Site
+2024,Brenzolix,Brenzolix,MAT-20065,Clinical Trial Kit,Vaccines,Clearwater Site
+2025,Ulvatrix,Ulvatrix,MAT-20008,Glass Vial 2ml,Vaccines,Bridgeholm Site
+2025,Zolvarin,Zolvarin,MAT-20056,Inbound Ocean Freight - Container,Pharmaceuticals,Kingsley Site
+2024,Vezanta,Vezanta,MAT-20059,Stainless Steel Reactor Component,Specialty Care,Solaris Park Site
+2024,Mendovia,Mendovia,MAT-20114,Reusable Shipping Tote,Consumer Healthcare,Solaris Park Site
+2024,Hemazol,Hemazol,MAT-20109,Prefilled Syringe 2.25ml,Vaccines,Ashford Site
+2026,Hemazol,Hemazol,MAT-20114,Reusable Shipping Tote,Vaccines,Northfield Site
+2025,Kaldrin,Kaldrin,MAT-20103,Enteric Coating Blend,Vaccines,Fenwick Site
+2024,Hemazol,Hemazol,MAT-20114,Reusable Shipping Tote,Specialty Care,Clearwater Site
+2026,Calmera,Calmera,MAT-20079,Patient Information Leaflet,Pharmaceuticals,Ashford Site
+2024,Norvelin,Norvelin,MAT-20040,Water for Injection,Specialty Care,Northfield Site
+2024,Renovex,Renovex,MAT-20080,Pressure-sensitive Label,Specialty Care,Rivermill Site
+2026,Zolvarin,Zolvarin,MAT-20056,Inbound Ocean Freight - Container,Vaccines,Clearwater Site
+2024,Brenzolix,Brenzolix,MAT-20065,Clinical Trial Kit,Specialty Care,Rivermill Site
+2025,Estrivon,Estrivon,MAT-20143,HDPE Bottle 250ml,Consumer Healthcare,Bridgeholm Site
+2026,Hemazol,Hemazol,MAT-20109,Prefilled Syringe 2.25ml,Pharmaceuticals,Ashford Site
+2026,Wintrelis,Wintrelis,MAT-20077,HDPE Bottle 100ml,Consumer Healthcare,Bridgeholm Site
+2025,Immunara,Immunara,MAT-20140,Freeze-dried Vaccine Vial,Vaccines,Fenwick Site
+2025,Pulmatrix,Pulmatrix,MAT-20025,Cold Storage - Warehouse Pallet Slot,Vaccines,Solaris Park Site
+2026,Glucovex,Glucovex,MAT-20107,Freeze-dried Vaccine Vial,Vaccines,Eastgate Site
+2026,Xantivo,Xantivo,MAT-20148,Stretch Pallet Wrap,Pharmaceuticals,Kingsley Site
+2025,Kaldrin,Kaldrin,MAT-20097,Comparator Drug Batch,Consumer Healthcare,Bridgeholm Site
+2026,Wintrelis,Wintrelis,MAT-20002,Synthetic Peptide Concentrate,Vaccines,Eastgate Site
+2025,Yenzura,Yenzura,MAT-20018,Custom Synthesis Batch,Pharmaceuticals,Clearwater Site
+2026,Florivex,Florivex,MAT-20112,Patient Information Leaflet,Vaccines,Fenwick Site
+2024,Vezanta,Vezanta,MAT-20090,Cold Chain Transport - 2-8C,Vaccines,Ashford Site
+2024,Hemazol,Hemazol,MAT-20009,Alu-Alu Blister Pack,Pharmaceuticals,Meadowbrook Site
+2026,Norvelin,Norvelin,MAT-20138,Isopropyl Alcohol,Specialty Care,Meadowbrook Site
+2024,Dermafyx,Dermafyx,MAT-20066,Ibuprofen API,Specialty Care,Fenwick Site
+2026,Hemazol,Hemazol,MAT-20049,Stretch Pallet Wrap,Pharmaceuticals,Bridgeholm Site
+2024,Lumivax,Lumivax,MAT-20084,Custom Synthesis Batch,Pharmaceuticals,Solaris Park Site
+2025,Zolvarin,Zolvarin,MAT-20056,Inbound Ocean Freight - Container,Specialty Care,Northfield Site
+2025,Renovex,Renovex,MAT-20080,Pressure-sensitive Label,Vaccines,Kingsley Site
+2025,Yenzura,Yenzura,MAT-20016,Stretch Pallet Wrap,Specialty Care,Rivermill Site
+2026,Lumivax,Lumivax,MAT-20013,Patient Information Leaflet,Specialty Care,Northfield Site
+2025,Mendovia,Mendovia,MAT-20092,Stainless Steel Reactor Component,Pharmaceuticals,Eastgate Site
+2026,Vezanta,Vezanta,MAT-20048,Reusable Shipping Tote,Consumer Healthcare,Rivermill Site
+2026,Ostreva,Ostreva,MAT-20010,Prefilled Syringe 1ml,Pharmaceuticals,Rivermill Site
+2026,Torvexa,Torvexa,MAT-20020,Contract Packaging Service,Consumer Healthcare,Clearwater Site
+2024,Immunara,Immunara,MAT-20077,HDPE Bottle 100ml,Pharmaceuticals,Kingsley Site
+2025,Yenzura,Yenzura,MAT-20072,Ethanol (Pharma Grade),Consumer Healthcare,Ashford Site
+2025,Sentrivax,Sentrivax,MAT-20112,Patient Information Leaflet,Vaccines,Northfield Site
+2024,Quilava,Quilava,MAT-20075,PVC Blister Pack,Pharmaceuticals,Meadowbrook Site
+2025,Florivex,Florivex,MAT-20092,Stainless Steel Reactor Component,Pharmaceuticals,Rivermill Site
+2026,Ulvatrix,Ulvatrix,MAT-20011,HDPE Bottle 100ml,Pharmaceuticals,Eastgate Site
+2026,Yenzura,Yenzura,MAT-20129,Pipette Tips (case),Vaccines,Meadowbrook Site
+2024,Calmera,Calmera,MAT-20018,Custom Synthesis Batch,Vaccines,Clearwater Site
+2025,Ulvatrix,Ulvatrix,MAT-20011,HDPE Bottle 100ml,Specialty Care,Clearwater Site
+2026,Brenzolix,Brenzolix,MAT-20105,Isopropyl Alcohol,Specialty Care,Solaris Park Site
+2024,Calmera,Calmera,MAT-20137,Methylparaben,Specialty Care,Ashford Site
+2024,Hemazol,Hemazol,MAT-20109,Prefilled Syringe 2.25ml,Vaccines,Ashford Site
+2025,Vezanta,Vezanta,MAT-20113,Pressure-sensitive Label,Specialty Care,Fenwick Site
+2026,Xantivo,Xantivo,MAT-20109,Prefilled Syringe 2.25ml,Specialty Care,Bridgeholm Site
+2025,Ostreva,Ostreva,MAT-20027,Filling Line Spare Parts,Vaccines,Kingsley Site
+2026,Xantivo,Xantivo,MAT-20089,Inbound Ocean Freight - Container,Vaccines,Rivermill Site
+2024,Ulvatrix,Ulvatrix,MAT-20072,Ethanol (Pharma Grade),Consumer Healthcare,Meadowbrook Site
+2024,Glucovex,Glucovex,MAT-20103,Enteric Coating Blend,Consumer Healthcare,Eastgate Site
+2024,Hemazol,Hemazol,MAT-20109,Prefilled Syringe 2.25ml,Pharmaceuticals,Eastgate Site
+2026,Dermafyx,Dermafyx,MAT-20066,Ibuprofen API,Consumer Healthcare,Northfield Site
+2025,Zolvarin,Zolvarin,MAT-20088,Inbound Air Freight - Temperature Controlled,Specialty Care,Meadowbrook Site
+2026,Kaldrin,Kaldrin,MAT-20138,Isopropyl Alcohol,Specialty Care,Meadowbrook Site
+2024,Quilava,Quilava,MAT-20084,Custom Synthesis Batch,Pharmaceuticals,Eastgate Site
+2026,Ostreva,Ostreva,MAT-20126,Filling Line Spare Parts,Specialty Care,Meadowbrook Site
+2026,Kaldrin,Kaldrin,MAT-20138,Isopropyl Alcohol,Specialty Care,Ashford Site
+2025,Norvelin,Norvelin,MAT-20002,Synthetic Peptide Concentrate,Specialty Care,Kingsley Site
+2025,Pulmatrix,Pulmatrix,MAT-20059,Stainless Steel Reactor Component,Specialty Care,Solaris Park Site
+2025,Norvelin,Norvelin,MAT-20046,Patient Information Leaflet,Pharmaceuticals,Meadowbrook Site
+2024,Lumivax,Lumivax,MAT-20084,Custom Synthesis Batch,Specialty Care,Solaris Park Site
+2025,Mendovia,Mendovia,MAT-20100,Recombinant Protein Concentrate,Specialty Care,Solaris Park Site
+2026,Brenzolix,Brenzolix,MAT-20029,Lab Reagent Kit,Consumer Healthcare,Kingsley Site
+2026,Ostreva,Ostreva,MAT-20027,Filling Line Spare Parts,Specialty Care,Ashford Site
+2024,Calmera,Calmera,MAT-20018,Custom Synthesis Batch,Consumer Healthcare,Eastgate Site
+2026,Torvexa,Torvexa,MAT-20081,Corrugated Shipping Case,Vaccines,Fenwick Site
+2024,Glucovex,Glucovex,MAT-20069,Microcrystalline Cellulose,Consumer Healthcare,Kingsley Site
+2026,Pulmatrix,Pulmatrix,MAT-20026,Stainless Steel Reactor Component,Vaccines,Fenwick Site
+2024,Mendovia,Mendovia,MAT-20012,Folding Carton,Vaccines,Ashford Site
+2026,Ostreva,Ostreva,MAT-20027,Filling Line Spare Parts,Specialty Care,Meadowbrook Site
+2024,Hemazol,Hemazol,MAT-20140,Freeze-dried Vaccine Vial,Consumer Healthcare,Bridgeholm Site
+2026,Ulvatrix,Ulvatrix,MAT-20025,Cold Storage - Warehouse Pallet Slot,Consumer Healthcare,Kingsley Site
+2025,Norvelin,Norvelin,MAT-20144,Folding Carton,Specialty Care,Clearwater Site
+2025,Hemazol,Hemazol,MAT-20140,Freeze-dried Vaccine Vial,Consumer Healthcare,Meadowbrook Site
+2024,Yenzura,Yenzura,MAT-20016,Stretch Pallet Wrap,Consumer Healthcare,Rivermill Site
+2026,Kaldrin,Kaldrin,MAT-20058,Cold Storage - Warehouse Pallet Slot,Specialty Care,Kingsley Site
+2026,Ulvatrix,Ulvatrix,MAT-20112,Patient Information Leaflet,Vaccines,Meadowbrook Site
+2026,Immunara,Immunara,MAT-20140,Freeze-dried Vaccine Vial,Consumer Healthcare,Solaris Park Site
+2025,Torvexa,Torvexa,MAT-20081,Corrugated Shipping Case,Consumer Healthcare,Northfield Site
+2026,Renovex,Renovex,MAT-20021,Inbound Road Freight - Pallet,Vaccines,Eastgate Site
+2024,Hemazol,Hemazol,MAT-20140,Freeze-dried Vaccine Vial,Specialty Care,Eastgate Site
+2026,Ulvatrix,Ulvatrix,MAT-20011,HDPE Bottle 100ml,Vaccines,Kingsley Site
+2026,Wintrelis,Wintrelis,MAT-20052,Aseptic Fill & Finish Service,Consumer Healthcare,Rivermill Site
+2024,Hemazol,Hemazol,MAT-20009,Alu-Alu Blister Pack,Pharmaceuticals,Kingsley Site
+2024,Pulmatrix,Pulmatrix,MAT-20026,Stainless Steel Reactor Component,Vaccines,Rivermill Site
+2024,Quilava,Quilava,MAT-20099,Ibuprofen API,Consumer Healthcare,Meadowbrook Site
+2025,Renovex,Renovex,MAT-20103,Enteric Coating Blend,Consumer Healthcare,Clearwater Site
+2025,Mendovia,Mendovia,MAT-20090,Cold Chain Transport - 2-8C,Vaccines,Eastgate Site
+2024,Brenzolix,Brenzolix,MAT-20065,Clinical Trial Kit,Pharmaceuticals,Meadowbrook Site
+2026,Immunara,Immunara,MAT-20140,Freeze-dried Vaccine Vial,Consumer Healthcare,Clearwater Site
+2024,Calmera,Calmera,MAT-20018,Custom Synthesis Batch,Vaccines,Kingsley Site
+2024,Brenzolix,Brenzolix,MAT-20071,Sodium Benzoate,Consumer Healthcare,Rivermill Site
+2024,Estrivon,Estrivon,MAT-20103,Enteric Coating Blend,Specialty Care,Fenwick Site
+2025,Norvelin,Norvelin,MAT-20002,Synthetic Peptide Concentrate,Specialty Care,Solaris Park Site
+2026,Lumivax,Lumivax,MAT-20013,Patient Information Leaflet,Specialty Care,Northfield Site
+2025,Sentrivax,Sentrivax,MAT-20000,Paracetamol API,Vaccines,Rivermill Site
+2026,Immunara,Immunara,MAT-20049,Stretch Pallet Wrap,Consumer Healthcare,Solaris Park Site
+2026,Immunara,Immunara,MAT-20049,Stretch Pallet Wrap,Specialty Care,Clearwater Site
+2024,Hemazol,Hemazol,MAT-20009,Alu-Alu Blister Pack,Vaccines,Bridgeholm Site
+2025,Sentrivax,Sentrivax,MAT-20045,Corrugated Shipping Box,Vaccines,Meadowbrook Site
+2024,Florivex,Florivex,MAT-20065,Clinical Trial Kit,Vaccines,Eastgate Site
+2024,Brenzolix,Brenzolix,MAT-20071,Sodium Benzoate,Consumer Healthcare,Ashford Site
+2024,Kaldrin,Kaldrin,MAT-20076,Prefilled Syringe 1ml,Specialty Care,Solaris Park Site
+2024,Vezanta,Vezanta,MAT-20113,Pressure-sensitive Label,Consumer Healthcare,Solaris Park Site
+2025,Wintrelis,Wintrelis,MAT-20077,HDPE Bottle 100ml,Specialty Care,Bridgeholm Site
+2024,Advelra,Advelra,MAT-20088,Inbound Air Freight - Temperature Controlled,Consumer Healthcare,Eastgate Site
+2025,Torvexa,Torvexa,MAT-20081,Corrugated Shipping Case,Pharmaceuticals,Eastgate Site
+2024,Vezanta,Vezanta,MAT-20093,Filling Line Spare Parts,Specialty Care,Meadowbrook Site
+2025,Calmera,Calmera,MAT-20051,Custom Synthesis Batch,Vaccines,Northfield Site
+2024,Kaldrin,Kaldrin,MAT-20076,Prefilled Syringe 1ml,Pharmaceuticals,Eastgate Site
+2026,Hemazol,Hemazol,MAT-20140,Freeze-dried Vaccine Vial,Pharmaceuticals,Eastgate Site
+2026,Florivex,Florivex,MAT-20134,Synthetic Peptide Concentrate,Consumer Healthcare,Clearwater Site
+2025,Norvelin,Norvelin,MAT-20052,Aseptic Fill & Finish Service,Specialty Care,Fenwick Site
+2024,Yenzura,Yenzura,MAT-20072,Ethanol (Pharma Grade),Vaccines,Eastgate Site
+2024,Renovex,Renovex,MAT-20103,Enteric Coating Blend,Pharmaceuticals,Eastgate Site
+2024,Advelra,Advelra,MAT-20142,Prefilled Syringe 1ml,Specialty Care,Kingsley Site
+2024,Dermafyx,Dermafyx,MAT-20085,Aseptic Fill & Finish Service,Pharmaceuticals,Solaris Park Site
+2024,Advelra,Advelra,MAT-20119,Contract Packaging Service,Consumer Healthcare,Clearwater Site
+2025,Pulmatrix,Pulmatrix,MAT-20059,Stainless Steel Reactor Component,Pharmaceuticals,Clearwater Site
+2025,Pulmatrix,Pulmatrix,MAT-20026,Stainless Steel Reactor Component,Specialty Care,Clearwater Site
+2025,Estrivon,Estrivon,MAT-20017,Fermentation Batch Service,Consumer Healthcare,Fenwick Site
+2026,Hemazol,Hemazol,MAT-20111,Corrugated Shipping Box,Vaccines,Meadowbrook Site
+2025,Vezanta,Vezanta,MAT-20118,Aseptic Fill & Finish Service,Pharmaceuticals,Rivermill Site
+2024,Florivex,Florivex,MAT-20061,HPLC Consumable Kit,Consumer Healthcare,Ashford Site
+2024,Florivex,Florivex,MAT-20054,Inbound Road Freight - Pallet,Vaccines,Meadowbrook Site
+2024,Xantivo,Xantivo,MAT-20148,Stretch Pallet Wrap,Vaccines,Bridgeholm Site
+2025,Kaldrin,Kaldrin,MAT-20058,Cold Storage - Warehouse Pallet Slot,Pharmaceuticals,Rivermill Site
+2026,Pulmatrix,Pulmatrix,MAT-20025,Cold Storage - Warehouse Pallet Slot,Vaccines,Eastgate Site
+2024,Kaldrin,Kaldrin,MAT-20076,Prefilled Syringe 1ml,Pharmaceuticals,Ashford Site
+2025,Yenzura,Yenzura,MAT-20016,Stretch Pallet Wrap,Specialty Care,Rivermill Site
+2026,Quilava,Quilava,MAT-20099,Ibuprofen API,Consumer Healthcare,Meadowbrook Site
+2024,Ostreva,Ostreva,MAT-20079,Patient Information Leaflet,Vaccines,Meadowbrook Site
+2025,Brenzolix,Brenzolix,MAT-20120,Inbound Road Freight - Pallet,Vaccines,Bridgeholm Site
+2024,Pulmatrix,Pulmatrix,MAT-20024,Cold Chain Transport - 2-8C,Vaccines,Fenwick Site
+2024,Renovex,Renovex,MAT-20006,Ethanol (Pharma Grade),Vaccines,Fenwick Site
+2024,Ulvatrix,Ulvatrix,MAT-20025,Cold Storage - Warehouse Pallet Slot,Consumer Healthcare,Clearwater Site
+2026,Norvelin,Norvelin,MAT-20144,Folding Carton,Consumer Healthcare,Bridgeholm Site
+2026,Yenzura,Yenzura,MAT-20072,Ethanol (Pharma Grade),Vaccines,Ashford Site
+2026,Hemazol,Hemazol,MAT-20114,Reusable Shipping Tote,Specialty Care,Kingsley Site
+2024,Zolvarin,Zolvarin,MAT-20056,Inbound Ocean Freight - Container,Pharmaceuticals,Eastgate Site
+2024,Calmera,Calmera,MAT-20022,Inbound Air Freight - Temperature Controlled,Pharmaceuticals,Bridgeholm Site
+2026,Pulmatrix,Pulmatrix,MAT-20026,Stainless Steel Reactor Component,Vaccines,Fenwick Site
+2026,Xantivo,Xantivo,MAT-20008,Glass Vial 2ml,Pharmaceuticals,Rivermill Site
+2024,Pulmatrix,Pulmatrix,MAT-20024,Cold Chain Transport - 2-8C,Consumer Healthcare,Northfield Site
+2024,Vezanta,Vezanta,MAT-20059,Stainless Steel Reactor Component,Vaccines,Fenwick Site
+2026,Dermafyx,Dermafyx,MAT-20011,HDPE Bottle 100ml,Consumer Healthcare,Eastgate Site
+2025,Ulvatrix,Ulvatrix,MAT-20088,Inbound Air Freight - Temperature Controlled,Specialty Care,Rivermill Site
+2024,Florivex,Florivex,MAT-20092,Stainless Steel Reactor Component,Specialty Care,Clearwater Site
+2025,Yenzura,Yenzura,MAT-20072,Ethanol (Pharma Grade),Vaccines,Bridgeholm Site
+2024,Pulmatrix,Pulmatrix,MAT-20025,Cold Storage - Warehouse Pallet Slot,Pharmaceuticals,Fenwick Site
+2024,Kaldrin,Kaldrin,MAT-20097,Comparator Drug Batch,Pharmaceuticals,Clearwater Site
+2025,Florivex,Florivex,MAT-20061,HPLC Consumable Kit,Consumer Healthcare,Meadowbrook Site
+2026,Torvexa,Torvexa,MAT-20081,Corrugated Shipping Case,Vaccines,Solaris Park Site
+2026,Yenzura,Yenzura,MAT-20129,Pipette Tips (case),Vaccines,Solaris Park Site
+2025,Kaldrin,Kaldrin,MAT-20076,Prefilled Syringe 1ml,Specialty Care,Northfield Site
+2026,Kaldrin,Kaldrin,MAT-20035,Synthetic Peptide Concentrate,Specialty Care,Bridgeholm Site
+2026,Ulvatrix,Ulvatrix,MAT-20008,Glass Vial 2ml,Pharmaceuticals,Meadowbrook Site
+2024,Pulmatrix,Pulmatrix,MAT-20025,Cold Storage - Warehouse Pallet Slot,Pharmaceuticals,Fenwick Site
+2026,Ulvatrix,Ulvatrix,MAT-20072,Ethanol (Pharma Grade),Consumer Healthcare,Rivermill Site
+2025,Ulvatrix,Ulvatrix,MAT-20112,Patient Information Leaflet,Specialty Care,Ashford Site
+2026,Immunara,Immunara,MAT-20045,Corrugated Shipping Box,Vaccines,Clearwater Site
+2026,Ostreva,Ostreva,MAT-20007,Water for Injection,Vaccines,Eastgate Site
+2026,Ulvatrix,Ulvatrix,MAT-20008,Glass Vial 2ml,Specialty Care,Solaris Park Site
+2024,Immunara,Immunara,MAT-20140,Freeze-dried Vaccine Vial,Specialty Care,Ashford Site
+2024,Lumivax,Lumivax,MAT-20085,Aseptic Fill & Finish Service,Consumer Healthcare,Kingsley Site
+2024,Estrivon,Estrivon,MAT-20046,Patient Information Leaflet,Pharmaceuticals,Clearwater Site
+2026,Mendovia,Mendovia,MAT-20070,Film Coating Powder,Vaccines,Kingsley Site
+2024,Estrivon,Estrivon,MAT-20119,Contract Packaging Service,Consumer Healthcare,Kingsley Site
+2024,Yenzura,Yenzura,MAT-20072,Ethanol (Pharma Grade),Consumer Healthcare,Rivermill Site
+2025,Calmera,Calmera,MAT-20137,Methylparaben,Vaccines,Northfield Site
+2026,Estrivon,Estrivon,MAT-20056,Inbound Ocean Freight - Container,Consumer Healthcare,Kingsley Site
+2024,Norvelin,Norvelin,MAT-20046,Patient Information Leaflet,Vaccines,Ashford Site
+2026,Wintrelis,Wintrelis,MAT-20002,Synthetic Peptide Concentrate,Specialty Care,Eastgate Site
+2026,Ulvatrix,Ulvatrix,MAT-20086,Contract Packaging Service,Vaccines,Northfield Site
+2025,Ostreva,Ostreva,MAT-20083,Fermentation Batch Service,Consumer Healthcare,Meadowbrook Site
+2026,Ulvatrix,Ulvatrix,MAT-20046,Patient Information Leaflet,Consumer Healthcare,Rivermill Site
+2024,Glucovex,Glucovex,MAT-20069,Microcrystalline Cellulose,Pharmaceuticals,Solaris Park Site
+2026,Vezanta,Vezanta,MAT-20113,Pressure-sensitive Label,Pharmaceuticals,Meadowbrook Site
+2026,Torvexa,Torvexa,MAT-20106,Water for Injection,Vaccines,Rivermill Site
+2024,Vezanta,Vezanta,MAT-20033,Paracetamol API,Vaccines,Rivermill Site
+2024,Florivex,Florivex,MAT-20112,Patient Information Leaflet,Consumer Healthcare,Bridgeholm Site
+2024,Wintrelis,Wintrelis,MAT-20055,Inbound Air Freight - Temperature Controlled,Vaccines,Clearwater Site
+2025,Sentrivax,Sentrivax,MAT-20091,Cold Storage - Warehouse Pallet Slot,Specialty Care,Clearwater Site
+2024,Kaldrin,Kaldrin,MAT-20058,Cold Storage - Warehouse Pallet Slot,Pharmaceuticals,Bridgeholm Site
+2025,Lumivax,Lumivax,MAT-20084,Custom Synthesis Batch,Specialty Care,Meadowbrook Site
+2024,Kaldrin,Kaldrin,MAT-20138,Isopropyl Alcohol,Pharmaceuticals,Northfield Site
+2024,Norvelin,Norvelin,MAT-20002,Synthetic Peptide Concentrate,Specialty Care,Ashford Site
+2026,Vezanta,Vezanta,MAT-20093,Filling Line Spare Parts,Vaccines,Fenwick Site
+2025,Renovex,Renovex,MAT-20080,Pressure-sensitive Label,Specialty Care,Meadowbrook Site
+2026,Norvelin,Norvelin,MAT-20144,Folding Carton,Pharmaceuticals,Kingsley Site
+2026,Ostreva,Ostreva,MAT-20027,Filling Line Spare Parts,Vaccines,Meadowbrook Site
+2024,Wintrelis,Wintrelis,MAT-20012,Folding Carton,Vaccines,Clearwater Site
+2024,Estrivon,Estrivon,MAT-20143,HDPE Bottle 250ml,Vaccines,Eastgate Site
+2025,Advelra,Advelra,MAT-20145,Patient Information Leaflet,Pharmaceuticals,Meadowbrook Site
+2026,Florivex,Florivex,MAT-20112,Patient Information Leaflet,Vaccines,Rivermill Site
+2026,Kaldrin,Kaldrin,MAT-20103,Enteric Coating Blend,Pharmaceuticals,Rivermill Site
+2026,Quilava,Quilava,MAT-20099,Ibuprofen API,Vaccines,Clearwater Site
+2026,Torvexa,Torvexa,MAT-20054,Inbound Road Freight - Pallet,Consumer Healthcare,Kingsley Site
+2026,Xantivo,Xantivo,MAT-20030,Single-use Bioreactor Bag,Vaccines,Bridgeholm Site
+2024,Xantivo,Xantivo,MAT-20030,Single-use Bioreactor Bag,Pharmaceuticals,Northfield Site
+2025,Hemazol,Hemazol,MAT-20056,Inbound Ocean Freight - Container,Specialty Care,Northfield Site
+2026,Yenzura,Yenzura,MAT-20072,Ethanol (Pharma Grade),Pharmaceuticals,Northfield Site
+2025,Advelra,Advelra,MAT-20119,Contract Packaging Service,Vaccines,Bridgeholm Site
+2024,Lumivax,Lumivax,MAT-20114,Reusable Shipping Tote,Vaccines,Rivermill Site
+2025,Advelra,Advelra,MAT-20036,Microcrystalline Cellulose,Consumer Healthcare,Eastgate Site
+2024,Immunara,Immunara,MAT-20077,HDPE Bottle 100ml,Vaccines,Bridgeholm Site
+2024,Xantivo,Xantivo,MAT-20032,Clinical Trial Kit,Vaccines,Clearwater Site
+2024,Ulvatrix,Ulvatrix,MAT-20025,Cold Storage - Warehouse Pallet Slot,Pharmaceuticals,Northfield Site
+2025,Pulmatrix,Pulmatrix,MAT-20004,Enteric Coating Blend,Specialty Care,Eastgate Site
+2025,Pulmatrix,Pulmatrix,MAT-20021,Inbound Road Freight - Pallet,Vaccines,Eastgate Site
+2024,Sentrivax,Sentrivax,MAT-20091,Cold Storage - Warehouse Pallet Slot,Specialty Care,Solaris Park Site
+2025,Glucovex,Glucovex,MAT-20015,Corrugated Shipping Case,Pharmaceuticals,Bridgeholm Site
+2026,Lumivax,Lumivax,MAT-20084,Custom Synthesis Batch,Specialty Care,Eastgate Site
+2025,Norvelin,Norvelin,MAT-20040,Water for Injection,Vaccines,Clearwater Site
+2025,Sentrivax,Sentrivax,MAT-20000,Paracetamol API,Pharmaceuticals,Rivermill Site
+2024,Glucovex,Glucovex,MAT-20069,Microcrystalline Cellulose,Vaccines,Solaris Park Site
+2026,Hemazol,Hemazol,MAT-20109,Prefilled Syringe 2.25ml,Pharmaceuticals,Bridgeholm Site
+2026,Renovex,Renovex,MAT-20103,Enteric Coating Blend,Consumer Healthcare,Eastgate Site
+2026,Pulmatrix,Pulmatrix,MAT-20059,Stainless Steel Reactor Component,Specialty Care,Fenwick Site
+2026,Xantivo,Xantivo,MAT-20148,Stretch Pallet Wrap,Specialty Care,Ashford Site
+2025,Quilava,Quilava,MAT-20084,Custom Synthesis Batch,Pharmaceuticals,Clearwater Site
+2026,Zolvarin,Zolvarin,MAT-20139,Water for Injection,Vaccines,Northfield Site
+2026,Vezanta,Vezanta,MAT-20007,Water for Injection,Pharmaceuticals,Meadowbrook Site
+2024,Hemazol,Hemazol,MAT-20109,Prefilled Syringe 2.25ml,Specialty Care,Kingsley Site
+2025,Pulmatrix,Pulmatrix,MAT-20059,Stainless Steel Reactor Component,Specialty Care,Bridgeholm Site
+2024,Xantivo,Xantivo,MAT-20032,Clinical Trial Kit,Specialty Care,Kingsley Site
+2026,Sentrivax,Sentrivax,MAT-20034,Recombinant Protein Concentrate,Consumer Healthcare,Fenwick Site
+2025,Wintrelis,Wintrelis,MAT-20002,Synthetic Peptide Concentrate,Pharmaceuticals,Eastgate Site
+2025,Xantivo,Xantivo,MAT-20008,Glass Vial 2ml,Consumer Healthcare,Clearwater Site
+2025,Sentrivax,Sentrivax,MAT-20021,Inbound Road Freight - Pallet,Consumer Healthcare,Kingsley Site
+2024,Dermafyx,Dermafyx,MAT-20011,HDPE Bottle 100ml,Specialty Care,Solaris Park Site
+2026,Kaldrin,Kaldrin,MAT-20035,Synthetic Peptide Concentrate,Vaccines,Fenwick Site
+2024,Lumivax,Lumivax,MAT-20013,Patient Information Leaflet,Specialty Care,Northfield Site
+2025,Zolvarin,Zolvarin,MAT-20044,HDPE Bottle 250ml,Vaccines,Kingsley Site
+2024,Ulvatrix,Ulvatrix,MAT-20011,HDPE Bottle 100ml,Consumer Healthcare,Ashford Site
+2026,Estrivon,Estrivon,MAT-20046,Patient Information Leaflet,Specialty Care,Kingsley Site
+2024,Kaldrin,Kaldrin,MAT-20103,Enteric Coating Blend,Specialty Care,Ashford Site
+2026,Advelra,Advelra,MAT-20036,Microcrystalline Cellulose,Specialty Care,Meadowbrook Site
+2026,Wintrelis,Wintrelis,MAT-20003,Microcrystalline Cellulose,Consumer Healthcare,Bridgeholm Site
+2026,Mendovia,Mendovia,MAT-20093,Filling Line Spare Parts,Consumer Healthcare,Clearwater Site
+2024,Immunara,Immunara,MAT-20077,HDPE Bottle 100ml,Vaccines,Kingsley Site
+2025,Renovex,Renovex,MAT-20043,Prefilled Syringe 2.25ml,Specialty Care,Ashford Site
+2025,Hemazol,Hemazol,MAT-20064,Comparator Drug Batch,Consumer Healthcare,Solaris Park Site
+2026,Norvelin,Norvelin,MAT-20002,Synthetic Peptide Concentrate,Pharmaceuticals,Clearwater Site
+2026,Kaldrin,Kaldrin,MAT-20035,Synthetic Peptide Concentrate,Pharmaceuticals,Meadowbrook Site
+2025,Kaldrin,Kaldrin,MAT-20058,Cold Storage - Warehouse Pallet Slot,Vaccines,Bridgeholm Site
+2024,Norvelin,Norvelin,MAT-20144,Folding Carton,Vaccines,Rivermill Site
+2024,Brenzolix,Brenzolix,MAT-20029,Lab Reagent Kit,Vaccines,Ashford Site
+2025,Brenzolix,Brenzolix,MAT-20029,Lab Reagent Kit,Consumer Healthcare,Bridgeholm Site
+2024,Ulvatrix,Ulvatrix,MAT-20046,Patient Information Leaflet,Vaccines,Meadowbrook Site
+2025,Sentrivax,Sentrivax,MAT-20112,Patient Information Leaflet,Pharmaceuticals,Solaris Park Site
+2026,Advelra,Advelra,MAT-20088,Inbound Air Freight - Temperature Controlled,Vaccines,Northfield Site
+2025,Lumivax,Lumivax,MAT-20013,Patient Information Leaflet,Vaccines,Kingsley Site
+2026,Ulvatrix,Ulvatrix,MAT-20011,HDPE Bottle 100ml,Consumer Healthcare,Rivermill Site
+2025,Sentrivax,Sentrivax,MAT-20080,Pressure-sensitive Label,Vaccines,Northfield Site
+2025,Estrivon,Estrivon,MAT-20056,Inbound Ocean Freight - Container,Pharmaceuticals,Northfield Site
+2024,Advelra,Advelra,MAT-20036,Microcrystalline Cellulose,Consumer Healthcare,Clearwater Site
+2026,Zolvarin,Zolvarin,MAT-20091,Cold Storage - Warehouse Pallet Slot,Pharmaceuticals,Kingsley Site
+2026,Zolvarin,Zolvarin,MAT-20139,Water for Injection,Vaccines,Northfield Site
+2025,Mendovia,Mendovia,MAT-20092,Stainless Steel Reactor Component,Pharmaceuticals,Bridgeholm Site
+2026,Immunara,Immunara,MAT-20128,Lab Reagent Kit,Specialty Care,Bridgeholm Site
+2025,Wintrelis,Wintrelis,MAT-20077,HDPE Bottle 100ml,Specialty Care,Kingsley Site
+2026,Brenzolix,Brenzolix,MAT-20029,Lab Reagent Kit,Pharmaceuticals,Rivermill Site
+2025,Renovex,Renovex,MAT-20006,Ethanol (Pharma Grade),Specialty Care,Northfield Site
+2024,Advelra,Advelra,MAT-20119,Contract Packaging Service,Specialty Care,Fenwick Site
+2024,Xantivo,Xantivo,MAT-20148,Stretch Pallet Wrap,Vaccines,Meadowbrook Site
+2025,Kaldrin,Kaldrin,MAT-20076,Prefilled Syringe 1ml,Vaccines,Kingsley Site
+2024,Ulvatrix,Ulvatrix,MAT-20072,Ethanol (Pharma Grade),Specialty Care,Meadowbrook Site
+2025,Wintrelis,Wintrelis,MAT-20077,HDPE Bottle 100ml,Specialty Care,Fenwick Site
+2025,Florivex,Florivex,MAT-20054,Inbound Road Freight - Pallet,Specialty Care,Eastgate Site
+2024,Zolvarin,Zolvarin,MAT-20024,Cold Chain Transport - 2-8C,Consumer Healthcare,Fenwick Site
+2026,Ulvatrix,Ulvatrix,MAT-20072,Ethanol (Pharma Grade),Specialty Care,Eastgate Site
+2025,Lumivax,Lumivax,MAT-20085,Aseptic Fill & Finish Service,Vaccines,Eastgate Site
+2026,Dermafyx,Dermafyx,MAT-20066,Ibuprofen API,Consumer Healthcare,Solaris Park Site
+2026,Glucovex,Glucovex,MAT-20069,Microcrystalline Cellulose,Consumer Healthcare,Ashford Site
+2025,Advelra,Advelra,MAT-20054,Inbound Road Freight - Pallet,Consumer Healthcare,Ashford Site
+2025,Norvelin,Norvelin,MAT-20002,Synthetic Peptide Concentrate,Consumer Healthcare,Fenwick Site
+2026,Mendovia,Mendovia,MAT-20100,Recombinant Protein Concentrate,Specialty Care,Fenwick Site
+2024,Florivex,Florivex,MAT-20092,Stainless Steel Reactor Component,Vaccines,Fenwick Site
+2025,Advelra,Advelra,MAT-20145,Patient Information Leaflet,Vaccines,Meadowbrook Site
+2026,Lumivax,Lumivax,MAT-20013,Patient Information Leaflet,Vaccines,Rivermill Site
+2026,Florivex,Florivex,MAT-20134,Synthetic Peptide Concentrate,Pharmaceuticals,Northfield Site
+2024,Yenzura,Yenzura,MAT-20018,Custom Synthesis Batch,Vaccines,Eastgate Site
+2024,Calmera,Calmera,MAT-20021,Inbound Road Freight - Pallet,Vaccines,Eastgate Site
+2025,Vezanta,Vezanta,MAT-20093,Filling Line Spare Parts,Vaccines,Clearwater Site
+2025,Zolvarin,Zolvarin,MAT-20086,Contract Packaging Service,Consumer Healthcare,Bridgeholm Site
+2026,Lumivax,Lumivax,MAT-20013,Patient Information Leaflet,Consumer Healthcare,Eastgate Site
+2026,Florivex,Florivex,MAT-20061,HPLC Consumable Kit,Consumer Healthcare,Eastgate Site
+2025,Wintrelis,Wintrelis,MAT-20002,Synthetic Peptide Concentrate,Consumer Healthcare,Rivermill Site
+2024,Norvelin,Norvelin,MAT-20002,Synthetic Peptide Concentrate,Consumer Healthcare,Ashford Site
+2026,Mendovia,Mendovia,MAT-20070,Film Coating Powder,Specialty Care,Rivermill Site
+2025,Brenzolix,Brenzolix,MAT-20065,Clinical Trial Kit,Pharmaceuticals,Fenwick Site
+2026,Kaldrin,Kaldrin,MAT-20058,Cold Storage - Warehouse Pallet Slot,Consumer Healthcare,Ashford Site
+2025,Pulmatrix,Pulmatrix,MAT-20118,Aseptic Fill & Finish Service,Specialty Care,Solaris Park Site
+2025,Zolvarin,Zolvarin,MAT-20086,Contract Packaging Service,Consumer Healthcare,Eastgate Site
+2025,Kaldrin,Kaldrin,MAT-20035,Synthetic Peptide Concentrate,Consumer Healthcare,Rivermill Site
+2024,Pulmatrix,Pulmatrix,MAT-20129,Pipette Tips (case),Consumer Healthcare,Kingsley Site
+2024,Pulmatrix,Pulmatrix,MAT-20118,Aseptic Fill & Finish Service,Consumer Healthcare,Kingsley Site
+2024,Glucovex,Glucovex,MAT-20135,Microcrystalline Cellulose,Vaccines,Ashford Site
+2026,Renovex,Renovex,MAT-20045,Corrugated Shipping Box,Vaccines,Solaris Park Site
+2026,Dermafyx,Dermafyx,MAT-20085,Aseptic Fill & Finish Service,Specialty Care,Rivermill Site
+2026,Calmera,Calmera,MAT-20121,Inbound Air Freight - Temperature Controlled,Vaccines,Bridgeholm Site
+2024,Ulvatrix,Ulvatrix,MAT-20072,Ethanol (Pharma Grade),Pharmaceuticals,Bridgeholm Site
+2026,Quilava,Quilava,MAT-20013,Patient Information Leaflet,Vaccines,Bridgeholm Site
+2025,Calmera,Calmera,MAT-20036,Microcrystalline Cellulose,Specialty Care,Bridgeholm Site
+2024,Quilava,Quilava,MAT-20084,Custom Synthesis Batch,Consumer Healthcare,Bridgeholm Site
+2024,Ostreva,Ostreva,MAT-20010,Prefilled Syringe 1ml,Pharmaceuticals,Fenwick Site
+2024,Florivex,Florivex,MAT-20065,Clinical Trial Kit,Consumer Healthcare,Clearwater Site
+2026,Lumivax,Lumivax,MAT-20085,Aseptic Fill & Finish Service,Consumer Healthcare,Solaris Park Site
+2026,Quilava,Quilava,MAT-20084,Custom Synthesis Batch,Pharmaceuticals,Bridgeholm Site
+2024,Torvexa,Torvexa,MAT-20020,Contract Packaging Service,Specialty Care,Ashford Site
+2025,Glucovex,Glucovex,MAT-20135,Microcrystalline Cellulose,Specialty Care,Ashford Site
+2026,Calmera,Calmera,MAT-20021,Inbound Road Freight - Pallet,Specialty Care,Clearwater Site
+2026,Florivex,Florivex,MAT-20065,Clinical Trial Kit,Pharmaceuticals,Meadowbrook Site
+2024,Hemazol,Hemazol,MAT-20056,Inbound Ocean Freight - Container,Vaccines,Kingsley Site
+2026,Ulvatrix,Ulvatrix,MAT-20086,Contract Packaging Service,Specialty Care,Clearwater Site
+2025,Immunara,Immunara,MAT-20138,Isopropyl Alcohol,Pharmaceuticals,Northfield Site
+2024,Dermafyx,Dermafyx,MAT-20011,HDPE Bottle 100ml,Specialty Care,Solaris Park Site
+2024,Torvexa,Torvexa,MAT-20086,Contract Packaging Service,Vaccines,Fenwick Site
+2024,Florivex,Florivex,MAT-20061,HPLC Consumable Kit,Pharmaceuticals,Bridgeholm Site
+2025,Ulvatrix,Ulvatrix,MAT-20126,Filling Line Spare Parts,Consumer Healthcare,Meadowbrook Site
+2026,Florivex,Florivex,MAT-20112,Patient Information Leaflet,Specialty Care,Meadowbrook Site
+2026,Yenzura,Yenzura,MAT-20016,Stretch Pallet Wrap,Specialty Care,Kingsley Site
+2025,Mendovia,Mendovia,MAT-20012,Folding Carton,Consumer Healthcare,Ashford Site
+2026,Lumivax,Lumivax,MAT-20013,Patient Information Leaflet,Vaccines,Bridgeholm Site
+2024,Yenzura,Yenzura,MAT-20129,Pipette Tips (case),Vaccines,Eastgate Site
+2025,Calmera,Calmera,MAT-20018,Custom Synthesis Batch,Specialty Care,Bridgeholm Site
+2026,Ulvatrix,Ulvatrix,MAT-20088,Inbound Air Freight - Temperature Controlled,Vaccines,Meadowbrook Site
+2026,Renovex,Renovex,MAT-20103,Enteric Coating Blend,Specialty Care,Rivermill Site
+2024,Pulmatrix,Pulmatrix,MAT-20129,Pipette Tips (case),Consumer Healthcare,Meadowbrook Site
+2024,Lumivax,Lumivax,MAT-20013,Patient Information Leaflet,Vaccines,Clearwater Site
+2024,Quilava,Quilava,MAT-20013,Patient Information Leaflet,Specialty Care,Bridgeholm Site
+2024,Dermafyx,Dermafyx,MAT-20085,Aseptic Fill & Finish Service,Vaccines,Northfield Site
+2026,Glucovex,Glucovex,MAT-20103,Enteric Coating Blend,Consumer Healthcare,Clearwater Site
+2024,Sentrivax,Sentrivax,MAT-20000,Paracetamol API,Vaccines,Kingsley Site
+2026,Quilava,Quilava,MAT-20084,Custom Synthesis Batch,Consumer Healthcare,Fenwick Site
+2024,Torvexa,Torvexa,MAT-20015,Corrugated Shipping Case,Vaccines,Rivermill Site
+2025,Pulmatrix,Pulmatrix,MAT-20026,Stainless Steel Reactor Component,Consumer Healthcare,Fenwick Site
+2026,Estrivon,Estrivon,MAT-20046,Patient Information Leaflet,Specialty Care,Kingsley Site
+2024,Glucovex,Glucovex,MAT-20135,Microcrystalline Cellulose,Pharmaceuticals,Fenwick Site
+2026,Yenzura,Yenzura,MAT-20129,Pipette Tips (case),Specialty Care,Northfield Site
+2026,Zolvarin,Zolvarin,MAT-20139,Water for Injection,Vaccines,Eastgate Site
+2025,Wintrelis,Wintrelis,MAT-20016,Stretch Pallet Wrap,Pharmaceuticals,Rivermill Site
+2024,Torvexa,Torvexa,MAT-20054,Inbound Road Freight - Pallet,Pharmaceuticals,Northfield Site
+2026,Hemazol,Hemazol,MAT-20109,Prefilled Syringe 2.25ml,Specialty Care,Meadowbrook Site
+2026,Estrivon,Estrivon,MAT-20056,Inbound Ocean Freight - Container,Consumer Healthcare,Rivermill Site
+2026,Hemazol,Hemazol,MAT-20056,Inbound Ocean Freight - Container,Pharmaceuticals,Kingsley Site
+2026,Brenzolix,Brenzolix,MAT-20105,Isopropyl Alcohol,Consumer Healthcare,Bridgeholm Site
+2026,Dermafyx,Dermafyx,MAT-20066,Ibuprofen API,Pharmaceuticals,Meadowbrook Site
+2024,Lumivax,Lumivax,MAT-20085,Aseptic Fill & Finish Service,Consumer Healthcare,Solaris Park Site
+2025,Xantivo,Xantivo,MAT-20071,Sodium Benzoate,Specialty Care,Rivermill Site
+2026,Lumivax,Lumivax,MAT-20114,Reusable Shipping Tote,Vaccines,Clearwater Site
+2025,Zolvarin,Zolvarin,MAT-20056,Inbound Ocean Freight - Container,Specialty Care,Rivermill Site
+2026,Glucovex,Glucovex,MAT-20135,Microcrystalline Cellulose,Specialty Care,Kingsley Site
+2024,Hemazol,Hemazol,MAT-20140,Freeze-dried Vaccine Vial,Vaccines,Kingsley Site
+2026,Brenzolix,Brenzolix,MAT-20065,Clinical Trial Kit,Consumer Healthcare,Bridgeholm Site
+2025,Lumivax,Lumivax,MAT-20084,Custom Synthesis Batch,Consumer Healthcare,Meadowbrook Site
+2026,Pulmatrix,Pulmatrix,MAT-20021,Inbound Road Freight - Pallet,Pharmaceuticals,Fenwick Site
+2025,Norvelin,Norvelin,MAT-20052,Aseptic Fill & Finish Service,Specialty Care,Kingsley Site
+2025,Florivex,Florivex,MAT-20112,Patient Information Leaflet,Pharmaceuticals,Rivermill Site
+2025,Norvelin,Norvelin,MAT-20052,Aseptic Fill & Finish Service,Specialty Care,Kingsley Site
+2026,Brenzolix,Brenzolix,MAT-20071,Sodium Benzoate,Vaccines,Ashford Site
+2024,Quilava,Quilava,MAT-20099,Ibuprofen API,Pharmaceuticals,Eastgate Site
+2026,Sentrivax,Sentrivax,MAT-20080,Pressure-sensitive Label,Specialty Care,Clearwater Site
+2025,Advelra,Advelra,MAT-20119,Contract Packaging Service,Consumer Healthcare,Eastgate Site
+2024,Renovex,Renovex,MAT-20080,Pressure-sensitive Label,Consumer Healthcare,Meadowbrook Site
+2026,Calmera,Calmera,MAT-20137,Methylparaben,Pharmaceuticals,Northfield Site
+2026,Dermafyx,Dermafyx,MAT-20039,Ethanol (Pharma Grade),Consumer Healthcare,Solaris Park Site
+2026,Lumivax,Lumivax,MAT-20013,Patient Information Leaflet,Specialty Care,Meadowbrook Site
+2025,Brenzolix,Brenzolix,MAT-20065,Clinical Trial Kit,Pharmaceuticals,Solaris Park Site
+2026,Wintrelis,Wintrelis,MAT-20052,Aseptic Fill & Finish Service,Pharmaceuticals,Eastgate Site
+2024,Quilava,Quilava,MAT-20084,Custom Synthesis Batch,Consumer Healthcare,Eastgate Site
+2025,Quilava,Quilava,MAT-20075,PVC Blister Pack,Specialty Care,Eastgate Site
+2024,Renovex,Renovex,MAT-20094,HPLC Consumable Kit,Consumer Healthcare,Meadowbrook Site
+2024,Pulmatrix,Pulmatrix,MAT-20004,Enteric Coating Blend,Vaccines,Kingsley Site
+2024,Lumivax,Lumivax,MAT-20084,Custom Synthesis Batch,Specialty Care,Kingsley Site
+2025,Brenzolix,Brenzolix,MAT-20029,Lab Reagent Kit,Specialty Care,Meadowbrook Site
+2026,Xantivo,Xantivo,MAT-20148,Stretch Pallet Wrap,Vaccines,Eastgate Site
+2026,Renovex,Renovex,MAT-20094,HPLC Consumable Kit,Specialty Care,Meadowbrook Site
+2025,Lumivax,Lumivax,MAT-20084,Custom Synthesis Batch,Vaccines,Fenwick Site
+2026,Sentrivax,Sentrivax,MAT-20144,Folding Carton,Vaccines,Ashford Site
+2025,Dermafyx,Dermafyx,MAT-20011,HDPE Bottle 100ml,Vaccines,Northfield Site
+2025,Vezanta,Vezanta,MAT-20007,Water for Injection,Pharmaceuticals,Rivermill Site
+2025,Zolvarin,Zolvarin,MAT-20044,HDPE Bottle 250ml,Pharmaceuticals,Solaris Park Site
+2024,Kaldrin,Kaldrin,MAT-20035,Synthetic Peptide Concentrate,Pharmaceuticals,Bridgeholm Site
+2024,Quilava,Quilava,MAT-20013,Patient Information Leaflet,Specialty Care,Ashford Site
+2026,Vezanta,Vezanta,MAT-20012,Folding Carton,Vaccines,Solaris Park Site
+2025,Glucovex,Glucovex,MAT-20135,Microcrystalline Cellulose,Specialty Care,Ashford Site
+2025,Advelra,Advelra,MAT-20145,Patient Information Leaflet,Vaccines,Northfield Site
+2024,Ulvatrix,Ulvatrix,MAT-20025,Cold Storage - Warehouse Pallet Slot,Pharmaceuticals,Fenwick Site
+2026,Glucovex,Glucovex,MAT-20069,Microcrystalline Cellulose,Specialty Care,Northfield Site
+2026,Florivex,Florivex,MAT-20092,Stainless Steel Reactor Component,Specialty Care,Eastgate Site
+2025,Mendovia,Mendovia,MAT-20012,Folding Carton,Pharmaceuticals,Meadowbrook Site
+2026,Calmera,Calmera,MAT-20036,Microcrystalline Cellulose,Vaccines,Rivermill Site
+2024,Ulvatrix,Ulvatrix,MAT-20008,Glass Vial 2ml,Specialty Care,Ashford Site
+2024,Estrivon,Estrivon,MAT-20056,Inbound Ocean Freight - Container,Consumer Healthcare,Rivermill Site
+2024,Advelra,Advelra,MAT-20054,Inbound Road Freight - Pallet,Consumer Healthcare,Rivermill Site
+2024,Torvexa,Torvexa,MAT-20040,Water for Injection,Consumer Healthcare,Fenwick Site
+2024,Zolvarin,Zolvarin,MAT-20024,Cold Chain Transport - 2-8C,Pharmaceuticals,Kingsley Site
+2026,Quilava,Quilava,MAT-20013,Patient Information Leaflet,Consumer Healthcare,Rivermill Site
+2024,Vezanta,Vezanta,MAT-20033,Paracetamol API,Consumer Healthcare,Bridgeholm Site
+2024,Pulmatrix,Pulmatrix,MAT-20004,Enteric Coating Blend,Specialty Care,Eastgate Site
+2025,Yenzura,Yenzura,MAT-20016,Stretch Pallet Wrap,Specialty Care,Solaris Park Site
+2024,Florivex,Florivex,MAT-20112,Patient Information Leaflet,Pharmaceuticals,Ashford Site
+2024,Kaldrin,Kaldrin,MAT-20097,Comparator Drug Batch,Consumer Healthcare,Northfield Site
+2026,Immunara,Immunara,MAT-20045,Corrugated Shipping Box,Vaccines,Eastgate Site
+2024,Ostreva,Ostreva,MAT-20083,Fermentation Batch Service,Pharmaceuticals,Northfield Site
+2025,Glucovex,Glucovex,MAT-20015,Corrugated Shipping Case,Specialty Care,Rivermill Site
+2025,Xantivo,Xantivo,MAT-20071,Sodium Benzoate,Pharmaceuticals,Ashford Site
+2024,Advelra,Advelra,MAT-20088,Inbound Air Freight - Temperature Controlled,Specialty Care,Ashford Site
+2026,Xantivo,Xantivo,MAT-20000,Paracetamol API,Pharmaceuticals,Eastgate Site
+2024,Zolvarin,Zolvarin,MAT-20076,Prefilled Syringe 1ml,Consumer Healthcare,Solaris Park Site
+2025,Norvelin,Norvelin,MAT-20008,Glass Vial 2ml,Vaccines,Rivermill Site
+2025,Torvexa,Torvexa,MAT-20106,Water for Injection,Specialty Care,Bridgeholm Site
+2024,Torvexa,Torvexa,MAT-20015,Corrugated Shipping Case,Consumer Healthcare,Ashford Site
+2026,Quilava,Quilava,MAT-20113,Pressure-sensitive Label,Pharmaceuticals,Northfield Site
+2025,Dermafyx,Dermafyx,MAT-20085,Aseptic Fill & Finish Service,Vaccines,Fenwick Site
+2024,Torvexa,Torvexa,MAT-20015,Corrugated Shipping Case,Specialty Care,Solaris Park Site
+2025,Ulvatrix,Ulvatrix,MAT-20088,Inbound Air Freight - Temperature Controlled,Vaccines,Northfield Site
+2025,Vezanta,Vezanta,MAT-20033,Paracetamol API,Vaccines,Rivermill Site
+2024,Dermafyx,Dermafyx,MAT-20039,Ethanol (Pharma Grade),Pharmaceuticals,Bridgeholm Site
+2024,Quilava,Quilava,MAT-20099,Ibuprofen API,Specialty Care,Eastgate Site
+2024,Florivex,Florivex,MAT-20054,Inbound Road Freight - Pallet,Consumer Healthcare,Fenwick Site
+2025,Xantivo,Xantivo,MAT-20008,Glass Vial 2ml,Pharmaceuticals,Ashford Site
+2026,Dermafyx,Dermafyx,MAT-20085,Aseptic Fill & Finish Service,Pharmaceuticals,Ashford Site
+2025,Advelra,Advelra,MAT-20105,Isopropyl Alcohol,Consumer Healthcare,Solaris Park Site
+2024,Ostreva,Ostreva,MAT-20027,Filling Line Spare Parts,Vaccines,Meadowbrook Site
+2024,Kaldrin,Kaldrin,MAT-20097,Comparator Drug Batch,Consumer Healthcare,Eastgate Site
+2026,Calmera,Calmera,MAT-20137,Methylparaben,Pharmaceuticals,Eastgate Site
+2024,Lumivax,Lumivax,MAT-20085,Aseptic Fill & Finish Service,Consumer Healthcare,Rivermill Site
+2026,Estrivon,Estrivon,MAT-20119,Contract Packaging Service,Pharmaceuticals,Kingsley Site
+2025,Immunara,Immunara,MAT-20045,Corrugated Shipping Box,Specialty Care,Ashford Site
+2025,Florivex,Florivex,MAT-20134,Synthetic Peptide Concentrate,Pharmaceuticals,Solaris Park Site
+2024,Wintrelis,Wintrelis,MAT-20077,HDPE Bottle 100ml,Consumer Healthcare,Fenwick Site
+2024,Dermafyx,Dermafyx,MAT-20085,Aseptic Fill & Finish Service,Specialty Care,Clearwater Site
+2026,Calmera,Calmera,MAT-20021,Inbound Road Freight - Pallet,Consumer Healthcare,Bridgeholm Site
+2026,Advelra,Advelra,MAT-20133,Monoclonal Antibody Bulk,Consumer Healthcare,Fenwick Site
+2025,Xantivo,Xantivo,MAT-20109,Prefilled Syringe 2.25ml,Consumer Healthcare,Rivermill Site
+2024,Norvelin,Norvelin,MAT-20052,Aseptic Fill & Finish Service,Pharmaceuticals,Rivermill Site
+2026,Torvexa,Torvexa,MAT-20002,Synthetic Peptide Concentrate,Consumer Healthcare,Bridgeholm Site
+2024,Torvexa,Torvexa,MAT-20040,Water for Injection,Specialty Care,Bridgeholm Site
+2026,Norvelin,Norvelin,MAT-20144,Folding Carton,Specialty Care,Meadowbrook Site
+2026,Quilava,Quilava,MAT-20099,Ibuprofen API,Specialty Care,Eastgate Site
+2025,Glucovex,Glucovex,MAT-20015,Corrugated Shipping Case,Pharmaceuticals,Northfield Site
+2026,Renovex,Renovex,MAT-20094,HPLC Consumable Kit,Consumer Healthcare,Ashford Site
+2024,Immunara,Immunara,MAT-20077,HDPE Bottle 100ml,Vaccines,Ashford Site
+2026,Wintrelis,Wintrelis,MAT-20012,Folding Carton,Pharmaceuticals,Kingsley Site
+2025,Brenzolix,Brenzolix,MAT-20120,Inbound Road Freight - Pallet,Vaccines,Rivermill Site
+2025,Ostreva,Ostreva,MAT-20083,Fermentation Batch Service,Pharmaceuticals,Clearwater Site
+2026,Torvexa,Torvexa,MAT-20086,Contract Packaging Service,Vaccines,Clearwater Site
+2026,Ulvatrix,Ulvatrix,MAT-20066,Ibuprofen API,Vaccines,Fenwick Site
+2025,Hemazol,Hemazol,MAT-20049,Stretch Pallet Wrap,Specialty Care,Meadowbrook Site
+2024,Pulmatrix,Pulmatrix,MAT-20004,Enteric Coating Blend,Vaccines,Rivermill Site
+2026,Hemazol,Hemazol,MAT-20056,Inbound Ocean Freight - Container,Consumer Healthcare,Meadowbrook Site
+2024,Ostreva,Ostreva,MAT-20027,Filling Line Spare Parts,Pharmaceuticals,Eastgate Site
+2024,Calmera,Calmera,MAT-20121,Inbound Air Freight - Temperature Controlled,Specialty Care,Eastgate Site
+2025,Advelra,Advelra,MAT-20142,Prefilled Syringe 1ml,Pharmaceuticals,Solaris Park Site
+2024,Zolvarin,Zolvarin,MAT-20076,Prefilled Syringe 1ml,Pharmaceuticals,Northfield Site
+2026,Advelra,Advelra,MAT-20088,Inbound Air Freight - Temperature Controlled,Specialty Care,Solaris Park Site
+2026,Kaldrin,Kaldrin,MAT-20138,Isopropyl Alcohol,Specialty Care,Ashford Site
+2026,Hemazol,Hemazol,MAT-20009,Alu-Alu Blister Pack,Pharmaceuticals,Northfield Site
+2026,Renovex,Renovex,MAT-20043,Prefilled Syringe 2.25ml,Pharmaceuticals,Meadowbrook Site
+2025,Dermafyx,Dermafyx,MAT-20066,Ibuprofen API,Pharmaceuticals,Kingsley Site
+2025,Calmera,Calmera,MAT-20018,Custom Synthesis Batch,Vaccines,Solaris Park Site
+2026,Estrivon,Estrivon,MAT-20046,Patient Information Leaflet,Vaccines,Ashford Site
+2026,Yenzura,Yenzura,MAT-20018,Custom Synthesis Batch,Pharmaceuticals,Clearwater Site
+2026,Advelra,Advelra,MAT-20142,Prefilled Syringe 1ml,Consumer Healthcare,Bridgeholm Site
+2026,Calmera,Calmera,MAT-20137,Methylparaben,Specialty Care,Meadowbrook Site
+2024,Norvelin,Norvelin,MAT-20040,Water for Injection,Pharmaceuticals,Northfield Site
+2026,Ulvatrix,Ulvatrix,MAT-20126,Filling Line Spare Parts,Consumer Healthcare,Solaris Park Site
+2025,Hemazol,Hemazol,MAT-20009,Alu-Alu Blister Pack,Pharmaceuticals,Solaris Park Site
+2024,Pulmatrix,Pulmatrix,MAT-20059,Stainless Steel Reactor Component,Pharmaceuticals,Fenwick Site
+2026,Calmera,Calmera,MAT-20018,Custom Synthesis Batch,Consumer Healthcare,Meadowbrook Site
+2026,Lumivax,Lumivax,MAT-20085,Aseptic Fill & Finish Service,Consumer Healthcare,Eastgate Site
+2024,Advelra,Advelra,MAT-20105,Isopropyl Alcohol,Pharmaceuticals,Rivermill Site
+2024,Mendovia,Mendovia,MAT-20114,Reusable Shipping Tote,Vaccines,Meadowbrook Site
+2025,Ostreva,Ostreva,MAT-20083,Fermentation Batch Service,Specialty Care,Fenwick Site
+2026,Norvelin,Norvelin,MAT-20002,Synthetic Peptide Concentrate,Consumer Healthcare,Meadowbrook Site
+2026,Torvexa,Torvexa,MAT-20012,Folding Carton,Specialty Care,Clearwater Site
+2024,Pulmatrix,Pulmatrix,MAT-20026,Stainless Steel Reactor Component,Pharmaceuticals,Northfield Site
+2024,Sentrivax,Sentrivax,MAT-20046,Patient Information Leaflet,Pharmaceuticals,Eastgate Site
+2026,Xantivo,Xantivo,MAT-20030,Single-use Bioreactor Bag,Vaccines,Eastgate Site
+2024,Vezanta,Vezanta,MAT-20007,Water for Injection,Specialty Care,Kingsley Site
+2025,Zolvarin,Zolvarin,MAT-20076,Prefilled Syringe 1ml,Vaccines,Clearwater Site
+2024,Estrivon,Estrivon,MAT-20017,Fermentation Batch Service,Consumer Healthcare,Bridgeholm Site
+2025,Calmera,Calmera,MAT-20051,Custom Synthesis Batch,Consumer Healthcare,Eastgate Site
+2024,Pulmatrix,Pulmatrix,MAT-20129,Pipette Tips (case),Vaccines,Clearwater Site
+2024,Kaldrin,Kaldrin,MAT-20097,Comparator Drug Batch,Consumer Healthcare,Ashford Site
+2024,Advelra,Advelra,MAT-20105,Isopropyl Alcohol,Pharmaceuticals,Eastgate Site
+2024,Ulvatrix,Ulvatrix,MAT-20126,Filling Line Spare Parts,Vaccines,Bridgeholm Site
+2025,Xantivo,Xantivo,MAT-20030,Single-use Bioreactor Bag,Pharmaceuticals,Clearwater Site
+2026,Calmera,Calmera,MAT-20036,Microcrystalline Cellulose,Consumer Healthcare,Fenwick Site
+2024,Torvexa,Torvexa,MAT-20012,Folding Carton,Specialty Care,Rivermill Site
+2024,Brenzolix,Brenzolix,MAT-20029,Lab Reagent Kit,Vaccines,Solaris Park Site
+2025,Brenzolix,Brenzolix,MAT-20029,Lab Reagent Kit,Specialty Care,Northfield Site
+2024,Brenzolix,Brenzolix,MAT-20071,Sodium Benzoate,Vaccines,Bridgeholm Site
+2025,Estrivon,Estrivon,MAT-20143,HDPE Bottle 250ml,Pharmaceuticals,Rivermill Site
+2026,Yenzura,Yenzura,MAT-20072,Ethanol (Pharma Grade),Vaccines,Eastgate Site
+2026,Torvexa,Torvexa,MAT-20081,Corrugated Shipping Case,Pharmaceuticals,Fenwick Site
+2024,Calmera,Calmera,MAT-20022,Inbound Air Freight - Temperature Controlled,Consumer Healthcare,Bridgeholm Site
+2025,Xantivo,Xantivo,MAT-20148,Stretch Pallet Wrap,Specialty Care,Clearwater Site
+2025,Ostreva,Ostreva,MAT-20027,Filling Line Spare Parts,Consumer Healthcare,Meadowbrook Site
+2026,Norvelin,Norvelin,MAT-20040,Water for Injection,Consumer Healthcare,Eastgate Site
+2025,Estrivon,Estrivon,MAT-20046,Patient Information Leaflet,Vaccines,Meadowbrook Site
+2024,Norvelin,Norvelin,MAT-20040,Water for Injection,Pharmaceuticals,Fenwick Site
+2024,Hemazol,Hemazol,MAT-20140,Freeze-dried Vaccine Vial,Specialty Care,Solaris Park Site
+2025,Yenzura,Yenzura,MAT-20018,Custom Synthesis Batch,Vaccines,Meadowbrook Site
+2025,Hemazol,Hemazol,MAT-20056,Inbound Ocean Freight - Container,Pharmaceuticals,Ashford Site
+2026,Ostreva,Ostreva,MAT-20027,Filling Line Spare Parts,Vaccines,Fenwick Site
+2024,Zolvarin,Zolvarin,MAT-20056,Inbound Ocean Freight - Container,Specialty Care,Eastgate Site
+2025,Norvelin,Norvelin,MAT-20040,Water for Injection,Specialty Care,Clearwater Site
+2025,Xantivo,Xantivo,MAT-20032,Clinical Trial Kit,Specialty Care,Eastgate Site
+2025,Estrivon,Estrivon,MAT-20143,HDPE Bottle 250ml,Specialty Care,Clearwater Site
+2025,Sentrivax,Sentrivax,MAT-20091,Cold Storage - Warehouse Pallet Slot,Consumer Healthcare,Kingsley Site
+2025,Kaldrin,Kaldrin,MAT-20103,Enteric Coating Blend,Pharmaceuticals,Eastgate Site
+2024,Torvexa,Torvexa,MAT-20106,Water for Injection,Consumer Healthcare,Northfield Site
+2025,Brenzolix,Brenzolix,MAT-20065,Clinical Trial Kit,Consumer Healthcare,Bridgeholm Site
+2025,Torvexa,Torvexa,MAT-20012,Folding Carton,Vaccines,Eastgate Site
+2025,Hemazol,Hemazol,MAT-20049,Stretch Pallet Wrap,Vaccines,Meadowbrook Site
+2025,Brenzolix,Brenzolix,MAT-20029,Lab Reagent Kit,Specialty Care,Bridgeholm Site
+2024,Estrivon,Estrivon,MAT-20103,Enteric Coating Blend,Pharmaceuticals,Fenwick Site
+2025,Vezanta,Vezanta,MAT-20140,Freeze-dried Vaccine Vial,Consumer Healthcare,Eastgate Site
+2025,Mendovia,Mendovia,MAT-20093,Filling Line Spare Parts,Vaccines,Northfield Site
+2026,Norvelin,Norvelin,MAT-20008,Glass Vial 2ml,Consumer Healthcare,Meadowbrook Site
+2024,Vezanta,Vezanta,MAT-20048,Reusable Shipping Tote,Pharmaceuticals,Kingsley Site
+2024,Quilava,Quilava,MAT-20013,Patient Information Leaflet,Pharmaceuticals,Bridgeholm Site
+2025,Estrivon,Estrivon,MAT-20103,Enteric Coating Blend,Pharmaceuticals,Clearwater Site
+2025,Hemazol,Hemazol,MAT-20114,Reusable Shipping Tote,Consumer Healthcare,Kingsley Site
+2026,Kaldrin,Kaldrin,MAT-20035,Synthetic Peptide Concentrate,Vaccines,Rivermill Site
+2026,Renovex,Renovex,MAT-20094,HPLC Consumable Kit,Specialty Care,Bridgeholm Site
+2025,Advelra,Advelra,MAT-20146,Pressure-sensitive Label,Consumer Healthcare,Northfield Site
+2024,Mendovia,Mendovia,MAT-20070,Film Coating Powder,Pharmaceuticals,Eastgate Site
+2024,Calmera,Calmera,MAT-20079,Patient Information Leaflet,Consumer Healthcare,Solaris Park Site
+2026,Wintrelis,Wintrelis,MAT-20073,Water for Injection,Pharmaceuticals,Eastgate Site
+2024,Hemazol,Hemazol,MAT-20009,Alu-Alu Blister Pack,Specialty Care,Northfield Site
+2026,Kaldrin,Kaldrin,MAT-20138,Isopropyl Alcohol,Specialty Care,Northfield Site
+2025,Hemazol,Hemazol,MAT-20109,Prefilled Syringe 2.25ml,Pharmaceuticals,Bridgeholm Site
+2024,Norvelin,Norvelin,MAT-20040,Water for Injection,Vaccines,Eastgate Site
+2026,Brenzolix,Brenzolix,MAT-20071,Sodium Benzoate,Pharmaceuticals,Kingsley Site
+2026,Pulmatrix,Pulmatrix,MAT-20026,Stainless Steel Reactor Component,Pharmaceuticals,Rivermill Site
+2024,Immunara,Immunara,MAT-20138,Isopropyl Alcohol,Vaccines,Meadowbrook Site
+2024,Quilava,Quilava,MAT-20075,PVC Blister Pack,Pharmaceuticals,Ashford Site
+2024,Yenzura,Yenzura,MAT-20018,Custom Synthesis Batch,Specialty Care,Northfield Site
+2026,Zolvarin,Zolvarin,MAT-20024,Cold Chain Transport - 2-8C,Specialty Care,Eastgate Site
+2025,Zolvarin,Zolvarin,MAT-20076,Prefilled Syringe 1ml,Consumer Healthcare,Rivermill Site
+2026,Torvexa,Torvexa,MAT-20012,Folding Carton,Specialty Care,Bridgeholm Site
+2025,Lumivax,Lumivax,MAT-20084,Custom Synthesis Batch,Pharmaceuticals,Rivermill Site
+2025,Glucovex,Glucovex,MAT-20135,Microcrystalline Cellulose,Vaccines,Fenwick Site
+2024,Renovex,Renovex,MAT-20043,Prefilled Syringe 2.25ml,Pharmaceuticals,Ashford Site
+2026,Florivex,Florivex,MAT-20134,Synthetic Peptide Concentrate,Specialty Care,Bridgeholm Site
+2024,Yenzura,Yenzura,MAT-20018,Custom Synthesis Batch,Vaccines,Ashford Site
+2024,Ulvatrix,Ulvatrix,MAT-20112,Patient Information Leaflet,Specialty Care,Rivermill Site
+2024,Ostreva,Ostreva,MAT-20126,Filling Line Spare Parts,Pharmaceuticals,Bridgeholm Site
+2026,Xantivo,Xantivo,MAT-20030,Single-use Bioreactor Bag,Specialty Care,Eastgate Site
+2024,Estrivon,Estrivon,MAT-20119,Contract Packaging Service,Specialty Care,Meadowbrook Site
+2025,Quilava,Quilava,MAT-20084,Custom Synthesis Batch,Vaccines,Ashford Site
+2024,Lumivax,Lumivax,MAT-20084,Custom Synthesis Batch,Specialty Care,Clearwater Site
+2024,Sentrivax,Sentrivax,MAT-20045,Corrugated Shipping Box,Vaccines,Meadowbrook Site
+2024,Sentrivax,Sentrivax,MAT-20091,Cold Storage - Warehouse Pallet Slot,Consumer Healthcare,Fenwick Site
+2026,Pulmatrix,Pulmatrix,MAT-20026,Stainless Steel Reactor Component,Pharmaceuticals,Eastgate Site
+2025,Vezanta,Vezanta,MAT-20140,Freeze-dried Vaccine Vial,Vaccines,Eastgate Site
+2025,Glucovex,Glucovex,MAT-20107,Freeze-dried Vaccine Vial,Vaccines,Rivermill Site
+2026,Norvelin,Norvelin,MAT-20040,Water for Injection,Specialty Care,Kingsley Site
+2025,Wintrelis,Wintrelis,MAT-20052,Aseptic Fill & Finish Service,Consumer Healthcare,Ashford Site
+2025,Immunara,Immunara,MAT-20045,Corrugated Shipping Box,Specialty Care,Northfield Site
+2025,Norvelin,Norvelin,MAT-20008,Glass Vial 2ml,Consumer Healthcare,Rivermill Site
+2026,Ostreva,Ostreva,MAT-20007,Water for Injection,Pharmaceuticals,Solaris Park Site
+2025,Torvexa,Torvexa,MAT-20040,Water for Injection,Pharmaceuticals,Fenwick Site
+2026,Brenzolix,Brenzolix,MAT-20065,Clinical Trial Kit,Specialty Care,Meadowbrook Site
+2025,Estrivon,Estrivon,MAT-20143,HDPE Bottle 250ml,Pharmaceuticals,Ashford Site
+2024,Advelra,Advelra,MAT-20119,Contract Packaging Service,Consumer Healthcare,Northfield Site
+2026,Vezanta,Vezanta,MAT-20140,Freeze-dried Vaccine Vial,Vaccines,Meadowbrook Site
+2026,Glucovex,Glucovex,MAT-20069,Microcrystalline Cellulose,Pharmaceuticals,Kingsley Site
+2024,Sentrivax,Sentrivax,MAT-20021,Inbound Road Freight - Pallet,Consumer Healthcare,Bridgeholm Site
+2026,Kaldrin,Kaldrin,MAT-20058,Cold Storage - Warehouse Pallet Slot,Vaccines,Northfield Site
+2025,Advelra,Advelra,MAT-20145,Patient Information Leaflet,Specialty Care,Kingsley Site
+2024,Calmera,Calmera,MAT-20079,Patient Information Leaflet,Vaccines,Northfield Site
+2024,Estrivon,Estrivon,MAT-20056,Inbound Ocean Freight - Container,Pharmaceuticals,Clearwater Site
+2026,Quilava,Quilava,MAT-20113,Pressure-sensitive Label,Specialty Care,Meadowbrook Site
+2026,Norvelin,Norvelin,MAT-20138,Isopropyl Alcohol,Vaccines,Solaris Park Site
+2026,Wintrelis,Wintrelis,MAT-20055,Inbound Air Freight - Temperature Controlled,Vaccines,Meadowbrook Site
+2024,Sentrivax,Sentrivax,MAT-20000,Paracetamol API,Pharmaceuticals,Fenwick Site
+2024,Advelra,Advelra,MAT-20105,Isopropyl Alcohol,Specialty Care,Clearwater Site
+2024,Immunara,Immunara,MAT-20140,Freeze-dried Vaccine Vial,Specialty Care,Rivermill Site
+2025,Lumivax,Lumivax,MAT-20085,Aseptic Fill & Finish Service,Consumer Healthcare,Fenwick Site
+2024,Yenzura,Yenzura,MAT-20072,Ethanol (Pharma Grade),Pharmaceuticals,Ashford Site
+2025,Quilava,Quilava,MAT-20084,Custom Synthesis Batch,Vaccines,Solaris Park Site
+2025,Torvexa,Torvexa,MAT-20054,Inbound Road Freight - Pallet,Specialty Care,Bridgeholm Site
+2025,Dermafyx,Dermafyx,MAT-20011,HDPE Bottle 100ml,Consumer Healthcare,Eastgate Site
+2026,Norvelin,Norvelin,MAT-20040,Water for Injection,Specialty Care,Eastgate Site
+2026,Hemazol,Hemazol,MAT-20056,Inbound Ocean Freight - Container,Pharmaceuticals,Eastgate Site
+2025,Kaldrin,Kaldrin,MAT-20103,Enteric Coating Blend,Consumer Healthcare,Meadowbrook Site
+2025,Ostreva,Ostreva,MAT-20126,Filling Line Spare Parts,Vaccines,Northfield Site
+2024,Mendovia,Mendovia,MAT-20090,Cold Chain Transport - 2-8C,Pharmaceuticals,Northfield Site
+2024,Pulmatrix,Pulmatrix,MAT-20026,Stainless Steel Reactor Component,Specialty Care,Rivermill Site
+2025,Mendovia,Mendovia,MAT-20092,Stainless Steel Reactor Component,Specialty Care,Bridgeholm Site
+2024,Vezanta,Vezanta,MAT-20093,Filling Line Spare Parts,Pharmaceuticals,Solaris Park Site
+2025,Dermafyx,Dermafyx,MAT-20011,HDPE Bottle 100ml,Consumer Healthcare,Solaris Park Site
+2024,Renovex,Renovex,MAT-20006,Ethanol (Pharma Grade),Specialty Care,Meadowbrook Site
+2025,Calmera,Calmera,MAT-20054,Inbound Road Freight - Pallet,Consumer Healthcare,Ashford Site
+2024,Wintrelis,Wintrelis,MAT-20077,HDPE Bottle 100ml,Pharmaceuticals,Eastgate Site
+2024,Torvexa,Torvexa,MAT-20020,Contract Packaging Service,Consumer Healthcare,Clearwater Site
+2026,Wintrelis,Wintrelis,MAT-20077,HDPE Bottle 100ml,Vaccines,Ashford Site
+2026,Florivex,Florivex,MAT-20134,Synthetic Peptide Concentrate,Consumer Healthcare,Northfield Site
+2025,Pulmatrix,Pulmatrix,MAT-20099,Ibuprofen API,Consumer Healthcare,Eastgate Site
+2025,Advelra,Advelra,MAT-20146,Pressure-sensitive Label,Vaccines,Eastgate Site
+2024,Quilava,Quilava,MAT-20075,PVC Blister Pack,Consumer Healthcare,Solaris Park Site
+2026,Yenzura,Yenzura,MAT-20018,Custom Synthesis Batch,Specialty Care,Clearwater Site
+2024,Xantivo,Xantivo,MAT-20032,Clinical Trial Kit,Vaccines,Solaris Park Site
+2025,Renovex,Renovex,MAT-20021,Inbound Road Freight - Pallet,Specialty Care,Kingsley Site
+2025,Brenzolix,Brenzolix,MAT-20065,Clinical Trial Kit,Consumer Healthcare,Bridgeholm Site
+2025,Renovex,Renovex,MAT-20103,Enteric Coating Blend,Vaccines,Northfield Site
+2025,Xantivo,Xantivo,MAT-20032,Clinical Trial Kit,Vaccines,Meadowbrook Site
+2025,Advelra,Advelra,MAT-20036,Microcrystalline Cellulose,Vaccines,Ashford Site
+2026,Glucovex,Glucovex,MAT-20015,Corrugated Shipping Case,Pharmaceuticals,Fenwick Site
+2025,Ulvatrix,Ulvatrix,MAT-20072,Ethanol (Pharma Grade),Consumer Healthcare,Northfield Site
+2024,Lumivax,Lumivax,MAT-20013,Patient Information Leaflet,Specialty Care,Ashford Site
+2026,Brenzolix,Brenzolix,MAT-20029,Lab Reagent Kit,Specialty Care,Ashford Site
+2025,Xantivo,Xantivo,MAT-20032,Clinical Trial Kit,Consumer Healthcare,Eastgate Site
+2024,Ostreva,Ostreva,MAT-20079,Patient Information Leaflet,Pharmaceuticals,Solaris Park Site
+2025,Renovex,Renovex,MAT-20006,Ethanol (Pharma Grade),Vaccines,Ashford Site
+2025,Glucovex,Glucovex,MAT-20069,Microcrystalline Cellulose,Vaccines,Ashford Site
+2024,Yenzura,Yenzura,MAT-20072,Ethanol (Pharma Grade),Pharmaceuticals,Eastgate Site
+2026,Florivex,Florivex,MAT-20092,Stainless Steel Reactor Component,Specialty Care,Rivermill Site
+2024,Dermafyx,Dermafyx,MAT-20039,Ethanol (Pharma Grade),Consumer Healthcare,Ashford Site
+2026,Ostreva,Ostreva,MAT-20083,Fermentation Batch Service,Specialty Care,Rivermill Site
+2024,Ostreva,Ostreva,MAT-20083,Fermentation Batch Service,Consumer Healthcare,Eastgate Site
+2026,Ulvatrix,Ulvatrix,MAT-20008,Glass Vial 2ml,Pharmaceuticals,Meadowbrook Site
+2026,Immunara,Immunara,MAT-20140,Freeze-dried Vaccine Vial,Vaccines,Northfield Site
+2024,Mendovia,Mendovia,MAT-20070,Film Coating Powder,Specialty Care,Kingsley Site
+2024,Advelra,Advelra,MAT-20133,Monoclonal Antibody Bulk,Vaccines,Northfield Site
+2026,Florivex,Florivex,MAT-20065,Clinical Trial Kit,Pharmaceuticals,Rivermill Site
+2024,Immunara,Immunara,MAT-20045,Corrugated Shipping Box,Specialty Care,Meadowbrook Site
+2024,Quilava,Quilava,MAT-20084,Custom Synthesis Batch,Specialty Care,Bridgeholm Site
+2024,Advelra,Advelra,MAT-20054,Inbound Road Freight - Pallet,Specialty Care,Northfield Site
+2024,Glucovex,Glucovex,MAT-20015,Corrugated Shipping Case,Vaccines,Ashford Site
+2024,Zolvarin,Zolvarin,MAT-20139,Water for Injection,Pharmaceuticals,Northfield Site
+2026,Kaldrin,Kaldrin,MAT-20097,Comparator Drug Batch,Vaccines,Eastgate Site
+2025,Ostreva,Ostreva,MAT-20027,Filling Line Spare Parts,Consumer Healthcare,Meadowbrook Site
+2026,Norvelin,Norvelin,MAT-20052,Aseptic Fill & Finish Service,Pharmaceuticals,Ashford Site
+2026,Florivex,Florivex,MAT-20112,Patient Information Leaflet,Specialty Care,Clearwater Site
+2026,Hemazol,Hemazol,MAT-20111,Corrugated Shipping Box,Vaccines,Kingsley Site
+2026,Brenzolix,Brenzolix,MAT-20029,Lab Reagent Kit,Consumer Healthcare,Meadowbrook Site
+2024,Brenzolix,Brenzolix,MAT-20120,Inbound Road Freight - Pallet,Consumer Healthcare,Rivermill Site
+2026,Xantivo,Xantivo,MAT-20071,Sodium Benzoate,Vaccines,Eastgate Site
+2026,Pulmatrix,Pulmatrix,MAT-20025,Cold Storage - Warehouse Pallet Slot,Specialty Care,Eastgate Site
+2024,Sentrivax,Sentrivax,MAT-20021,Inbound Road Freight - Pallet,Pharmaceuticals,Clearwater Site
+2025,Hemazol,Hemazol,MAT-20111,Corrugated Shipping Box,Consumer Healthcare,Kingsley Site
+2024,Ostreva,Ostreva,MAT-20027,Filling Line Spare Parts,Specialty Care,Clearwater Site
+2025,Pulmatrix,Pulmatrix,MAT-20129,Pipette Tips (case),Vaccines,Ashford Site
+2026,Florivex,Florivex,MAT-20061,HPLC Consumable Kit,Consumer Healthcare,Fenwick Site
+2026,Glucovex,Glucovex,MAT-20015,Corrugated Shipping Case,Consumer Healthcare,Kingsley Site
+2026,Yenzura,Yenzura,MAT-20016,Stretch Pallet Wrap,Pharmaceuticals,Ashford Site
+2024,Yenzura,Yenzura,MAT-20018,Custom Synthesis Batch,Consumer Healthcare,Northfield Site
+2026,Ostreva,Ostreva,MAT-20126,Filling Line Spare Parts,Consumer Healthcare,Clearwater Site
+2024,Advelra,Advelra,MAT-20036,Microcrystalline Cellulose,Pharmaceuticals,Rivermill Site
+2024,Torvexa,Torvexa,MAT-20054,Inbound Road Freight - Pallet,Pharmaceuticals,Eastgate Site
+2024,Florivex,Florivex,MAT-20112,Patient Information Leaflet,Consumer Healthcare,Solaris Park Site
+2024,Ulvatrix,Ulvatrix,MAT-20086,Contract Packaging Service,Consumer Healthcare,Bridgeholm Site
+2024,Torvexa,Torvexa,MAT-20054,Inbound Road Freight - Pallet,Vaccines,Eastgate Site
+2025,Florivex,Florivex,MAT-20092,Stainless Steel Reactor Component,Vaccines,Solaris Park Site
+2024,Florivex,Florivex,MAT-20092,Stainless Steel Reactor Component,Vaccines,Fenwick Site
+2024,Calmera,Calmera,MAT-20036,Microcrystalline Cellulose,Consumer Healthcare,Fenwick Site
+2024,Mendovia,Mendovia,MAT-20070,Film Coating Powder,Vaccines,Fenwick Site
+2025,Kaldrin,Kaldrin,MAT-20138,Isopropyl Alcohol,Pharmaceuticals,Solaris Park Site
+2026,Norvelin,Norvelin,MAT-20002,Synthetic Peptide Concentrate,Consumer Healthcare,Solaris Park Site
+2024,Ulvatrix,Ulvatrix,MAT-20112,Patient Information Leaflet,Vaccines,Eastgate Site
+2024,Kaldrin,Kaldrin,MAT-20103,Enteric Coating Blend,Vaccines,Kingsley Site
+2024,Ostreva,Ostreva,MAT-20083,Fermentation Batch Service,Pharmaceuticals,Fenwick Site
+2026,Torvexa,Torvexa,MAT-20086,Contract Packaging Service,Vaccines,Rivermill Site
+2025,Estrivon,Estrivon,MAT-20056,Inbound Ocean Freight - Container,Pharmaceuticals,Eastgate Site
+2024,Torvexa,Torvexa,MAT-20028,HPLC Consumable Kit,Consumer Healthcare,Kingsley Site
+2025,Norvelin,Norvelin,MAT-20138,Isopropyl Alcohol,Vaccines,Northfield Site
+2024,Dermafyx,Dermafyx,MAT-20085,Aseptic Fill & Finish Service,Specialty Care,Clearwater Site
+2024,Glucovex,Glucovex,MAT-20015,Corrugated Shipping Case,Specialty Care,Meadowbrook Site
+2025,Torvexa,Torvexa,MAT-20012,Folding Carton,Vaccines,Rivermill Site
+2025,Advelra,Advelra,MAT-20133,Monoclonal Antibody Bulk,Consumer Healthcare,Rivermill Site
+2024,Torvexa,Torvexa,MAT-20028,HPLC Consumable Kit,Consumer Healthcare,Kingsley Site
+2026,Dermafyx,Dermafyx,MAT-20085,Aseptic Fill & Finish Service,Vaccines,Clearwater Site
+2024,Pulmatrix,Pulmatrix,MAT-20021,Inbound Road Freight - Pallet,Pharmaceuticals,Ashford Site
+2024,Mendovia,Mendovia,MAT-20085,Aseptic Fill & Finish Service,Vaccines,Clearwater Site
+2025,Immunara,Immunara,MAT-20049,Stretch Pallet Wrap,Vaccines,Bridgeholm Site
+2025,Vezanta,Vezanta,MAT-20140,Freeze-dried Vaccine Vial,Specialty Care,Rivermill Site
+2026,Estrivon,Estrivon,MAT-20143,HDPE Bottle 250ml,Specialty Care,Rivermill Site
+2024,Pulmatrix,Pulmatrix,MAT-20026,Stainless Steel Reactor Component,Pharmaceuticals,Kingsley Site
+2024,Torvexa,Torvexa,MAT-20086,Contract Packaging Service,Consumer Healthcare,Fenwick Site
+2025,Estrivon,Estrivon,MAT-20143,HDPE Bottle 250ml,Vaccines,Eastgate Site
+2024,Xantivo,Xantivo,MAT-20030,Single-use Bioreactor Bag,Consumer Healthcare,Solaris Park Site
+2025,Lumivax,Lumivax,MAT-20084,Custom Synthesis Batch,Consumer Healthcare,Rivermill Site
+2024,Immunara,Immunara,MAT-20045,Corrugated Shipping Box,Vaccines,Rivermill Site
+2026,Torvexa,Torvexa,MAT-20002,Synthetic Peptide Concentrate,Consumer Healthcare,Solaris Park Site
+2024,Wintrelis,Wintrelis,MAT-20052,Aseptic Fill & Finish Service,Specialty Care,Ashford Site
+2025,Torvexa,Torvexa,MAT-20040,Water for Injection,Consumer Healthcare,Ashford Site
+2024,Ulvatrix,Ulvatrix,MAT-20008,Glass Vial 2ml,Consumer Healthcare,Eastgate Site
+2024,Estrivon,Estrivon,MAT-20017,Fermentation Batch Service,Vaccines,Meadowbrook Site
+2026,Vezanta,Vezanta,MAT-20012,Folding Carton,Pharmaceuticals,Kingsley Site
+2026,Florivex,Florivex,MAT-20054,Inbound Road Freight - Pallet,Consumer Healthcare,Bridgeholm Site
+2025,Quilava,Quilava,MAT-20084,Custom Synthesis Batch,Specialty Care,Ashford Site
+2025,Vezanta,Vezanta,MAT-20059,Stainless Steel Reactor Component,Vaccines,Solaris Park Site
+2024,Hemazol,Hemazol,MAT-20056,Inbound Ocean Freight - Container,Consumer Healthcare,Rivermill Site
+2026,Mendovia,Mendovia,MAT-20113,Pressure-sensitive Label,Vaccines,Fenwick Site
+2026,Pulmatrix,Pulmatrix,MAT-20004,Enteric Coating Blend,Consumer Healthcare,Clearwater Site
+2024,Immunara,Immunara,MAT-20077,HDPE Bottle 100ml,Consumer Healthcare,Bridgeholm Site
+2026,Mendovia,Mendovia,MAT-20020,Contract Packaging Service,Vaccines,Bridgeholm Site
+2025,Florivex,Florivex,MAT-20061,HPLC Consumable Kit,Specialty Care,Ashford Site
+2025,Estrivon,Estrivon,MAT-20103,Enteric Coating Blend,Pharmaceuticals,Bridgeholm Site
+2025,Immunara,Immunara,MAT-20140,Freeze-dried Vaccine Vial,Vaccines,Kingsley Site
+2024,Zolvarin,Zolvarin,MAT-20139,Water for Injection,Consumer Healthcare,Solaris Park Site
+2026,Zolvarin,Zolvarin,MAT-20139,Water for Injection,Consumer Healthcare,Rivermill Site
+2025,Torvexa,Torvexa,MAT-20040,Water for Injection,Vaccines,Eastgate Site
+2025,Florivex,Florivex,MAT-20054,Inbound Road Freight - Pallet,Pharmaceuticals,Bridgeholm Site
+2025,Florivex,Florivex,MAT-20061,HPLC Consumable Kit,Specialty Care,Eastgate Site
+2025,Zolvarin,Zolvarin,MAT-20088,Inbound Air Freight - Temperature Controlled,Vaccines,Bridgeholm Site
+2024,Ostreva,Ostreva,MAT-20079,Patient Information Leaflet,Consumer Healthcare,Eastgate Site
+2024,Vezanta,Vezanta,MAT-20048,Reusable Shipping Tote,Vaccines,Eastgate Site
+2025,Hemazol,Hemazol,MAT-20009,Alu-Alu Blister Pack,Consumer Healthcare,Kingsley Site
+2024,Torvexa,Torvexa,MAT-20054,Inbound Road Freight - Pallet,Pharmaceuticals,Northfield Site
+2026,Ulvatrix,Ulvatrix,MAT-20072,Ethanol (Pharma Grade),Specialty Care,Eastgate Site
+2025,Xantivo,Xantivo,MAT-20148,Stretch Pallet Wrap,Vaccines,Clearwater Site
+2024,Norvelin,Norvelin,MAT-20144,Folding Carton,Consumer Healthcare,Northfield Site
+2025,Torvexa,Torvexa,MAT-20081,Corrugated Shipping Case,Vaccines,Eastgate Site
+2025,Calmera,Calmera,MAT-20051,Custom Synthesis Batch,Pharmaceuticals,Northfield Site
+2024,Xantivo,Xantivo,MAT-20030,Single-use Bioreactor Bag,Pharmaceuticals,Rivermill Site
+2024,Torvexa,Torvexa,MAT-20106,Water for Injection,Consumer Healthcare,Solaris Park Site
+2026,Sentrivax,Sentrivax,MAT-20021,Inbound Road Freight - Pallet,Vaccines,Eastgate Site
+2025,Kaldrin,Kaldrin,MAT-20058,Cold Storage - Warehouse Pallet Slot,Pharmaceuticals,Kingsley Site
+2025,Hemazol,Hemazol,MAT-20111,Corrugated Shipping Box,Pharmaceuticals,Clearwater Site
+2026,Advelra,Advelra,MAT-20133,Monoclonal Antibody Bulk,Specialty Care,Ashford Site
+2024,Wintrelis,Wintrelis,MAT-20055,Inbound Air Freight - Temperature Controlled,Specialty Care,Meadowbrook Site
+2024,Norvelin,Norvelin,MAT-20008,Glass Vial 2ml,Specialty Care,Northfield Site
+2025,Quilava,Quilava,MAT-20075,PVC Blister Pack,Specialty Care,Meadowbrook Site
+2026,Glucovex,Glucovex,MAT-20103,Enteric Coating Blend,Consumer Healthcare,Northfield Site
+2026,Advelra,Advelra,MAT-20142,Prefilled Syringe 1ml,Vaccines,Ashford Site
+2024,Florivex,Florivex,MAT-20112,Patient Information Leaflet,Specialty Care,Rivermill Site
+2025,Pulmatrix,Pulmatrix,MAT-20025,Cold Storage - Warehouse Pallet Slot,Vaccines,Rivermill Site
+2024,Glucovex,Glucovex,MAT-20015,Corrugated Shipping Case,Pharmaceuticals,Northfield Site
+2026,Vezanta,Vezanta,MAT-20140,Freeze-dried Vaccine Vial,Consumer Healthcare,Rivermill Site
+2025,Ostreva,Ostreva,MAT-20027,Filling Line Spare Parts,Vaccines,Rivermill Site
+2025,Norvelin,Norvelin,MAT-20144,Folding Carton,Consumer Healthcare,Rivermill Site
+2024,Yenzura,Yenzura,MAT-20018,Custom Synthesis Batch,Vaccines,Ashford Site
+2026,Quilava,Quilava,MAT-20099,Ibuprofen API,Consumer Healthcare,Ashford Site
+2024,Ostreva,Ostreva,MAT-20126,Filling Line Spare Parts,Vaccines,Meadowbrook Site
+2025,Ulvatrix,Ulvatrix,MAT-20066,Ibuprofen API,Pharmaceuticals,Meadowbrook Site
+2024,Ostreva,Ostreva,MAT-20126,Filling Line Spare Parts,Consumer Healthcare,Fenwick Site
+2026,Dermafyx,Dermafyx,MAT-20039,Ethanol (Pharma Grade),Pharmaceuticals,Rivermill Site
+2026,Quilava,Quilava,MAT-20013,Patient Information Leaflet,Vaccines,Eastgate Site
+2026,Kaldrin,Kaldrin,MAT-20097,Comparator Drug Batch,Pharmaceuticals,Eastgate Site
+2026,Kaldrin,Kaldrin,MAT-20097,Comparator Drug Batch,Specialty Care,Meadowbrook Site
+2025,Immunara,Immunara,MAT-20138,Isopropyl Alcohol,Specialty Care,Eastgate Site
+2025,Hemazol,Hemazol,MAT-20140,Freeze-dried Vaccine Vial,Specialty Care,Fenwick Site
+2026,Glucovex,Glucovex,MAT-20015,Corrugated Shipping Case,Consumer Healthcare,Ashford Site
+2024,Torvexa,Torvexa,MAT-20040,Water for Injection,Consumer Healthcare,Meadowbrook Site
+2026,Zolvarin,Zolvarin,MAT-20139,Water for Injection,Vaccines,Clearwater Site
+2024,Zolvarin,Zolvarin,MAT-20091,Cold Storage - Warehouse Pallet Slot,Pharmaceuticals,Meadowbrook Site
+2025,Xantivo,Xantivo,MAT-20000,Paracetamol API,Vaccines,Bridgeholm Site
+2026,Ostreva,Ostreva,MAT-20007,Water for Injection,Consumer Healthcare,Rivermill Site
+2024,Vezanta,Vezanta,MAT-20113,Pressure-sensitive Label,Consumer Healthcare,Solaris Park Site
+2025,Renovex,Renovex,MAT-20059,Stainless Steel Reactor Component,Specialty Care,Meadowbrook Site
+2024,Florivex,Florivex,MAT-20065,Clinical Trial Kit,Consumer Healthcare,Solaris Park Site
+2026,Lumivax,Lumivax,MAT-20084,Custom Synthesis Batch,Pharmaceuticals,Kingsley Site
+2024,Zolvarin,Zolvarin,MAT-20088,Inbound Air Freight - Temperature Controlled,Pharmaceuticals,Meadowbrook Site
+2025,Wintrelis,Wintrelis,MAT-20016,Stretch Pallet Wrap,Consumer Healthcare,Ashford Site
+2026,Vezanta,Vezanta,MAT-20090,Cold Chain Transport - 2-8C,Pharmaceuticals,Meadowbrook Site
+2025,Hemazol,Hemazol,MAT-20049,Stretch Pallet Wrap,Consumer Healthcare,Solaris Park Site
+2024,Pulmatrix,Pulmatrix,MAT-20099,Ibuprofen API,Specialty Care,Rivermill Site
+2025,Sentrivax,Sentrivax,MAT-20112,Patient Information Leaflet,Specialty Care,Meadowbrook Site
+2025,Ostreva,Ostreva,MAT-20027,Filling Line Spare Parts,Specialty Care,Solaris Park Site
+2026,Norvelin,Norvelin,MAT-20138,Isopropyl Alcohol,Pharmaceuticals,Fenwick Site
+2025,Wintrelis,Wintrelis,MAT-20012,Folding Carton,Consumer Healthcare,Bridgeholm Site
+2026,Yenzura,Yenzura,MAT-20129,Pipette Tips (case),Pharmaceuticals,Eastgate Site
+2025,Pulmatrix,Pulmatrix,MAT-20025,Cold Storage - Warehouse Pallet Slot,Pharmaceuticals,Northfield Site
+2026,Zolvarin,Zolvarin,MAT-20044,HDPE Bottle 250ml,Consumer Healthcare,Northfield Site
+2025,Xantivo,Xantivo,MAT-20109,Prefilled Syringe 2.25ml,Specialty Care,Northfield Site
+2024,Kaldrin,Kaldrin,MAT-20076,Prefilled Syringe 1ml,Specialty Care,Clearwater Site
+2025,Brenzolix,Brenzolix,MAT-20065,Clinical Trial Kit,Vaccines,Solaris Park Site
+2025,Pulmatrix,Pulmatrix,MAT-20099,Ibuprofen API,Vaccines,Solaris Park Site
+2025,Advelra,Advelra,MAT-20054,Inbound Road Freight - Pallet,Specialty Care,Solaris Park Site
+2025,Advelra,Advelra,MAT-20054,Inbound Road Freight - Pallet,Pharmaceuticals,Bridgeholm Site
+2024,Estrivon,Estrivon,MAT-20119,Contract Packaging Service,Vaccines,Clearwater Site
+2025,Ostreva,Ostreva,MAT-20079,Patient Information Leaflet,Consumer Healthcare,Rivermill Site
+2024,Ulvatrix,Ulvatrix,MAT-20126,Filling Line Spare Parts,Specialty Care,Bridgeholm Site
+2026,Vezanta,Vezanta,MAT-20090,Cold Chain Transport - 2-8C,Consumer Healthcare,Solaris Park Site
+2025,Renovex,Renovex,MAT-20045,Corrugated Shipping Box,Specialty Care,Ashford Site
+2024,Zolvarin,Zolvarin,MAT-20091,Cold Storage - Warehouse Pallet Slot,Vaccines,Meadowbrook Site
+2024,Wintrelis,Wintrelis,MAT-20052,Aseptic Fill & Finish Service,Specialty Care,Clearwater Site
+2026,Advelra,Advelra,MAT-20142,Prefilled Syringe 1ml,Consumer Healthcare,Northfield Site
+2026,Wintrelis,Wintrelis,MAT-20073,Water for Injection,Vaccines,Eastgate Site
+2026,Dermafyx,Dermafyx,MAT-20039,Ethanol (Pharma Grade),Pharmaceuticals,Meadowbrook Site
+2026,Vezanta,Vezanta,MAT-20090,Cold Chain Transport - 2-8C,Pharmaceuticals,Bridgeholm Site
+2026,Norvelin,Norvelin,MAT-20008,Glass Vial 2ml,Specialty Care,Northfield Site
+2025,Ostreva,Ostreva,MAT-20027,Filling Line Spare Parts,Vaccines,Northfield Site
+2024,Zolvarin,Zolvarin,MAT-20091,Cold Storage - Warehouse Pallet Slot,Vaccines,Kingsley Site
+2024,Wintrelis,Wintrelis,MAT-20003,Microcrystalline Cellulose,Vaccines,Kingsley Site
+2024,Torvexa,Torvexa,MAT-20086,Contract Packaging Service,Pharmaceuticals,Kingsley Site
+2024,Sentrivax,Sentrivax,MAT-20144,Folding Carton,Pharmaceuticals,Bridgeholm Site
+2025,Estrivon,Estrivon,MAT-20119,Contract Packaging Service,Consumer Healthcare,Solaris Park Site
+2024,Zolvarin,Zolvarin,MAT-20088,Inbound Air Freight - Temperature Controlled,Pharmaceuticals,Ashford Site
+2024,Yenzura,Yenzura,MAT-20018,Custom Synthesis Batch,Consumer Healthcare,Kingsley Site
+2024,Immunara,Immunara,MAT-20140,Freeze-dried Vaccine Vial,Consumer Healthcare,Eastgate Site
+2024,Advelra,Advelra,MAT-20088,Inbound Air Freight - Temperature Controlled,Vaccines,Rivermill Site
+2024,Wintrelis,Wintrelis,MAT-20055,Inbound Air Freight - Temperature Controlled,Consumer Healthcare,Kingsley Site
+2024,Xantivo,Xantivo,MAT-20030,Single-use Bioreactor Bag,Consumer Healthcare,Fenwick Site
+2026,Zolvarin,Zolvarin,MAT-20091,Cold Storage - Warehouse Pallet Slot,Specialty Care,Northfield Site
+2026,Norvelin,Norvelin,MAT-20052,Aseptic Fill & Finish Service,Pharmaceuticals,Kingsley Site
+2026,Lumivax,Lumivax,MAT-20114,Reusable Shipping Tote,Vaccines,Northfield Site
+2025,Mendovia,Mendovia,MAT-20093,Filling Line Spare Parts,Vaccines,Meadowbrook Site
+2026,Hemazol,Hemazol,MAT-20049,Stretch Pallet Wrap,Vaccines,Northfield Site
+2024,Xantivo,Xantivo,MAT-20030,Single-use Bioreactor Bag,Specialty Care,Bridgeholm Site
+2025,Dermafyx,Dermafyx,MAT-20039,Ethanol (Pharma Grade),Pharmaceuticals,Clearwater Site
+2025,Vezanta,Vezanta,MAT-20140,Freeze-dried Vaccine Vial,Vaccines,Rivermill Site
+2026,Lumivax,Lumivax,MAT-20084,Custom Synthesis Batch,Pharmaceuticals,Clearwater Site
+2025,Vezanta,Vezanta,MAT-20059,Stainless Steel Reactor Component,Vaccines,Bridgeholm Site
+2025,Calmera,Calmera,MAT-20022,Inbound Air Freight - Temperature Controlled,Vaccines,Ashford Site
+2024,Zolvarin,Zolvarin,MAT-20024,Cold Chain Transport - 2-8C,Specialty Care,Northfield Site
+2024,Ulvatrix,Ulvatrix,MAT-20072,Ethanol (Pharma Grade),Consumer Healthcare,Northfield Site
+2024,Pulmatrix,Pulmatrix,MAT-20021,Inbound Road Freight - Pallet,Pharmaceuticals,Bridgeholm Site
+2026,Vezanta,Vezanta,MAT-20113,Pressure-sensitive Label,Pharmaceuticals,Ashford Site
+2025,Florivex,Florivex,MAT-20092,Stainless Steel Reactor Component,Vaccines,Kingsley Site
+2026,Ostreva,Ostreva,MAT-20027,Filling Line Spare Parts,Consumer Healthcare,Meadowbrook Site
+2025,Renovex,Renovex,MAT-20045,Corrugated Shipping Box,Pharmaceuticals,Ashford Site
+2026,Estrivon,Estrivon,MAT-20017,Fermentation Batch Service,Consumer Healthcare,Kingsley Site
+2026,Florivex,Florivex,MAT-20061,HPLC Consumable Kit,Specialty Care,Meadowbrook Site
+2024,Calmera,Calmera,MAT-20137,Methylparaben,Pharmaceuticals,Clearwater Site
+2026,Torvexa,Torvexa,MAT-20002,Synthetic Peptide Concentrate,Specialty Care,Rivermill Site
+2025,Florivex,Florivex,MAT-20065,Clinical Trial Kit,Specialty Care,Eastgate Site
+2026,Advelra,Advelra,MAT-20036,Microcrystalline Cellulose,Vaccines,Northfield Site
+2026,Hemazol,Hemazol,MAT-20009,Alu-Alu Blister Pack,Specialty Care,Northfield Site
+2024,Vezanta,Vezanta,MAT-20090,Cold Chain Transport - 2-8C,Vaccines,Meadowbrook Site
+2025,Immunara,Immunara,MAT-20128,Lab Reagent Kit,Consumer Healthcare,Kingsley Site
+2026,Norvelin,Norvelin,MAT-20008,Glass Vial 2ml,Vaccines,Meadowbrook Site
+2026,Lumivax,Lumivax,MAT-20114,Reusable Shipping Tote,Pharmaceuticals,Rivermill Site
+2024,Florivex,Florivex,MAT-20061,HPLC Consumable Kit,Consumer Healthcare,Eastgate Site
+2024,Kaldrin,Kaldrin,MAT-20138,Isopropyl Alcohol,Consumer Healthcare,Solaris Park Site
+2026,Ostreva,Ostreva,MAT-20083,Fermentation Batch Service,Pharmaceuticals,Eastgate Site
+2025,Hemazol,Hemazol,MAT-20140,Freeze-dried Vaccine Vial,Vaccines,Northfield Site
+2026,Florivex,Florivex,MAT-20112,Patient Information Leaflet,Specialty Care,Clearwater Site
+2024,Xantivo,Xantivo,MAT-20071,Sodium Benzoate,Specialty Care,Ashford Site
+2024,Advelra,Advelra,MAT-20105,Isopropyl Alcohol,Vaccines,Clearwater Site
+2024,Lumivax,Lumivax,MAT-20013,Patient Information Leaflet,Pharmaceuticals,Fenwick Site
+2024,Mendovia,Mendovia,MAT-20085,Aseptic Fill & Finish Service,Consumer Healthcare,Bridgeholm Site
+2024,Zolvarin,Zolvarin,MAT-20088,Inbound Air Freight - Temperature Controlled,Consumer Healthcare,Meadowbrook Site
+2024,Wintrelis,Wintrelis,MAT-20100,Recombinant Protein Concentrate,Specialty Care,Meadowbrook Site
+2026,Renovex,Renovex,MAT-20006,Ethanol (Pharma Grade),Pharmaceuticals,Fenwick Site
+2026,Xantivo,Xantivo,MAT-20054,Inbound Road Freight - Pallet,Specialty Care,Solaris Park Site
+2025,Renovex,Renovex,MAT-20094,HPLC Consumable Kit,Specialty Care,Clearwater Site
+2024,Estrivon,Estrivon,MAT-20103,Enteric Coating Blend,Vaccines,Clearwater Site
+2025,Brenzolix,Brenzolix,MAT-20029,Lab Reagent Kit,Specialty Care,Kingsley Site
+2026,Zolvarin,Zolvarin,MAT-20091,Cold Storage - Warehouse Pallet Slot,Consumer Healthcare,Kingsley Site
+2024,Calmera,Calmera,MAT-20079,Patient Information Leaflet,Consumer Healthcare,Kingsley Site
+2026,Quilava,Quilava,MAT-20075,PVC Blister Pack,Vaccines,Northfield Site
+2024,Immunara,Immunara,MAT-20077,HDPE Bottle 100ml,Specialty Care,Eastgate Site
+2025,Florivex,Florivex,MAT-20134,Synthetic Peptide Concentrate,Vaccines,Northfield Site
+2025,Norvelin,Norvelin,MAT-20046,Patient Information Leaflet,Pharmaceuticals,Ashford Site
+2026,Torvexa,Torvexa,MAT-20081,Corrugated Shipping Case,Vaccines,Solaris Park Site
+2025,Mendovia,Mendovia,MAT-20093,Filling Line Spare Parts,Vaccines,Kingsley Site
+2026,Yenzura,Yenzura,MAT-20072,Ethanol (Pharma Grade),Vaccines,Fenwick Site
+2026,Zolvarin,Zolvarin,MAT-20088,Inbound Air Freight - Temperature Controlled,Specialty Care,Bridgeholm Site
+2025,Renovex,Renovex,MAT-20068,Synthetic Peptide Concentrate,Specialty Care,Kingsley Site
+2025,Florivex,Florivex,MAT-20065,Clinical Trial Kit,Pharmaceuticals,Meadowbrook Site
+2024,Dermafyx,Dermafyx,MAT-20011,HDPE Bottle 100ml,Vaccines,Northfield Site
+2025,Renovex,Renovex,MAT-20103,Enteric Coating Blend,Pharmaceuticals,Fenwick Site
+2026,Glucovex,Glucovex,MAT-20103,Enteric Coating Blend,Vaccines,Kingsley Site
+2024,Calmera,Calmera,MAT-20036,Microcrystalline Cellulose,Specialty Care,Northfield Site
+2024,Advelra,Advelra,MAT-20145,Patient Information Leaflet,Consumer Healthcare,Meadowbrook Site
+2026,Brenzolix,Brenzolix,MAT-20029,Lab Reagent Kit,Specialty Care,Eastgate Site
+2026,Ulvatrix,Ulvatrix,MAT-20088,Inbound Air Freight - Temperature Controlled,Consumer Healthcare,Solaris Park Site
+2025,Brenzolix,Brenzolix,MAT-20105,Isopropyl Alcohol,Pharmaceuticals,Solaris Park Site
+2024,Kaldrin,Kaldrin,MAT-20058,Cold Storage - Warehouse Pallet Slot,Vaccines,Bridgeholm Site
+2025,Torvexa,Torvexa,MAT-20020,Contract Packaging Service,Vaccines,Bridgeholm Site
+2024,Quilava,Quilava,MAT-20084,Custom Synthesis Batch,Specialty Care,Fenwick Site
+2025,Wintrelis,Wintrelis,MAT-20073,Water for Injection,Vaccines,Eastgate Site
+2024,Kaldrin,Kaldrin,MAT-20076,Prefilled Syringe 1ml,Vaccines,Northfield Site
+2024,Renovex,Renovex,MAT-20103,Enteric Coating Blend,Consumer Healthcare,Solaris Park Site
+2026,Advelra,Advelra,MAT-20054,Inbound Road Freight - Pallet,Specialty Care,Clearwater Site
+2024,Ulvatrix,Ulvatrix,MAT-20025,Cold Storage - Warehouse Pallet Slot,Consumer Healthcare,Bridgeholm Site
+2025,Ulvatrix,Ulvatrix,MAT-20066,Ibuprofen API,Pharmaceuticals,Fenwick Site
+2026,Norvelin,Norvelin,MAT-20052,Aseptic Fill & Finish Service,Pharmaceuticals,Rivermill Site
+2026,Quilava,Quilava,MAT-20113,Pressure-sensitive Label,Vaccines,Northfield Site
+2026,Pulmatrix,Pulmatrix,MAT-20099,Ibuprofen API,Specialty Care,Rivermill Site
+2025,Renovex,Renovex,MAT-20059,Stainless Steel Reactor Component,Specialty Care,Eastgate Site
+2026,Zolvarin,Zolvarin,MAT-20044,HDPE Bottle 250ml,Pharmaceuticals,Meadowbrook Site
+2025,Hemazol,Hemazol,MAT-20064,Comparator Drug Batch,Consumer Healthcare,Rivermill Site
+2024,Xantivo,Xantivo,MAT-20032,Clinical Trial Kit,Vaccines,Rivermill Site
+2024,Wintrelis,Wintrelis,MAT-20003,Microcrystalline Cellulose,Consumer Healthcare,Clearwater Site
+2024,Dermafyx,Dermafyx,MAT-20066,Ibuprofen API,Specialty Care,Ashford Site
+2024,Quilava,Quilava,MAT-20075,PVC Blister Pack,Pharmaceuticals,Ashford Site
+2024,Mendovia,Mendovia,MAT-20100,Recombinant Protein Concentrate,Specialty Care,Rivermill Site
+2026,Zolvarin,Zolvarin,MAT-20056,Inbound Ocean Freight - Container,Pharmaceuticals,Eastgate Site
+2025,Xantivo,Xantivo,MAT-20030,Single-use Bioreactor Bag,Vaccines,Bridgeholm Site
+2024,Quilava,Quilava,MAT-20075,PVC Blister Pack,Specialty Care,Northfield Site
+2025,Glucovex,Glucovex,MAT-20069,Microcrystalline Cellulose,Vaccines,Meadowbrook Site
+2025,Kaldrin,Kaldrin,MAT-20103,Enteric Coating Blend,Consumer Healthcare,Bridgeholm Site
+2024,Ulvatrix,Ulvatrix,MAT-20086,Contract Packaging Service,Specialty Care,Clearwater Site
+2025,Advelra,Advelra,MAT-20088,Inbound Air Freight - Temperature Controlled,Specialty Care,Eastgate Site
+2024,Zolvarin,Zolvarin,MAT-20139,Water for Injection,Pharmaceuticals,Northfield Site
+2025,Xantivo,Xantivo,MAT-20008,Glass Vial 2ml,Consumer Healthcare,Rivermill Site
+2026,Zolvarin,Zolvarin,MAT-20024,Cold Chain Transport - 2-8C,Specialty Care,Northfield Site
+2026,Xantivo,Xantivo,MAT-20032,Clinical Trial Kit,Pharmaceuticals,Ashford Site
+2024,Xantivo,Xantivo,MAT-20000,Paracetamol API,Consumer Healthcare,Rivermill Site
+2025,Immunara,Immunara,MAT-20140,Freeze-dried Vaccine Vial,Vaccines,Meadowbrook Site
+2026,Brenzolix,Brenzolix,MAT-20065,Clinical Trial Kit,Consumer Healthcare,Bridgeholm Site
+2025,Advelra,Advelra,MAT-20142,Prefilled Syringe 1ml,Pharmaceuticals,Rivermill Site
+2025,Lumivax,Lumivax,MAT-20013,Patient Information Leaflet,Consumer Healthcare,Kingsley Site
+2026,Norvelin,Norvelin,MAT-20144,Folding Carton,Vaccines,Kingsley Site
+2024,Wintrelis,Wintrelis,MAT-20077,HDPE Bottle 100ml,Pharmaceuticals,Ashford Site
+2024,Quilava,Quilava,MAT-20084,Custom Synthesis Batch,Consumer Healthcare,Northfield Site
+2024,Torvexa,Torvexa,MAT-20015,Corrugated Shipping Case,Consumer Healthcare,Fenwick Site
+2024,Kaldrin,Kaldrin,MAT-20035,Synthetic Peptide Concentrate,Consumer Healthcare,Northfield Site
+2024,Zolvarin,Zolvarin,MAT-20056,Inbound Ocean Freight - Container,Vaccines,Rivermill Site
+2024,Sentrivax,Sentrivax,MAT-20034,Recombinant Protein Concentrate,Specialty Care,Clearwater Site
+2024,Zolvarin,Zolvarin,MAT-20076,Prefilled Syringe 1ml,Vaccines,Bridgeholm Site
+2026,Mendovia,Mendovia,MAT-20020,Contract Packaging Service,Specialty Care,Meadowbrook Site
+2026,Vezanta,Vezanta,MAT-20113,Pressure-sensitive Label,Specialty Care,Bridgeholm Site
+2024,Sentrivax,Sentrivax,MAT-20021,Inbound Road Freight - Pallet,Specialty Care,Fenwick Site
+2026,Florivex,Florivex,MAT-20061,HPLC Consumable Kit,Consumer Healthcare,Rivermill Site
+2025,Norvelin,Norvelin,MAT-20008,Glass Vial 2ml,Specialty Care,Kingsley Site
+2024,Glucovex,Glucovex,MAT-20069,Microcrystalline Cellulose,Vaccines,Fenwick Site
+2025,Yenzura,Yenzura,MAT-20072,Ethanol (Pharma Grade),Vaccines,Northfield Site
+2026,Glucovex,Glucovex,MAT-20015,Corrugated Shipping Case,Consumer Healthcare,Meadowbrook Site
+2026,Advelra,Advelra,MAT-20088,Inbound Air Freight - Temperature Controlled,Pharmaceuticals,Clearwater Site
+2024,Quilava,Quilava,MAT-20013,Patient Information Leaflet,Specialty Care,Northfield Site
+2024,Ulvatrix,Ulvatrix,MAT-20046,Patient Information Leaflet,Pharmaceuticals,Kingsley Site
+2026,Xantivo,Xantivo,MAT-20030,Single-use Bioreactor Bag,Consumer Healthcare,Solaris Park Site
+2024,Calmera,Calmera,MAT-20121,Inbound Air Freight - Temperature Controlled,Vaccines,Clearwater Site
+2024,Norvelin,Norvelin,MAT-20040,Water for Injection,Consumer Healthcare,Bridgeholm Site
+2026,Immunara,Immunara,MAT-20049,Stretch Pallet Wrap,Pharmaceuticals,Fenwick Site
+2025,Florivex,Florivex,MAT-20092,Stainless Steel Reactor Component,Vaccines,Rivermill Site
+2026,Dermafyx,Dermafyx,MAT-20039,Ethanol (Pharma Grade),Pharmaceuticals,Meadowbrook Site
+2026,Pulmatrix,Pulmatrix,MAT-20025,Cold Storage - Warehouse Pallet Slot,Vaccines,Northfield Site
+2024,Lumivax,Lumivax,MAT-20114,Reusable Shipping Tote,Pharmaceuticals,Ashford Site
+2025,Quilava,Quilava,MAT-20113,Pressure-sensitive Label,Consumer Healthcare,Meadowbrook Site
+2026,Quilava,Quilava,MAT-20084,Custom Synthesis Batch,Vaccines,Solaris Park Site
+2025,Calmera,Calmera,MAT-20131,Clinical Trial Kit,Consumer Healthcare,Clearwater Site
+2024,Yenzura,Yenzura,MAT-20016,Stretch Pallet Wrap,Vaccines,Kingsley Site
+2025,Immunara,Immunara,MAT-20140,Freeze-dried Vaccine Vial,Specialty Care,Clearwater Site
+2025,Estrivon,Estrivon,MAT-20103,Enteric Coating Blend,Vaccines,Fenwick Site
+2026,Xantivo,Xantivo,MAT-20008,Glass Vial 2ml,Pharmaceuticals,Fenwick Site
+2024,Hemazol,Hemazol,MAT-20109,Prefilled Syringe 2.25ml,Specialty Care,Rivermill Site
+2026,Yenzura,Yenzura,MAT-20016,Stretch Pallet Wrap,Pharmaceuticals,Eastgate Site
+2025,Mendovia,Mendovia,MAT-20020,Contract Packaging Service,Specialty Care,Northfield Site
+2025,Glucovex,Glucovex,MAT-20103,Enteric Coating Blend,Specialty Care,Northfield Site
+2024,Lumivax,Lumivax,MAT-20114,Reusable Shipping Tote,Vaccines,Northfield Site
+2025,Norvelin,Norvelin,MAT-20052,Aseptic Fill & Finish Service,Specialty Care,Northfield Site
+2024,Mendovia,Mendovia,MAT-20012,Folding Carton,Pharmaceuticals,Clearwater Site
+2024,Immunara,Immunara,MAT-20077,HDPE Bottle 100ml,Pharmaceuticals,Northfield Site
+2026,Glucovex,Glucovex,MAT-20038,Methylparaben,Pharmaceuticals,Eastgate Site
+2026,Brenzolix,Brenzolix,MAT-20071,Sodium Benzoate,Pharmaceuticals,Eastgate Site
+2024,Mendovia,Mendovia,MAT-20113,Pressure-sensitive Label,Consumer Healthcare,Fenwick Site
+2026,Florivex,Florivex,MAT-20092,Stainless Steel Reactor Component,Specialty Care,Fenwick Site
+2025,Torvexa,Torvexa,MAT-20054,Inbound Road Freight - Pallet,Consumer Healthcare,Solaris Park Site
+2026,Dermafyx,Dermafyx,MAT-20085,Aseptic Fill & Finish Service,Specialty Care,Northfield Site
+2026,Brenzolix,Brenzolix,MAT-20105,Isopropyl Alcohol,Specialty Care,Northfield Site
+2025,Estrivon,Estrivon,MAT-20056,Inbound Ocean Freight - Container,Specialty Care,Meadowbrook Site
+2025,Wintrelis,Wintrelis,MAT-20073,Water for Injection,Consumer Healthcare,Kingsley Site
+2024,Estrivon,Estrivon,MAT-20056,Inbound Ocean Freight - Container,Consumer Healthcare,Bridgeholm Site
+2025,Ulvatrix,Ulvatrix,MAT-20086,Contract Packaging Service,Consumer Healthcare,Solaris Park Site
+2024,Renovex,Renovex,MAT-20043,Prefilled Syringe 2.25ml,Pharmaceuticals,Bridgeholm Site
+2026,Dermafyx,Dermafyx,MAT-20039,Ethanol (Pharma Grade),Consumer Healthcare,Fenwick Site
+2024,Renovex,Renovex,MAT-20094,HPLC Consumable Kit,Consumer Healthcare,Fenwick Site
+2025,Norvelin,Norvelin,MAT-20052,Aseptic Fill & Finish Service,Vaccines,Kingsley Site
+2025,Wintrelis,Wintrelis,MAT-20002,Synthetic Peptide Concentrate,Pharmaceuticals,Ashford Site
+2025,Ulvatrix,Ulvatrix,MAT-20046,Patient Information Leaflet,Consumer Healthcare,Clearwater Site
+2024,Norvelin,Norvelin,MAT-20052,Aseptic Fill & Finish Service,Specialty Care,Rivermill Site
+2024,Ostreva,Ostreva,MAT-20010,Prefilled Syringe 1ml,Specialty Care,Northfield Site
+2024,Pulmatrix,Pulmatrix,MAT-20118,Aseptic Fill & Finish Service,Specialty Care,Eastgate Site
+2025,Zolvarin,Zolvarin,MAT-20091,Cold Storage - Warehouse Pallet Slot,Pharmaceuticals,Eastgate Site
+2025,Glucovex,Glucovex,MAT-20038,Methylparaben,Consumer Healthcare,Bridgeholm Site
+2024,Mendovia,Mendovia,MAT-20070,Film Coating Powder,Consumer Healthcare,Solaris Park Site
+2024,Wintrelis,Wintrelis,MAT-20012,Folding Carton,Specialty Care,Solaris Park Site
+2026,Wintrelis,Wintrelis,MAT-20012,Folding Carton,Specialty Care,Ashford Site
+2025,Dermafyx,Dermafyx,MAT-20039,Ethanol (Pharma Grade),Pharmaceuticals,Fenwick Site
+2025,Renovex,Renovex,MAT-20045,Corrugated Shipping Box,Consumer Healthcare,Eastgate Site
+2025,Florivex,Florivex,MAT-20112,Patient Information Leaflet,Pharmaceuticals,Solaris Park Site
+2026,Hemazol,Hemazol,MAT-20140,Freeze-dried Vaccine Vial,Consumer Healthcare,Ashford Site
+2025,Torvexa,Torvexa,MAT-20015,Corrugated Shipping Case,Specialty Care,Meadowbrook Site
+2026,Yenzura,Yenzura,MAT-20016,Stretch Pallet Wrap,Vaccines,Rivermill Site
+2025,Wintrelis,Wintrelis,MAT-20003,Microcrystalline Cellulose,Pharmaceuticals,Fenwick Site
+2025,Yenzura,Yenzura,MAT-20129,Pipette Tips (case),Pharmaceuticals,Bridgeholm Site
+2026,Vezanta,Vezanta,MAT-20007,Water for Injection,Specialty Care,Clearwater Site
+2025,Yenzura,Yenzura,MAT-20018,Custom Synthesis Batch,Vaccines,Clearwater Site
+2025,Lumivax,Lumivax,MAT-20084,Custom Synthesis Batch,Vaccines,Solaris Park Site
+2026,Lumivax,Lumivax,MAT-20114,Reusable Shipping Tote,Consumer Healthcare,Bridgeholm Site
+2025,Pulmatrix,Pulmatrix,MAT-20004,Enteric Coating Blend,Pharmaceuticals,Fenwick Site
+2025,Wintrelis,Wintrelis,MAT-20016,Stretch Pallet Wrap,Vaccines,Solaris Park Site
+2026,Yenzura,Yenzura,MAT-20018,Custom Synthesis Batch,Specialty Care,Rivermill Site
+2025,Sentrivax,Sentrivax,MAT-20034,Recombinant Protein Concentrate,Pharmaceuticals,Rivermill Site
+2024,Torvexa,Torvexa,MAT-20040,Water for Injection,Pharmaceuticals,Kingsley Site
+2025,Mendovia,Mendovia,MAT-20090,Cold Chain Transport - 2-8C,Vaccines,Solaris Park Site
+2024,Glucovex,Glucovex,MAT-20069,Microcrystalline Cellulose,Specialty Care,Solaris Park Site
+2024,Wintrelis,Wintrelis,MAT-20100,Recombinant Protein Concentrate,Specialty Care,Meadowbrook Site
+2024,Immunara,Immunara,MAT-20128,Lab Reagent Kit,Vaccines,Fenwick Site
+2024,Hemazol,Hemazol,MAT-20056,Inbound Ocean Freight - Container,Specialty Care,Clearwater Site
+2026,Ulvatrix,Ulvatrix,MAT-20066,Ibuprofen API,Consumer Healthcare,Eastgate Site
+2025,Pulmatrix,Pulmatrix,MAT-20021,Inbound Road Freight - Pallet,Vaccines,Solaris Park Site
+2026,Yenzura,Yenzura,MAT-20016,Stretch Pallet Wrap,Vaccines,Northfield Site
+2024,Estrivon,Estrivon,MAT-20119,Contract Packaging Service,Vaccines,Northfield Site
+2024,Torvexa,Torvexa,MAT-20012,Folding Carton,Pharmaceuticals,Rivermill Site
+2026,Ostreva,Ostreva,MAT-20027,Filling Line Spare Parts,Vaccines,Eastgate Site
+2025,Renovex,Renovex,MAT-20094,HPLC Consumable Kit,Vaccines,Solaris Park Site
+2025,Kaldrin,Kaldrin,MAT-20138,Isopropyl Alcohol,Pharmaceuticals,Kingsley Site
+2026,Torvexa,Torvexa,MAT-20040,Water for Injection,Pharmaceuticals,Ashford Site
+2025,Lumivax,Lumivax,MAT-20084,Custom Synthesis Batch,Consumer Healthcare,Meadowbrook Site
+2025,Xantivo,Xantivo,MAT-20000,Paracetamol API,Specialty Care,Northfield Site
+2025,Pulmatrix,Pulmatrix,MAT-20099,Ibuprofen API,Pharmaceuticals,Solaris Park Site
+2024,Sentrivax,Sentrivax,MAT-20000,Paracetamol API,Pharmaceuticals,Northfield Site
+2025,Xantivo,Xantivo,MAT-20089,Inbound Ocean Freight - Container,Vaccines,Solaris Park Site
+2024,Wintrelis,Wintrelis,MAT-20002,Synthetic Peptide Concentrate,Specialty Care,Eastgate Site
+2025,Estrivon,Estrivon,MAT-20046,Patient Information Leaflet,Specialty Care,Ashford Site
+2024,Glucovex,Glucovex,MAT-20038,Methylparaben,Specialty Care,Bridgeholm Site
+2024,Xantivo,Xantivo,MAT-20008,Glass Vial 2ml,Specialty Care,Meadowbrook Site
+2025,Yenzura,Yenzura,MAT-20129,Pipette Tips (case),Specialty Care,Northfield Site
+2026,Glucovex,Glucovex,MAT-20135,Microcrystalline Cellulose,Pharmaceuticals,Solaris Park Site
+2024,Norvelin,Norvelin,MAT-20144,Folding Carton,Consumer Healthcare,Eastgate Site
+2026,Ulvatrix,Ulvatrix,MAT-20086,Contract Packaging Service,Vaccines,Meadowbrook Site
+2026,Calmera,Calmera,MAT-20022,Inbound Air Freight - Temperature Controlled,Specialty Care,Meadowbrook Site
+2024,Yenzura,Yenzura,MAT-20072,Ethanol (Pharma Grade),Specialty Care,Meadowbrook Site
+2026,Advelra,Advelra,MAT-20146,Pressure-sensitive Label,Specialty Care,Fenwick Site
+2024,Renovex,Renovex,MAT-20080,Pressure-sensitive Label,Specialty Care,Clearwater Site
+2025,Estrivon,Estrivon,MAT-20017,Fermentation Batch Service,Pharmaceuticals,Clearwater Site
+2024,Florivex,Florivex,MAT-20054,Inbound Road Freight - Pallet,Vaccines,Clearwater Site
+2026,Glucovex,Glucovex,MAT-20069,Microcrystalline Cellulose,Consumer Healthcare,Clearwater Site
+2025,Immunara,Immunara,MAT-20045,Corrugated Shipping Box,Pharmaceuticals,Meadowbrook Site
+2025,Torvexa,Torvexa,MAT-20012,Folding Carton,Consumer Healthcare,Kingsley Site
+2026,Quilava,Quilava,MAT-20013,Patient Information Leaflet,Vaccines,Rivermill Site
+2024,Renovex,Renovex,MAT-20068,Synthetic Peptide Concentrate,Consumer Healthcare,Kingsley Site
+2025,Calmera,Calmera,MAT-20018,Custom Synthesis Batch,Specialty Care,Northfield Site
+2026,Torvexa,Torvexa,MAT-20054,Inbound Road Freight - Pallet,Consumer Healthcare,Fenwick Site
+2025,Advelra,Advelra,MAT-20119,Contract Packaging Service,Vaccines,Clearwater Site
+2025,Zolvarin,Zolvarin,MAT-20044,HDPE Bottle 250ml,Vaccines,Eastgate Site
+2026,Estrivon,Estrivon,MAT-20103,Enteric Coating Blend,Consumer Healthcare,Clearwater Site
+2024,Dermafyx,Dermafyx,MAT-20066,Ibuprofen API,Vaccines,Bridgeholm Site
+2026,Torvexa,Torvexa,MAT-20086,Contract Packaging Service,Pharmaceuticals,Rivermill Site
+2026,Lumivax,Lumivax,MAT-20013,Patient Information Leaflet,Consumer Healthcare,Solaris Park Site
+2024,Immunara,Immunara,MAT-20138,Isopropyl Alcohol,Pharmaceuticals,Eastgate Site
+2025,Wintrelis,Wintrelis,MAT-20077,HDPE Bottle 100ml,Vaccines,Eastgate Site
+2026,Glucovex,Glucovex,MAT-20103,Enteric Coating Blend,Consumer Healthcare,Ashford Site
+2024,Kaldrin,Kaldrin,MAT-20138,Isopropyl Alcohol,Vaccines,Fenwick Site
+2026,Norvelin,Norvelin,MAT-20046,Patient Information Leaflet,Specialty Care,Rivermill Site
+2026,Renovex,Renovex,MAT-20021,Inbound Road Freight - Pallet,Vaccines,Eastgate Site
+2025,Glucovex,Glucovex,MAT-20103,Enteric Coating Blend,Specialty Care,Northfield Site
+2026,Lumivax,Lumivax,MAT-20013,Patient Information Leaflet,Pharmaceuticals,Clearwater Site
+2024,Renovex,Renovex,MAT-20080,Pressure-sensitive Label,Pharmaceuticals,Solaris Park Site
+2026,Xantivo,Xantivo,MAT-20089,Inbound Ocean Freight - Container,Consumer Healthcare,Clearwater Site
+2025,Kaldrin,Kaldrin,MAT-20138,Isopropyl Alcohol,Consumer Healthcare,Clearwater Site
+2026,Advelra,Advelra,MAT-20142,Prefilled Syringe 1ml,Specialty Care,Ashford Site
+2025,Ulvatrix,Ulvatrix,MAT-20025,Cold Storage - Warehouse Pallet Slot,Specialty Care,Solaris Park Site
+2026,Wintrelis,Wintrelis,MAT-20100,Recombinant Protein Concentrate,Pharmaceuticals,Kingsley Site
+2024,Pulmatrix,Pulmatrix,MAT-20021,Inbound Road Freight - Pallet,Specialty Care,Rivermill Site
+2026,Brenzolix,Brenzolix,MAT-20065,Clinical Trial Kit,Vaccines,Clearwater Site
+2025,Calmera,Calmera,MAT-20137,Methylparaben,Vaccines,Northfield Site
+2025,Dermafyx,Dermafyx,MAT-20011,HDPE Bottle 100ml,Consumer Healthcare,Fenwick Site
+2025,Yenzura,Yenzura,MAT-20018,Custom Synthesis Batch,Consumer Healthcare,Fenwick Site
+2026,Quilava,Quilava,MAT-20013,Patient Information Leaflet,Specialty Care,Fenwick Site
+2025,Lumivax,Lumivax,MAT-20114,Reusable Shipping Tote,Consumer Healthcare,Rivermill Site
+2025,Florivex,Florivex,MAT-20065,Clinical Trial Kit,Specialty Care,Meadowbrook Site
+2024,Advelra,Advelra,MAT-20036,Microcrystalline Cellulose,Specialty Care,Bridgeholm Site
+2025,Pulmatrix,Pulmatrix,MAT-20004,Enteric Coating Blend,Specialty Care,Bridgeholm Site
+2025,Estrivon,Estrivon,MAT-20119,Contract Packaging Service,Pharmaceuticals,Fenwick Site
+2025,Calmera,Calmera,MAT-20137,Methylparaben,Consumer Healthcare,Meadowbrook Site
+2024,Lumivax,Lumivax,MAT-20085,Aseptic Fill & Finish Service,Vaccines,Meadowbrook Site
+2025,Kaldrin,Kaldrin,MAT-20058,Cold Storage - Warehouse Pallet Slot,Specialty Care,Meadowbrook Site
+2024,Advelra,Advelra,MAT-20119,Contract Packaging Service,Vaccines,Bridgeholm Site
+2026,Ostreva,Ostreva,MAT-20126,Filling Line Spare Parts,Pharmaceuticals,Bridgeholm Site
+2024,Zolvarin,Zolvarin,MAT-20139,Water for Injection,Specialty Care,Northfield Site
+2024,Yenzura,Yenzura,MAT-20018,Custom Synthesis Batch,Pharmaceuticals,Solaris Park Site
+2024,Ostreva,Ostreva,MAT-20083,Fermentation Batch Service,Consumer Healthcare,Meadowbrook Site
+2024,Estrivon,Estrivon,MAT-20017,Fermentation Batch Service,Specialty Care,Northfield Site
+2024,Florivex,Florivex,MAT-20061,HPLC Consumable Kit,Consumer Healthcare,Northfield Site
+2026,Sentrivax,Sentrivax,MAT-20091,Cold Storage - Warehouse Pallet Slot,Vaccines,Northfield Site
+2025,Ulvatrix,Ulvatrix,MAT-20088,Inbound Air Freight - Temperature Controlled,Vaccines,Meadowbrook Site
+2026,Wintrelis,Wintrelis,MAT-20016,Stretch Pallet Wrap,Specialty Care,Rivermill Site
+2025,Ulvatrix,Ulvatrix,MAT-20025,Cold Storage - Warehouse Pallet Slot,Specialty Care,Kingsley Site
+2024,Quilava,Quilava,MAT-20113,Pressure-sensitive Label,Consumer Healthcare,Eastgate Site
+2025,Sentrivax,Sentrivax,MAT-20000,Paracetamol API,Vaccines,Fenwick Site
+2026,Norvelin,Norvelin,MAT-20144,Folding Carton,Pharmaceuticals,Meadowbrook Site
+2024,Lumivax,Lumivax,MAT-20114,Reusable Shipping Tote,Vaccines,Fenwick Site
+2025,Zolvarin,Zolvarin,MAT-20088,Inbound Air Freight - Temperature Controlled,Consumer Healthcare,Bridgeholm Site
+2026,Advelra,Advelra,MAT-20142,Prefilled Syringe 1ml,Specialty Care,Solaris Park Site
+2025,Torvexa,Torvexa,MAT-20015,Corrugated Shipping Case,Consumer Healthcare,Kingsley Site
+2026,Vezanta,Vezanta,MAT-20113,Pressure-sensitive Label,Vaccines,Clearwater Site
+2024,Advelra,Advelra,MAT-20105,Isopropyl Alcohol,Consumer Healthcare,Eastgate Site
+2024,Vezanta,Vezanta,MAT-20118,Aseptic Fill & Finish Service,Pharmaceuticals,Fenwick Site
+2026,Renovex,Renovex,MAT-20006,Ethanol (Pharma Grade),Consumer Healthcare,Bridgeholm Site
+2026,Immunara,Immunara,MAT-20138,Isopropyl Alcohol,Specialty Care,Solaris Park Site
+2024,Kaldrin,Kaldrin,MAT-20058,Cold Storage - Warehouse Pallet Slot,Vaccines,Rivermill Site
+2026,Torvexa,Torvexa,MAT-20028,HPLC Consumable Kit,Specialty Care,Ashford Site
+2026,Kaldrin,Kaldrin,MAT-20103,Enteric Coating Blend,Specialty Care,Fenwick Site
+2025,Ulvatrix,Ulvatrix,MAT-20088,Inbound Air Freight - Temperature Controlled,Consumer Healthcare,Rivermill Site
+2025,Renovex,Renovex,MAT-20094,HPLC Consumable Kit,Vaccines,Solaris Park Site
+2026,Advelra,Advelra,MAT-20088,Inbound Air Freight - Temperature Controlled,Vaccines,Kingsley Site
+2026,Lumivax,Lumivax,MAT-20114,Reusable Shipping Tote,Consumer Healthcare,Rivermill Site
+2025,Torvexa,Torvexa,MAT-20040,Water for Injection,Vaccines,Solaris Park Site
+2025,Florivex,Florivex,MAT-20054,Inbound Road Freight - Pallet,Consumer Healthcare,Bridgeholm Site
+2026,Norvelin,Norvelin,MAT-20002,Synthetic Peptide Concentrate,Consumer Healthcare,Eastgate Site
+2025,Pulmatrix,Pulmatrix,MAT-20024,Cold Chain Transport - 2-8C,Consumer Healthcare,Bridgeholm Site
+2024,Glucovex,Glucovex,MAT-20015,Corrugated Shipping Case,Vaccines,Northfield Site
+2025,Norvelin,Norvelin,MAT-20052,Aseptic Fill & Finish Service,Vaccines,Rivermill Site
+2024,Mendovia,Mendovia,MAT-20020,Contract Packaging Service,Pharmaceuticals,Ashford Site
+2026,Sentrivax,Sentrivax,MAT-20021,Inbound Road Freight - Pallet,Consumer Healthcare,Eastgate Site
+2025,Norvelin,Norvelin,MAT-20138,Isopropyl Alcohol,Consumer Healthcare,Kingsley Site
+2025,Kaldrin,Kaldrin,MAT-20035,Synthetic Peptide Concentrate,Pharmaceuticals,Clearwater Site
+2024,Estrivon,Estrivon,MAT-20103,Enteric Coating Blend,Specialty Care,Eastgate Site
+2026,Hemazol,Hemazol,MAT-20064,Comparator Drug Batch,Pharmaceuticals,Ashford Site
+2026,Ulvatrix,Ulvatrix,MAT-20025,Cold Storage - Warehouse Pallet Slot,Pharmaceuticals,Eastgate Site
+2024,Florivex,Florivex,MAT-20065,Clinical Trial Kit,Pharmaceuticals,Northfield Site
+2025,Xantivo,Xantivo,MAT-20032,Clinical Trial Kit,Consumer Healthcare,Bridgeholm Site
+2026,Vezanta,Vezanta,MAT-20093,Filling Line Spare Parts,Pharmaceuticals,Bridgeholm Site
+2025,Immunara,Immunara,MAT-20140,Freeze-dried Vaccine Vial,Consumer Healthcare,Meadowbrook Site
+2026,Calmera,Calmera,MAT-20021,Inbound Road Freight - Pallet,Specialty Care,Ashford Site
+2025,Lumivax,Lumivax,MAT-20085,Aseptic Fill & Finish Service,Pharmaceuticals,Bridgeholm Site
+2026,Sentrivax,Sentrivax,MAT-20045,Corrugated Shipping Box,Specialty Care,Solaris Park Site
+2026,Pulmatrix,Pulmatrix,MAT-20059,Stainless Steel Reactor Component,Consumer Healthcare,Kingsley Site
+2025,Calmera,Calmera,MAT-20021,Inbound Road Freight - Pallet,Pharmaceuticals,Bridgeholm Site
+2025,Torvexa,Torvexa,MAT-20020,Contract Packaging Service,Specialty Care,Eastgate Site
+2026,Norvelin,Norvelin,MAT-20052,Aseptic Fill & Finish Service,Consumer Healthcare,Bridgeholm Site
+2025,Renovex,Renovex,MAT-20080,Pressure-sensitive Label,Vaccines,Bridgeholm Site
+2024,Advelra,Advelra,MAT-20036,Microcrystalline Cellulose,Specialty Care,Clearwater Site
+2024,Calmera,Calmera,MAT-20121,Inbound Air Freight - Temperature Controlled,Specialty Care,Rivermill Site
+2024,Florivex,Florivex,MAT-20061,HPLC Consumable Kit,Pharmaceuticals,Fenwick Site
+2024,Yenzura,Yenzura,MAT-20129,Pipette Tips (case),Vaccines,Kingsley Site
+2026,Vezanta,Vezanta,MAT-20007,Water for Injection,Specialty Care,Rivermill Site
+2024,Renovex,Renovex,MAT-20045,Corrugated Shipping Box,Specialty Care,Northfield Site
+2025,Norvelin,Norvelin,MAT-20008,Glass Vial 2ml,Pharmaceuticals,Rivermill Site
+2025,Brenzolix,Brenzolix,MAT-20105,Isopropyl Alcohol,Vaccines,Solaris Park Site
+2024,Quilava,Quilava,MAT-20013,Patient Information Leaflet,Vaccines,Clearwater Site
+2026,Sentrivax,Sentrivax,MAT-20034,Recombinant Protein Concentrate,Vaccines,Meadowbrook Site
+2026,Xantivo,Xantivo,MAT-20008,Glass Vial 2ml,Consumer Healthcare,Kingsley Site
+2024,Pulmatrix,Pulmatrix,MAT-20021,Inbound Road Freight - Pallet,Consumer Healthcare,Northfield Site
+2025,Ostreva,Ostreva,MAT-20010,Prefilled Syringe 1ml,Specialty Care,Bridgeholm Site
+2025,Ulvatrix,Ulvatrix,MAT-20126,Filling Line Spare Parts,Vaccines,Solaris Park Site
+2025,Lumivax,Lumivax,MAT-20114,Reusable Shipping Tote,Pharmaceuticals,Ashford Site
+2024,Pulmatrix,Pulmatrix,MAT-20059,Stainless Steel Reactor Component,Vaccines,Solaris Park Site
+2025,Dermafyx,Dermafyx,MAT-20011,HDPE Bottle 100ml,Consumer Healthcare,Northfield Site
+2025,Wintrelis,Wintrelis,MAT-20003,Microcrystalline Cellulose,Pharmaceuticals,Fenwick Site
+2026,Estrivon,Estrivon,MAT-20143,HDPE Bottle 250ml,Specialty Care,Kingsley Site
+2026,Ulvatrix,Ulvatrix,MAT-20112,Patient Information Leaflet,Consumer Healthcare,Meadowbrook Site
+2024,Immunara,Immunara,MAT-20049,Stretch Pallet Wrap,Consumer Healthcare,Bridgeholm Site
+2024,Sentrivax,Sentrivax,MAT-20000,Paracetamol API,Pharmaceuticals,Meadowbrook Site
+2025,Calmera,Calmera,MAT-20021,Inbound Road Freight - Pallet,Pharmaceuticals,Rivermill Site
+2024,Zolvarin,Zolvarin,MAT-20086,Contract Packaging Service,Consumer Healthcare,Northfield Site
+2025,Glucovex,Glucovex,MAT-20103,Enteric Coating Blend,Specialty Care,Rivermill Site
+2026,Lumivax,Lumivax,MAT-20114,Reusable Shipping Tote,Pharmaceuticals,Northfield Site
+2026,Torvexa,Torvexa,MAT-20028,HPLC Consumable Kit,Specialty Care,Kingsley Site
+2026,Pulmatrix,Pulmatrix,MAT-20026,Stainless Steel Reactor Component,Vaccines,Solaris Park Site
+2025,Vezanta,Vezanta,MAT-20140,Freeze-dried Vaccine Vial,Consumer Healthcare,Clearwater Site
+2025,Renovex,Renovex,MAT-20094,HPLC Consumable Kit,Specialty Care,Ashford Site
+2025,Torvexa,Torvexa,MAT-20015,Corrugated Shipping Case,Vaccines,Clearwater Site
+2025,Yenzura,Yenzura,MAT-20016,Stretch Pallet Wrap,Pharmaceuticals,Rivermill Site
+2024,Ostreva,Ostreva,MAT-20027,Filling Line Spare Parts,Consumer Healthcare,Ashford Site
+2025,Glucovex,Glucovex,MAT-20103,Enteric Coating Blend,Vaccines,Rivermill Site
+2026,Mendovia,Mendovia,MAT-20090,Cold Chain Transport - 2-8C,Consumer Healthcare,Ashford Site
+2024,Xantivo,Xantivo,MAT-20000,Paracetamol API,Specialty Care,Solaris Park Site
+2026,Dermafyx,Dermafyx,MAT-20039,Ethanol (Pharma Grade),Vaccines,Northfield Site
+2026,Estrivon,Estrivon,MAT-20143,HDPE Bottle 250ml,Consumer Healthcare,Bridgeholm Site
+2026,Mendovia,Mendovia,MAT-20092,Stainless Steel Reactor Component,Vaccines,Solaris Park Site
+2024,Hemazol,Hemazol,MAT-20049,Stretch Pallet Wrap,Pharmaceuticals,Clearwater Site
+2025,Yenzura,Yenzura,MAT-20129,Pipette Tips (case),Consumer Healthcare,Meadowbrook Site
+2024,Sentrivax,Sentrivax,MAT-20080,Pressure-sensitive Label,Specialty Care,Northfield Site
+2024,Pulmatrix,Pulmatrix,MAT-20118,Aseptic Fill & Finish Service,Consumer Healthcare,Clearwater Site
+2026,Quilava,Quilava,MAT-20113,Pressure-sensitive Label,Specialty Care,Eastgate Site
+2024,Yenzura,Yenzura,MAT-20016,Stretch Pallet Wrap,Consumer Healthcare,Bridgeholm Site
+2026,Kaldrin,Kaldrin,MAT-20058,Cold Storage - Warehouse Pallet Slot,Specialty Care,Meadowbrook Site
+2026,Yenzura,Yenzura,MAT-20129,Pipette Tips (case),Specialty Care,Rivermill Site
+2024,Pulmatrix,Pulmatrix,MAT-20129,Pipette Tips (case),Pharmaceuticals,Eastgate Site
+2024,Florivex,Florivex,MAT-20134,Synthetic Peptide Concentrate,Pharmaceuticals,Clearwater Site
+2026,Torvexa,Torvexa,MAT-20002,Synthetic Peptide Concentrate,Consumer Healthcare,Rivermill Site
+2025,Hemazol,Hemazol,MAT-20049,Stretch Pallet Wrap,Specialty Care,Clearwater Site
+2024,Xantivo,Xantivo,MAT-20089,Inbound Ocean Freight - Container,Vaccines,Ashford Site
+2025,Pulmatrix,Pulmatrix,MAT-20026,Stainless Steel Reactor Component,Vaccines,Kingsley Site
+2024,Yenzura,Yenzura,MAT-20018,Custom Synthesis Batch,Consumer Healthcare,Solaris Park Site
+2024,Glucovex,Glucovex,MAT-20107,Freeze-dried Vaccine Vial,Specialty Care,Fenwick Site
+2024,Yenzura,Yenzura,MAT-20018,Custom Synthesis Batch,Vaccines,Rivermill Site
+2024,Sentrivax,Sentrivax,MAT-20080,Pressure-sensitive Label,Specialty Care,Ashford Site
+2024,Pulmatrix,Pulmatrix,MAT-20099,Ibuprofen API,Specialty Care,Clearwater Site
+2024,Ostreva,Ostreva,MAT-20083,Fermentation Batch Service,Vaccines,Fenwick Site
+2025,Yenzura,Yenzura,MAT-20072,Ethanol (Pharma Grade),Consumer Healthcare,Eastgate Site
+2024,Brenzolix,Brenzolix,MAT-20071,Sodium Benzoate,Vaccines,Solaris Park Site
+2026,Immunara,Immunara,MAT-20077,HDPE Bottle 100ml,Pharmaceuticals,Rivermill Site
+2026,Glucovex,Glucovex,MAT-20015,Corrugated Shipping Case,Specialty Care,Bridgeholm Site
+2025,Hemazol,Hemazol,MAT-20064,Comparator Drug Batch,Consumer Healthcare,Kingsley Site
+2024,Yenzura,Yenzura,MAT-20129,Pipette Tips (case),Specialty Care,Ashford Site
+2024,Ulvatrix,Ulvatrix,MAT-20008,Glass Vial 2ml,Vaccines,Meadowbrook Site
+2025,Immunara,Immunara,MAT-20138,Isopropyl Alcohol,Consumer Healthcare,Meadowbrook Site
+2026,Advelra,Advelra,MAT-20133,Monoclonal Antibody Bulk,Vaccines,Solaris Park Site
+2025,Zolvarin,Zolvarin,MAT-20024,Cold Chain Transport - 2-8C,Specialty Care,Meadowbrook Site
+2025,Norvelin,Norvelin,MAT-20046,Patient Information Leaflet,Consumer Healthcare,Eastgate Site
+2024,Norvelin,Norvelin,MAT-20040,Water for Injection,Specialty Care,Solaris Park Site
+2024,Quilava,Quilava,MAT-20099,Ibuprofen API,Vaccines,Rivermill Site
+2026,Torvexa,Torvexa,MAT-20020,Contract Packaging Service,Specialty Care,Kingsley Site
+2025,Vezanta,Vezanta,MAT-20012,Folding Carton,Vaccines,Eastgate Site
+2026,Quilava,Quilava,MAT-20099,Ibuprofen API,Specialty Care,Meadowbrook Site
+2025,Calmera,Calmera,MAT-20018,Custom Synthesis Batch,Pharmaceuticals,Northfield Site
+2026,Glucovex,Glucovex,MAT-20135,Microcrystalline Cellulose,Pharmaceuticals,Eastgate Site
+2025,Yenzura,Yenzura,MAT-20016,Stretch Pallet Wrap,Pharmaceuticals,Solaris Park Site
+2025,Immunara,Immunara,MAT-20045,Corrugated Shipping Box,Consumer Healthcare,Bridgeholm Site
+2025,Norvelin,Norvelin,MAT-20052,Aseptic Fill & Finish Service,Vaccines,Bridgeholm Site
+2024,Sentrivax,Sentrivax,MAT-20045,Corrugated Shipping Box,Consumer Healthcare,Ashford Site
+2024,Zolvarin,Zolvarin,MAT-20086,Contract Packaging Service,Pharmaceuticals,Meadowbrook Site
+2025,Mendovia,Mendovia,MAT-20085,Aseptic Fill & Finish Service,Pharmaceuticals,Fenwick Site
+2025,Wintrelis,Wintrelis,MAT-20073,Water for Injection,Vaccines,Eastgate Site
+2024,Mendovia,Mendovia,MAT-20070,Film Coating Powder,Consumer Healthcare,Kingsley Site
+2026,Pulmatrix,Pulmatrix,MAT-20004,Enteric Coating Blend,Specialty Care,Kingsley Site
+2024,Lumivax,Lumivax,MAT-20084,Custom Synthesis Batch,Vaccines,Northfield Site
+2024,Kaldrin,Kaldrin,MAT-20035,Synthetic Peptide Concentrate,Consumer Healthcare,Meadowbrook Site
+2025,Hemazol,Hemazol,MAT-20064,Comparator Drug Batch,Specialty Care,Clearwater Site
+2026,Dermafyx,Dermafyx,MAT-20085,Aseptic Fill & Finish Service,Pharmaceuticals,Bridgeholm Site
+2026,Mendovia,Mendovia,MAT-20113,Pressure-sensitive Label,Pharmaceuticals,Rivermill Site
+2026,Yenzura,Yenzura,MAT-20018,Custom Synthesis Batch,Vaccines,Rivermill Site
+2024,Kaldrin,Kaldrin,MAT-20035,Synthetic Peptide Concentrate,Pharmaceuticals,Fenwick Site
+2024,Calmera,Calmera,MAT-20051,Custom Synthesis Batch,Vaccines,Clearwater Site
+2026,Quilava,Quilava,MAT-20099,Ibuprofen API,Vaccines,Rivermill Site
+2025,Advelra,Advelra,MAT-20088,Inbound Air Freight - Temperature Controlled,Pharmaceuticals,Bridgeholm Site
+2024,Pulmatrix,Pulmatrix,MAT-20026,Stainless Steel Reactor Component,Specialty Care,Bridgeholm Site
+2025,Lumivax,Lumivax,MAT-20013,Patient Information Leaflet,Vaccines,Fenwick Site
+2025,Zolvarin,Zolvarin,MAT-20076,Prefilled Syringe 1ml,Specialty Care,Bridgeholm Site
+2024,Vezanta,Vezanta,MAT-20033,Paracetamol API,Specialty Care,Kingsley Site
+2024,Wintrelis,Wintrelis,MAT-20100,Recombinant Protein Concentrate,Pharmaceuticals,Fenwick Site
+2024,Immunara,Immunara,MAT-20045,Corrugated Shipping Box,Vaccines,Northfield Site
+2024,Norvelin,Norvelin,MAT-20040,Water for Injection,Vaccines,Solaris Park Site
+2024,Brenzolix,Brenzolix,MAT-20105,Isopropyl Alcohol,Specialty Care,Fenwick Site
+2026,Vezanta,Vezanta,MAT-20012,Folding Carton,Pharmaceuticals,Fenwick Site
+2024,Estrivon,Estrivon,MAT-20056,Inbound Ocean Freight - Container,Pharmaceuticals,Rivermill Site
+2024,Kaldrin,Kaldrin,MAT-20058,Cold Storage - Warehouse Pallet Slot,Specialty Care,Clearwater Site
+2024,Quilava,Quilava,MAT-20084,Custom Synthesis Batch,Consumer Healthcare,Rivermill Site
+2025,Immunara,Immunara,MAT-20045,Corrugated Shipping Box,Vaccines,Northfield Site
+2025,Dermafyx,Dermafyx,MAT-20039,Ethanol (Pharma Grade),Vaccines,Solaris Park Site
+2026,Yenzura,Yenzura,MAT-20072,Ethanol (Pharma Grade),Vaccines,Eastgate Site
+2025,Estrivon,Estrivon,MAT-20143,HDPE Bottle 250ml,Pharmaceuticals,Fenwick Site
+2026,Hemazol,Hemazol,MAT-20109,Prefilled Syringe 2.25ml,Vaccines,Eastgate Site
+2025,Brenzolix,Brenzolix,MAT-20029,Lab Reagent Kit,Vaccines,Northfield Site
+2026,Dermafyx,Dermafyx,MAT-20066,Ibuprofen API,Pharmaceuticals,Rivermill Site
+2024,Zolvarin,Zolvarin,MAT-20044,HDPE Bottle 250ml,Consumer Healthcare,Solaris Park Site
+2026,Hemazol,Hemazol,MAT-20009,Alu-Alu Blister Pack,Vaccines,Solaris Park Site
+2024,Vezanta,Vezanta,MAT-20012,Folding Carton,Vaccines,Bridgeholm Site
+2024,Norvelin,Norvelin,MAT-20138,Isopropyl Alcohol,Vaccines,Eastgate Site
+2026,Hemazol,Hemazol,MAT-20049,Stretch Pallet Wrap,Consumer Healthcare,Clearwater Site
+2025,Wintrelis,Wintrelis,MAT-20055,Inbound Air Freight - Temperature Controlled,Vaccines,Solaris Park Site
+2024,Kaldrin,Kaldrin,MAT-20035,Synthetic Peptide Concentrate,Specialty Care,Meadowbrook Site
+2025,Zolvarin,Zolvarin,MAT-20088,Inbound Air Freight - Temperature Controlled,Specialty Care,Northfield Site
+2025,Florivex,Florivex,MAT-20134,Synthetic Peptide Concentrate,Specialty Care,Clearwater Site
+2025,Glucovex,Glucovex,MAT-20107,Freeze-dried Vaccine Vial,Pharmaceuticals,Kingsley Site
+2024,Mendovia,Mendovia,MAT-20085,Aseptic Fill & Finish Service,Specialty Care,Ashford Site
+2024,Vezanta,Vezanta,MAT-20140,Freeze-dried Vaccine Vial,Consumer Healthcare,Eastgate Site
+2025,Ulvatrix,Ulvatrix,MAT-20112,Patient Information Leaflet,Consumer Healthcare,Clearwater Site
+2024,Zolvarin,Zolvarin,MAT-20139,Water for Injection,Vaccines,Clearwater Site
+2025,Norvelin,Norvelin,MAT-20138,Isopropyl Alcohol,Consumer Healthcare,Kingsley Site
+2025,Calmera,Calmera,MAT-20021,Inbound Road Freight - Pallet,Specialty Care,Eastgate Site
+2024,Mendovia,Mendovia,MAT-20020,Contract Packaging Service,Pharmaceuticals,Kingsley Site
+2025,Ostreva,Ostreva,MAT-20010,Prefilled Syringe 1ml,Pharmaceuticals,Meadowbrook Site
+2025,Quilava,Quilava,MAT-20075,PVC Blister Pack,Vaccines,Clearwater Site
+2026,Torvexa,Torvexa,MAT-20020,Contract Packaging Service,Vaccines,Meadowbrook Site
+2025,Pulmatrix,Pulmatrix,MAT-20099,Ibuprofen API,Specialty Care,Fenwick Site
+2024,Wintrelis,Wintrelis,MAT-20055,Inbound Air Freight - Temperature Controlled,Vaccines,Bridgeholm Site
+2026,Torvexa,Torvexa,MAT-20081,Corrugated Shipping Case,Vaccines,Kingsley Site
+2025,Sentrivax,Sentrivax,MAT-20034,Recombinant Protein Concentrate,Vaccines,Meadowbrook Site
+2026,Glucovex,Glucovex,MAT-20015,Corrugated Shipping Case,Specialty Care,Kingsley Site
+2025,Estrivon,Estrivon,MAT-20143,HDPE Bottle 250ml,Consumer Healthcare,Ashford Site
+2024,Calmera,Calmera,MAT-20021,Inbound Road Freight - Pallet,Specialty Care,Solaris Park Site
+2026,Yenzura,Yenzura,MAT-20072,Ethanol (Pharma Grade),Consumer Healthcare,Meadowbrook Site
+2026,Glucovex,Glucovex,MAT-20135,Microcrystalline Cellulose,Specialty Care,Bridgeholm Site
+2026,Lumivax,Lumivax,MAT-20114,Reusable Shipping Tote,Vaccines,Kingsley Site
+2025,Advelra,Advelra,MAT-20145,Patient Information Leaflet,Specialty Care,Bridgeholm Site
+2025,Estrivon,Estrivon,MAT-20017,Fermentation Batch Service,Specialty Care,Kingsley Site
+2024,Vezanta,Vezanta,MAT-20059,Stainless Steel Reactor Component,Pharmaceuticals,Clearwater Site
+2025,Dermafyx,Dermafyx,MAT-20085,Aseptic Fill & Finish Service,Pharmaceuticals,Rivermill Site
+2026,Norvelin,Norvelin,MAT-20008,Glass Vial 2ml,Vaccines,Ashford Site
+2024,Calmera,Calmera,MAT-20121,Inbound Air Freight - Temperature Controlled,Pharmaceuticals,Ashford Site
+2025,Glucovex,Glucovex,MAT-20107,Freeze-dried Vaccine Vial,Specialty Care,Northfield Site
+2026,Quilava,Quilava,MAT-20075,PVC Blister Pack,Pharmaceuticals,Rivermill Site
+2026,Immunara,Immunara,MAT-20077,HDPE Bottle 100ml,Specialty Care,Ashford Site
+2026,Sentrivax,Sentrivax,MAT-20045,Corrugated Shipping Box,Vaccines,Clearwater Site
+2025,Yenzura,Yenzura,MAT-20072,Ethanol (Pharma Grade),Pharmaceuticals,Eastgate Site
+2025,Dermafyx,Dermafyx,MAT-20039,Ethanol (Pharma Grade),Vaccines,Kingsley Site
+2025,Zolvarin,Zolvarin,MAT-20088,Inbound Air Freight - Temperature Controlled,Specialty Care,Eastgate Site
+2026,Lumivax,Lumivax,MAT-20013,Patient Information Leaflet,Vaccines,Kingsley Site
+2024,Vezanta,Vezanta,MAT-20090,Cold Chain Transport - 2-8C,Consumer Healthcare,Fenwick Site
+2025,Zolvarin,Zolvarin,MAT-20086,Contract Packaging Service,Vaccines,Kingsley Site
+2025,Dermafyx,Dermafyx,MAT-20085,Aseptic Fill & Finish Service,Consumer Healthcare,Northfield Site
+2025,Glucovex,Glucovex,MAT-20103,Enteric Coating Blend,Consumer Healthcare,Bridgeholm Site
+2024,Wintrelis,Wintrelis,MAT-20012,Folding Carton,Vaccines,Clearwater Site
+2025,Xantivo,Xantivo,MAT-20089,Inbound Ocean Freight - Container,Specialty Care,Rivermill Site
+2025,Ulvatrix,Ulvatrix,MAT-20011,HDPE Bottle 100ml,Pharmaceuticals,Clearwater Site
+2026,Wintrelis,Wintrelis,MAT-20100,Recombinant Protein Concentrate,Vaccines,Fenwick Site
+2026,Hemazol,Hemazol,MAT-20009,Alu-Alu Blister Pack,Pharmaceuticals,Rivermill Site
+2024,Norvelin,Norvelin,MAT-20052,Aseptic Fill & Finish Service,Consumer Healthcare,Kingsley Site
+2024,Advelra,Advelra,MAT-20146,Pressure-sensitive Label,Vaccines,Kingsley Site
+2025,Ulvatrix,Ulvatrix,MAT-20025,Cold Storage - Warehouse Pallet Slot,Pharmaceuticals,Rivermill Site
+2024,Glucovex,Glucovex,MAT-20107,Freeze-dried Vaccine Vial,Consumer Healthcare,Meadowbrook Site
+2025,Glucovex,Glucovex,MAT-20069,Microcrystalline Cellulose,Specialty Care,Ashford Site
+2024,Wintrelis,Wintrelis,MAT-20073,Water for Injection,Pharmaceuticals,Meadowbrook Site
+2026,Brenzolix,Brenzolix,MAT-20105,Isopropyl Alcohol,Consumer Healthcare,Rivermill Site
+2024,Yenzura,Yenzura,MAT-20129,Pipette Tips (case),Specialty Care,Ashford Site
+2024,Ulvatrix,Ulvatrix,MAT-20046,Patient Information Leaflet,Pharmaceuticals,Meadowbrook Site
+2024,Sentrivax,Sentrivax,MAT-20000,Paracetamol API,Specialty Care,Northfield Site
+2026,Kaldrin,Kaldrin,MAT-20138,Isopropyl Alcohol,Pharmaceuticals,Northfield Site
+2025,Brenzolix,Brenzolix,MAT-20071,Sodium Benzoate,Pharmaceuticals,Eastgate Site
+2026,Renovex,Renovex,MAT-20080,Pressure-sensitive Label,Specialty Care,Rivermill Site
+2026,Norvelin,Norvelin,MAT-20040,Water for Injection,Pharmaceuticals,Kingsley Site
+2024,Ulvatrix,Ulvatrix,MAT-20112,Patient Information Leaflet,Consumer Healthcare,Eastgate Site
+2024,Dermafyx,Dermafyx,MAT-20011,HDPE Bottle 100ml,Consumer Healthcare,Meadowbrook Site
+2025,Sentrivax,Sentrivax,MAT-20021,Inbound Road Freight - Pallet,Pharmaceuticals,Solaris Park Site
+2024,Lumivax,Lumivax,MAT-20084,Custom Synthesis Batch,Specialty Care,Northfield Site
+2025,Xantivo,Xantivo,MAT-20030,Single-use Bioreactor Bag,Specialty Care,Kingsley Site
+2024,Dermafyx,Dermafyx,MAT-20039,Ethanol (Pharma Grade),Pharmaceuticals,Rivermill Site
+2025,Lumivax,Lumivax,MAT-20084,Custom Synthesis Batch,Pharmaceuticals,Ashford Site
+2024,Dermafyx,Dermafyx,MAT-20085,Aseptic Fill & Finish Service,Pharmaceuticals,Kingsley Site
+2025,Wintrelis,Wintrelis,MAT-20016,Stretch Pallet Wrap,Vaccines,Meadowbrook Site
+2026,Pulmatrix,Pulmatrix,MAT-20026,Stainless Steel Reactor Component,Vaccines,Bridgeholm Site
+2026,Sentrivax,Sentrivax,MAT-20000,Paracetamol API,Consumer Healthcare,Rivermill Site
+2024,Dermafyx,Dermafyx,MAT-20039,Ethanol (Pharma Grade),Consumer Healthcare,Fenwick Site
+2025,Estrivon,Estrivon,MAT-20119,Contract Packaging Service,Pharmaceuticals,Kingsley Site
+2025,Glucovex,Glucovex,MAT-20015,Corrugated Shipping Case,Consumer Healthcare,Ashford Site
+2025,Norvelin,Norvelin,MAT-20138,Isopropyl Alcohol,Specialty Care,Solaris Park Site
+2024,Ulvatrix,Ulvatrix,MAT-20112,Patient Information Leaflet,Pharmaceuticals,Northfield Site
+2025,Vezanta,Vezanta,MAT-20140,Freeze-dried Vaccine Vial,Pharmaceuticals,Clearwater Site
+2026,Dermafyx,Dermafyx,MAT-20011,HDPE Bottle 100ml,Vaccines,Solaris Park Site
+2024,Vezanta,Vezanta,MAT-20048,Reusable Shipping Tote,Consumer Healthcare,Meadowbrook Site
+2024,Brenzolix,Brenzolix,MAT-20071,Sodium Benzoate,Pharmaceuticals,Fenwick Site
+2025,Glucovex,Glucovex,MAT-20038,Methylparaben,Specialty Care,Kingsley Site
+2025,Wintrelis,Wintrelis,MAT-20002,Synthetic Peptide Concentrate,Specialty Care,Rivermill Site
+2026,Ostreva,Ostreva,MAT-20010,Prefilled Syringe 1ml,Consumer Healthcare,Fenwick Site
+2025,Florivex,Florivex,MAT-20092,Stainless Steel Reactor Component,Specialty Care,Meadowbrook Site
+2024,Calmera,Calmera,MAT-20036,Microcrystalline Cellulose,Consumer Healthcare,Meadowbrook Site
+2026,Quilava,Quilava,MAT-20084,Custom Synthesis Batch,Specialty Care,Kingsley Site
+2026,Sentrivax,Sentrivax,MAT-20046,Patient Information Leaflet,Consumer Healthcare,Clearwater Site
+2026,Norvelin,Norvelin,MAT-20144,Folding Carton,Vaccines,Northfield Site
+2025,Advelra,Advelra,MAT-20145,Patient Information Leaflet,Consumer Healthcare,Clearwater Site
+2025,Pulmatrix,Pulmatrix,MAT-20099,Ibuprofen API,Vaccines,Fenwick Site
+2026,Mendovia,Mendovia,MAT-20092,Stainless Steel Reactor Component,Vaccines,Eastgate Site
+2026,Pulmatrix,Pulmatrix,MAT-20059,Stainless Steel Reactor Component,Specialty Care,Eastgate Site
+2025,Norvelin,Norvelin,MAT-20052,Aseptic Fill & Finish Service,Consumer Healthcare,Clearwater Site
+2024,Mendovia,Mendovia,MAT-20092,Stainless Steel Reactor Component,Specialty Care,Northfield Site
+2024,Quilava,Quilava,MAT-20084,Custom Synthesis Batch,Pharmaceuticals,Meadowbrook Site
+2025,Vezanta,Vezanta,MAT-20048,Reusable Shipping Tote,Vaccines,Northfield Site
+2026,Norvelin,Norvelin,MAT-20008,Glass Vial 2ml,Specialty Care,Eastgate Site
+2024,Immunara,Immunara,MAT-20045,Corrugated Shipping Box,Specialty Care,Rivermill Site
+2024,Advelra,Advelra,MAT-20146,Pressure-sensitive Label,Specialty Care,Bridgeholm Site
+2024,Ulvatrix,Ulvatrix,MAT-20086,Contract Packaging Service,Pharmaceuticals,Ashford Site
+2026,Estrivon,Estrivon,MAT-20103,Enteric Coating Blend,Pharmaceuticals,Ashford Site
+2024,Ostreva,Ostreva,MAT-20027,Filling Line Spare Parts,Pharmaceuticals,Rivermill Site
+2026,Mendovia,Mendovia,MAT-20012,Folding Carton,Vaccines,Solaris Park Site
+2026,Estrivon,Estrivon,MAT-20103,Enteric Coating Blend,Vaccines,Eastgate Site
+2024,Sentrivax,Sentrivax,MAT-20046,Patient Information Leaflet,Pharmaceuticals,Bridgeholm Site
+2025,Immunara,Immunara,MAT-20049,Stretch Pallet Wrap,Vaccines,Bridgeholm Site
+2025,Glucovex,Glucovex,MAT-20103,Enteric Coating Blend,Consumer Healthcare,Northfield Site
+2025,Advelra,Advelra,MAT-20145,Patient Information Leaflet,Pharmaceuticals,Bridgeholm Site
+2025,Immunara,Immunara,MAT-20077,HDPE Bottle 100ml,Pharmaceuticals,Solaris Park Site
+2024,Mendovia,Mendovia,MAT-20070,Film Coating Powder,Vaccines,Fenwick Site
+2024,Wintrelis,Wintrelis,MAT-20055,Inbound Air Freight - Temperature Controlled,Vaccines,Fenwick Site
+2025,Zolvarin,Zolvarin,MAT-20056,Inbound Ocean Freight - Container,Vaccines,Bridgeholm Site
+2024,Torvexa,Torvexa,MAT-20015,Corrugated Shipping Case,Specialty Care,Meadowbrook Site
+2026,Dermafyx,Dermafyx,MAT-20011,HDPE Bottle 100ml,Specialty Care,Bridgeholm Site
+2026,Brenzolix,Brenzolix,MAT-20029,Lab Reagent Kit,Vaccines,Northfield Site
+2026,Estrivon,Estrivon,MAT-20143,HDPE Bottle 250ml,Pharmaceuticals,Northfield Site
+2024,Kaldrin,Kaldrin,MAT-20035,Synthetic Peptide Concentrate,Consumer Healthcare,Fenwick Site
+2025,Hemazol,Hemazol,MAT-20009,Alu-Alu Blister Pack,Consumer Healthcare,Eastgate Site
+2026,Zolvarin,Zolvarin,MAT-20024,Cold Chain Transport - 2-8C,Consumer Healthcare,Meadowbrook Site
+2026,Quilava,Quilava,MAT-20099,Ibuprofen API,Specialty Care,Meadowbrook Site
+2026,Yenzura,Yenzura,MAT-20072,Ethanol (Pharma Grade),Pharmaceuticals,Eastgate Site
+2026,Calmera,Calmera,MAT-20054,Inbound Road Freight - Pallet,Vaccines,Northfield Site
+2024,Norvelin,Norvelin,MAT-20138,Isopropyl Alcohol,Consumer Healthcare,Ashford Site
+2026,Sentrivax,Sentrivax,MAT-20045,Corrugated Shipping Box,Vaccines,Ashford Site
+2026,Sentrivax,Sentrivax,MAT-20000,Paracetamol API,Vaccines,Rivermill Site
+2026,Hemazol,Hemazol,MAT-20064,Comparator Drug Batch,Consumer Healthcare,Solaris Park Site
+2025,Yenzura,Yenzura,MAT-20129,Pipette Tips (case),Consumer Healthcare,Fenwick Site
+2025,Sentrivax,Sentrivax,MAT-20112,Patient Information Leaflet,Specialty Care,Fenwick Site
+2026,Torvexa,Torvexa,MAT-20012,Folding Carton,Pharmaceuticals,Bridgeholm Site
+2025,Zolvarin,Zolvarin,MAT-20056,Inbound Ocean Freight - Container,Pharmaceuticals,Clearwater Site
+2025,Ulvatrix,Ulvatrix,MAT-20025,Cold Storage - Warehouse Pallet Slot,Pharmaceuticals,Meadowbrook Site
+2024,Mendovia,Mendovia,MAT-20020,Contract Packaging Service,Specialty Care,Northfield Site
+2024,Norvelin,Norvelin,MAT-20008,Glass Vial 2ml,Pharmaceuticals,Clearwater Site
+2025,Lumivax,Lumivax,MAT-20114,Reusable Shipping Tote,Vaccines,Solaris Park Site
+2025,Pulmatrix,Pulmatrix,MAT-20129,Pipette Tips (case),Specialty Care,Northfield Site
+2025,Calmera,Calmera,MAT-20079,Patient Information Leaflet,Vaccines,Ashford Site
+2024,Ostreva,Ostreva,MAT-20027,Filling Line Spare Parts,Specialty Care,Bridgeholm Site
+2025,Calmera,Calmera,MAT-20018,Custom Synthesis Batch,Pharmaceuticals,Eastgate Site
+2024,Mendovia,Mendovia,MAT-20113,Pressure-sensitive Label,Consumer Healthcare,Solaris Park Site
+2026,Quilava,Quilava,MAT-20099,Ibuprofen API,Vaccines,Kingsley Site
+2025,Norvelin,Norvelin,MAT-20144,Folding Carton,Consumer Healthcare,Ashford Site
+2025,Zolvarin,Zolvarin,MAT-20056,Inbound Ocean Freight - Container,Consumer Healthcare,Northfield Site
+2025,Sentrivax,Sentrivax,MAT-20021,Inbound Road Freight - Pallet,Vaccines,Eastgate Site
+2024,Immunara,Immunara,MAT-20128,Lab Reagent Kit,Consumer Healthcare,Bridgeholm Site
+2024,Advelra,Advelra,MAT-20105,Isopropyl Alcohol,Pharmaceuticals,Ashford Site
+2024,Xantivo,Xantivo,MAT-20089,Inbound Ocean Freight - Container,Pharmaceuticals,Fenwick Site
+2024,Lumivax,Lumivax,MAT-20114,Reusable Shipping Tote,Pharmaceuticals,Fenwick Site
+2025,Sentrivax,Sentrivax,MAT-20112,Patient Information Leaflet,Specialty Care,Meadowbrook Site
+2024,Torvexa,Torvexa,MAT-20081,Corrugated Shipping Case,Vaccines,Ashford Site
+2025,Torvexa,Torvexa,MAT-20015,Corrugated Shipping Case,Vaccines,Meadowbrook Site
+2025,Florivex,Florivex,MAT-20065,Clinical Trial Kit,Pharmaceuticals,Solaris Park Site
+2024,Zolvarin,Zolvarin,MAT-20086,Contract Packaging Service,Vaccines,Kingsley Site
+2026,Lumivax,Lumivax,MAT-20013,Patient Information Leaflet,Consumer Healthcare,Eastgate Site
+2024,Hemazol,Hemazol,MAT-20140,Freeze-dried Vaccine Vial,Vaccines,Bridgeholm Site
+2024,Norvelin,Norvelin,MAT-20040,Water for Injection,Consumer Healthcare,Northfield Site
+2026,Estrivon,Estrivon,MAT-20046,Patient Information Leaflet,Specialty Care,Eastgate Site
+2026,Xantivo,Xantivo,MAT-20030,Single-use Bioreactor Bag,Specialty Care,Eastgate Site
+2025,Dermafyx,Dermafyx,MAT-20011,HDPE Bottle 100ml,Vaccines,Kingsley Site
+2024,Estrivon,Estrivon,MAT-20143,HDPE Bottle 250ml,Consumer Healthcare,Rivermill Site
+2025,Ostreva,Ostreva,MAT-20079,Patient Information Leaflet,Vaccines,Rivermill Site
+2026,Mendovia,Mendovia,MAT-20100,Recombinant Protein Concentrate,Vaccines,Clearwater Site
+2026,Norvelin,Norvelin,MAT-20052,Aseptic Fill & Finish Service,Specialty Care,Northfield Site
+2024,Norvelin,Norvelin,MAT-20052,Aseptic Fill & Finish Service,Consumer Healthcare,Northfield Site
+2024,Glucovex,Glucovex,MAT-20107,Freeze-dried Vaccine Vial,Vaccines,Bridgeholm Site
+2025,Brenzolix,Brenzolix,MAT-20105,Isopropyl Alcohol,Consumer Healthcare,Northfield Site
+2024,Florivex,Florivex,MAT-20054,Inbound Road Freight - Pallet,Specialty Care,Rivermill Site
+2026,Wintrelis,Wintrelis,MAT-20016,Stretch Pallet Wrap,Pharmaceuticals,Kingsley Site
+2026,Hemazol,Hemazol,MAT-20114,Reusable Shipping Tote,Vaccines,Fenwick Site
+2024,Ulvatrix,Ulvatrix,MAT-20011,HDPE Bottle 100ml,Specialty Care,Rivermill Site
+2024,Ulvatrix,Ulvatrix,MAT-20046,Patient Information Leaflet,Pharmaceuticals,Northfield Site
+2026,Florivex,Florivex,MAT-20134,Synthetic Peptide Concentrate,Consumer Healthcare,Clearwater Site
+2025,Dermafyx,Dermafyx,MAT-20085,Aseptic Fill & Finish Service,Vaccines,Fenwick Site
+2026,Norvelin,Norvelin,MAT-20008,Glass Vial 2ml,Consumer Healthcare,Ashford Site
+2026,Calmera,Calmera,MAT-20079,Patient Information Leaflet,Consumer Healthcare,Kingsley Site
+2024,Kaldrin,Kaldrin,MAT-20138,Isopropyl Alcohol,Specialty Care,Kingsley Site
+2024,Ulvatrix,Ulvatrix,MAT-20112,Patient Information Leaflet,Pharmaceuticals,Meadowbrook Site
+2025,Zolvarin,Zolvarin,MAT-20086,Contract Packaging Service,Vaccines,Solaris Park Site
+2025,Calmera,Calmera,MAT-20021,Inbound Road Freight - Pallet,Specialty Care,Bridgeholm Site
+2024,Zolvarin,Zolvarin,MAT-20044,HDPE Bottle 250ml,Consumer Healthcare,Clearwater Site
+2025,Kaldrin,Kaldrin,MAT-20138,Isopropyl Alcohol,Consumer Healthcare,Solaris Park Site
+2024,Pulmatrix,Pulmatrix,MAT-20059,Stainless Steel Reactor Component,Consumer Healthcare,Fenwick Site
+2026,Glucovex,Glucovex,MAT-20103,Enteric Coating Blend,Pharmaceuticals,Rivermill Site
+2025,Wintrelis,Wintrelis,MAT-20003,Microcrystalline Cellulose,Specialty Care,Clearwater Site
+2025,Xantivo,Xantivo,MAT-20032,Clinical Trial Kit,Pharmaceuticals,Fenwick Site
+2026,Florivex,Florivex,MAT-20065,Clinical Trial Kit,Specialty Care,Rivermill Site
+2024,Estrivon,Estrivon,MAT-20017,Fermentation Batch Service,Vaccines,Bridgeholm Site
+2026,Calmera,Calmera,MAT-20079,Patient Information Leaflet,Specialty Care,Bridgeholm Site
+2025,Brenzolix,Brenzolix,MAT-20065,Clinical Trial Kit,Pharmaceuticals,Eastgate Site
+2024,Estrivon,Estrivon,MAT-20143,HDPE Bottle 250ml,Pharmaceuticals,Clearwater Site
+2026,Quilava,Quilava,MAT-20013,Patient Information Leaflet,Specialty Care,Northfield Site
+2026,Norvelin,Norvelin,MAT-20138,Isopropyl Alcohol,Specialty Care,Clearwater Site
+2025,Glucovex,Glucovex,MAT-20107,Freeze-dried Vaccine Vial,Vaccines,Eastgate Site
+2026,Glucovex,Glucovex,MAT-20015,Corrugated Shipping Case,Pharmaceuticals,Bridgeholm Site
+2026,Mendovia,Mendovia,MAT-20012,Folding Carton,Pharmaceuticals,Eastgate Site
+2026,Norvelin,Norvelin,MAT-20002,Synthetic Peptide Concentrate,Consumer Healthcare,Bridgeholm Site
+2025,Mendovia,Mendovia,MAT-20100,Recombinant Protein Concentrate,Specialty Care,Rivermill Site
+2025,Calmera,Calmera,MAT-20036,Microcrystalline Cellulose,Consumer Healthcare,Solaris Park Site
+2024,Advelra,Advelra,MAT-20036,Microcrystalline Cellulose,Vaccines,Ashford Site
+2024,Lumivax,Lumivax,MAT-20085,Aseptic Fill & Finish Service,Vaccines,Rivermill Site
+2024,Glucovex,Glucovex,MAT-20135,Microcrystalline Cellulose,Specialty Care,Fenwick Site
+2026,Ulvatrix,Ulvatrix,MAT-20126,Filling Line Spare Parts,Specialty Care,Clearwater Site
+2024,Ulvatrix,Ulvatrix,MAT-20066,Ibuprofen API,Specialty Care,Bridgeholm Site
+2025,Xantivo,Xantivo,MAT-20030,Single-use Bioreactor Bag,Specialty Care,Bridgeholm Site
+2026,Glucovex,Glucovex,MAT-20015,Corrugated Shipping Case,Specialty Care,Fenwick Site
+2024,Torvexa,Torvexa,MAT-20020,Contract Packaging Service,Vaccines,Bridgeholm Site
+2024,Estrivon,Estrivon,MAT-20143,HDPE Bottle 250ml,Pharmaceuticals,Meadowbrook Site
+2024,Wintrelis,Wintrelis,MAT-20077,HDPE Bottle 100ml,Consumer Healthcare,Eastgate Site
+2025,Xantivo,Xantivo,MAT-20008,Glass Vial 2ml,Consumer Healthcare,Eastgate Site
+2025,Ostreva,Ostreva,MAT-20027,Filling Line Spare Parts,Consumer Healthcare,Rivermill Site
+2025,Estrivon,Estrivon,MAT-20103,Enteric Coating Blend,Consumer Healthcare,Fenwick Site
+2024,Mendovia,Mendovia,MAT-20100,Recombinant Protein Concentrate,Specialty Care,Fenwick Site
+2025,Wintrelis,Wintrelis,MAT-20055,Inbound Air Freight - Temperature Controlled,Specialty Care,Kingsley Site
+2025,Quilava,Quilava,MAT-20113,Pressure-sensitive Label,Specialty Care,Bridgeholm Site
+2026,Kaldrin,Kaldrin,MAT-20103,Enteric Coating Blend,Vaccines,Eastgate Site
+2026,Immunara,Immunara,MAT-20049,Stretch Pallet Wrap,Consumer Healthcare,Rivermill Site
+2025,Advelra,Advelra,MAT-20146,Pressure-sensitive Label,Vaccines,Fenwick Site
+2025,Advelra,Advelra,MAT-20133,Monoclonal Antibody Bulk,Specialty Care,Fenwick Site
+2026,Norvelin,Norvelin,MAT-20144,Folding Carton,Pharmaceuticals,Eastgate Site
+2024,Wintrelis,Wintrelis,MAT-20077,HDPE Bottle 100ml,Vaccines,Ashford Site
+2026,Ostreva,Ostreva,MAT-20126,Filling Line Spare Parts,Vaccines,Kingsley Site
+2026,Hemazol,Hemazol,MAT-20140,Freeze-dried Vaccine Vial,Pharmaceuticals,Kingsley Site
+2026,Pulmatrix,Pulmatrix,MAT-20021,Inbound Road Freight - Pallet,Consumer Healthcare,Meadowbrook Site
+2024,Estrivon,Estrivon,MAT-20103,Enteric Coating Blend,Pharmaceuticals,Meadowbrook Site
+2026,Ostreva,Ostreva,MAT-20010,Prefilled Syringe 1ml,Pharmaceuticals,Eastgate Site
+2024,Estrivon,Estrivon,MAT-20056,Inbound Ocean Freight - Container,Specialty Care,Ashford Site
+2026,Sentrivax,Sentrivax,MAT-20045,Corrugated Shipping Box,Consumer Healthcare,Fenwick Site
+2026,Quilava,Quilava,MAT-20013,Patient Information Leaflet,Specialty Care,Eastgate Site
+2024,Mendovia,Mendovia,MAT-20020,Contract Packaging Service,Consumer Healthcare,Northfield Site
+2024,Pulmatrix,Pulmatrix,MAT-20021,Inbound Road Freight - Pallet,Vaccines,Kingsley Site
+2024,Renovex,Renovex,MAT-20043,Prefilled Syringe 2.25ml,Consumer Healthcare,Ashford Site
+2026,Sentrivax,Sentrivax,MAT-20021,Inbound Road Freight - Pallet,Vaccines,Solaris Park Site
+2026,Pulmatrix,Pulmatrix,MAT-20025,Cold Storage - Warehouse Pallet Slot,Pharmaceuticals,Kingsley Site
+2026,Xantivo,Xantivo,MAT-20089,Inbound Ocean Freight - Container,Consumer Healthcare,Rivermill Site
+2025,Xantivo,Xantivo,MAT-20054,Inbound Road Freight - Pallet,Specialty Care,Ashford Site
+2025,Advelra,Advelra,MAT-20119,Contract Packaging Service,Specialty Care,Solaris Park Site
+2024,Wintrelis,Wintrelis,MAT-20052,Aseptic Fill & Finish Service,Specialty Care,Solaris Park Site
+2024,Advelra,Advelra,MAT-20145,Patient Information Leaflet,Vaccines,Eastgate Site
+2024,Advelra,Advelra,MAT-20088,Inbound Air Freight - Temperature Controlled,Consumer Healthcare,Bridgeholm Site
+2024,Immunara,Immunara,MAT-20140,Freeze-dried Vaccine Vial,Consumer Healthcare,Bridgeholm Site
+2024,Glucovex,Glucovex,MAT-20107,Freeze-dried Vaccine Vial,Specialty Care,Ashford Site
+2026,Wintrelis,Wintrelis,MAT-20077,HDPE Bottle 100ml,Pharmaceuticals,Bridgeholm Site
+2026,Florivex,Florivex,MAT-20134,Synthetic Peptide Concentrate,Specialty Care,Ashford Site
+2026,Yenzura,Yenzura,MAT-20129,Pipette Tips (case),Vaccines,Clearwater Site
+2025,Advelra,Advelra,MAT-20105,Isopropyl Alcohol,Consumer Healthcare,Clearwater Site
+2024,Ulvatrix,Ulvatrix,MAT-20046,Patient Information Leaflet,Consumer Healthcare,Clearwater Site
+2026,Immunara,Immunara,MAT-20045,Corrugated Shipping Box,Pharmaceuticals,Rivermill Site
+2024,Glucovex,Glucovex,MAT-20135,Microcrystalline Cellulose,Consumer Healthcare,Rivermill Site
+2024,Torvexa,Torvexa,MAT-20020,Contract Packaging Service,Pharmaceuticals,Northfield Site
+2024,Calmera,Calmera,MAT-20079,Patient Information Leaflet,Consumer Healthcare,Clearwater Site
+2025,Dermafyx,Dermafyx,MAT-20011,HDPE Bottle 100ml,Pharmaceuticals,Bridgeholm Site
+2024,Brenzolix,Brenzolix,MAT-20105,Isopropyl Alcohol,Pharmaceuticals,Meadowbrook Site
+2026,Immunara,Immunara,MAT-20138,Isopropyl Alcohol,Pharmaceuticals,Meadowbrook Site
+2025,Brenzolix,Brenzolix,MAT-20071,Sodium Benzoate,Pharmaceuticals,Fenwick Site
+2025,Norvelin,Norvelin,MAT-20002,Synthetic Peptide Concentrate,Consumer Healthcare,Rivermill Site
+2024,Wintrelis,Wintrelis,MAT-20055,Inbound Air Freight - Temperature Controlled,Vaccines,Bridgeholm Site
+2026,Vezanta,Vezanta,MAT-20048,Reusable Shipping Tote,Consumer Healthcare,Bridgeholm Site
+2024,Vezanta,Vezanta,MAT-20093,Filling Line Spare Parts,Consumer Healthcare,Ashford Site
+2025,Lumivax,Lumivax,MAT-20084,Custom Synthesis Batch,Vaccines,Northfield Site
+2026,Ulvatrix,Ulvatrix,MAT-20046,Patient Information Leaflet,Pharmaceuticals,Clearwater Site
+2025,Renovex,Renovex,MAT-20080,Pressure-sensitive Label,Consumer Healthcare,Ashford Site
+2025,Dermafyx,Dermafyx,MAT-20039,Ethanol (Pharma Grade),Consumer Healthcare,Northfield Site
+2026,Calmera,Calmera,MAT-20022,Inbound Air Freight - Temperature Controlled,Vaccines,Ashford Site
+2024,Wintrelis,Wintrelis,MAT-20077,HDPE Bottle 100ml,Vaccines,Ashford Site
+2024,Xantivo,Xantivo,MAT-20008,Glass Vial 2ml,Pharmaceuticals,Rivermill Site
+2026,Mendovia,Mendovia,MAT-20085,Aseptic Fill & Finish Service,Specialty Care,Bridgeholm Site
+2024,Ostreva,Ostreva,MAT-20083,Fermentation Batch Service,Specialty Care,Clearwater Site
+2025,Pulmatrix,Pulmatrix,MAT-20004,Enteric Coating Blend,Vaccines,Solaris Park Site
+2025,Florivex,Florivex,MAT-20054,Inbound Road Freight - Pallet,Specialty Care,Northfield Site
+2025,Yenzura,Yenzura,MAT-20129,Pipette Tips (case),Consumer Healthcare,Bridgeholm Site
+2025,Glucovex,Glucovex,MAT-20107,Freeze-dried Vaccine Vial,Consumer Healthcare,Fenwick Site
+2026,Vezanta,Vezanta,MAT-20048,Reusable Shipping Tote,Consumer Healthcare,Clearwater Site
+2025,Lumivax,Lumivax,MAT-20085,Aseptic Fill & Finish Service,Consumer Healthcare,Solaris Park Site
+2024,Mendovia,Mendovia,MAT-20100,Recombinant Protein Concentrate,Vaccines,Meadowbrook Site
+2025,Florivex,Florivex,MAT-20065,Clinical Trial Kit,Vaccines,Rivermill Site
+2026,Pulmatrix,Pulmatrix,MAT-20024,Cold Chain Transport - 2-8C,Consumer Healthcare,Bridgeholm Site
+2024,Brenzolix,Brenzolix,MAT-20120,Inbound Road Freight - Pallet,Consumer Healthcare,Clearwater Site
+2026,Ostreva,Ostreva,MAT-20126,Filling Line Spare Parts,Vaccines,Northfield Site
+2024,Zolvarin,Zolvarin,MAT-20076,Prefilled Syringe 1ml,Vaccines,Bridgeholm Site
+2024,Lumivax,Lumivax,MAT-20085,Aseptic Fill & Finish Service,Specialty Care,Eastgate Site
+2025,Quilava,Quilava,MAT-20099,Ibuprofen API,Vaccines,Meadowbrook Site
+2024,Lumivax,Lumivax,MAT-20013,Patient Information Leaflet,Pharmaceuticals,Eastgate Site
+2024,Lumivax,Lumivax,MAT-20013,Patient Information Leaflet,Consumer Healthcare,Clearwater Site
+2024,Dermafyx,Dermafyx,MAT-20066,Ibuprofen API,Specialty Care,Solaris Park Site
+2026,Advelra,Advelra,MAT-20054,Inbound Road Freight - Pallet,Vaccines,Northfield Site
+2025,Vezanta,Vezanta,MAT-20118,Aseptic Fill & Finish Service,Vaccines,Ashford Site
+2025,Quilava,Quilava,MAT-20099,Ibuprofen API,Pharmaceuticals,Rivermill Site
+2026,Zolvarin,Zolvarin,MAT-20044,HDPE Bottle 250ml,Vaccines,Fenwick Site
+2026,Estrivon,Estrivon,MAT-20119,Contract Packaging Service,Specialty Care,Bridgeholm Site
+2024,Norvelin,Norvelin,MAT-20040,Water for Injection,Pharmaceuticals,Northfield Site
+2024,Pulmatrix,Pulmatrix,MAT-20025,Cold Storage - Warehouse Pallet Slot,Pharmaceuticals,Northfield Site
+2026,Estrivon,Estrivon,MAT-20056,Inbound Ocean Freight - Container,Vaccines,Solaris Park Site
+2026,Kaldrin,Kaldrin,MAT-20076,Prefilled Syringe 1ml,Specialty Care,Solaris Park Site
+2024,Wintrelis,Wintrelis,MAT-20055,Inbound Air Freight - Temperature Controlled,Specialty Care,Ashford Site
+2024,Quilava,Quilava,MAT-20013,Patient Information Leaflet,Specialty Care,Rivermill Site
+2026,Wintrelis,Wintrelis,MAT-20003,Microcrystalline Cellulose,Pharmaceuticals,Clearwater Site
+2026,Mendovia,Mendovia,MAT-20093,Filling Line Spare Parts,Specialty Care,Fenwick Site
+2025,Zolvarin,Zolvarin,MAT-20091,Cold Storage - Warehouse Pallet Slot,Specialty Care,Clearwater Site
+2024,Kaldrin,Kaldrin,MAT-20035,Synthetic Peptide Concentrate,Specialty Care,Bridgeholm Site
+2024,Hemazol,Hemazol,MAT-20049,Stretch Pallet Wrap,Consumer Healthcare,Northfield Site
+2026,Advelra,Advelra,MAT-20142,Prefilled Syringe 1ml,Vaccines,Eastgate Site
+2024,Kaldrin,Kaldrin,MAT-20138,Isopropyl Alcohol,Specialty Care,Fenwick Site
+2025,Glucovex,Glucovex,MAT-20103,Enteric Coating Blend,Vaccines,Eastgate Site
+2024,Estrivon,Estrivon,MAT-20017,Fermentation Batch Service,Pharmaceuticals,Meadowbrook Site
+2026,Hemazol,Hemazol,MAT-20111,Corrugated Shipping Box,Specialty Care,Northfield Site
+2026,Mendovia,Mendovia,MAT-20092,Stainless Steel Reactor Component,Specialty Care,Solaris Park Site
+2024,Ostreva,Ostreva,MAT-20083,Fermentation Batch Service,Consumer Healthcare,Ashford Site
+2026,Vezanta,Vezanta,MAT-20048,Reusable Shipping Tote,Pharmaceuticals,Fenwick Site
+2026,Brenzolix,Brenzolix,MAT-20065,Clinical Trial Kit,Pharmaceuticals,Rivermill Site
+2026,Norvelin,Norvelin,MAT-20138,Isopropyl Alcohol,Vaccines,Clearwater Site
+2024,Advelra,Advelra,MAT-20088,Inbound Air Freight - Temperature Controlled,Pharmaceuticals,Eastgate Site
+2025,Norvelin,Norvelin,MAT-20002,Synthetic Peptide Concentrate,Vaccines,Meadowbrook Site
+2025,Pulmatrix,Pulmatrix,MAT-20024,Cold Chain Transport - 2-8C,Vaccines,Solaris Park Site
+2025,Lumivax,Lumivax,MAT-20085,Aseptic Fill & Finish Service,Consumer Healthcare,Ashford Site
+2026,Calmera,Calmera,MAT-20036,Microcrystalline Cellulose,Pharmaceuticals,Meadowbrook Site
+2025,Torvexa,Torvexa,MAT-20028,HPLC Consumable Kit,Pharmaceuticals,Meadowbrook Site
+2024,Norvelin,Norvelin,MAT-20008,Glass Vial 2ml,Specialty Care,Clearwater Site
+2026,Kaldrin,Kaldrin,MAT-20097,Comparator Drug Batch,Vaccines,Northfield Site
+2024,Glucovex,Glucovex,MAT-20015,Corrugated Shipping Case,Vaccines,Clearwater Site
+2025,Ostreva,Ostreva,MAT-20027,Filling Line Spare Parts,Vaccines,Meadowbrook Site
+2026,Norvelin,Norvelin,MAT-20144,Folding Carton,Consumer Healthcare,Kingsley Site
+2026,Florivex,Florivex,MAT-20065,Clinical Trial Kit,Vaccines,Meadowbrook Site
+2024,Advelra,Advelra,MAT-20036,Microcrystalline Cellulose,Vaccines,Northfield Site
+2025,Sentrivax,Sentrivax,MAT-20045,Corrugated Shipping Box,Pharmaceuticals,Meadowbrook Site
+2026,Wintrelis,Wintrelis,MAT-20077,HDPE Bottle 100ml,Pharmaceuticals,Fenwick Site
+2026,Calmera,Calmera,MAT-20022,Inbound Air Freight - Temperature Controlled,Consumer Healthcare,Meadowbrook Site
+2024,Glucovex,Glucovex,MAT-20015,Corrugated Shipping Case,Pharmaceuticals,Clearwater Site
+2024,Vezanta,Vezanta,MAT-20113,Pressure-sensitive Label,Vaccines,Solaris Park Site
+2025,Lumivax,Lumivax,MAT-20085,Aseptic Fill & Finish Service,Specialty Care,Kingsley Site
+2024,Xantivo,Xantivo,MAT-20148,Stretch Pallet Wrap,Pharmaceuticals,Northfield Site
+2026,Brenzolix,Brenzolix,MAT-20065,Clinical Trial Kit,Pharmaceuticals,Bridgeholm Site
+2026,Ulvatrix,Ulvatrix,MAT-20112,Patient Information Leaflet,Pharmaceuticals,Bridgeholm Site
+2026,Pulmatrix,Pulmatrix,MAT-20059,Stainless Steel Reactor Component,Pharmaceuticals,Meadowbrook Site
+2024,Sentrivax,Sentrivax,MAT-20021,Inbound Road Freight - Pallet,Vaccines,Fenwick Site
+2025,Xantivo,Xantivo,MAT-20030,Single-use Bioreactor Bag,Consumer Healthcare,Bridgeholm Site
+2024,Ulvatrix,Ulvatrix,MAT-20025,Cold Storage - Warehouse Pallet Slot,Pharmaceuticals,Kingsley Site
+2024,Yenzura,Yenzura,MAT-20129,Pipette Tips (case),Consumer Healthcare,Solaris Park Site
+2025,Vezanta,Vezanta,MAT-20090,Cold Chain Transport - 2-8C,Specialty Care,Rivermill Site
+2025,Hemazol,Hemazol,MAT-20056,Inbound Ocean Freight - Container,Vaccines,Bridgeholm Site
+2024,Vezanta,Vezanta,MAT-20007,Water for Injection,Pharmaceuticals,Eastgate Site
+2026,Estrivon,Estrivon,MAT-20119,Contract Packaging Service,Specialty Care,Bridgeholm Site
+2025,Calmera,Calmera,MAT-20018,Custom Synthesis Batch,Consumer Healthcare,Ashford Site
+2025,Xantivo,Xantivo,MAT-20054,Inbound Road Freight - Pallet,Pharmaceuticals,Fenwick Site
+2024,Xantivo,Xantivo,MAT-20030,Single-use Bioreactor Bag,Pharmaceuticals,Northfield Site
+2026,Mendovia,Mendovia,MAT-20020,Contract Packaging Service,Vaccines,Solaris Park Site
+2026,Advelra,Advelra,MAT-20146,Pressure-sensitive Label,Specialty Care,Solaris Park Site
+2025,Ulvatrix,Ulvatrix,MAT-20025,Cold Storage - Warehouse Pallet Slot,Consumer Healthcare,Eastgate Site
+2026,Dermafyx,Dermafyx,MAT-20066,Ibuprofen API,Consumer Healthcare,Eastgate Site
+2025,Wintrelis,Wintrelis,MAT-20100,Recombinant Protein Concentrate,Specialty Care,Clearwater Site
+2025,Yenzura,Yenzura,MAT-20129,Pipette Tips (case),Pharmaceuticals,Clearwater Site
+2025,Quilava,Quilava,MAT-20099,Ibuprofen API,Pharmaceuticals,Bridgeholm Site
+2025,Quilava,Quilava,MAT-20099,Ibuprofen API,Vaccines,Bridgeholm Site
+2024,Sentrivax,Sentrivax,MAT-20080,Pressure-sensitive Label,Vaccines,Clearwater Site
+2026,Sentrivax,Sentrivax,MAT-20112,Patient Information Leaflet,Pharmaceuticals,Rivermill Site
+2026,Yenzura,Yenzura,MAT-20018,Custom Synthesis Batch,Vaccines,Ashford Site
+2024,Norvelin,Norvelin,MAT-20002,Synthetic Peptide Concentrate,Vaccines,Eastgate Site
+2025,Ostreva,Ostreva,MAT-20126,Filling Line Spare Parts,Specialty Care,Bridgeholm Site
+2026,Xantivo,Xantivo,MAT-20148,Stretch Pallet Wrap,Vaccines,Ashford Site
+2025,Vezanta,Vezanta,MAT-20048,Reusable Shipping Tote,Specialty Care,Fenwick Site
+2024,Florivex,Florivex,MAT-20134,Synthetic Peptide Concentrate,Pharmaceuticals,Ashford Site
+2026,Kaldrin,Kaldrin,MAT-20035,Synthetic Peptide Concentrate,Vaccines,Fenwick Site
+2026,Torvexa,Torvexa,MAT-20002,Synthetic Peptide Concentrate,Vaccines,Fenwick Site
+2026,Lumivax,Lumivax,MAT-20114,Reusable Shipping Tote,Specialty Care,Ashford Site
+2025,Estrivon,Estrivon,MAT-20056,Inbound Ocean Freight - Container,Specialty Care,Clearwater Site
+2024,Kaldrin,Kaldrin,MAT-20035,Synthetic Peptide Concentrate,Vaccines,Bridgeholm Site
+2026,Mendovia,Mendovia,MAT-20020,Contract Packaging Service,Pharmaceuticals,Fenwick Site
+2024,Advelra,Advelra,MAT-20105,Isopropyl Alcohol,Pharmaceuticals,Ashford Site
+2025,Dermafyx,Dermafyx,MAT-20011,HDPE Bottle 100ml,Specialty Care,Bridgeholm Site
+2024,Torvexa,Torvexa,MAT-20054,Inbound Road Freight - Pallet,Pharmaceuticals,Eastgate Site
+2025,Torvexa,Torvexa,MAT-20081,Corrugated Shipping Case,Consumer Healthcare,Rivermill Site
+2026,Sentrivax,Sentrivax,MAT-20144,Folding Carton,Pharmaceuticals,Rivermill Site
+2026,Kaldrin,Kaldrin,MAT-20103,Enteric Coating Blend,Pharmaceuticals,Northfield Site
+2025,Vezanta,Vezanta,MAT-20113,Pressure-sensitive Label,Pharmaceuticals,Kingsley Site
+2025,Florivex,Florivex,MAT-20112,Patient Information Leaflet,Vaccines,Bridgeholm Site
+2026,Pulmatrix,Pulmatrix,MAT-20024,Cold Chain Transport - 2-8C,Consumer Healthcare,Ashford Site
+2026,Brenzolix,Brenzolix,MAT-20071,Sodium Benzoate,Pharmaceuticals,Eastgate Site
+2024,Torvexa,Torvexa,MAT-20015,Corrugated Shipping Case,Pharmaceuticals,Rivermill Site
+2024,Yenzura,Yenzura,MAT-20016,Stretch Pallet Wrap,Pharmaceuticals,Rivermill Site
+2026,Vezanta,Vezanta,MAT-20090,Cold Chain Transport - 2-8C,Pharmaceuticals,Ashford Site
+2024,Immunara,Immunara,MAT-20077,HDPE Bottle 100ml,Pharmaceuticals,Clearwater Site
+2026,Wintrelis,Wintrelis,MAT-20055,Inbound Air Freight - Temperature Controlled,Vaccines,Eastgate Site
+2024,Florivex,Florivex,MAT-20092,Stainless Steel Reactor Component,Specialty Care,Kingsley Site
+2024,Glucovex,Glucovex,MAT-20069,Microcrystalline Cellulose,Pharmaceuticals,Clearwater Site
+2024,Florivex,Florivex,MAT-20054,Inbound Road Freight - Pallet,Specialty Care,Solaris Park Site
+2024,Advelra,Advelra,MAT-20105,Isopropyl Alcohol,Vaccines,Clearwater Site
+2026,Vezanta,Vezanta,MAT-20090,Cold Chain Transport - 2-8C,Vaccines,Meadowbrook Site
+2026,Xantivo,Xantivo,MAT-20054,Inbound Road Freight - Pallet,Consumer Healthcare,Solaris Park Site
+2026,Quilava,Quilava,MAT-20113,Pressure-sensitive Label,Pharmaceuticals,Fenwick Site
+2026,Quilava,Quilava,MAT-20084,Custom Synthesis Batch,Consumer Healthcare,Meadowbrook Site
+2026,Norvelin,Norvelin,MAT-20002,Synthetic Peptide Concentrate,Consumer Healthcare,Clearwater Site
+2025,Wintrelis,Wintrelis,MAT-20073,Water for Injection,Pharmaceuticals,Clearwater Site
+2025,Sentrivax,Sentrivax,MAT-20034,Recombinant Protein Concentrate,Consumer Healthcare,Meadowbrook Site
+2025,Immunara,Immunara,MAT-20128,Lab Reagent Kit,Consumer Healthcare,Fenwick Site
+2024,Yenzura,Yenzura,MAT-20016,Stretch Pallet Wrap,Specialty Care,Clearwater Site
+2026,Sentrivax,Sentrivax,MAT-20080,Pressure-sensitive Label,Consumer Healthcare,Bridgeholm Site
+2026,Glucovex,Glucovex,MAT-20069,Microcrystalline Cellulose,Consumer Healthcare,Bridgeholm Site
+2025,Glucovex,Glucovex,MAT-20103,Enteric Coating Blend,Vaccines,Fenwick Site
+2026,Vezanta,Vezanta,MAT-20090,Cold Chain Transport - 2-8C,Vaccines,Clearwater Site
+2024,Quilava,Quilava,MAT-20099,Ibuprofen API,Specialty Care,Meadowbrook Site
+2025,Renovex,Renovex,MAT-20103,Enteric Coating Blend,Vaccines,Northfield Site
+2025,Wintrelis,Wintrelis,MAT-20003,Microcrystalline Cellulose,Consumer Healthcare,Bridgeholm Site
+2024,Quilava,Quilava,MAT-20013,Patient Information Leaflet,Consumer Healthcare,Solaris Park Site
+2026,Florivex,Florivex,MAT-20065,Clinical Trial Kit,Vaccines,Meadowbrook Site
+2024,Kaldrin,Kaldrin,MAT-20138,Isopropyl Alcohol,Specialty Care,Kingsley Site
+2025,Xantivo,Xantivo,MAT-20109,Prefilled Syringe 2.25ml,Pharmaceuticals,Fenwick Site
+2026,Advelra,Advelra,MAT-20105,Isopropyl Alcohol,Consumer Healthcare,Northfield Site
+2026,Mendovia,Mendovia,MAT-20113,Pressure-sensitive Label,Vaccines,Bridgeholm Site
+2025,Immunara,Immunara,MAT-20140,Freeze-dried Vaccine Vial,Vaccines,Northfield Site
+2025,Brenzolix,Brenzolix,MAT-20071,Sodium Benzoate,Consumer Healthcare,Eastgate Site
+2026,Zolvarin,Zolvarin,MAT-20086,Contract Packaging Service,Pharmaceuticals,Ashford Site
+2024,Pulmatrix,Pulmatrix,MAT-20024,Cold Chain Transport - 2-8C,Vaccines,Kingsley Site
+2025,Lumivax,Lumivax,MAT-20013,Patient Information Leaflet,Pharmaceuticals,Solaris Park Site
+2024,Sentrivax,Sentrivax,MAT-20000,Paracetamol API,Specialty Care,Eastgate Site
+2026,Lumivax,Lumivax,MAT-20013,Patient Information Leaflet,Pharmaceuticals,Fenwick Site
+2026,Brenzolix,Brenzolix,MAT-20071,Sodium Benzoate,Pharmaceuticals,Meadowbrook Site
+2024,Lumivax,Lumivax,MAT-20085,Aseptic Fill & Finish Service,Pharmaceuticals,Meadowbrook Site
+2025,Glucovex,Glucovex,MAT-20107,Freeze-dried Vaccine Vial,Pharmaceuticals,Eastgate Site
+2026,Pulmatrix,Pulmatrix,MAT-20118,Aseptic Fill & Finish Service,Vaccines,Solaris Park Site
+2025,Zolvarin,Zolvarin,MAT-20139,Water for Injection,Vaccines,Rivermill Site
+2026,Yenzura,Yenzura,MAT-20129,Pipette Tips (case),Pharmaceuticals,Eastgate Site
+2026,Hemazol,Hemazol,MAT-20140,Freeze-dried Vaccine Vial,Pharmaceuticals,Meadowbrook Site
+2025,Florivex,Florivex,MAT-20112,Patient Information Leaflet,Vaccines,Ashford Site
+2024,Immunara,Immunara,MAT-20077,HDPE Bottle 100ml,Specialty Care,Clearwater Site
+2026,Florivex,Florivex,MAT-20112,Patient Information Leaflet,Pharmaceuticals,Northfield Site
+2025,Renovex,Renovex,MAT-20068,Synthetic Peptide Concentrate,Vaccines,Bridgeholm Site
+2026,Glucovex,Glucovex,MAT-20069,Microcrystalline Cellulose,Consumer Healthcare,Fenwick Site
+2025,Kaldrin,Kaldrin,MAT-20058,Cold Storage - Warehouse Pallet Slot,Consumer Healthcare,Clearwater Site
+2026,Brenzolix,Brenzolix,MAT-20065,Clinical Trial Kit,Vaccines,Fenwick Site
+2024,Dermafyx,Dermafyx,MAT-20039,Ethanol (Pharma Grade),Consumer Healthcare,Fenwick Site
+2025,Mendovia,Mendovia,MAT-20100,Recombinant Protein Concentrate,Specialty Care,Northfield Site
+2025,Zolvarin,Zolvarin,MAT-20056,Inbound Ocean Freight - Container,Specialty Care,Eastgate Site
+2024,Sentrivax,Sentrivax,MAT-20080,Pressure-sensitive Label,Specialty Care,Solaris Park Site
+2025,Hemazol,Hemazol,MAT-20049,Stretch Pallet Wrap,Specialty Care,Rivermill Site
+2024,Estrivon,Estrivon,MAT-20119,Contract Packaging Service,Consumer Healthcare,Ashford Site
+2025,Mendovia,Mendovia,MAT-20012,Folding Carton,Specialty Care,Meadowbrook Site
+2024,Dermafyx,Dermafyx,MAT-20039,Ethanol (Pharma Grade),Pharmaceuticals,Bridgeholm Site
+2026,Immunara,Immunara,MAT-20138,Isopropyl Alcohol,Specialty Care,Clearwater Site
+2024,Florivex,Florivex,MAT-20134,Synthetic Peptide Concentrate,Pharmaceuticals,Clearwater Site
+2024,Torvexa,Torvexa,MAT-20002,Synthetic Peptide Concentrate,Specialty Care,Solaris Park Site
+2024,Advelra,Advelra,MAT-20142,Prefilled Syringe 1ml,Pharmaceuticals,Clearwater Site
+2025,Yenzura,Yenzura,MAT-20129,Pipette Tips (case),Consumer Healthcare,Fenwick Site
+2026,Brenzolix,Brenzolix,MAT-20120,Inbound Road Freight - Pallet,Vaccines,Eastgate Site
+2026,Wintrelis,Wintrelis,MAT-20077,HDPE Bottle 100ml,Specialty Care,Solaris Park Site
+2024,Wintrelis,Wintrelis,MAT-20002,Synthetic Peptide Concentrate,Vaccines,Meadowbrook Site
+2026,Hemazol,Hemazol,MAT-20111,Corrugated Shipping Box,Consumer Healthcare,Bridgeholm Site
+2024,Mendovia,Mendovia,MAT-20092,Stainless Steel Reactor Component,Vaccines,Northfield Site
+2025,Estrivon,Estrivon,MAT-20017,Fermentation Batch Service,Vaccines,Clearwater Site
+2025,Kaldrin,Kaldrin,MAT-20058,Cold Storage - Warehouse Pallet Slot,Vaccines,Bridgeholm Site
+2026,Florivex,Florivex,MAT-20092,Stainless Steel Reactor Component,Pharmaceuticals,Solaris Park Site
+2024,Immunara,Immunara,MAT-20140,Freeze-dried Vaccine Vial,Consumer Healthcare,Fenwick Site
+2025,Pulmatrix,Pulmatrix,MAT-20024,Cold Chain Transport - 2-8C,Vaccines,Kingsley Site
+2024,Ulvatrix,Ulvatrix,MAT-20088,Inbound Air Freight - Temperature Controlled,Consumer Healthcare,Meadowbrook Site
+2024,Torvexa,Torvexa,MAT-20012,Folding Carton,Consumer Healthcare,Solaris Park Site
+2026,Calmera,Calmera,MAT-20121,Inbound Air Freight - Temperature Controlled,Consumer Healthcare,Solaris Park Site
+2026,Ostreva,Ostreva,MAT-20010,Prefilled Syringe 1ml,Vaccines,Rivermill Site
+2026,Brenzolix,Brenzolix,MAT-20071,Sodium Benzoate,Specialty Care,Ashford Site
+2026,Dermafyx,Dermafyx,MAT-20066,Ibuprofen API,Consumer Healthcare,Northfield Site
+2024,Ostreva,Ostreva,MAT-20007,Water for Injection,Pharmaceuticals,Ashford Site
+2024,Ulvatrix,Ulvatrix,MAT-20072,Ethanol (Pharma Grade),Consumer Healthcare,Rivermill Site
+2024,Pulmatrix,Pulmatrix,MAT-20025,Cold Storage - Warehouse Pallet Slot,Pharmaceuticals,Clearwater Site
+2026,Estrivon,Estrivon,MAT-20017,Fermentation Batch Service,Pharmaceuticals,Northfield Site
+2026,Yenzura,Yenzura,MAT-20018,Custom Synthesis Batch,Vaccines,Kingsley Site
+2024,Estrivon,Estrivon,MAT-20143,HDPE Bottle 250ml,Vaccines,Clearwater Site
+2024,Torvexa,Torvexa,MAT-20020,Contract Packaging Service,Specialty Care,Solaris Park Site
+2025,Wintrelis,Wintrelis,MAT-20077,HDPE Bottle 100ml,Specialty Care,Rivermill Site
+2024,Zolvarin,Zolvarin,MAT-20139,Water for Injection,Vaccines,Kingsley Site
+2026,Renovex,Renovex,MAT-20068,Synthetic Peptide Concentrate,Specialty Care,Northfield Site
+2026,Pulmatrix,Pulmatrix,MAT-20118,Aseptic Fill & Finish Service,Consumer Healthcare,Kingsley Site
+2026,Yenzura,Yenzura,MAT-20129,Pipette Tips (case),Consumer Healthcare,Solaris Park Site
+2025,Brenzolix,Brenzolix,MAT-20120,Inbound Road Freight - Pallet,Consumer Healthcare,Northfield Site
+2024,Advelra,Advelra,MAT-20036,Microcrystalline Cellulose,Vaccines,Clearwater Site
+2026,Yenzura,Yenzura,MAT-20072,Ethanol (Pharma Grade),Specialty Care,Bridgeholm Site
+2024,Ulvatrix,Ulvatrix,MAT-20112,Patient Information Leaflet,Consumer Healthcare,Fenwick Site
+2024,Brenzolix,Brenzolix,MAT-20105,Isopropyl Alcohol,Consumer Healthcare,Bridgeholm Site
+2025,Norvelin,Norvelin,MAT-20138,Isopropyl Alcohol,Specialty Care,Northfield Site
+2026,Hemazol,Hemazol,MAT-20111,Corrugated Shipping Box,Consumer Healthcare,Northfield Site
+2026,Ulvatrix,Ulvatrix,MAT-20112,Patient Information Leaflet,Consumer Healthcare,Clearwater Site
+2026,Wintrelis,Wintrelis,MAT-20003,Microcrystalline Cellulose,Consumer Healthcare,Meadowbrook Site
+2024,Vezanta,Vezanta,MAT-20007,Water for Injection,Vaccines,Solaris Park Site
+2026,Ostreva,Ostreva,MAT-20079,Patient Information Leaflet,Pharmaceuticals,Northfield Site
+2024,Calmera,Calmera,MAT-20054,Inbound Road Freight - Pallet,Vaccines,Ashford Site
+2024,Florivex,Florivex,MAT-20054,Inbound Road Freight - Pallet,Consumer Healthcare,Rivermill Site
+2024,Hemazol,Hemazol,MAT-20049,Stretch Pallet Wrap,Specialty Care,Northfield Site
+2026,Dermafyx,Dermafyx,MAT-20011,HDPE Bottle 100ml,Vaccines,Eastgate Site
+2024,Advelra,Advelra,MAT-20119,Contract Packaging Service,Vaccines,Fenwick Site
+2024,Hemazol,Hemazol,MAT-20111,Corrugated Shipping Box,Vaccines,Rivermill Site
+2026,Zolvarin,Zolvarin,MAT-20091,Cold Storage - Warehouse Pallet Slot,Pharmaceuticals,Clearwater Site
+2025,Hemazol,Hemazol,MAT-20111,Corrugated Shipping Box,Vaccines,Bridgeholm Site
+2026,Torvexa,Torvexa,MAT-20002,Synthetic Peptide Concentrate,Specialty Care,Solaris Park Site
+2025,Yenzura,Yenzura,MAT-20129,Pipette Tips (case),Specialty Care,Bridgeholm Site
+2026,Torvexa,Torvexa,MAT-20012,Folding Carton,Specialty Care,Clearwater Site
+2024,Quilava,Quilava,MAT-20084,Custom Synthesis Batch,Pharmaceuticals,Northfield Site
+2024,Mendovia,Mendovia,MAT-20070,Film Coating Powder,Consumer Healthcare,Rivermill Site
+2024,Zolvarin,Zolvarin,MAT-20088,Inbound Air Freight - Temperature Controlled,Pharmaceuticals,Ashford Site
+2025,Dermafyx,Dermafyx,MAT-20085,Aseptic Fill & Finish Service,Consumer Healthcare,Bridgeholm Site
+2024,Mendovia,Mendovia,MAT-20020,Contract Packaging Service,Consumer Healthcare,Rivermill Site
+2024,Florivex,Florivex,MAT-20065,Clinical Trial Kit,Pharmaceuticals,Bridgeholm Site
+2024,Mendovia,Mendovia,MAT-20070,Film Coating Powder,Pharmaceuticals,Kingsley Site
+2026,Immunara,Immunara,MAT-20049,Stretch Pallet Wrap,Consumer Healthcare,Meadowbrook Site
+2025,Mendovia,Mendovia,MAT-20093,Filling Line Spare Parts,Specialty Care,Eastgate Site
+2025,Ulvatrix,Ulvatrix,MAT-20008,Glass Vial 2ml,Consumer Healthcare,Clearwater Site
+2026,Dermafyx,Dermafyx,MAT-20085,Aseptic Fill & Finish Service,Specialty Care,Clearwater Site
+2024,Quilava,Quilava,MAT-20075,PVC Blister Pack,Specialty Care,Ashford Site
+2026,Yenzura,Yenzura,MAT-20129,Pipette Tips (case),Specialty Care,Eastgate Site
+2024,Ostreva,Ostreva,MAT-20079,Patient Information Leaflet,Consumer Healthcare,Clearwater Site
+2024,Dermafyx,Dermafyx,MAT-20039,Ethanol (Pharma Grade),Specialty Care,Ashford Site
+2024,Sentrivax,Sentrivax,MAT-20045,Corrugated Shipping Box,Consumer Healthcare,Fenwick Site
+2024,Quilava,Quilava,MAT-20099,Ibuprofen API,Pharmaceuticals,Solaris Park Site
+2026,Sentrivax,Sentrivax,MAT-20144,Folding Carton,Consumer Healthcare,Northfield Site
+2026,Florivex,Florivex,MAT-20092,Stainless Steel Reactor Component,Vaccines,Meadowbrook Site
+2025,Wintrelis,Wintrelis,MAT-20012,Folding Carton,Consumer Healthcare,Meadowbrook Site
+2025,Norvelin,Norvelin,MAT-20052,Aseptic Fill & Finish Service,Specialty Care,Clearwater Site
+2026,Glucovex,Glucovex,MAT-20107,Freeze-dried Vaccine Vial,Pharmaceuticals,Meadowbrook Site
+2024,Wintrelis,Wintrelis,MAT-20012,Folding Carton,Specialty Care,Clearwater Site
+2024,Zolvarin,Zolvarin,MAT-20044,HDPE Bottle 250ml,Vaccines,Rivermill Site
+2024,Mendovia,Mendovia,MAT-20092,Stainless Steel Reactor Component,Vaccines,Rivermill Site
+2025,Ulvatrix,Ulvatrix,MAT-20126,Filling Line Spare Parts,Specialty Care,Solaris Park Site
+2025,Ostreva,Ostreva,MAT-20126,Filling Line Spare Parts,Pharmaceuticals,Meadowbrook Site
+2025,Norvelin,Norvelin,MAT-20046,Patient Information Leaflet,Specialty Care,Kingsley Site
+2025,Renovex,Renovex,MAT-20045,Corrugated Shipping Box,Vaccines,Clearwater Site
+2026,Sentrivax,Sentrivax,MAT-20034,Recombinant Protein Concentrate,Pharmaceuticals,Northfield Site
+2026,Immunara,Immunara,MAT-20128,Lab Reagent Kit,Specialty Care,Kingsley Site
+2024,Vezanta,Vezanta,MAT-20090,Cold Chain Transport - 2-8C,Vaccines,Rivermill Site
+2025,Zolvarin,Zolvarin,MAT-20056,Inbound Ocean Freight - Container,Vaccines,Kingsley Site
+2026,Dermafyx,Dermafyx,MAT-20085,Aseptic Fill & Finish Service,Specialty Care,Northfield Site
+2025,Norvelin,Norvelin,MAT-20002,Synthetic Peptide Concentrate,Vaccines,Meadowbrook Site
+2024,Calmera,Calmera,MAT-20051,Custom Synthesis Batch,Pharmaceuticals,Clearwater Site
+2026,Yenzura,Yenzura,MAT-20072,Ethanol (Pharma Grade),Pharmaceuticals,Rivermill Site
+2025,Sentrivax,Sentrivax,MAT-20021,Inbound Road Freight - Pallet,Vaccines,Bridgeholm Site
+2025,Florivex,Florivex,MAT-20065,Clinical Trial Kit,Pharmaceuticals,Bridgeholm Site
+2024,Glucovex,Glucovex,MAT-20038,Methylparaben,Pharmaceuticals,Ashford Site
+2026,Xantivo,Xantivo,MAT-20008,Glass Vial 2ml,Pharmaceuticals,Ashford Site
+2026,Lumivax,Lumivax,MAT-20114,Reusable Shipping Tote,Consumer Healthcare,Kingsley Site
+2025,Quilava,Quilava,MAT-20013,Patient Information Leaflet,Specialty Care,Kingsley Site
+2024,Ulvatrix,Ulvatrix,MAT-20008,Glass Vial 2ml,Vaccines,Eastgate Site
+2025,Dermafyx,Dermafyx,MAT-20066,Ibuprofen API,Pharmaceuticals,Meadowbrook Site
+2025,Sentrivax,Sentrivax,MAT-20112,Patient Information Leaflet,Specialty Care,Fenwick Site
+2026,Renovex,Renovex,MAT-20043,Prefilled Syringe 2.25ml,Pharmaceuticals,Northfield Site
+2024,Ostreva,Ostreva,MAT-20126,Filling Line Spare Parts,Vaccines,Fenwick Site
+2024,Ostreva,Ostreva,MAT-20083,Fermentation Batch Service,Specialty Care,Solaris Park Site
+2024,Dermafyx,Dermafyx,MAT-20039,Ethanol (Pharma Grade),Consumer Healthcare,Fenwick Site
+2024,Pulmatrix,Pulmatrix,MAT-20099,Ibuprofen API,Pharmaceuticals,Clearwater Site
+2025,Ulvatrix,Ulvatrix,MAT-20025,Cold Storage - Warehouse Pallet Slot,Specialty Care,Solaris Park Site
+2026,Quilava,Quilava,MAT-20013,Patient Information Leaflet,Pharmaceuticals,Rivermill Site
+2024,Torvexa,Torvexa,MAT-20086,Contract Packaging Service,Pharmaceuticals,Clearwater Site
+2024,Renovex,Renovex,MAT-20045,Corrugated Shipping Box,Pharmaceuticals,Solaris Park Site
+2024,Vezanta,Vezanta,MAT-20093,Filling Line Spare Parts,Pharmaceuticals,Clearwater Site
+2025,Quilava,Quilava,MAT-20075,PVC Blister Pack,Vaccines,Rivermill Site
+2024,Norvelin,Norvelin,MAT-20138,Isopropyl Alcohol,Vaccines,Clearwater Site
+2024,Dermafyx,Dermafyx,MAT-20066,Ibuprofen API,Specialty Care,Kingsley Site
+2025,Renovex,Renovex,MAT-20094,HPLC Consumable Kit,Pharmaceuticals,Northfield Site
+2026,Kaldrin,Kaldrin,MAT-20035,Synthetic Peptide Concentrate,Pharmaceuticals,Solaris Park Site
+2026,Quilava,Quilava,MAT-20075,PVC Blister Pack,Consumer Healthcare,Meadowbrook Site
+2026,Mendovia,Mendovia,MAT-20114,Reusable Shipping Tote,Vaccines,Fenwick Site
+2025,Xantivo,Xantivo,MAT-20071,Sodium Benzoate,Pharmaceuticals,Eastgate Site
+2025,Quilava,Quilava,MAT-20075,PVC Blister Pack,Vaccines,Eastgate Site
+2025,Lumivax,Lumivax,MAT-20084,Custom Synthesis Batch,Specialty Care,Meadowbrook Site
+2026,Calmera,Calmera,MAT-20036,Microcrystalline Cellulose,Consumer Healthcare,Bridgeholm Site
+2026,Calmera,Calmera,MAT-20051,Custom Synthesis Batch,Specialty Care,Clearwater Site
+2024,Florivex,Florivex,MAT-20061,HPLC Consumable Kit,Vaccines,Solaris Park Site
+2024,Norvelin,Norvelin,MAT-20040,Water for Injection,Specialty Care,Solaris Park Site
+2026,Torvexa,Torvexa,MAT-20012,Folding Carton,Consumer Healthcare,Meadowbrook Site
+2024,Dermafyx,Dermafyx,MAT-20011,HDPE Bottle 100ml,Consumer Healthcare,Solaris Park Site
+2025,Dermafyx,Dermafyx,MAT-20039,Ethanol (Pharma Grade),Vaccines,Northfield Site
+2024,Ulvatrix,Ulvatrix,MAT-20046,Patient Information Leaflet,Specialty Care,Kingsley Site
+2026,Norvelin,Norvelin,MAT-20008,Glass Vial 2ml,Consumer Healthcare,Kingsley Site
+2026,Brenzolix,Brenzolix,MAT-20105,Isopropyl Alcohol,Specialty Care,Meadowbrook Site
+2026,Mendovia,Mendovia,MAT-20020,Contract Packaging Service,Specialty Care,Eastgate Site
+2025,Vezanta,Vezanta,MAT-20113,Pressure-sensitive Label,Vaccines,Rivermill Site
+2025,Pulmatrix,Pulmatrix,MAT-20021,Inbound Road Freight - Pallet,Consumer Healthcare,Rivermill Site
+2025,Ostreva,Ostreva,MAT-20079,Patient Information Leaflet,Pharmaceuticals,Rivermill Site
+2024,Glucovex,Glucovex,MAT-20103,Enteric Coating Blend,Specialty Care,Solaris Park Site
+2025,Ostreva,Ostreva,MAT-20083,Fermentation Batch Service,Specialty Care,Eastgate Site
+2025,Dermafyx,Dermafyx,MAT-20085,Aseptic Fill & Finish Service,Consumer Healthcare,Northfield Site
+2024,Xantivo,Xantivo,MAT-20089,Inbound Ocean Freight - Container,Vaccines,Eastgate Site
+2024,Vezanta,Vezanta,MAT-20140,Freeze-dried Vaccine Vial,Pharmaceuticals,Kingsley Site
+2026,Renovex,Renovex,MAT-20103,Enteric Coating Blend,Pharmaceuticals,Clearwater Site
+2024,Wintrelis,Wintrelis,MAT-20002,Synthetic Peptide Concentrate,Vaccines,Clearwater Site
+2025,Lumivax,Lumivax,MAT-20084,Custom Synthesis Batch,Pharmaceuticals,Bridgeholm Site
+2026,Dermafyx,Dermafyx,MAT-20011,HDPE Bottle 100ml,Consumer Healthcare,Meadowbrook Site
+2025,Florivex,Florivex,MAT-20134,Synthetic Peptide Concentrate,Consumer Healthcare,Eastgate Site
+2026,Wintrelis,Wintrelis,MAT-20016,Stretch Pallet Wrap,Vaccines,Meadowbrook Site
+2025,Hemazol,Hemazol,MAT-20111,Corrugated Shipping Box,Consumer Healthcare,Ashford Site
+2025,Ostreva,Ostreva,MAT-20007,Water for Injection,Pharmaceuticals,Rivermill Site
+2026,Wintrelis,Wintrelis,MAT-20052,Aseptic Fill & Finish Service,Specialty Care,Rivermill Site
+2025,Lumivax,Lumivax,MAT-20013,Patient Information Leaflet,Pharmaceuticals,Kingsley Site
+2025,Torvexa,Torvexa,MAT-20002,Synthetic Peptide Concentrate,Consumer Healthcare,Ashford Site
+2024,Mendovia,Mendovia,MAT-20093,Filling Line Spare Parts,Pharmaceuticals,Solaris Park Site
+2024,Pulmatrix,Pulmatrix,MAT-20129,Pipette Tips (case),Consumer Healthcare,Eastgate Site
+2025,Kaldrin,Kaldrin,MAT-20058,Cold Storage - Warehouse Pallet Slot,Pharmaceuticals,Bridgeholm Site
+2025,Florivex,Florivex,MAT-20054,Inbound Road Freight - Pallet,Pharmaceuticals,Northfield Site
+2024,Vezanta,Vezanta,MAT-20012,Folding Carton,Specialty Care,Fenwick Site
+2025,Ulvatrix,Ulvatrix,MAT-20066,Ibuprofen API,Vaccines,Northfield Site
+2024,Vezanta,Vezanta,MAT-20118,Aseptic Fill & Finish Service,Specialty Care,Clearwater Site
+2025,Xantivo,Xantivo,MAT-20008,Glass Vial 2ml,Specialty Care,Kingsley Site
+2024,Florivex,Florivex,MAT-20134,Synthetic Peptide Concentrate,Consumer Healthcare,Solaris Park Site
+2026,Hemazol,Hemazol,MAT-20056,Inbound Ocean Freight - Container,Pharmaceuticals,Kingsley Site
+2024,Immunara,Immunara,MAT-20138,Isopropyl Alcohol,Vaccines,Kingsley Site
+2024,Wintrelis,Wintrelis,MAT-20100,Recombinant Protein Concentrate,Consumer Healthcare,Eastgate Site
+2026,Immunara,Immunara,MAT-20045,Corrugated Shipping Box,Vaccines,Meadowbrook Site
+2025,Advelra,Advelra,MAT-20146,Pressure-sensitive Label,Vaccines,Bridgeholm Site
+2024,Yenzura,Yenzura,MAT-20016,Stretch Pallet Wrap,Specialty Care,Solaris Park Site
+2025,Glucovex,Glucovex,MAT-20069,Microcrystalline Cellulose,Vaccines,Solaris Park Site
+2024,Immunara,Immunara,MAT-20140,Freeze-dried Vaccine Vial,Consumer Healthcare,Rivermill Site
+2026,Yenzura,Yenzura,MAT-20018,Custom Synthesis Batch,Specialty Care,Kingsley Site
+2026,Immunara,Immunara,MAT-20138,Isopropyl Alcohol,Specialty Care,Fenwick Site
+2024,Kaldrin,Kaldrin,MAT-20076,Prefilled Syringe 1ml,Vaccines,Bridgeholm Site
+2025,Florivex,Florivex,MAT-20134,Synthetic Peptide Concentrate,Vaccines,Bridgeholm Site
+2025,Lumivax,Lumivax,MAT-20084,Custom Synthesis Batch,Specialty Care,Meadowbrook Site
+2025,Glucovex,Glucovex,MAT-20038,Methylparaben,Consumer Healthcare,Eastgate Site
+2026,Zolvarin,Zolvarin,MAT-20139,Water for Injection,Consumer Healthcare,Ashford Site
+2024,Vezanta,Vezanta,MAT-20118,Aseptic Fill & Finish Service,Specialty Care,Kingsley Site
+2025,Ostreva,Ostreva,MAT-20010,Prefilled Syringe 1ml,Vaccines,Fenwick Site
+2024,Ulvatrix,Ulvatrix,MAT-20011,HDPE Bottle 100ml,Specialty Care,Fenwick Site
+2025,Brenzolix,Brenzolix,MAT-20029,Lab Reagent Kit,Pharmaceuticals,Bridgeholm Site
+2024,Renovex,Renovex,MAT-20045,Corrugated Shipping Box,Pharmaceuticals,Kingsley Site
+2025,Torvexa,Torvexa,MAT-20012,Folding Carton,Vaccines,Bridgeholm Site
+2025,Renovex,Renovex,MAT-20103,Enteric Coating Blend,Consumer Healthcare,Meadowbrook Site
+2026,Yenzura,Yenzura,MAT-20018,Custom Synthesis Batch,Specialty Care,Bridgeholm Site
+2025,Ostreva,Ostreva,MAT-20126,Filling Line Spare Parts,Consumer Healthcare,Ashford Site
+2025,Advelra,Advelra,MAT-20145,Patient Information Leaflet,Specialty Care,Northfield Site
+2026,Ostreva,Ostreva,MAT-20083,Fermentation Batch Service,Pharmaceuticals,Meadowbrook Site
+2025,Ulvatrix,Ulvatrix,MAT-20088,Inbound Air Freight - Temperature Controlled,Pharmaceuticals,Northfield Site
+2024,Zolvarin,Zolvarin,MAT-20044,HDPE Bottle 250ml,Specialty Care,Rivermill Site
+2025,Lumivax,Lumivax,MAT-20114,Reusable Shipping Tote,Consumer Healthcare,Clearwater Site
+2026,Ostreva,Ostreva,MAT-20010,Prefilled Syringe 1ml,Pharmaceuticals,Fenwick Site
+2026,Calmera,Calmera,MAT-20054,Inbound Road Freight - Pallet,Specialty Care,Northfield Site

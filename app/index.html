@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EF Tracker</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="app">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">EF</div>
+      <div class="brand-copy"><strong>EF Tracker</strong><span>Scope 3 governance</span></div>
+    </div>
+    <nav class="nav">
+      <button class="active" data-page="dashboard">Dashboard</button>
+      <div class="section-label">Emission Factors</div>
+      <button data-page="ef-entry">EF Entry</button>
+      <button data-page="ef-log">EF Log</button>
+      <div class="section-label">Data</div>
+      <button data-page="reference">Reference Data</button>
+      <button data-page="audit">Audit</button>
+    </nav>
+    <div class="sidebar-foot">
+      <div class="user-switch">
+        <label>Logged in as (demo)</label>
+        <select id="currentUserSelect"></select>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <div class="topbar">
+      <div class="page-title"><h1 id="topTitle">Dashboard</h1><p id="topSubtitle">Quick status overview of emission factor proposals and reference data</p></div>
+      <div class="topbar-actions">
+        <button class="icon-btn" id="notifBtn" title="Notifications">🔔 <span id="notifCount"></span></button>
+        <button class="btn" id="resyncBtn">Resync reference data</button>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <!-- ===================== DASHBOARD ===================== -->
+      <section class="page active" id="page-dashboard">
+        <div class="notice info" id="syncNotice">Loading reference data…</div>
+        <div class="grid kpis" id="dashboardKpis"></div>
+        <div class="grid two-col" style="margin-top:20px">
+          <div class="card">
+            <div class="card-head"><div><h3>EF proposals by stage</h3><p>Across all open and closed proposals</p></div></div>
+            <div id="stageBreakdown"></div>
+          </div>
+          <div class="card">
+            <div class="card-head"><div><h3>Recent activity</h3><p>Latest audit log entries</p></div></div>
+            <div id="recentActivity"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== EF ENTRY ===================== -->
+      <section class="page" id="page-ef-entry">
+        <div class="card-head" style="margin-bottom:14px">
+          <div><h2>Emission Factor proposal</h2><p>Create a new EF proposal, or open an existing one by Change ID.</p></div>
+          <div style="display:flex;gap:8px">
+            <input type="text" id="openChangeIdInput" placeholder="Open by Change ID…" style="width:180px">
+            <button class="btn" id="openChangeIdBtn">Open</button>
+            <button class="btn primary" id="newEfBtn">+ New EF proposal</button>
+          </div>
+        </div>
+
+        <div class="stage-tracker" id="stageTracker"></div>
+
+        <div id="efStageScreens"></div>
+      </section>
+
+      <!-- ===================== EF LOG ===================== -->
+      <section class="page" id="page-ef-log">
+        <div class="card-head">
+          <div><h2>EF Log</h2><p>All EF proposals with current stage, status and latest details.</p></div>
+          <button class="btn primary" data-go="ef-entry">+ New EF proposal</button>
+        </div>
+        <div class="card">
+          <div class="table-toolbar">
+            <input type="text" id="efLogSearch" placeholder="Search change ID, name, material…">
+          </div>
+          <div class="table-scroll"><table id="efLogTable"></table></div>
+        </div>
+      </section>
+
+      <!-- ===================== REFERENCE DATA ===================== -->
+      <section class="page" id="page-reference">
+        <div class="card-head"><div><h2>Reference Data</h2><p>Latest data as loaded from the backend. Use Resync to refresh.</p></div></div>
+        <div class="tabs" id="refTabs"></div>
+        <div class="card">
+          <div class="table-toolbar">
+            <input type="text" id="refSearch" placeholder="Search this table…">
+            <span class="pill gray" id="refRowCount"></span>
+          </div>
+          <div class="table-scroll"><table id="refTable"></table></div>
+        </div>
+      </section>
+
+      <!-- ===================== AUDIT ===================== -->
+      <section class="page" id="page-audit">
+        <div class="card-head"><div><h2>Audit log</h2><p>Every important action, tracked by user and timestamp.</p></div></div>
+        <div class="card">
+          <div class="table-toolbar">
+            <input type="text" id="auditSearch" placeholder="Search user, action, object…">
+          </div>
+          <div class="table-scroll"><table id="auditTable"></table></div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<div id="modalRoot"></div>
+<div class="toast-stack" id="toastStack"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+category,option_no,option_label,includes_text,review_route
+EF Source,1,Supplier/manufacturer,"Supplier PCF, supplier LCA or supplier EPD",
+EF Source,2,Internal calculation,"Internal LCA, engineering calculation or internally combined sources",
+EF Source,3,EF database,"ecoinvent, Sphera/GaBi, CEDA, EXIOBASE, etc.",
+EF Source,4,Published authoritative source,"Government, industry association, EPD programme or academic publication",
+EF Source,5,Other/unknown,"Consultant, legacy EF or source not documented",
+EF Methodology,1,Recognized product LCA/PCF standard,"ISO 14067, ISO 14040/44, GHG Protocol Product Standard, PAS 2050",
+EF Methodology,2,Sector-specific methodology or PCR,"TfS, PACT, PAS 2090, ISO 14025 EPD with applicable PCR",
+EF Methodology,3,Process/activity-based calculation,"Process LCA, engineering calculation, measurement or mass balance",
+EF Methodology,4,Hybrid or spend-based calculation,"Hybrid LCA, EEIO or spend-based EF",
+EF Methodology,5,Proxy/other/unknown methodology,"Adjusted EF, extrapolation, undocumented or other method",
+EF Assurance,1,Independently verified,Third-party verification or verified EPD,Standard Reviewer
+EF Assurance,2,Independently reviewed / quality-assured,"Critical review, peer review or database QA process",Standard Reviewer
+EF Assurance,3,Internally or customer reviewed,Documented internal or second-party review,Standard Reviewer
+EF Assurance,4,Unverified but documented,Full or partial methodology/calculation available,Expert Reviewer
+EF Assurance,5,Unverified/unknown,"Single EF value, unsupported declaration or no assurance information",Expert Reviewer

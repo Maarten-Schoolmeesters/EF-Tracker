@@ -1,0 +1,19 @@
+# Confidential source materials - never commit
+"Slide w requirement spec etc.pptx"
+Slide*requirement*.pptx
+Anonymized_Excel_Package/
+Anonymized_Excel_Package.zip
+emission_factor_tracker_mockup_v6.html
+Prompt.txt
+
+# OS/editor
+.DS_Store
+Thumbs.db
+
+# Env/secrets
+.env
+.env.local
+*.local
+
+# Node
+node_modules/

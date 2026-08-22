@@ -1,0 +1,190 @@
+supplier_name,emission_factor_name,parent_supplier_mapping_initial,supplier_number,ef_per_1000_gbp
+Atlas Solutions,Spend EF Atlas Solutions v1,Cascade Polymer Group,SUP-10000,0.4621
+,Spend EF Atlas Solutions v2,Cascade Polymer Group,SUP-10000,0.4713
+Atlas Solutions,Spend EF Atlas Solutions v3,Cascade Polymer Group,SUP-10000,0.4806
+,Spend EF Cascade Labs v1,Helix Group,SUP-10001,0.7844
+Cascade Labs,Spend EF Cascade Labs v2,,SUP-10001,0.8001
+Cascade Labs,Spend EF Cascade Labs v3,Helix Group,SUP-10001,0.8158
+Cascade Labs,Spend EF Cascade Labs v4,Helix Group,SUP-10001,0.8315
+Cascade Labs,Spend EF Cascade Labs v5,Helix Group,SUP-10001,0.8472
+Cascade Labs,Spend EF Cascade Labs v6,Helix Group,SUP-10001,0.8628
+Ridgeline International,Spend EF Ridgeline International v1,NovaChem Holdings,SUP-10002,0.9154
+Ridgeline International,Spend EF Ridgeline International v2,NovaChem Holdings,SUP-10002,0.9337
+Ridgeline International,Spend EF Ridgeline International v3,NovaChem Holdings,SUP-10002,0.952
+,Spend EF PharmaPak Glass Works v1,BrightLab Corp,SUP-10003,0.2511
+PharmaPak Glass Works,Spend EF PharmaPak Glass Works v2,BrightLab Corp,SUP-10003,0.2561
+PharmaPak Glass Works,Spend EF PharmaPak Glass Works v3,BrightLab Corp,SUP-10003,0.2611
+PharmaPak Glass Works,Spend EF PharmaPak Glass Works v4,BrightLab Corp,SUP-10003,0.2662
+Bluepeak Glass Works,Spend EF Bluepeak Glass Works v1,BrightLab Corp,SUP-10004,0.1042
+Bluepeak Glass Works,Spend EF Bluepeak Glass Works v2,BrightLab Corp,SUP-10004,0.1063
+Bluepeak Glass Works,Spend EF Bluepeak Glass Works v3,BrightLab Corp,SUP-10004,0.1084
+Bluepeak Glass Works,Spend EF Bluepeak Glass Works v4,,SUP-10004,0.1105
+,Spend EF Bluepeak Glass Works v5,BrightLab Corp,SUP-10004,0.1125
+Bluepeak Glass Works,Spend EF Bluepeak Glass Works v6,BrightLab Corp,SUP-10004,0.1146
+Amberline Logistics,Spend EF Amberline Logistics v1,Cascade Polymer Group,SUP-10005,0.3783
+Amberline Logistics,Spend EF Amberline Logistics v2,Cascade Polymer Group,SUP-10005,0.3859
+Amberline Logistics,Spend EF Amberline Logistics v3,Cascade Polymer Group,SUP-10005,0.3934
+,Spend EF Amberline Logistics v4,Cascade Polymer Group,SUP-10005,0.401
+Amberline Logistics,Spend EF Amberline Logistics v5,Cascade Polymer Group,SUP-10005,0.4086
+Amberline Logistics,Spend EF Amberline Logistics v6,Cascade Polymer Group,SUP-10005,0.4161
+Amberline Logistics,Spend EF Amberline Logistics v7,Cascade Polymer Group,SUP-10005,0.4237
+Corex Materials Ltd,Spend EF Corex Materials Ltd v1,Cascade Polymer Group,SUP-10006,0.6127
+Corex Materials Ltd,Spend EF Corex Materials Ltd v2,Cascade Polymer Group,SUP-10006,0.625
+Corex Materials Ltd,Spend EF Corex Materials Ltd v3,Cascade Polymer Group,SUP-10006,0.6372
+Solara Industries,Spend EF Solara Industries v1,,SUP-10007,0.4567
+Solara Industries,Spend EF Solara Industries v2,Helix Group,SUP-10007,0.4658
+Solara Industries,Spend EF Solara Industries v3,Helix Group,SUP-10007,0.475
+Ferrolux Manufacturing Co.,Spend EF Ferrolux Manufacturing Co. v1,Quantum Holdings,SUP-10008,0.098
+Ferrolux Manufacturing Co.,Spend EF Ferrolux Manufacturing Co. v2,Quantum Holdings,SUP-10008,0.1
+Ferrolux Manufacturing Co.,Spend EF Ferrolux Manufacturing Co. v3,Quantum Holdings,SUP-10008,0.1019
+Ferrolux Manufacturing Co.,Spend EF Ferrolux Manufacturing Co. v4,Quantum Holdings,SUP-10008,0.1039
+Ferrolux Manufacturing Co.,Spend EF Ferrolux Manufacturing Co. v5,Quantum Holdings,SUP-10008,0.1058
+Helix Labs,Spend EF Helix Labs v1,,SUP-10009,0.4307
+Helix Labs,Spend EF Helix Labs v2,Sterling Industries,SUP-10009,0.4393
+Helix Labs,Spend EF Helix Labs v3,Sterling Industries,SUP-10009,0.4479
+Helix Labs,Spend EF Helix Labs v4,Sterling Industries,SUP-10009,0.4565
+Vantis Industries,Spend EF Vantis Industries v1,BrightLab Corp,SUP-10010,0.5058
+,Spend EF Vantis Industries v2,BrightLab Corp,SUP-10010,0.5159
+Vantis Industries,Spend EF Vantis Industries v3,BrightLab Corp,SUP-10010,0.526
+Vantis Industries,Spend EF Vantis Industries v4,BrightLab Corp,SUP-10010,0.5361
+Vantis Industries,Spend EF Vantis Industries v5,BrightLab Corp,SUP-10010,0.5463
+,Spend EF Vantis Industries v6,BrightLab Corp,SUP-10010,0.5564
+Ridgeline Glass Works,Spend EF Ridgeline Glass Works v1,Helix Group,SUP-10011,0.9924
+Ridgeline Glass Works,Spend EF Ridgeline Glass Works v2,Helix Group,SUP-10011,1.0122
+Ridgeline Glass Works,Spend EF Ridgeline Glass Works v3,,SUP-10011,1.0321
+Ridgeline Glass Works,Spend EF Ridgeline Glass Works v4,Helix Group,SUP-10011,1.0519
+Ridgeline Glass Works,Spend EF Ridgeline Glass Works v5,Helix Group,SUP-10011,1.0718
+,Spend EF Everline Industries v1,Atlas Materials Corp,SUP-10012,0.4186
+Everline Industries,Spend EF Everline Industries v2,Atlas Materials Corp,SUP-10012,0.427
+Everline Industries,Spend EF Everline Industries v3,Atlas Materials Corp,SUP-10012,0.4353
+Everline Industries,Spend EF Everline Industries v4,Atlas Materials Corp,SUP-10012,0.4437
+Everline Industries,Spend EF Everline Industries v5,Atlas Materials Corp,SUP-10012,0.4521
+Everline Industries,Spend EF Everline Industries v6,Atlas Materials Corp,SUP-10012,0.4605
+Everline Industries,Spend EF Everline Industries v7,Atlas Materials Corp,SUP-10012,0.4688
+Quantum Vial Co.,Spend EF Quantum Vial Co. v1,Quantum Holdings,SUP-10013,0.7387
+Quantum Vial Co.,Spend EF Quantum Vial Co. v2,,SUP-10013,0.7535
+Quantum Vial Co.,Spend EF Quantum Vial Co. v3,Quantum Holdings,SUP-10013,0.7682
+Quantum Vial Co.,Spend EF Quantum Vial Co. v4,,SUP-10013,0.783
+Quantum Vial Co.,Spend EF Quantum Vial Co. v5,,SUP-10013,0.7978
+Ferrolux Glass Works,Spend EF Ferrolux Glass Works v1,Cascade Polymer Group,SUP-10014,0.153
+Ferrolux Glass Works,Spend EF Ferrolux Glass Works v2,Cascade Polymer Group,SUP-10014,0.1561
+,Spend EF Ferrolux Glass Works v3,Cascade Polymer Group,SUP-10014,0.1591
+Ferrolux Glass Works,Spend EF Ferrolux Glass Works v4,Cascade Polymer Group,SUP-10014,0.1622
+Ferrolux Glass Works,Spend EF Ferrolux Glass Works v5,Cascade Polymer Group,SUP-10014,0.1652
+Ferrolux Glass Works,Spend EF Ferrolux Glass Works v6,Cascade Polymer Group,SUP-10014,0.1683
+Ferrolux Glass Works,Spend EF Ferrolux Glass Works v7,,SUP-10014,0.1714
+Clarion Packaging Ltd,Spend EF Clarion Packaging Ltd v1,Meridian Industries plc,SUP-10015,0.793
+Clarion Packaging Ltd,Spend EF Clarion Packaging Ltd v2,Meridian Industries plc,SUP-10015,0.8089
+Clarion Packaging Ltd,Spend EF Clarion Packaging Ltd v3,Meridian Industries plc,SUP-10015,0.8247
+Clarion Packaging Ltd,Spend EF Clarion Packaging Ltd v4,Meridian Industries plc,SUP-10015,0.8406
+,Spend EF Clarion Packaging Ltd v5,Meridian Industries plc,SUP-10015,0.8564
+Clarion Packaging Ltd,Spend EF Clarion Packaging Ltd v6,Meridian Industries plc,SUP-10015,0.8723
+,Spend EF Clarion Packaging Ltd v7,Meridian Industries plc,SUP-10015,0.8882
+BrightLab Vial Co.,Spend EF BrightLab Vial Co. v1,,SUP-10016,0.0671
+,Spend EF BrightLab Vial Co. v2,Everline Group,SUP-10016,0.0684
+BrightLab Vial Co.,Spend EF BrightLab Vial Co. v3,Everline Group,SUP-10016,0.0698
+,Spend EF BrightLab Vial Co. v4,,SUP-10016,0.0711
+Solara Manufacturing Co.,Spend EF Solara Manufacturing Co. v1,NovaChem Holdings,SUP-10017,1.0175
+Solara Manufacturing Co.,Spend EF Solara Manufacturing Co. v2,NovaChem Holdings,SUP-10017,1.0379
+Solara Manufacturing Co.,Spend EF Solara Manufacturing Co. v3,,SUP-10017,1.0582
+,Spend EF Solara Manufacturing Co. v4,NovaChem Holdings,SUP-10017,1.0786
+Solara Manufacturing Co.,Spend EF Solara Manufacturing Co. v5,NovaChem Holdings,SUP-10017,1.0989
+Solara Manufacturing Co.,Spend EF Solara Manufacturing Co. v6,NovaChem Holdings,SUP-10017,1.1193
+Solara Manufacturing Co.,Spend EF Solara Manufacturing Co. v7,NovaChem Holdings,SUP-10017,1.1396
+Solara International,Spend EF Solara International v1,,SUP-10018,1.1178
+Solara International,Spend EF Solara International v2,,SUP-10018,1.1402
+Solara International,Spend EF Solara International v3,Cascade Polymer Group,SUP-10018,1.1625
+Solara International,Spend EF Solara International v4,Cascade Polymer Group,SUP-10018,1.1849
+Ridgeline Labs,Spend EF Ridgeline Labs v1,Quantum Holdings,SUP-10019,0.7877
+Ridgeline Labs,Spend EF Ridgeline Labs v2,Quantum Holdings,SUP-10019,0.8035
+Ridgeline Labs,Spend EF Ridgeline Labs v3,,SUP-10019,0.8192
+,Spend EF Ridgeline Labs v4,Quantum Holdings,SUP-10019,0.835
+Vantis Packaging Ltd,Spend EF Vantis Packaging Ltd v1,Sterling Industries,SUP-10020,1.1938
+Vantis Packaging Ltd,Spend EF Vantis Packaging Ltd v2,Sterling Industries,SUP-10020,1.2177
+Vantis Packaging Ltd,Spend EF Vantis Packaging Ltd v3,Sterling Industries,SUP-10020,1.2416
+Vantis Packaging Ltd,Spend EF Vantis Packaging Ltd v4,Sterling Industries,SUP-10020,1.2654
+Vantis Packaging Ltd,Spend EF Vantis Packaging Ltd v5,,SUP-10020,1.2893
+,Spend EF Vantis Packaging Ltd v6,Sterling Industries,SUP-10020,1.3132
+Cascade Glass Works,Spend EF Cascade Glass Works v1,,SUP-10021,0.5513
+,Spend EF Cascade Glass Works v2,BrightLab Corp,SUP-10021,0.5623
+Cascade Glass Works,Spend EF Cascade Glass Works v3,BrightLab Corp,SUP-10021,0.5734
+,Spend EF Cascade Glass Works v4,,SUP-10021,0.5844
+Cascade Glass Works,Spend EF Cascade Glass Works v5,BrightLab Corp,SUP-10021,0.5954
+Cascade Glass Works,Spend EF Cascade Glass Works v6,BrightLab Corp,SUP-10021,0.6064
+Cascade Excipients Ltd,Spend EF Cascade Excipients Ltd v1,Sterling Industries,SUP-10022,0.9789
+Cascade Excipients Ltd,Spend EF Cascade Excipients Ltd v2,Sterling Industries,SUP-10022,0.9985
+Cascade Excipients Ltd,Spend EF Cascade Excipients Ltd v3,Sterling Industries,SUP-10022,1.0181
+,Spend EF Cascade Excipients Ltd v4,Sterling Industries,SUP-10022,1.0376
+Cascade Excipients Ltd,Spend EF Cascade Excipients Ltd v5,Sterling Industries,SUP-10022,1.0572
+Cascade Excipients Ltd,Spend EF Cascade Excipients Ltd v6,Sterling Industries,SUP-10022,1.0768
+Cascade Excipients Ltd,Spend EF Cascade Excipients Ltd v7,Sterling Industries,SUP-10022,1.0964
+Atlas Fine Chemicals,Spend EF Atlas Fine Chemicals v1,Meridian Industries plc,SUP-10023,0.4846
+Atlas Fine Chemicals,Spend EF Atlas Fine Chemicals v2,Meridian Industries plc,SUP-10023,0.4943
+,Spend EF Atlas Fine Chemicals v3,Meridian Industries plc,SUP-10023,0.504
+Atlas Fine Chemicals,Spend EF Atlas Fine Chemicals v4,Meridian Industries plc,SUP-10023,0.5137
+Atlas Fine Chemicals,Spend EF Atlas Fine Chemicals v5,Meridian Industries plc,SUP-10023,0.5234
+Atlas Fine Chemicals,Spend EF Atlas Fine Chemicals v6,Meridian Industries plc,SUP-10023,0.5331
+Atlas Fine Chemicals,Spend EF Atlas Fine Chemicals v7,Meridian Industries plc,SUP-10023,0.5428
+,Spend EF Clarion Industries v1,Everline Group,SUP-10024,0.7565
+Clarion Industries,Spend EF Clarion Industries v2,Everline Group,SUP-10024,0.7716
+Clarion Industries,Spend EF Clarion Industries v3,Everline Group,SUP-10024,0.7868
+Clarion Industries,Spend EF Clarion Industries v4,,SUP-10024,0.8019
+Clarion Industries,Spend EF Clarion Industries v5,,SUP-10024,0.817
+Trueform Polymer Group,Spend EF Trueform Polymer Group v1,BrightLab Corp,SUP-10025,1.1348
+Trueform Polymer Group,Spend EF Trueform Polymer Group v2,BrightLab Corp,SUP-10025,1.1575
+Trueform Polymer Group,Spend EF Trueform Polymer Group v3,BrightLab Corp,SUP-10025,1.1802
+Trueform Polymer Group,Spend EF Trueform Polymer Group v4,BrightLab Corp,SUP-10025,1.2029
+Bluepeak Group,Spend EF Bluepeak Group v1,Cascade Polymer Group,SUP-10026,0.4872
+,Spend EF Bluepeak Group v2,Cascade Polymer Group,SUP-10026,0.4969
+Bluepeak Group,Spend EF Bluepeak Group v3,Cascade Polymer Group,SUP-10026,0.5067
+,Spend EF Bluepeak Group v4,,SUP-10026,0.5164
+Bluepeak Group,Spend EF Bluepeak Group v5,Cascade Polymer Group,SUP-10026,0.5262
+Atlas Polymer Group,Spend EF Atlas Polymer Group v1,Everline Group,SUP-10027,0.4115
+Atlas Polymer Group,Spend EF Atlas Polymer Group v2,Everline Group,SUP-10027,0.4197
+,Spend EF Atlas Polymer Group v3,Everline Group,SUP-10027,0.428
+,Spend EF NovaChem Labs v1,Cascade Polymer Group,SUP-10028,0.7424
+NovaChem Labs,Spend EF NovaChem Labs v2,Cascade Polymer Group,SUP-10028,0.7572
+NovaChem Labs,Spend EF NovaChem Labs v3,Cascade Polymer Group,SUP-10028,0.7721
+Trueform Industries,Spend EF Trueform Industries v1,Cascade Polymer Group,SUP-10029,0.7311
+,Spend EF Trueform Industries v2,Cascade Polymer Group,SUP-10029,0.7457
+Trueform Industries,Spend EF Trueform Industries v3,Cascade Polymer Group,SUP-10029,0.7603
+Trueform Industries,Spend EF Trueform Industries v4,Cascade Polymer Group,SUP-10029,0.775
+Cascade Materials Ltd,Spend EF Cascade Materials Ltd v1,Meridian Industries plc,SUP-10030,1.0639
+Cascade Materials Ltd,Spend EF Cascade Materials Ltd v2,,SUP-10030,1.0852
+Cascade Materials Ltd,Spend EF Cascade Materials Ltd v3,Meridian Industries plc,SUP-10030,1.1065
+Cascade Materials Ltd,Spend EF Cascade Materials Ltd v4,Meridian Industries plc,SUP-10030,1.1277
+,Spend EF Cascade Materials Ltd v5,Meridian Industries plc,SUP-10030,1.149
+Clarion Materials Ltd,Spend EF Clarion Materials Ltd v1,,SUP-10031,0.6317
+Clarion Materials Ltd,Spend EF Clarion Materials Ltd v2,Sterling Industries,SUP-10031,0.6443
+Clarion Materials Ltd,Spend EF Clarion Materials Ltd v3,Sterling Industries,SUP-10031,0.657
+,Spend EF Everline Glass Works v1,NovaChem Holdings,SUP-10032,0.0708
+Everline Glass Works,Spend EF Everline Glass Works v2,NovaChem Holdings,SUP-10032,0.0722
+Everline Glass Works,Spend EF Everline Glass Works v3,NovaChem Holdings,SUP-10032,0.0736
+Meridian Labs,Spend EF Meridian Labs v1,Sterling Industries,SUP-10033,0.5783
+Meridian Labs,Spend EF Meridian Labs v2,Sterling Industries,SUP-10033,0.5899
+Meridian Labs,Spend EF Meridian Labs v3,Sterling Industries,SUP-10033,0.6014
+Meridian Labs,Spend EF Meridian Labs v4,Sterling Industries,SUP-10033,0.613
+,Spend EF Cascade Packaging Ltd v1,,SUP-10034,1.0683
+Cascade Packaging Ltd,Spend EF Cascade Packaging Ltd v2,Sterling Industries,SUP-10034,1.0897
+Cascade Packaging Ltd,Spend EF Cascade Packaging Ltd v3,Sterling Industries,SUP-10034,1.111
+Cascade Packaging Ltd,Spend EF Cascade Packaging Ltd v4,Sterling Industries,SUP-10034,1.1324
+Cascade Packaging Ltd,Spend EF Cascade Packaging Ltd v5,,SUP-10034,1.1538
+Quantum Excipients Ltd,Spend EF Quantum Excipients Ltd v1,Pinnacle Chemicals plc,SUP-10035,0.5326
+Quantum Excipients Ltd,Spend EF Quantum Excipients Ltd v2,Pinnacle Chemicals plc,SUP-10035,0.5433
+,Spend EF Quantum Excipients Ltd v3,,SUP-10035,0.5539
+Quantum Excipients Ltd,Spend EF Quantum Excipients Ltd v4,Pinnacle Chemicals plc,SUP-10035,0.5646
+Quantum Excipients Ltd,Spend EF Quantum Excipients Ltd v5,Pinnacle Chemicals plc,SUP-10035,0.5752
+,Spend EF Quantum Excipients Ltd v6,,SUP-10035,0.5859
+PharmaPak Labs,Spend EF PharmaPak Labs v1,Cascade Polymer Group,SUP-10036,0.4776
+PharmaPak Labs,Spend EF PharmaPak Labs v2,,SUP-10036,0.4872
+PharmaPak Labs,Spend EF PharmaPak Labs v3,,SUP-10036,0.4967
+Amberline Excipients Ltd,Spend EF Amberline Excipients Ltd v1,,SUP-10037,0.2638
+Amberline Excipients Ltd,Spend EF Amberline Excipients Ltd v2,Sterling Industries,SUP-10037,0.2691
+Amberline Excipients Ltd,Spend EF Amberline Excipients Ltd v3,Sterling Industries,SUP-10037,0.2744
+Sterling Industries,Spend EF Sterling Industries v1,,SUP-10038,0.9939
+,Spend EF Sterling Industries v2,Quantum Holdings,SUP-10038,1.0138
+Sterling Industries,Spend EF Sterling Industries v3,,SUP-10038,1.0337
+Sterling Industries,Spend EF Sterling Industries v4,Quantum Holdings,SUP-10038,1.0535
+NovaChem Industries,Spend EF NovaChem Industries v1,NovaChem Holdings,SUP-10039,0.8558
+NovaChem Industries,Spend EF NovaChem Industries v2,NovaChem Holdings,SUP-10039,0.8729
+NovaChem Industries,Spend EF NovaChem Industries v3,NovaChem Holdings,SUP-10039,0.89

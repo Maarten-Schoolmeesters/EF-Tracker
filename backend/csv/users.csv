@@ -1,0 +1,19 @@
+user_id,name,roles,open_ef_reviews,open_ef_approvals
+U-1000,Ingrid Novak,"{""Expert EF Reviewer""}",3,0
+U-1001,Diego Duarte,"{""Project Owner"",""Expert EF Reviewer""}",1,0
+U-1002,Diego Osei,"{""Project Reviewer""}",3,0
+U-1003,Hannah Berg,"{""EF Approver""}",0,3
+U-1004,Diego Adeyemi,"{""Standard EF Reviewer"",""EF Approver""}",3,3
+U-1005,Elena Osei,"{""Project Owner""}",0,0
+U-1006,Zara Reyes,"{""Standard EF Reviewer"",""Expert EF Reviewer""}",3,0
+U-1007,Benjamin Berg,"{""Project Owner""}",0,0
+U-1008,Sofia Haddad,"{""Expert EF Reviewer""}",2,0
+U-1009,Ingrid Duarte,"{""Project Owner""}",0,0
+U-1010,Freya Duarte,"{""EF Approver"",""Project Owner""}",0,2
+U-1011,Priya Tanaka,"{""Project Reviewer""}",0,0
+U-1012,Ravi Adeyemi,"{""Expert EF Reviewer""}",6,0
+U-1013,Elena Adeyemi,"{""Expert EF Reviewer""}",4,0
+U-1014,Sofia Adeyemi,"{""Project Owner""}",0,0
+U-1015,Maya Larsen,"{""Project Owner""}",0,0
+U-1016,Jonas Sorensen,"{""Standard EF Reviewer""}",4,0
+U-1017,Fatima Larsen,"{""EF Approver""}",0,0
