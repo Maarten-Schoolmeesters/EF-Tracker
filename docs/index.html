@@ -15,13 +15,13 @@
       <div class="brand-copy"><strong>EF Tracker</strong><span>Scope 3 governance</span></div>
     </div>
     <nav class="nav">
-      <button class="active" data-page="dashboard">Dashboard</button>
+      <button class="active" data-page="dashboard"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></svg>Dashboard</button>
       <div class="section-label">Emission Factors</div>
-      <button data-page="ef-entry">EF Entry</button>
-      <button data-page="ef-log">EF Log</button>
+      <button data-page="ef-entry"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3.5l6.5 6.5L9 21H3v-6L14 3.5z"/><path d="M12.5 5 19 11.5"/></svg>EF Entry</button>
+      <button data-page="ef-log"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 3.5h10a1.5 1.5 0 0 1 1.5 1.5v15L15 17l-3 2.5L9 17l-3.5 2.5V5A1.5 1.5 0 0 1 7 3.5z"/><path d="M8.5 8.5h7M8.5 12h7"/></svg>EF Log</button>
       <div class="section-label">Data</div>
-      <button data-page="reference">Reference Data</button>
-      <button data-page="audit">Audit</button>
+      <button data-page="reference"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="5.5" rx="7.5" ry="2.5"/><path d="M4.5 5.5V18c0 1.4 3.4 2.5 7.5 2.5s7.5-1.1 7.5-2.5V5.5"/><path d="M4.5 11.75c0 1.4 3.4 2.5 7.5 2.5s7.5-1.1 7.5-2.5"/></svg>Reference Data</button>
+      <button data-page="audit"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3.5l7 2.8v5.4c0 4.4-3 6.9-7 8.8-4-1.9-7-4.4-7-8.8V6.3l7-2.8z"/><path d="M9 12.2l2 2 4-4.2"/></svg>Audit</button>
     </nav>
     <div class="sidebar-foot">
       <div class="user-switch">
@@ -39,8 +39,11 @@
     <div class="topbar">
       <div class="page-title"><h1 id="topTitle">Dashboard</h1><p id="topSubtitle">Quick status overview of emission factor proposals and reference data</p></div>
       <div class="topbar-actions">
-        <button class="icon-btn" id="notifBtn" title="Notifications">🔔 <span id="notifCount"></span></button>
-        <button class="btn" id="resyncBtn">Resync reference data</button>
+        <button class="icon-btn notif-btn" id="notifBtn" title="Notifications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 10a6 6 0 1 1 12 0c0 4 1.5 5.5 1.5 5.5h-15S6 14 6 10z"/><path d="M10 19a2 2 0 0 0 4 0"/></svg>
+          <span id="notifCount" class="notif-count"></span>
+        </button>
+        <button class="btn" id="resyncBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M20 11A8 8 0 1 0 18.5 16"/><path d="M20 5v6h-6"/></svg> Resync reference data</button>
       </div>
     </div>
 

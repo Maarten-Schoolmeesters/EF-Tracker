@@ -97,13 +97,21 @@ function wireUserAndRoleSelectors() {
 }
 
 async function resync() {
+  const btn = document.getElementById("resyncBtn");
+  btn.classList.add("resync-spin");
+  btn.disabled = true;
   toast("Resyncing reference data…");
-  await loadReferenceData();
-  await loadTransactionalData();
-  populateUserSelect();
-  renderNotifBadge();
-  renderCurrentPage();
-  toast("Reference data resynced", "success");
+  try {
+    await loadReferenceData();
+    await loadTransactionalData();
+    populateUserSelect();
+    renderNotifBadge();
+    renderCurrentPage();
+    toast("Reference data resynced", "success");
+  } finally {
+    btn.classList.remove("resync-spin");
+    btn.disabled = false;
+  }
 }
 
 async function init() {

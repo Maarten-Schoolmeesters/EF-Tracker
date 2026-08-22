@@ -13,7 +13,7 @@ export function createStyledDropdown({ container, options, value, placeholder, r
   function render() {
     container.innerHTML = "";
     const wrap = document.createElement("div");
-    wrap.className = "styled-dropdown" + (disabled ? " disabled" : "");
+    wrap.className = "styled-dropdown" + (disabled ? " disabled" : "") + (open ? " open" : "");
 
     const btn = document.createElement("button");
     btn.type = "button";
