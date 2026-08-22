@@ -127,6 +127,33 @@ export function pickApprover() {
   return pickByLowestCount("EF Approver", "open_ef_approvals");
 }
 
+// ---- Role-based action gating (E2/E3): must be BOTH the specific person
+// assigned to this proposal AND currently acting as an appropriate role -
+// holding the role in general is not enough, and being assigned isn't
+// enough either if currently acting as a different role. ----
+
+const REVIEWER_ROLES = ["Expert EF Reviewer", "Standard EF Reviewer"];
+
+export function canActOnReview(proposal) {
+  return store.currentUserId === proposal.reviewer_id && REVIEWER_ROLES.includes(store.currentActiveRole);
+}
+
+export function canActOnApproval(proposal) {
+  return store.currentUserId === proposal.approver_id && store.currentActiveRole === "EF Approver";
+}
+
+export function reviewGatingMessage(proposal) {
+  if (store.currentUserId !== proposal.reviewer_id) return "You are not the reviewer assigned to this EF proposal - only the assigned reviewer can act here.";
+  if (!REVIEWER_ROLES.includes(store.currentActiveRole)) return `You're assigned as the reviewer, but you're currently acting as "${store.currentActiveRole || "no role"}" - switch to a reviewer role to act.`;
+  return null;
+}
+
+export function approvalGatingMessage(proposal) {
+  if (store.currentUserId !== proposal.approver_id) return "You are not the approver assigned to this EF proposal - only the assigned approver can act here.";
+  if (store.currentActiveRole !== "EF Approver") return `You're assigned as the approver, but you're currently acting as "${store.currentActiveRole || "no role"}" - switch to EF Approver to act.`;
+  return null;
+}
+
 // ---- New EF Name derivation (slide 12: "standard must be agreed" - proposing a concrete rule) ----
 
 export function deriveEfName({ efType, fields, materialDescription, supplierName, year }) {

@@ -3,7 +3,7 @@ import { store, loadReferenceData, loadTransactionalData } from "./dataStore.js"
 import { toast } from "./toast.js";
 import { registerPageChangeHandler } from "./nav.js";
 import { renderDashboard } from "./pages/dashboard.js";
-import { mountEfEntry, confirmDiscardIfDirty, forceBlankDraft } from "./pages/efEntry.js";
+import { mountEfEntry, confirmDiscardIfDirty, forceBlankDraft, rerenderIfMounted } from "./pages/efEntry.js";
 import { mountEfLog, renderEfLog } from "./pages/efLog.js";
 import { mountReferenceData, renderActiveTab } from "./pages/referenceData.js";
 import { mountAudit, renderAudit } from "./pages/audit.js";
@@ -21,6 +21,7 @@ let currentPage = "dashboard";
 
 function renderCurrentPage() {
   if (currentPage === "dashboard") renderDashboard();
+  if (currentPage === "ef-entry") rerenderIfMounted();
   if (currentPage === "ef-log") renderEfLog();
   if (currentPage === "reference") renderActiveTab();
   if (currentPage === "audit") renderAudit();
@@ -57,13 +58,40 @@ function wireNav() {
   });
 }
 
+// Repopulates <option> lists to match current data/state. Safe to call
+// repeatedly (e.g. on every resync) since it never attaches listeners -
+// that happens once in wireUserAndRoleSelectors().
+function populateRoleSelect() {
+  const roleSel = document.getElementById("currentRoleSelect");
+  const user = store.users.find((u) => u.user_id === store.currentUserId);
+  const roles = user?.roles || [];
+  roleSel.innerHTML = roles.length
+    ? roles.map((r) => `<option value="${r}">${r}</option>`).join("")
+    : `<option value="">No roles assigned</option>`;
+  if (!roles.includes(store.currentActiveRole)) store.currentActiveRole = roles[0] || null;
+  roleSel.value = store.currentActiveRole || "";
+  roleSel.disabled = roles.length === 0;
+}
+
 function populateUserSelect() {
   const sel = document.getElementById("currentUserSelect");
   sel.innerHTML = store.users.map((u) => `<option value="${u.user_id}">${u.name} (${(u.roles || []).join(", ") || "no role"})</option>`).join("");
   sel.value = store.currentUserId;
-  sel.addEventListener("change", () => {
-    store.currentUserId = sel.value;
+  populateRoleSelect();
+}
+
+// One-time listener wiring - called once from init(), NOT from resync(),
+// so resyncing the dropdowns' options doesn't stack duplicate handlers.
+function wireUserAndRoleSelectors() {
+  document.getElementById("currentUserSelect").addEventListener("change", (e) => {
+    store.currentUserId = e.target.value;
+    store.currentActiveRole = null; // force re-pick from the new user's own roles
+    populateRoleSelect();
     renderNotifBadge();
+    renderCurrentPage();
+  });
+  document.getElementById("currentRoleSelect").addEventListener("change", (e) => {
+    store.currentActiveRole = e.target.value || null;
     renderCurrentPage();
   });
 }
@@ -80,6 +108,7 @@ async function resync() {
 
 async function init() {
   wireNav();
+  wireUserAndRoleSelectors();
   mountNotifications();
   document.getElementById("resyncBtn").addEventListener("click", resync);
 

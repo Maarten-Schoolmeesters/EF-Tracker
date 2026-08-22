@@ -7,6 +7,7 @@ import { toast } from "../toast.js";
 import {
   STAGES, EF_TYPES, REVIEW_STEPS, generateChangeId, lookupCurrentEf, pctChange, yearlyEmissionsBaseline,
   productForMaterial, reviewRouteForAssurance, pickReviewer, pickApprover, deriveEfName,
+  reviewGatingMessage, approvalGatingMessage,
 } from "../efLogic.js";
 
 let draft = null; // in-memory proposal being edited/viewed
@@ -40,8 +41,30 @@ function blankDraft() {
   return d;
 }
 
+// Strips null/""/[]/{} "empty" values recursively so a truly-blank draft
+// compares equal regardless of whether it's been through a render pass yet -
+// e.g. fields:{} (fresh) and fields:{facets:{gplt:[],material_code:[],...}}
+// (after the facet group's first getSelections() call populates empty
+// arrays for every key) must be treated as the same "nothing entered" state,
+// not a false-positive unsaved change.
+function stripEmpty(value) {
+  if (Array.isArray(value)) {
+    const arr = value.map(stripEmpty).filter((v) => v !== undefined);
+    return arr.length ? arr : undefined;
+  }
+  if (value && typeof value === "object") {
+    const out = {};
+    for (const k of Object.keys(value)) {
+      const v = stripEmpty(value[k]);
+      if (v !== undefined) out[k] = v;
+    }
+    return Object.keys(out).length ? out : undefined;
+  }
+  return value === null || value === "" ? undefined : value;
+}
+
 function snapshotForDirtyCheck(d) {
-  return stableStringify({ ef_type: d.ef_type, fields: d.fields, common_fields: d.common_fields });
+  return stableStringify(stripEmpty({ ef_type: d.ef_type, fields: d.fields, common_fields: d.common_fields }) || {});
 }
 
 // Whether the current E1-Draft form has changes not yet persisted via Save
@@ -116,6 +139,14 @@ export function openProposalById(changeId, stage) {
 function renderAll() {
   renderStageTracker();
   renderStageScreen();
+}
+
+// Re-renders whatever's currently shown, without changing which proposal or
+// stage is being viewed - used when something outside EF Entry changes that
+// affects it (e.g. switching the "acting as" user/role, which changes
+// whether the current viewer can act on the open proposal's E2/E3 screen).
+export function rerenderIfMounted() {
+  if (draft) renderAll();
 }
 
 function stageIndex(code) { return STAGES.findIndex((s) => s.code === code); }
@@ -764,11 +795,14 @@ function renderE2(el) {
   const p = draft;
   const card = document.createElement("div");
   card.className = "card";
-  const canAct = p.status === "E2-Review";
+  const atStage = p.status === "E2-Review";
+  const gatingMsg = atStage ? reviewGatingMessage(p) : null;
+  const canAct = atStage && !gatingMsg;
   const doneCount = () => (p.review_steps || []).filter((s) => s.done).length;
   const total = (p.review_steps || []).length;
   card.innerHTML = `
     <div class="card-head"><div><h2>EF Entry · E2 Review<span class="tbd-tag">Details TBD w/ LCA team</span></h2><p>Reviewer validates the proposal against EF Expert Guidance before it can move to Approval.</p></div></div>
+    ${gatingMsg ? `<div class="notice warn">${gatingMsg} You can view this proposal but not act on it.</div>` : ""}
     <div class="grid two-col">
       <div>${summaryRows(p)}</div>
       <div>
@@ -808,11 +842,14 @@ function renderE2(el) {
 
 function renderE3(el) {
   const p = draft;
-  const canAct = p.status === "E3-Approval";
+  const atStage = p.status === "E3-Approval";
+  const gatingMsg = atStage ? approvalGatingMessage(p) : null;
+  const canAct = atStage && !gatingMsg;
   const card = document.createElement("div");
   card.className = "card";
   card.innerHTML = `
     <div class="card-head"><div><h2>EF Entry · E3 Approval<span class="tbd-tag">Details TBD w/ LCA team</span></h2><p>Approver gives business sign-off before Carbon App ingestion.</p></div></div>
+    ${gatingMsg ? `<div class="notice warn">${gatingMsg} You can view this proposal but not act on it.</div>` : ""}
     ${summaryRows(p)}
     <div class="actions">
       <button class="btn ghost danger" id="onHoldBtn" ${canAct ? "" : "disabled"}>Put On Hold</button>

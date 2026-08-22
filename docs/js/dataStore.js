@@ -35,6 +35,7 @@ export const store = {
   auditLog: [],
   notifications: [],
   currentUserId: null,
+  currentActiveRole: null, // which of the current user's roles they're "acting as" right now - gates E2/E3 actions
 };
 
 async function fetchAll(table, orderCol) {
