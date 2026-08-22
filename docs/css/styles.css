@@ -107,6 +107,42 @@ body {
 .grid.two-col { grid-template-columns: 2fr 1fr; align-items: start; }
 @media (max-width: 980px) { .grid.two-col { grid-template-columns: 1fr; } }
 
+/* ---------------- EF Entry layout: fixed-width side column so the form
+   column doesn't stretch/shrink oddly, impact panel lives full-width below ---------------- */
+.ef1-top-row { display: flex; gap: 24px; align-items: flex-start; }
+.ef1-form-col { flex: 1; min-width: 0; }
+.ef1-side-col { flex: 0 0 320px; max-width: 320px; display: flex; flex-direction: column; gap: 18px; }
+@media (max-width: 980px) { .ef1-top-row { flex-direction: column; } .ef1-side-col { flex-basis: auto; max-width: none; width: 100%; } }
+
+/* ---------------- High-level impact summary panel ---------------- */
+.summary-panel .metric-row { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px dashed var(--border); gap: 10px; }
+.summary-panel .metric-row:last-child { border-bottom: none; }
+.summary-panel .metric-label { font-size: 12px; color: var(--muted); display: flex; align-items: center; }
+.summary-panel .metric-value { font-size: 15px; font-weight: 700; text-align: right; }
+.summary-panel .metric-value.small { font-size: 12px; font-weight: 500; color: var(--muted); }
+.direction-badge { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+.direction-badge.increase { background: var(--red-bg); color: var(--red); }
+.direction-badge.decrease { background: var(--green-bg); color: var(--green); }
+.direction-badge.flat { background: var(--gray-bg); color: var(--muted); }
+
+/* ---------------- Calculated-field hover explanation ---------------- */
+.info-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 14px; height: 14px; border-radius: 50%; background: var(--gray-bg); color: var(--muted);
+  font-size: 10px; font-style: italic; font-weight: 700; font-family: Georgia, serif; cursor: help;
+  margin-left: 5px; position: relative; vertical-align: middle; flex-shrink: 0;
+}
+.info-icon:hover, .info-icon:focus { background: var(--primary-light); color: var(--primary-dark); outline: none; }
+.info-icon::after {
+  content: attr(data-tooltip);
+  position: absolute; bottom: calc(100% + 7px); left: 50%; transform: translateX(-50%);
+  background: var(--text); color: #fff; padding: 8px 10px; border-radius: 7px; font-size: 11.5px; font-weight: 400;
+  font-style: normal; line-height: 1.4; white-space: normal; width: max-content; max-width: 240px; text-align: left;
+  box-shadow: 0 6px 20px rgba(40,25,15,.25); opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity .12s ease; z-index: 30;
+}
+.info-icon:hover::after, .info-icon:focus::after { opacity: 1; visibility: visible; }
+
 /* ---------------- KPI ---------------- */
 .kpi { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 18px; box-shadow: var(--shadow); }
 .kpi .top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }

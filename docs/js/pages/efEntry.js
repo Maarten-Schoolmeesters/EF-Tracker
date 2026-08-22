@@ -1,9 +1,11 @@
-import { store, currentUser, insertRow, updateRow, logAudit, notify, loadTransactionalData, adjustUserCount, maybeInsertVersion } from "../dataStore.js";
+import { store, currentUser, insertRow, updateRow, logAudit, notify, loadTransactionalData, adjustUserCount, maybeInsertVersion, stableStringify } from "../dataStore.js";
 import { createFacetFilterGroup } from "../facetFilter.js";
 import { createStyledDropdown } from "../styledDropdown.js";
+import { infoIcon } from "../tooltip.js";
+import { goToPage } from "../nav.js";
 import { toast } from "../toast.js";
 import {
-  STAGES, EF_TYPES, REVIEW_STEPS, generateChangeId, lookupCurrentEf, pctChange,
+  STAGES, EF_TYPES, REVIEW_STEPS, generateChangeId, lookupCurrentEf, pctChange, yearlyEmissionsBaseline,
   productForMaterial, reviewRouteForAssurance, pickReviewer, pickApprover, deriveEfName,
 } from "../efLogic.js";
 
@@ -17,7 +19,7 @@ function esmaOptions(category) {
 }
 
 function blankDraft() {
-  return {
+  const d = {
     change_id: null, // assigned on first save
     ef_type: EF_TYPES[0],
     status: "E1-Draft",
@@ -34,17 +36,61 @@ function blankDraft() {
     approval_notes: "",
     _isNew: true,
   };
+  d._lastSaved = snapshotForDirtyCheck(d);
+  return d;
+}
+
+function snapshotForDirtyCheck(d) {
+  return stableStringify({ ef_type: d.ef_type, fields: d.fields, common_fields: d.common_fields });
+}
+
+// Whether the current E1-Draft form has changes not yet persisted via Save
+// Draft / Submit for Review - used to warn before navigating away or
+// discarding it. Frozen/later-stage proposals are never "dirty" in this sense.
+export function hasUnsavedChanges() {
+  if (!draft || draft.frozen || draft.status !== "E1-Draft") return false;
+  return snapshotForDirtyCheck(draft) !== draft._lastSaved;
+}
+
+// Runs onProceed immediately if there's nothing to lose; otherwise asks the
+// user to save, discard, or stay, and only calls onProceed once resolved.
+export function confirmDiscardIfDirty(onProceed) {
+  if (!hasUnsavedChanges()) { onProceed(); return; }
+  const root = document.getElementById("modalRoot");
+  root.innerHTML = `
+    <div class="modal-backdrop"><div class="modal">
+      <div class="modal-head"><h3>Unsaved changes</h3><button class="icon-btn" id="unsavedClose">✕</button></div>
+      <p>This EF proposal draft has changes that haven't been saved. Leaving now will lose them.</p>
+      <div class="actions">
+        <button class="btn" id="unsavedCancel">Stay here</button>
+        <button class="btn ghost danger" id="unsavedDiscard">Discard changes</button>
+        <button class="btn primary" id="unsavedSave">Save draft & continue</button>
+      </div>
+    </div></div>`;
+  const close = () => { root.innerHTML = ""; };
+  document.getElementById("unsavedClose").addEventListener("click", close);
+  document.getElementById("unsavedCancel").addEventListener("click", close);
+  document.getElementById("unsavedDiscard").addEventListener("click", () => { close(); onProceed(); });
+  document.getElementById("unsavedSave").addEventListener("click", async () => {
+    close();
+    await saveDraft(false);
+    onProceed();
+  });
+}
+
+// Unguarded - only call this once you already know it's safe to discard
+// whatever was there (e.g. from inside a confirmDiscardIfDirty callback).
+export function forceBlankDraft() {
+  draft = blankDraft();
+  activeStageView = "E1-Draft";
+  renderAll();
 }
 
 export function mountEfEntry() {
-  document.getElementById("newEfBtn").addEventListener("click", () => {
-    draft = blankDraft();
-    activeStageView = "E1-Draft";
-    renderAll();
-  });
+  document.getElementById("newEfBtn").addEventListener("click", () => confirmDiscardIfDirty(forceBlankDraft));
   document.getElementById("openChangeIdBtn").addEventListener("click", () => {
     const id = document.getElementById("openChangeIdInput").value.trim();
-    openByChangeId(id);
+    confirmDiscardIfDirty(() => openByChangeId(id));
   });
   if (!draft) { draft = blankDraft(); }
   renderAll();
@@ -53,7 +99,7 @@ export function mountEfEntry() {
 function openByChangeId(id) {
   const found = store.efProposals.find((p) => p.change_id.toLowerCase() === id.toLowerCase());
   if (!found) { toast(`No EF proposal found with Change ID "${id}"`, "error"); return; }
-  draft = { ...found, _isNew: false };
+  draft = { ...found, _isNew: false, _lastSaved: snapshotForDirtyCheck(found) };
   activeStageView = draft.status;
   renderAll();
 }
@@ -61,9 +107,9 @@ function openByChangeId(id) {
 export function openProposalById(changeId, stage) {
   const found = store.efProposals.find((p) => p.change_id === changeId);
   if (!found) return;
-  draft = { ...found, _isNew: false };
+  draft = { ...found, _isNew: false, _lastSaved: snapshotForDirtyCheck(found) };
   activeStageView = stage || draft.status;
-  document.querySelector('[data-page="ef-entry"]').click();
+  goToPage("ef-entry");
   renderAll();
 }
 
@@ -121,11 +167,12 @@ function renderE1(el) {
     card.innerHTML += `<div class="notice lock-notice">This proposal is frozen at ${draft.status}. Use the stage's Return action to reopen editing.</div>`;
   }
 
-  const layout = document.createElement("div");
-  layout.className = "grid two-col";
+  const topRow = document.createElement("div");
+  topRow.className = "ef1-top-row";
 
-  const left = document.createElement("div");
-  left.innerHTML = `
+  const formCol = document.createElement("div");
+  formCol.className = "ef1-form-col";
+  formCol.innerHTML = `
     <div class="field" style="max-width:360px;margin-bottom:16px">
       <label>EF Type <span class="req">*</span></label>
       <select id="efTypeSelect" ${frozen ? "disabled" : ""}>
@@ -136,15 +183,23 @@ function renderE1(el) {
     <div id="alwaysFieldsArea"></div>
   `;
 
-  const right = document.createElement("div");
-  right.innerHTML = `
+  const sideCol = document.createElement("div");
+  sideCol.className = "ef1-side-col";
+  sideCol.innerHTML = `
     <div class="card" id="derivedCard"><h3>Derived info</h3><div id="derivedRows"></div></div>
-    <div class="card" id="impactCard"><h3>Reference data & impact</h3><div id="impactArea"></div></div>
+    <div class="card summary-panel" id="summaryCard"><h3>Impact summary</h3><div id="summaryRows"></div></div>
   `;
 
-  layout.appendChild(left);
-  layout.appendChild(right);
-  card.appendChild(layout);
+  topRow.appendChild(formCol);
+  topRow.appendChild(sideCol);
+  card.appendChild(topRow);
+  el.appendChild(card);
+
+  const impactCard = document.createElement("div");
+  impactCard.className = "card";
+  impactCard.id = "impactCard";
+  impactCard.innerHTML = `<h3>Reference data & impact</h3><div id="impactArea"></div>`;
+  el.appendChild(impactCard);
 
   const actions = document.createElement("div");
   actions.className = "actions";
@@ -153,8 +208,7 @@ function renderE1(el) {
     <button class="btn" id="saveDraftBtn" ${frozen ? "disabled" : ""}>Save draft</button>
     <button class="btn primary" id="submitReviewBtn" ${frozen ? "disabled" : ""}>Submit for review</button>
   `;
-  card.appendChild(actions);
-  el.appendChild(card);
+  el.appendChild(actions);
 
   document.getElementById("efTypeSelect").addEventListener("change", (e) => {
     draft.ef_type = e.target.value;
@@ -169,10 +223,7 @@ function renderE1(el) {
   renderAlwaysFields();
   renderTypeSpecific();
 
-  document.getElementById("clearBtn").addEventListener("click", () => {
-    draft = blankDraft();
-    renderAll();
-  });
+  document.getElementById("clearBtn").addEventListener("click", () => confirmDiscardIfDirty(forceBlankDraft));
   document.getElementById("saveDraftBtn").addEventListener("click", () => saveDraft(false));
   document.getElementById("submitReviewBtn").addEventListener("click", () => saveDraft(true));
 
@@ -377,14 +428,15 @@ function updateDerivedAndImpact() {
     ${derivedRow("Project ID", "Non-project (no linked project)")}
     ${derivedRow("Change ID", draft.derived.changeId)}
     ${derivedRow("New EF Name", draft.derived.newEfName)}
-    ${derivedRow("Proposed Review Route", draft.derived.reviewRoute)}
-    ${derivedRow("Reviewer (auto-assigned)", draft.derived.reviewerName)}
-    ${derivedRow("Approver (auto-assigned)", draft.derived.approverName)}
+    ${derivedRow("Proposed Review Route" + infoIcon("Independently verified/reviewed/customer-reviewed assurance levels route to a Standard Reviewer; unverified levels route to an Expert Reviewer, per the EF Sources/Methods/Assurance reference table."), draft.derived.reviewRoute)}
+    ${derivedRow("Reviewer (auto-assigned)" + infoIcon("The eligible reviewer (matching role and route) with the fewest current open reviews. Ties break alphabetically by name."), draft.derived.reviewerName)}
+    ${derivedRow("Approver (auto-assigned)" + infoIcon("The EF Approver with the fewest current open approvals. Ties break alphabetically by name."), draft.derived.approverName)}
     ${derivedRow("Change Proposer", draft.derived.proposerName)}
     ${derivedRow("Linked Product", draft.derived.productBrand)}
   `;
 
   renderImpact({ materialCodes, supplierNumber, commonId1s, classifications, matchingRows });
+  renderSummaryPanel({ materialCodes, supplierNumber, commonId1s, classifications, matchingRows });
 
   const submitBtn = document.getElementById("submitReviewBtn");
   if (submitBtn) submitBtn.disabled = draft.frozen || validateMandatory().length > 0;
@@ -394,34 +446,84 @@ function derivedRow(k, v) {
   return `<div class="derived-row"><div class="k">${k}</div><div class="v">${v}</div></div>`;
 }
 
+// Shared per-material computation used by both the impact table and the
+// high-level summary panel, so the two never drift apart.
+function computeMaterialImpactRows(materialCodes, newVal) {
+  return materialCodes.map((mc) => {
+    const caeRows = store.carbonAppExport.filter((r) => r.material_code === mc).sort((a, b) => a.year - b.year);
+    const latest = caeRows[caeRows.length - 1] || null;
+    const previous = caeRows.length > 1 ? caeRows[caeRows.length - 2] : null;
+    const current = latest ? lookupCurrentEf({
+      materialCode: mc, supplierNumber: latest.supplier_number,
+      categoryL1: latest.category_level_1_enriched, categoryL2: latest.category_level_2_enriched, categoryL3: latest.category_level_3_enriched,
+    }) : null;
+    const baselineYtd = latest ? yearlyEmissionsBaseline(latest.year) : 0;
+    const baselinePrev = previous ? yearlyEmissionsBaseline(previous.year) : 0;
+    const deltaYtd = current && newVal != null && latest ? (newVal - current.value) * Number(latest.tonnage || 0) / 1000 : null;
+    const deltaPrev = current && newVal != null && previous ? (newVal - current.value) * Number(previous.tonnage || 0) / 1000 : null;
+    const pctChangeYtd = deltaYtd !== null && baselineYtd ? (deltaYtd / baselineYtd) * 100 : null;
+    const pctChangePrev = deltaPrev !== null && baselinePrev ? (deltaPrev / baselinePrev) * 100 : null;
+    return { mc, latest, previous, current, deltaYtd, deltaPrev, pctChangeYtd, pctChangePrev };
+  });
+}
+
+function fmtNum(v, suffix = "") {
+  return v === null || v === undefined || isNaN(v) ? "—" : `${Number(v).toFixed(2)}${suffix}`;
+}
+
 function renderImpact({ materialCodes, supplierNumber, commonId1s, classifications, matchingRows }) {
   const area = document.getElementById("impactArea");
   const newVal = draft.fields.newEfValue;
 
   if (draft.ef_type === "Supplier Materials EF") {
     if (!materialCodes.length) { area.innerHTML = `<p class="empty">Select at least one Material Code.</p>`; return; }
-    let totalDeltaCo2 = 0, totalPrevCo2 = 0;
-    const rowsHtml = materialCodes.map((mc) => {
-      const caeRows = store.carbonAppExport.filter((r) => r.material_code === mc).sort((a, b) => a.year - b.year);
-      const latest = caeRows[caeRows.length - 1];
-      const current = lookupCurrentEf({ materialCode: mc, supplierNumber: latest?.supplier_number, categoryL1: latest?.category_level_1_enriched, categoryL2: latest?.category_level_2_enriched, categoryL3: latest?.category_level_3_enriched });
-      const change = current && newVal ? pctChange(current.value, newVal) : null;
-      const twoYearSum = caeRows.reduce((s, r) => s + Number(r.co2e_mt || 0), 0);
-      const deltaCo2 = current && newVal ? (newVal - current.value) * (latest?.tonnage || 0) / 1000 : 0;
-      totalDeltaCo2 += deltaCo2 || 0;
-      totalPrevCo2 += twoYearSum;
-      return `<tr>
-        <td>${mc}</td><td>${latest?.indicator_name || latest?.material || "—"}</td><td>${latest?.uom || "—"}</td>
-        <td>${current ? current.name : "None found"}</td><td>${current ? current.tier : "—"}</td>
-        <td>${caeRows.map((r) => `${r.year}: ${Number(r.co2e_mt).toFixed(2)}t`).join(" / ")}</td>
-        <td>${change !== null ? change.toFixed(1) + "%" : "—"}</td>
-        <td>${deltaCo2 ? deltaCo2.toFixed(2) + "t" : "—"}</td>
-      </tr>`;
-    }).join("");
+    const rows = computeMaterialImpactRows(materialCodes, newVal);
+    const totals = rows.reduce((acc, r) => {
+      acc.tonnageYtd += Number(r.latest?.tonnage || 0);
+      acc.tonnagePrev += Number(r.previous?.tonnage || 0);
+      acc.invQtyYtd += Number(r.latest?.invoice_quantity || 0);
+      acc.invQtyPrev += Number(r.previous?.invoice_quantity || 0);
+      acc.emissionsYtd += Number(r.latest?.co2e_mt || 0);
+      acc.emissionsPrev += Number(r.previous?.co2e_mt || 0);
+      acc.pctYtd += r.pctChangeYtd || 0;
+      acc.pctPrev += r.pctChangePrev || 0;
+      return acc;
+    }, { tonnageYtd: 0, tonnagePrev: 0, invQtyYtd: 0, invQtyPrev: 0, emissionsYtd: 0, emissionsPrev: 0, pctYtd: 0, pctPrev: 0 });
+
+    const rowsHtml = rows.map(({ mc, latest, previous, current, pctChangeYtd, pctChangePrev }) => `
+      <tr>
+        <td>${mc}</td>
+        <td>${latest?.indicator_name || latest?.material || "—"}</td>
+        <td>${latest?.uom || "—"}</td>
+        <td>${current ? current.name : "None found"}</td>
+        <td>${current ? current.tier : "—"}</td>
+        <td>${current ? fmtNum(current.value) : "—"}</td>
+        <td>${fmtNum(latest?.tonnage)}</td>
+        <td>${fmtNum(previous?.tonnage)}</td>
+        <td>${fmtNum(latest?.invoice_quantity)}</td>
+        <td>${fmtNum(previous?.invoice_quantity)}</td>
+        <td>${fmtNum(latest?.co2e_mt, "t")}</td>
+        <td>${fmtNum(previous?.co2e_mt, "t")}</td>
+        <td>${pctChangeYtd !== null ? pctChangeYtd.toFixed(3) + "%" : "—"}</td>
+        <td>${pctChangePrev !== null ? pctChangePrev.toFixed(3) + "%" : "—"}</td>
+      </tr>`).join("");
+
     area.innerHTML = `<div class="table-scroll"><table>
-      <thead><tr><th>Material Code</th><th>Indicator</th><th>UoM</th><th>Current EF Name</th><th>Current EF Type</th><th>Prev. 2yr emissions</th><th>% Change</th><th>ΔCO2 (S3-1a)</th></tr></thead>
+      <thead><tr>
+        <th>Material Code</th><th>Indicator</th><th>UoM</th><th>Current EF Name</th><th>Current EF Type</th>
+        <th>Current EF Value</th><th>Tonnage YTD</th><th>Tonnage Prev. Yr</th><th>Invoice Qty YTD</th><th>Invoice Qty Prev. Yr</th>
+        <th>YTD Emissions</th><th>Last Yr Emissions</th>
+        <th>% Change YTD${infoIcon("(New EF − Current EF) × YTD tonnage, expressed as a % of total company-wide emissions for that year - an emissions-swing-vs-footprint view, not a plain EF-value comparison (which wouldn't depend on tonnage or year at all).")}</th>
+        <th>% Change Last Yr${infoIcon("Same calculation, using last year's tonnage and last year's total company-wide emissions as the baseline - genuinely differs from the YTD column since tonnage differs by year.")}</th>
+      </tr></thead>
       <tbody>${rowsHtml}</tbody>
-      <tfoot><tr><td colspan="5"><strong>Total</strong></td><td>${totalPrevCo2.toFixed(2)}t</td><td></td><td>${totalDeltaCo2.toFixed(2)}t</td></tr></tfoot>
+      <tfoot><tr>
+        <td colspan="5"><strong>Total</strong></td><td></td>
+        <td>${fmtNum(totals.tonnageYtd)}</td><td>${fmtNum(totals.tonnagePrev)}</td>
+        <td>${fmtNum(totals.invQtyYtd)}</td><td>${fmtNum(totals.invQtyPrev)}</td>
+        <td>${fmtNum(totals.emissionsYtd, "t")}</td><td>${fmtNum(totals.emissionsPrev, "t")}</td>
+        <td>${totals.pctYtd.toFixed(3)}%</td><td>${totals.pctPrev.toFixed(3)}%</td>
+      </tr></tfoot>
     </table></div>`;
   } else if (draft.ef_type === "Supplier Spend EF / CCF index") {
     if (!supplierNumber) { area.innerHTML = `<p class="empty">Select a Supplier Name / Number.</p>`; return; }
@@ -463,6 +565,79 @@ function renderImpact({ materialCodes, supplierNumber, commonId1s, classificatio
       ${derivedRow("% Change of EF", change !== null ? change.toFixed(1) + "%" : "—")}
       ${derivedRow("Material IDs linked to this classification", [...new Set(linkedMaterials)].join(", ") || "None")}
     `;
+  }
+}
+
+function directionBadge(delta) {
+  if (delta === null || delta === undefined || isNaN(delta) || Math.abs(delta) < 0.0005) return `<span class="direction-badge flat">No change</span>`;
+  return delta > 0 ? `<span class="direction-badge increase">↑ Increase</span>` : `<span class="direction-badge decrease">↓ Decrease</span>`;
+}
+
+function metricRow(label, valueHtml) {
+  return `<div class="metric-row"><span class="metric-label">${label}</span><span class="metric-value">${valueHtml}</span></div>`;
+}
+
+const ILLUSTRATIVE_NOTE = "Illustrative figure only: based on combined previous-year + YTD tonnage as a stand-in for scale, since an approved EF only actually applies to future emissions. Gives a sense of potential future impact, not a precise forecast.";
+const SHARE_NOTE = "Illustrative figure only, same historical-tonnage basis as the total ΔCO2e above: expressed as a % of combined previous-year + YTD company-wide emissions (Scope 3-1a).";
+
+function renderSummaryPanel({ materialCodes, supplierNumber, commonId1s, classifications }) {
+  const area = document.getElementById("summaryRows");
+  const newVal = draft.fields.newEfValue;
+
+  if (draft.ef_type === "Supplier Materials EF") {
+    if (!materialCodes.length) { area.innerHTML = `<p class="empty">Select at least one Material Code to see the impact summary.</p>`; return; }
+    const rows = computeMaterialImpactRows(materialCodes, newVal);
+    const totalDelta = rows.reduce((s, r) => s + (r.deltaYtd || 0) + (r.deltaPrev || 0), 0);
+    const years = new Set();
+    rows.forEach((r) => { if (r.latest) years.add(r.latest.year); if (r.previous) years.add(r.previous.year); });
+    const totalBaseline = [...years].reduce((s, y) => s + yearlyEmissionsBaseline(y), 0);
+    const hasValue = newVal !== null && newVal !== undefined;
+    const share = hasValue && totalBaseline ? (totalDelta / totalBaseline) * 100 : null;
+
+    area.innerHTML = [
+      metricRow("Material Codes impacted", materialCodes.length),
+      metricRow("Direction", hasValue ? directionBadge(totalDelta) : `<span class="direction-badge flat">—</span>`),
+      metricRow(`Total ΔCO2e impact${infoIcon(ILLUSTRATIVE_NOTE)}`, hasValue ? fmtNum(totalDelta, "t") : "—"),
+      metricRow(`Share of Scope 3-1a footprint${infoIcon(SHARE_NOTE)}`, share !== null ? share.toFixed(3) + "%" : "—"),
+    ].join("");
+  } else if (draft.ef_type === "Supplier Spend EF / CCF index") {
+    if (!supplierNumber) { area.innerHTML = `<p class="empty">Select a supplier to see the impact summary.</p>`; return; }
+    const current = lookupCurrentEf({ supplierNumber });
+    const change = current && newVal != null ? pctChange(current.value, newVal) : null;
+    area.innerHTML = [
+      metricRow("Suppliers impacted", 1),
+      metricRow("Direction", change !== null ? directionBadge(change) : `<span class="direction-badge flat">—</span>`),
+      metricRow(`Total ΔCO2e impact${infoIcon("Not available for this EF type - spend-based factors have no tonnage basis to compute an emissions figure from.")}`, `<span class="metric-value small">n/a</span>`),
+    ].join("");
+  } else if (draft.ef_type === "Global EF - Material to Common ID mapping") {
+    if (!commonId1s.length) { area.innerHTML = `<p class="empty">Select a Common ID1 to see the impact summary.</p>`; return; }
+    const cid = commonId1s[0];
+    const gfi = store.globalFactorsInventory.find((r) => r.common_id1 === cid);
+    const change = gfi && newVal != null ? pctChange(Number(gfi.co2_emission_factor_current), newVal) : null;
+    const linkedCount = store.commonId.filter((r) => r.common_id1 === cid).length;
+    area.innerHTML = [
+      metricRow("Material IDs impacted", linkedCount),
+      metricRow("Direction", change !== null ? directionBadge(change) : `<span class="direction-badge flat">—</span>`),
+      metricRow(`Total ΔCO2e impact${infoIcon("Not available for this EF type - Common ID mappings have no per-material tonnage basis in this reference data to compute an emissions figure from.")}`, `<span class="metric-value small">n/a</span>`),
+    ].join("");
+  } else {
+    if (!classifications.length) { area.innerHTML = `<p class="empty">Select an EEIO classification to see the impact summary.</p>`; return; }
+    const cls = classifications[0];
+    const ef = store.eeioEf.find((r) => r.enriched_l1l2l3_classification === cls);
+    const change = ef && newVal != null ? pctChange(Number(ef.eeio_factor_kgco2e_gbp), newVal) : null;
+    const eeioRow = store.eeio.find((r) => r.enriched_l1l2l3_classification === cls);
+    const linkedCount = eeioRow
+      ? new Set(store.carbonAppExport.filter((r) =>
+          r.category_level_1_enriched === eeioRow.category_level_1_enriched &&
+          r.category_level_2_enriched === eeioRow.category_level_2_enriched &&
+          r.category_level_3_enriched === eeioRow.category_level_3_enriched
+        ).map((r) => r.material_code)).size
+      : 0;
+    area.innerHTML = [
+      metricRow("Material Codes impacted", linkedCount),
+      metricRow("Direction", change !== null ? directionBadge(change) : `<span class="direction-badge flat">—</span>`),
+      metricRow(`Total ΔCO2e impact${infoIcon("Not available for this EF type - CEDA/EEIO factors have no per-material tonnage basis in this reference data to compute an emissions figure from.")}`, `<span class="metric-value small">n/a</span>`),
+    ].join("");
   }
 }
 
@@ -546,6 +721,7 @@ async function saveDraft(submitForReview) {
     }
     Object.assign(draft, payload);
     draft._isNew = false;
+    draft._lastSaved = snapshotForDirtyCheck(draft);
     await loadTransactionalData();
     activeStageView = payload.status;
     renderAll();

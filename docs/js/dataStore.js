@@ -6,7 +6,7 @@ import { toast } from "./toast.js";
 // because Postgres JSONB does not preserve key order on round-trip - a
 // snapshot fetched back from the DB can have different key order than the
 // in-memory object that was inserted, even though the content is identical.
-function stableStringify(value) {
+export function stableStringify(value) {
   if (Array.isArray(value)) return `[${value.map(stableStringify).join(",")}]`;
   if (value && typeof value === "object") {
     return `{${Object.keys(value).sort().map((k) => `${JSON.stringify(k)}:${stableStringify(value[k])}`).join(",")}}`;

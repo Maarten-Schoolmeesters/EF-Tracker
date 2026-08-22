@@ -1,8 +1,9 @@
 import { isConfigured } from "./supabaseClient.js";
 import { store, loadReferenceData, loadTransactionalData } from "./dataStore.js";
 import { toast } from "./toast.js";
+import { registerPageChangeHandler } from "./nav.js";
 import { renderDashboard } from "./pages/dashboard.js";
-import { mountEfEntry } from "./pages/efEntry.js";
+import { mountEfEntry, confirmDiscardIfDirty, forceBlankDraft } from "./pages/efEntry.js";
 import { mountEfLog, renderEfLog } from "./pages/efLog.js";
 import { mountReferenceData, renderActiveTab } from "./pages/referenceData.js";
 import { mountAudit, renderAudit } from "./pages/audit.js";
@@ -36,8 +37,20 @@ function showPage(pageKey) {
 }
 
 function wireNav() {
+  registerPageChangeHandler(showPage);
   document.querySelectorAll(".nav button[data-page]").forEach((btn) => {
-    btn.addEventListener("click", () => showPage(btn.dataset.page));
+    btn.addEventListener("click", () => {
+      // The EF Entry nav button must always land on a fresh blank Draft,
+      // never silently resume whatever proposal was last open - but both
+      // paths still go through the unsaved-changes guard first, and must
+      // only navigate if the guard's callback actually runs (not if the
+      // user chose "Stay here").
+      if (btn.dataset.page === "ef-entry") {
+        confirmDiscardIfDirty(() => { forceBlankDraft(); showPage("ef-entry"); });
+      } else {
+        confirmDiscardIfDirty(() => showPage(btn.dataset.page));
+      }
+    });
   });
   document.querySelectorAll("[data-go]").forEach((btn) => {
     btn.addEventListener("click", () => document.querySelector(`.nav button[data-page="${btn.dataset.go}"]`).click());

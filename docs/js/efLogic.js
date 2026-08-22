@@ -78,6 +78,16 @@ export function lookupCurrentEf({ materialCode, supplierNumber, categoryL1, cate
   return null;
 }
 
+// Total company-wide emissions for a given year, used as the denominator for
+// "% change vs baseline" impact metrics (an emissions-swing-vs-total-footprint
+// view, as opposed to a plain before/after EF-value percentage which doesn't
+// depend on tonnage or year at all).
+export function yearlyEmissionsBaseline(year) {
+  return store.carbonAppExport
+    .filter((r) => Number(r.year) === Number(year))
+    .reduce((sum, r) => sum + Number(r.co2e_mt || 0), 0);
+}
+
 export function pctChange(oldVal, newVal) {
   if (oldVal === null || oldVal === undefined || oldVal === 0 || isNaN(oldVal)) return null;
   return ((newVal - oldVal) / Math.abs(oldVal)) * 100;
