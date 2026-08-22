@@ -1,4 +1,4 @@
-import { store, currentUser, insertRow, updateRow, logAudit, notify, loadTransactionalData } from "../dataStore.js";
+import { store, currentUser, insertRow, updateRow, logAudit, notify, loadTransactionalData, adjustUserCount } from "../dataStore.js";
 import { createFacetFilterGroup } from "../facetFilter.js";
 import { toast } from "../toast.js";
 import {
@@ -316,8 +316,11 @@ function updateDerivedAndImpact() {
   let efName = "";
   let productBrand = "—";
   if (draft.ef_type === "Supplier Materials EF" && materialCodes.length) {
-    const firstRow = store.carbonAppExport.find((r) => r.material_code === materialCodes[0]);
-    efName = deriveEfName({ efType: draft.ef_type, materialDescription: firstRow?.material, supplierName: firstRow?.supplier_name, year: firstRow?.year });
+    const latestRow = store.carbonAppExport
+      .filter((r) => r.material_code === materialCodes[0])
+      .sort((a, b) => a.year - b.year)
+      .pop();
+    efName = deriveEfName({ efType: draft.ef_type, materialDescription: latestRow?.material, supplierName: latestRow?.supplier_name, year: latestRow?.year });
     const brands = [...new Set(materialCodes.map((mc) => productForMaterial(mc)).filter(Boolean))];
     productBrand = brands.length === 1 ? brands[0] : brands.length > 1 ? "Multiple products" : "No linked product";
   } else if (draft.ef_type === "Supplier Spend EF / CCF index" && matchingRows.length) {
@@ -468,6 +471,7 @@ async function saveDraft(submitForReview) {
   const reviewer = route ? pickReviewer(route) : null;
   const approver = pickApprover();
   draft.derived.newEfName = draft.derived.newEfName || "—";
+  draft.derived.changeId = draft.change_id;
 
   const payload = {
     change_id: draft.change_id,
@@ -488,6 +492,7 @@ async function saveDraft(submitForReview) {
     if (isFirstSave) {
       await insertRow("ef_proposals", payload);
       await logAudit("Create draft", "ef_proposal", draft.change_id, null, payload);
+      if (submitForReview) await logAudit("Submit for review", "ef_proposal", draft.change_id, { status: "E1-Draft" }, { status: "E2-Review" });
     } else {
       await updateRow("ef_proposals", "change_id", draft.change_id, payload);
       await logAudit(submitForReview ? "Submit for review" : "Save draft", "ef_proposal", draft.change_id, null, payload);
@@ -495,13 +500,14 @@ async function saveDraft(submitForReview) {
     if (submitForReview) {
       await insertRow("ef_proposal_versions", { change_id: draft.change_id, version_no: 1, stage: "E2-Review", snapshot: payload, changed_by: store.currentUserId });
       if (reviewer) {
-        await updateRow("users", "user_id", reviewer.user_id, { open_ef_reviews: (reviewer.open_ef_reviews || 0) + 1 });
+        await adjustUserCount(reviewer.user_id, "open_ef_reviews", 1);
         await notify(reviewer.user_id, `You were assigned to review ${draft.change_id}`, draft.change_id);
       }
       toast(`${draft.change_id} submitted for review`, "success");
     } else {
       toast(`${draft.change_id} saved as draft`, "success");
     }
+    Object.assign(draft, payload);
     draft._isNew = false;
     await loadTransactionalData();
     activeStageView = payload.status;
@@ -556,10 +562,10 @@ function renderE2(el) {
   card.querySelectorAll('#checklist input[type="checkbox"]').forEach((cb) => {
     cb.addEventListener("change", () => { p.review_steps[Number(cb.dataset.i)].done = cb.checked; });
   });
-  document.getElementById("returnDraftBtn").addEventListener("click", () => transitionStage("E1-Draft", { frozen: false }, "Return for revision"));
+  document.getElementById("returnDraftBtn").addEventListener("click", () => transitionStage("E1-Draft", { frozen: false }, "Return for revision", [[p.reviewer_id, "open_ef_reviews", -1]]));
   document.getElementById("submitApprovalBtn").addEventListener("click", () => {
     if (!p.review_steps.every((s) => s.done)) { toast("Complete every checklist step before sending for approval", "error"); return; }
-    transitionStage("E3-Approval", { frozen: true }, "Submit for approval");
+    transitionStage("E3-Approval", { frozen: true }, "Submit for approval", [[p.reviewer_id, "open_ef_reviews", -1], [p.approver_id, "open_ef_approvals", 1]]);
   });
   if (canAct) wireOnHoldCancel(el);
 }
@@ -580,8 +586,8 @@ function renderE3(el) {
     </div>
   `;
   el.appendChild(card);
-  document.getElementById("returnReviewBtn").addEventListener("click", () => transitionStage("E2-Review", { frozen: true }, "Return for review"));
-  document.getElementById("submitIngestionBtn").addEventListener("click", () => transitionStage("E4-Ready", { frozen: true }, "Submit for ingestion"));
+  document.getElementById("returnReviewBtn").addEventListener("click", () => transitionStage("E2-Review", { frozen: true }, "Return for review", [[p.approver_id, "open_ef_approvals", -1], [p.reviewer_id, "open_ef_reviews", 1]]));
+  document.getElementById("submitIngestionBtn").addEventListener("click", () => transitionStage("E4-Ready", { frozen: true }, "Submit for ingestion", [[p.approver_id, "open_ef_approvals", -1]]));
   if (canAct) wireOnHoldCancel(el);
 }
 
@@ -629,21 +635,26 @@ function wireOnHoldCancel(el) {
     transitionStage("E5-OnHold", { on_hold_from_status: draft.status }, "Put on hold");
   });
   document.getElementById("cancelBtn")?.addEventListener("click", () => {
+    const p = draft;
+    const adjustments = p.status === "E2-Review" ? [[p.reviewer_id, "open_ef_reviews", -1]]
+      : p.status === "E3-Approval" ? [[p.approver_id, "open_ef_approvals", -1]]
+      : [];
     showConfirmModal(
       "Cancel this EF proposal?",
       "This cannot be undone. The proposal will remain visible in the EF Log as Cancelled.",
-      () => transitionStage("E6-Cancelled", { frozen: true }, "Cancel proposal")
+      () => transitionStage("E6-Cancelled", { frozen: true }, "Cancel proposal", adjustments)
     );
   });
 }
 
-async function transitionStage(newStatus, patch, actionLabel) {
+async function transitionStage(newStatus, patch, actionLabel, countAdjustments = []) {
   const p = draft;
   const oldStatus = p.status;
   const updated = { status: newStatus, ...patch };
   try {
     await updateRow("ef_proposals", "change_id", p.change_id, updated);
     Object.assign(p, updated);
+    for (const [userId, field, delta] of countAdjustments) await adjustUserCount(userId, field, delta);
     const priorVersions = store.efProposalVersions.filter((v) => v.change_id === p.change_id).length;
     await insertRow("ef_proposal_versions", { change_id: p.change_id, version_no: priorVersions + 1, stage: newStatus, snapshot: { ...p, ...updated }, changed_by: store.currentUserId });
     await logAudit(actionLabel, "ef_proposal", p.change_id, { status: oldStatus }, { status: newStatus });

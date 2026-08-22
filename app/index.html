@@ -81,10 +81,12 @@
           <button class="btn primary" data-go="ef-entry">+ New EF proposal</button>
         </div>
         <div class="card">
-          <div class="table-toolbar">
+          <div class="table-toolbar" id="efLogToolbar">
             <input type="text" id="efLogSearch" placeholder="Search change ID, name, material…">
           </div>
+          <div id="efLogFilterBar"></div>
           <div class="table-scroll"><table id="efLogTable"></table></div>
+          <div class="empty-state hidden" id="efLogEmpty"><div class="empty-icon">EF</div><h3>No EF proposals yet</h3><p>Create one from EF Entry and it will appear here.</p></div>
         </div>
       </section>
 

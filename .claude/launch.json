@@ -4,7 +4,7 @@
     {
       "name": "ef-tracker-local",
       "runtimeExecutable": "py",
-      "runtimeArgs": ["-m", "http.server", "8000", "--directory", "app"],
+      "runtimeArgs": ["data-generation/dev_server.py", "8000", "app"],
       "port": 8000
     }
   ]

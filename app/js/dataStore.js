@@ -113,6 +113,15 @@ export async function logAudit(action, objectType, objectId, oldValue, newValue)
   });
 }
 
+export async function adjustUserCount(userId, field, delta) {
+  if (!userId) return;
+  const user = store.users.find((u) => u.user_id === userId);
+  if (!user) return;
+  const next = Math.max(0, (user[field] || 0) + delta);
+  await updateRow("users", "user_id", userId, { [field]: next });
+  user[field] = next; // keep local cache in sync so back-to-back assignments in the same session stay accurate
+}
+
 export async function notify(userId, message, changeId) {
   if (!userId) return;
   await insertRow("notifications", {

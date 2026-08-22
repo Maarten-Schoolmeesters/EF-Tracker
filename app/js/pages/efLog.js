@@ -15,7 +15,23 @@ export function mountEfLog() {
 
 export function renderEfLog() {
   const table = document.getElementById("efLogTable");
+  const filterBarEl = document.getElementById("efLogFilterBar");
+  const emptyEl = document.getElementById("efLogEmpty");
+  const toolbarEl = document.getElementById("efLogToolbar");
   if (!table) return;
+
+  if (!store.efProposals.length) {
+    table.closest(".table-scroll").classList.add("hidden");
+    filterBarEl.classList.add("hidden");
+    toolbarEl.classList.add("hidden");
+    emptyEl.classList.remove("hidden");
+    return;
+  }
+  table.closest(".table-scroll").classList.remove("hidden");
+  filterBarEl.classList.remove("hidden");
+  toolbarEl.classList.remove("hidden");
+  emptyEl.classList.add("hidden");
+
   const statuses = [...new Set(store.efProposals.map((p) => p.status))];
   const types = [...new Set(store.efProposals.map((p) => p.ef_type))];
 
@@ -28,18 +44,13 @@ export function renderEfLog() {
     );
   }
 
-  if (!store.efProposals.length) {
-    table.innerHTML = "";
-    table.parentElement.previousElementSibling.style.display = "none";
-    table.parentElement.innerHTML = `<div class="empty-state"><div class="empty-icon">EF</div><h3>No EF proposals yet</h3><p>Create one from EF Entry and it will appear here.</p></div>`;
-    return;
-  }
-
-  const filterBar = `
+  filterBarEl.innerHTML = `
     <div style="display:flex;gap:8px;margin-bottom:10px">
       <select id="statusFilterSel" class="col-filter"><option value="">All statuses</option>${statuses.map((s) => `<option ${s === statusFilter ? "selected" : ""}>${s}</option>`).join("")}</select>
       <select id="typeFilterSel" class="col-filter"><option value="">All EF types</option>${types.map((t) => `<option ${t === typeFilter ? "selected" : ""}>${t}</option>`).join("")}</select>
     </div>`;
+  filterBarEl.querySelector("#statusFilterSel").addEventListener("change", (e) => { statusFilter = e.target.value; renderEfLog(); });
+  filterBarEl.querySelector("#typeFilterSel").addEventListener("change", (e) => { typeFilter = e.target.value; renderEfLog(); });
 
   table.innerHTML = `
     <thead><tr>
@@ -63,12 +74,6 @@ export function renderEfLog() {
           </td>
         </tr>`).join("")}
     </tbody>`;
-
-  table.insertAdjacentHTML("beforebegin", filterBar);
-  const prevBar = table.previousElementSibling;
-
-  prevBar.querySelector("#statusFilterSel").addEventListener("change", (e) => { statusFilter = e.target.value; renderEfLog(); });
-  prevBar.querySelector("#typeFilterSel").addEventListener("change", (e) => { typeFilter = e.target.value; renderEfLog(); });
 
   table.querySelectorAll("[data-open]").forEach((btn) => {
     btn.addEventListener("click", () => openProposalById(btn.dataset.open, btn.dataset.stage));
