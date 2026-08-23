@@ -168,6 +168,37 @@ export async function adjustUserCount(userId, field, delta) {
   user[field] = next; // keep local cache in sync so back-to-back assignments in the same session stay accurate
 }
 
+// ---- Evidence file storage (Supabase Storage "evidence" bucket) ----
+// Small demo-purpose files only (screenshot / short PDF) - well within the
+// free tier, and capped client-side so nobody accidentally uploads something
+// large. common_fields.evidence on ef_proposals stores { path, filename },
+// not the URL itself - the public URL is derived from the path on read, so
+// it stays correct even if the project's storage URL ever changes.
+const EVIDENCE_BUCKET = "evidence";
+export const EVIDENCE_MAX_BYTES = 5 * 1024 * 1024;
+
+export async function uploadEvidenceFile(changeId, file) {
+  if (file.size > EVIDENCE_MAX_BYTES) {
+    throw new Error(`File too large (${(file.size / 1024 / 1024).toFixed(1)}MB) - evidence uploads are capped at ${EVIDENCE_MAX_BYTES / 1024 / 1024}MB for this demo.`);
+  }
+  const path = `${changeId}/${Date.now()}-${file.name}`;
+  const { error } = await supabase.storage.from(EVIDENCE_BUCKET).upload(path, file, { upsert: false });
+  if (error) { toast(`Evidence upload failed: ${error.message}`, "error"); throw error; }
+  return { path, filename: file.name };
+}
+
+export async function deleteEvidenceFile(path) {
+  if (!path) return;
+  const { error } = await supabase.storage.from(EVIDENCE_BUCKET).remove([path]);
+  if (error) console.error("Evidence delete failed (non-fatal):", error);
+}
+
+export function evidencePublicUrl(path) {
+  if (!path) return null;
+  const { data } = supabase.storage.from(EVIDENCE_BUCKET).getPublicUrl(path);
+  return data.publicUrl;
+}
+
 export async function notify(userId, message, changeId) {
   if (!userId) return;
   await insertRow("notifications", {

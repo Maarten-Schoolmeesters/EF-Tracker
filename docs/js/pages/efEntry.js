@@ -1,4 +1,4 @@
-import { store, currentUser, insertRow, updateRow, logAudit, notify, loadTransactionalData, adjustUserCount, maybeInsertVersion, stableStringify } from "../dataStore.js";
+import { store, currentUser, insertRow, updateRow, logAudit, notify, loadTransactionalData, adjustUserCount, maybeInsertVersion, stableStringify, uploadEvidenceFile, deleteEvidenceFile, evidencePublicUrl } from "../dataStore.js";
 import { createFacetFilterGroup } from "../facetFilter.js";
 import { createStyledDropdown } from "../styledDropdown.js";
 import { infoIcon } from "../tooltip.js";
@@ -7,7 +7,7 @@ import { toast } from "../toast.js";
 import {
   STAGES, EF_TYPES, REVIEW_STEPS, generateChangeId, lookupCurrentEf, pctChange, yearlyEmissionsBaseline,
   productForMaterial, reviewRouteForAssurance, pickReviewer, pickApprover, deriveEfName,
-  reviewGatingMessage, approvalGatingMessage,
+  reviewGatingMessage, approvalGatingMessage, resolveCurrentEfTier,
 } from "../efLogic.js";
 
 let draft = null; // in-memory proposal being edited/viewed
@@ -31,7 +31,7 @@ function blankDraft() {
     approver_id: null,
     on_hold_from_status: null,
     fields: {},
-    common_fields: { source: "", methodology: "", assurance: "", evidence: "", comment: "" },
+    common_fields: { source: "", methodology: "", assurance: "", evidence: null, comment: "" },
     derived: {},
     review_steps: REVIEW_STEPS.map((s) => ({ text: s, done: false })),
     approval_notes: "",
@@ -343,13 +343,24 @@ function renderE1(el) {
 
   function renderAlwaysFields() {
     const area = document.getElementById("alwaysFieldsArea");
+    const ev = draft.common_fields.evidence;
     area.innerHTML = `
       <div class="section-title"><h4>Source, methodology & evidence</h4></div>
       <div class="field-grid">
         <div class="field"><label>Source of new EF <span class="req">*</span></label><div id="sourceDropdownMount"></div></div>
         <div class="field"><label>Methodology standard <span class="req">*</span></label><div id="methodDropdownMount"></div></div>
         <div class="field"><label>Assurance <span class="req">*</span></label><div id="assuranceDropdownMount"></div></div>
-        <div class="field span-2"><label>Evidence link to SharePoint <span class="req">*</span></label><input type="url" id="evidenceInput" placeholder="https://…" value="${draft.common_fields.evidence || ""}"></div>
+        <div class="field span-2">
+          <label>Evidence file <span class="req">*</span>${infoIcon("Small demo-purpose files only (screenshot or short PDF), up to 5MB, stored in Supabase Storage.")}</label>
+          <div class="evidence-upload">
+            ${ev?.path ? `
+              <span class="evidence-current">📎 ${ev.filename}</span>
+              <a class="btn ghost small" href="${evidencePublicUrl(ev.path)}" target="_blank" rel="noopener">View</a>
+              <button type="button" class="btn ghost small danger" id="evidenceRemoveBtn" ${frozen ? "disabled" : ""}>Remove</button>
+            ` : `<span class="evidence-current empty">No file uploaded yet</span>`}
+            <input type="file" id="evidenceInput" accept="image/*,.pdf" ${frozen ? "disabled" : ""} style="${ev?.path ? "display:none" : ""}">
+          </div>
+        </div>
         <div class="field span-2"><label>Proposer comment</label><textarea id="commentInput">${draft.common_fields.comment || ""}</textarea></div>
       </div>
     `;
@@ -376,9 +387,33 @@ function renderE1(el) {
       required: true, disabled: frozen, onChange: () => updateDerivedAndImpact(),
     });
 
-    ["evidenceInput", "commentInput"].forEach((id) => {
-      document.getElementById(id).addEventListener("input", () => updateDerivedAndImpact());
+    document.getElementById("commentInput").addEventListener("input", () => updateDerivedAndImpact());
+
+    const evidenceInput = document.getElementById("evidenceInput");
+    evidenceInput.addEventListener("change", async () => {
+      const file = evidenceInput.files[0];
+      if (!file) return;
+      const priorPath = draft.common_fields.evidence?.path;
+      try {
+        const uploaded = await uploadEvidenceFile(draft.change_id || (draft._tempEvidenceId ??= `temp-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`), file);
+        draft.common_fields.evidence = uploaded;
+        if (priorPath) deleteEvidenceFile(priorPath);
+        toast(`Uploaded ${uploaded.filename}`, "success");
+      } catch (e) {
+        console.error(e);
+        toast(e.message || "Evidence upload failed", "error");
+      }
+      renderAlwaysFields();
+      updateDerivedAndImpact();
     });
+    document.getElementById("evidenceRemoveBtn")?.addEventListener("click", () => {
+      const priorPath = draft.common_fields.evidence?.path;
+      draft.common_fields.evidence = null;
+      if (priorPath) deleteEvidenceFile(priorPath);
+      renderAlwaysFields();
+      updateDerivedAndImpact();
+    });
+
     if (frozen) area.querySelectorAll("input,textarea").forEach((n) => (n.disabled = true));
   }
 }
@@ -398,7 +433,6 @@ function readFormIntoDraft() {
   if (sourceDropdown) draft.common_fields.source = sourceDropdown.getValue() || "";
   if (methodDropdown) draft.common_fields.methodology = methodDropdown.getValue() || "";
   if (assuranceDropdown) draft.common_fields.assurance = assuranceDropdown.getValue() || "";
-  if (el("evidenceInput")) draft.common_fields.evidence = val("evidenceInput") || "";
   if (el("commentInput")) draft.common_fields.comment = val("commentInput") || "";
 }
 
@@ -458,7 +492,7 @@ function updateDerivedAndImpact() {
   document.getElementById("derivedRows").innerHTML = `
     ${derivedRow("Project ID", "Non-project (no linked project)")}
     ${derivedRow("Change ID", draft.derived.changeId)}
-    ${derivedRow("New EF Name", draft.derived.newEfName)}
+    ${derivedRow(`New EF Name<span class="tbd-tag subtle">Naming standard TBD</span>`, draft.derived.newEfName)}
     ${derivedRow("Proposed Review Route" + infoIcon("Independently verified/reviewed/customer-reviewed assurance levels route to a Standard Reviewer; unverified levels route to an Expert Reviewer, per the EF Sources/Methods/Assurance reference table."), draft.derived.reviewRoute)}
     ${derivedRow("Reviewer (auto-assigned)" + infoIcon("The eligible reviewer (matching role and route) with the fewest current open reviews. Ties break alphabetically by name."), draft.derived.reviewerName)}
     ${derivedRow("Approver (auto-assigned)" + infoIcon("The EF Approver with the fewest current open approvals. Ties break alphabetically by name."), draft.derived.approverName)}
@@ -477,24 +511,54 @@ function derivedRow(k, v) {
   return `<div class="derived-row"><div class="k">${k}</div><div class="v">${v}</div></div>`;
 }
 
+function isBlank(v) {
+  return v === null || v === undefined || v === "";
+}
+
+// Converts the proposed New EF Value into kg CO2e/kg, the one basis that can
+// be multiplied by tonnage regardless of which unit the proposer picked.
+// Unit Mass (kg per unit) is what makes the "per unit" case convertible at
+// all - it's collected for exactly this purpose.
+function newEfPerKg(newVal, newEfUnit, unitMass) {
+  if (newVal === null || newVal === undefined || isNaN(newVal)) return null;
+  if (newEfUnit === "kg CO2e / kg") return newVal;
+  if (newEfUnit === "kg CO2e / tonne") return newVal / 1000;
+  if (newEfUnit === "kg CO2e / unit") return unitMass ? newVal / unitMass : null;
+  return null;
+}
+
 // Shared per-material computation used by both the impact table and the
 // high-level summary panel, so the two never drift apart.
-function computeMaterialImpactRows(materialCodes, newVal) {
+//
+// Current EF: trusted directly from Carbon App Export's own co2_factor_final
+// / co2e_mt (never recomputed via the cascade - see resolveCurrentEfTier).
+// The delta only needs to convert the NEW side (fully controlled - the
+// proposer picks its unit and supplies Unit Mass); the current side uses
+// co2e_mt as-is, sidestepping the need to know the current EF's own unit.
+// When a material's current tier is spend-based, Carbon App Export never
+// recorded a tonnage for it, so the estimate is genuinely not possible -
+// not just "not yet computed" - and is surfaced as such rather than as a
+// silent zero or dash.
+function computeMaterialImpactRows(materialCodes, newVal, newEfUnit, unitMass) {
+  const newPerKg = newEfPerKg(newVal, newEfUnit, unitMass);
   return materialCodes.map((mc) => {
     const caeRows = store.carbonAppExport.filter((r) => r.material_code === mc).sort((a, b) => a.year - b.year);
     const latest = caeRows[caeRows.length - 1] || null;
     const previous = caeRows.length > 1 ? caeRows[caeRows.length - 2] : null;
-    const current = latest ? lookupCurrentEf({
-      materialCode: mc, supplierNumber: latest.supplier_number,
-      categoryL1: latest.category_level_1_enriched, categoryL2: latest.category_level_2_enriched, categoryL3: latest.category_level_3_enriched,
-    }) : null;
+    const currentTier = latest ? resolveCurrentEfTier(latest.co2_factor_name_final) : null;
+
+    const tonnageYtdOk = !!(latest && !isBlank(latest.tonnage));
+    const tonnagePrevOk = !!(previous && !isBlank(previous.tonnage));
+
     const baselineYtd = latest ? yearlyEmissionsBaseline(latest.year) : 0;
     const baselinePrev = previous ? yearlyEmissionsBaseline(previous.year) : 0;
-    const deltaYtd = current && newVal != null && latest ? (newVal - current.value) * Number(latest.tonnage || 0) / 1000 : null;
-    const deltaPrev = current && newVal != null && previous ? (newVal - current.value) * Number(previous.tonnage || 0) / 1000 : null;
+
+    const deltaYtd = tonnageYtdOk && newPerKg !== null ? (newPerKg * Number(latest.tonnage)) - Number(latest.co2e_mt || 0) : null;
+    const deltaPrev = tonnagePrevOk && newPerKg !== null ? (newPerKg * Number(previous.tonnage)) - Number(previous.co2e_mt || 0) : null;
     const pctChangeYtd = deltaYtd !== null && baselineYtd ? (deltaYtd / baselineYtd) * 100 : null;
     const pctChangePrev = deltaPrev !== null && baselinePrev ? (deltaPrev / baselinePrev) * 100 : null;
-    return { mc, latest, previous, current, deltaYtd, deltaPrev, pctChangeYtd, pctChangePrev };
+
+    return { mc, latest, previous, currentTier, deltaYtd, deltaPrev, pctChangeYtd, pctChangePrev, tonnageYtdOk, tonnagePrevOk };
   });
 }
 
@@ -508,10 +572,10 @@ function renderImpact({ materialCodes, supplierNumber, commonId1s, classificatio
 
   if (draft.ef_type === "Supplier Materials EF") {
     if (!materialCodes.length) { area.innerHTML = `<p class="empty">Select at least one Material Code.</p>`; return; }
-    const rows = computeMaterialImpactRows(materialCodes, newVal);
+    const rows = computeMaterialImpactRows(materialCodes, newVal, draft.fields.newEfUnit, draft.fields.unitMass);
     const totals = rows.reduce((acc, r) => {
-      acc.tonnageYtd += Number(r.latest?.tonnage || 0);
-      acc.tonnagePrev += Number(r.previous?.tonnage || 0);
+      acc.tonnageYtd += r.tonnageYtdOk ? Number(r.latest.tonnage) : 0;
+      acc.tonnagePrev += r.tonnagePrevOk ? Number(r.previous.tonnage) : 0;
       acc.invQtyYtd += Number(r.latest?.invoice_quantity || 0);
       acc.invQtyPrev += Number(r.previous?.invoice_quantity || 0);
       acc.emissionsYtd += Number(r.latest?.co2e_mt || 0);
@@ -521,35 +585,40 @@ function renderImpact({ materialCodes, supplierNumber, commonId1s, classificatio
       return acc;
     }, { tonnageYtd: 0, tonnagePrev: 0, invQtyYtd: 0, invQtyPrev: 0, emissionsYtd: 0, emissionsPrev: 0, pctYtd: 0, pctPrev: 0 });
 
-    const rowsHtml = rows.map(({ mc, latest, previous, current, pctChangeYtd, pctChangePrev }) => `
+    const naCell = (why) => `<span class="cell-na" tabindex="0" data-tooltip="${why}">n/a</span>`;
+    const spendReason = "Cannot estimate - this material's Current EF is spend-based, so Carbon App Export has no tonnage recorded for it.";
+
+    const rowsHtml = rows.map(({ mc, latest, previous, currentTier, pctChangeYtd, pctChangePrev, tonnageYtdOk, tonnagePrevOk }) => `
       <tr>
         <td>${mc}</td>
         <td>${latest?.indicator_name || latest?.material || "—"}</td>
         <td>${latest?.uom || "—"}</td>
-        <td>${current ? current.name : "None found"}</td>
-        <td>${current ? current.tier : "—"}</td>
-        <td>${current ? fmtNum(current.value) : "—"}</td>
-        <td>${fmtNum(latest?.tonnage)}</td>
-        <td>${fmtNum(previous?.tonnage)}</td>
-        <td>${fmtNum(latest?.invoice_quantity)}</td>
-        <td>${fmtNum(previous?.invoice_quantity)}</td>
+        <td>${latest?.co2_factor_name_final || "None found"}</td>
+        <td>${currentTier ? currentTier.tier : "—"}</td>
+        <td>${currentTier?.unit || "—"}</td>
+        <td>${latest ? fmtNum(Number(latest.co2_factor_final)) : "—"}</td>
+        <td>${tonnageYtdOk ? fmtNum(latest.tonnage) : naCell(spendReason)}</td>
+        <td>${previous ? (tonnagePrevOk ? fmtNum(previous.tonnage) : naCell(spendReason)) : "—"}</td>
+        <td>${tonnageYtdOk ? fmtNum(latest.invoice_quantity) : naCell(spendReason)}</td>
+        <td>${previous ? (tonnagePrevOk ? fmtNum(previous.invoice_quantity) : naCell(spendReason)) : "—"}</td>
         <td>${fmtNum(latest?.co2e_mt, "t")}</td>
         <td>${fmtNum(previous?.co2e_mt, "t")}</td>
-        <td>${pctChangeYtd !== null ? pctChangeYtd.toFixed(3) + "%" : "—"}</td>
-        <td>${pctChangePrev !== null ? pctChangePrev.toFixed(3) + "%" : "—"}</td>
+        <td>${tonnageYtdOk ? (pctChangeYtd !== null ? pctChangeYtd.toFixed(3) + "%" : "—") : naCell(spendReason)}</td>
+        <td>${previous ? (tonnagePrevOk ? (pctChangePrev !== null ? pctChangePrev.toFixed(3) + "%" : "—") : naCell(spendReason)) : "—"}</td>
       </tr>`).join("");
 
     area.innerHTML = `<div class="table-scroll"><table>
       <thead><tr>
-        <th>Material Code</th><th>Indicator</th><th>UoM</th><th>Current EF Name</th><th>Current EF Type</th>
-        <th>Current EF Value</th><th>Tonnage YTD</th><th>Tonnage Prev. Yr</th><th>Invoice Qty YTD</th><th>Invoice Qty Prev. Yr</th>
+        <th>Material Code</th><th>Indicator</th><th>UoM</th><th>Current EF Name</th>
+        <th>Current EF Type${infoIcon("Identified by matching this row's Current EF Name against each reference table's own name column - the value itself is trusted directly from Carbon App Export, never recomputed.")}</th>
+        <th>Current EF Unit</th><th>Current EF Value</th><th>Tonnage YTD</th><th>Tonnage Prev. Yr</th><th>Invoice Qty YTD</th><th>Invoice Qty Prev. Yr</th>
         <th>YTD Emissions</th><th>Last Yr Emissions</th>
-        <th>% Change YTD${infoIcon("(New EF − Current EF) × YTD tonnage, expressed as a % of total company-wide emissions for that year - an emissions-swing-vs-footprint view, not a plain EF-value comparison (which wouldn't depend on tonnage or year at all).")}</th>
-        <th>% Change Last Yr${infoIcon("Same calculation, using last year's tonnage and last year's total company-wide emissions as the baseline - genuinely differs from the YTD column since tonnage differs by year.")}</th>
+        <th>% Change YTD${infoIcon("New EF value (converted to kg CO2e/kg via New EF Unit + Unit Mass) × YTD tonnage, minus this year's already-resolved YTD Emissions - expressed as a % of total Scope 3-1a emissions for that year. Shown as n/a when this material's Current EF is spend-based, since there is no tonnage to estimate from.")}</th>
+        <th>% Change Last Yr${infoIcon("Same calculation using last year's tonnage, last year's emissions and last year's Scope 3-1a total as the baseline.")}</th>
       </tr></thead>
       <tbody>${rowsHtml}</tbody>
       <tfoot><tr>
-        <td colspan="5"><strong>Total</strong></td><td></td>
+        <td colspan="7"><strong>Total</strong></td>
         <td>${fmtNum(totals.tonnageYtd)}</td><td>${fmtNum(totals.tonnagePrev)}</td>
         <td>${fmtNum(totals.invQtyYtd)}</td><td>${fmtNum(totals.invQtyPrev)}</td>
         <td>${fmtNum(totals.emissionsYtd, "t")}</td><td>${fmtNum(totals.emissionsPrev, "t")}</td>
@@ -608,8 +677,8 @@ function metricRow(label, valueHtml) {
   return `<div class="metric-row"><span class="metric-label">${label}</span><span class="metric-value">${valueHtml}</span></div>`;
 }
 
-const ILLUSTRATIVE_NOTE = "Illustrative figure only: based on combined previous-year + YTD tonnage as a stand-in for scale, since an approved EF only actually applies to future emissions. Gives a sense of potential future impact, not a precise forecast.";
-const SHARE_NOTE = "Illustrative figure only, same historical-tonnage basis as the total ΔCO2e above: expressed as a % of combined previous-year + YTD company-wide emissions (Scope 3-1a).";
+const ILLUSTRATIVE_NOTE = "Illustrative figure only: uses that year's recorded tonnage as a stand-in for scale, since an approved EF only actually applies to future emissions. Gives a sense of potential future impact, not a precise forecast.";
+const SHARE_NOTE = "Illustrative figure only, same tonnage basis as the ΔCO2e figure above: expressed as a % of total Scope 3-1a emissions for that year.";
 
 function renderSummaryPanel({ materialCodes, supplierNumber, commonId1s, classifications }) {
   const area = document.getElementById("summaryRows");
@@ -617,19 +686,31 @@ function renderSummaryPanel({ materialCodes, supplierNumber, commonId1s, classif
 
   if (draft.ef_type === "Supplier Materials EF") {
     if (!materialCodes.length) { area.innerHTML = `<p class="empty">Select at least one Material Code to see the impact summary.</p>`; return; }
-    const rows = computeMaterialImpactRows(materialCodes, newVal);
-    const totalDelta = rows.reduce((s, r) => s + (r.deltaYtd || 0) + (r.deltaPrev || 0), 0);
-    const years = new Set();
-    rows.forEach((r) => { if (r.latest) years.add(r.latest.year); if (r.previous) years.add(r.previous.year); });
-    const totalBaseline = [...years].reduce((s, y) => s + yearlyEmissionsBaseline(y), 0);
-    const hasValue = newVal !== null && newVal !== undefined;
-    const share = hasValue && totalBaseline ? (totalDelta / totalBaseline) * 100 : null;
+    const rows = computeMaterialImpactRows(materialCodes, newVal, draft.fields.newEfUnit, draft.fields.unitMass);
+    const inputsComplete = newEfPerKg(newVal, draft.fields.newEfUnit, draft.fields.unitMass) !== null;
+
+    const totalDeltaYtd = rows.reduce((s, r) => s + (r.deltaYtd || 0), 0);
+    const totalDeltaPrev = rows.reduce((s, r) => s + (r.deltaPrev || 0), 0);
+    const anyYtd = inputsComplete && rows.some((r) => r.deltaYtd !== null);
+    const anyPrev = inputsComplete && rows.some((r) => r.deltaPrev !== null);
+
+    const yearsYtd = new Set(rows.filter((r) => r.latest).map((r) => r.latest.year));
+    const yearsPrev = new Set(rows.filter((r) => r.previous).map((r) => r.previous.year));
+    const baselineYtd = [...yearsYtd].reduce((s, y) => s + yearlyEmissionsBaseline(y), 0);
+    const baselinePrev = [...yearsPrev].reduce((s, y) => s + yearlyEmissionsBaseline(y), 0);
+    const shareYtd = anyYtd && baselineYtd ? (totalDeltaYtd / baselineYtd) * 100 : null;
+    const sharePrev = anyPrev && baselinePrev ? (totalDeltaPrev / baselinePrev) * 100 : null;
+
+    const cell = (has, val) => (!inputsComplete ? "—" : has ? val : "n/a");
 
     area.innerHTML = [
       metricRow("Material Codes impacted", materialCodes.length),
-      metricRow("Direction", hasValue ? directionBadge(totalDelta) : `<span class="direction-badge flat">—</span>`),
-      metricRow(`Total ΔCO2e impact${infoIcon(ILLUSTRATIVE_NOTE)}`, hasValue ? fmtNum(totalDelta, "t") : "—"),
-      metricRow(`Share of Scope 3-1a footprint${infoIcon(SHARE_NOTE)}`, share !== null ? share.toFixed(3) + "%" : "—"),
+      metricRow("Direction · YTD", inputsComplete && anyYtd ? directionBadge(totalDeltaYtd) : `<span class="direction-badge flat">—</span>`),
+      metricRow(`ΔCO2e impact · YTD${infoIcon(ILLUSTRATIVE_NOTE)}`, cell(anyYtd, fmtNum(totalDeltaYtd, "t"))),
+      metricRow(`Share of Scope 3-1a · YTD${infoIcon(SHARE_NOTE)}`, cell(anyYtd, shareYtd !== null ? shareYtd.toFixed(3) + "%" : "n/a")),
+      metricRow("Direction · Last Yr", inputsComplete && anyPrev ? directionBadge(totalDeltaPrev) : `<span class="direction-badge flat">—</span>`),
+      metricRow(`ΔCO2e impact · Last Yr${infoIcon(ILLUSTRATIVE_NOTE)}`, cell(anyPrev, fmtNum(totalDeltaPrev, "t"))),
+      metricRow(`Share of Scope 3-1a · Last Yr${infoIcon(SHARE_NOTE)}`, cell(anyPrev, sharePrev !== null ? sharePrev.toFixed(3) + "%" : "n/a")),
     ].join("");
   } else if (draft.ef_type === "Supplier Spend EF / CCF index") {
     if (!supplierNumber) { area.innerHTML = `<p class="empty">Select a supplier to see the impact summary.</p>`; return; }
@@ -694,7 +775,7 @@ function validateMandatory() {
   if (!draft.common_fields.source) missing.push("Source of new EF");
   if (!draft.common_fields.methodology) missing.push("Methodology standard");
   if (!draft.common_fields.assurance) missing.push("Assurance");
-  if (!draft.common_fields.evidence) missing.push("Evidence link");
+  if (!draft.common_fields.evidence?.path) missing.push("Evidence file");
   return missing;
 }
 
@@ -720,7 +801,11 @@ async function saveDraft(submitForReview) {
     status: submitForReview ? "E2-Review" : "E1-Draft",
     frozen: submitForReview,
     project_id: null,
-    proposer_id: store.currentUserId,
+    // Locked at first submission, not re-set here - draft.proposer_id already
+    // carries the original proposer forward across loads/reopens, so
+    // "Return for Revision" always goes back to whoever actually proposed it,
+    // never to whoever most recently clicked Save.
+    proposer_id: draft.proposer_id,
     reviewer_id: reviewer ? reviewer.user_id : null,
     approver_id: approver ? approver.user_id : null,
     fields: draft.fields,
@@ -772,8 +857,11 @@ function summaryRows(p) {
     ["New EF Value", p.fields.newEfValue], ["New EF Unit", p.fields.newEfUnit || "—"],
   ];
   Object.entries(facets).forEach(([k, v]) => rows.push([k, (v || []).join(", ") || "—"]));
+  const evidenceHtml = p.common_fields.evidence?.path
+    ? `<a href="${evidencePublicUrl(p.common_fields.evidence.path)}" target="_blank" rel="noopener">📎 ${p.common_fields.evidence.filename}</a>`
+    : "—";
   rows.push(["Source", p.common_fields.source], ["Methodology", p.common_fields.methodology],
-    ["Assurance", p.common_fields.assurance], ["Evidence", p.common_fields.evidence || "—"],
+    ["Assurance", p.common_fields.assurance], ["Evidence", evidenceHtml],
     ["New EF Name", p.derived.newEfName], ["Reviewer", p.derived.reviewerName], ["Approver", p.derived.approverName],
     ["Proposer", p.derived.proposerName]);
   return rows.map(([k, v]) => derivedRow(k, v ?? "—")).join("");
@@ -868,17 +956,33 @@ function renderE4(el) {
   const p = draft;
   const card = document.createElement("div");
   card.className = "card";
+  const ingestedBadge = p.ingested_at
+    ? `<span class="ingested-badge">✓ Ingested on ${new Date(p.ingested_at).toLocaleDateString()}</span>`
+    : "";
   card.innerHTML = `
-    <div class="card-head"><div><h2>EF Entry · E4 Ready<span class="tbd-tag">To confirm w/ LCA team</span></h2><p>Ready for manual ingestion into the Carbon App. Ingestion itself happens outside this tool for now.</p></div></div>
+    <div class="card-head"><div><h2>EF Entry · E4 Ready<span class="tbd-tag">To confirm w/ LCA team</span></h2><p>Ready for ingestion into the Carbon App. ${ingestedBadge}</p></div></div>
     ${summaryRows(p)}
-    <div class="actions"><button class="btn" id="markIngestedBtn">Mark as ingested (log only)</button>
-    <button class="btn ghost danger" id="onHoldBtn">Put On Hold</button>
-    <button class="btn ghost danger" id="cancelBtn">Cancel</button></div>
+    <div class="actions">
+      <button class="btn primary" id="markIngestedBtn" ${p.ingested_at ? "disabled" : ""}>${p.ingested_at ? "Already marked as ingested" : "✓ Mark as ingested into Carbon App"}</button>
+      <button class="btn ghost danger" id="onHoldBtn">Put On Hold</button>
+      <button class="btn ghost danger" id="cancelBtn">Cancel</button>
+    </div>
   `;
   el.appendChild(card);
   document.getElementById("markIngestedBtn").addEventListener("click", async () => {
-    await logAudit("Marked as ingested", "ef_proposal", p.change_id, null, { ingested_at: new Date().toISOString() });
-    toast(`${p.change_id} marked as ingested (audit log only, status unchanged)`, "success");
+    // ingested_at is the same field a future real Carbon App integration
+    // would set automatically - a timestamp flag on the proposal itself,
+    // not just an audit-log entry, so it can persist as a badge here and
+    // show up in the EF Log / Dashboard.
+    const ingestedAt = new Date().toISOString();
+    try {
+      await updateRow("ef_proposals", "change_id", p.change_id, { ingested_at: ingestedAt });
+      p.ingested_at = ingestedAt;
+      await logAudit("Marked as ingested", "ef_proposal", p.change_id, null, { ingested_at: ingestedAt });
+      await loadTransactionalData();
+      toast(`${p.change_id} marked as ingested`, "success");
+      renderAll();
+    } catch (e) { console.error(e); }
   });
   wireOnHoldCancel(el);
 }
@@ -890,10 +994,20 @@ function renderE5(el) {
   card.innerHTML = `
     <div class="card-head"><div><h2>EF Entry · E5 On Hold</h2><p>Retained and viewable. Put back into ${p.on_hold_from_status || "its previous stage"} when ready to resume.</p></div></div>
     ${summaryRows(p)}
-    <div class="actions"><button class="btn primary" id="resumeBtn">Resume ${p.on_hold_from_status || "previous stage"}</button></div>
+    <div class="actions">
+      <button class="btn ghost danger" id="cancelBtn">Cancel</button>
+      <button class="btn primary" id="resumeBtn">Resume ${p.on_hold_from_status || "previous stage"}</button>
+    </div>
   `;
   el.appendChild(card);
   document.getElementById("resumeBtn").addEventListener("click", () => transitionStage(p.on_hold_from_status || "E1-Draft", { on_hold_from_status: null }, "Resume from On Hold"));
+  document.getElementById("cancelBtn").addEventListener("click", () => {
+    showConfirmModal(
+      "Cancel this EF proposal?",
+      "This cannot be undone. The proposal will remain visible in the EF Log as Cancelled.",
+      () => transitionStage("E6-Cancelled", { frozen: true, on_hold_from_status: null }, "Cancel proposal", cancelAdjustments(p.on_hold_from_status))
+    );
+  });
 }
 
 function renderE6(el) {
@@ -903,19 +1017,30 @@ function renderE6(el) {
   el.appendChild(card);
 }
 
+// Shared between the Cancel button (wherever it appears) and E5's own
+// Cancel-from-On-Hold path, which needs to release workload based on the
+// stage the proposal was paused FROM, not its current "E5-OnHold" status.
+function cancelAdjustments(fromStatus) {
+  const p = draft;
+  return fromStatus === "E2-Review" ? [[p.reviewer_id, "open_ef_reviews", -1]]
+    : fromStatus === "E3-Approval" ? [[p.approver_id, "open_ef_approvals", -1]]
+    : [];
+}
+
 function wireOnHoldCancel(el) {
   document.getElementById("onHoldBtn")?.addEventListener("click", () => {
-    transitionStage("E5-OnHold", { on_hold_from_status: draft.status }, "Put on hold");
+    showConfirmModal(
+      "Put this EF proposal on hold?",
+      "It will be retained and viewable, but paused out of the active workflow. You can resume it back into its current stage whenever you're ready.",
+      () => transitionStage("E5-OnHold", { on_hold_from_status: draft.status }, "Put on hold")
+    );
   });
   document.getElementById("cancelBtn")?.addEventListener("click", () => {
     const p = draft;
-    const adjustments = p.status === "E2-Review" ? [[p.reviewer_id, "open_ef_reviews", -1]]
-      : p.status === "E3-Approval" ? [[p.approver_id, "open_ef_approvals", -1]]
-      : [];
     showConfirmModal(
       "Cancel this EF proposal?",
       "This cannot be undone. The proposal will remain visible in the EF Log as Cancelled.",
-      () => transitionStage("E6-Cancelled", { frozen: true }, "Cancel proposal", adjustments)
+      () => transitionStage("E6-Cancelled", { frozen: true }, "Cancel proposal", cancelAdjustments(p.status))
     );
   });
 }

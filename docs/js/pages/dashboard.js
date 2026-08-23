@@ -1,12 +1,14 @@
 import { store, currentUser } from "../dataStore.js";
 import { isConfigured } from "../supabaseClient.js";
-import { STAGES } from "../efLogic.js";
+import { STAGES, EF_TYPES, resolveCurrentEfTier } from "../efLogic.js";
 
 export function renderDashboard() {
   renderSyncNotice();
   renderKpis();
   renderStageBreakdown();
   renderRecentActivity();
+  renderEfTypeBreakdown();
+  renderTopMaterials();
 }
 
 function renderSyncNotice() {
@@ -52,6 +54,69 @@ function renderStageBreakdown() {
       <div style="margin-bottom:10px">
         <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:3px"><span>${s.label}</span><span>${count}</span></div>
         <div style="background:var(--gray-bg);border-radius:6px;height:8px;overflow:hidden"><div style="width:${pct}%;background:var(--primary);height:100%"></div></div>
+      </div>`;
+  }).join("");
+}
+
+function stageColor(code) {
+  if (code === "E6-Cancelled") return "var(--red)";
+  if (code === "E5-OnHold") return "var(--amber)";
+  if (code === "E4-Ready") return "var(--green)";
+  return "var(--primary)";
+}
+
+function renderEfTypeBreakdown() {
+  const el = document.getElementById("efTypeBreakdown");
+  if (!el) return;
+  const rows = EF_TYPES.map((type) => {
+    const proposals = store.efProposals.filter((p) => p.ef_type === type);
+    const ingested = proposals.filter((p) => p.ingested_at).length;
+    const stageCounts = STAGES.map((s) => ({ ...s, count: proposals.filter((p) => p.status === s.code).length }));
+    return { type, total: proposals.length, ingested, stageCounts };
+  });
+  if (!rows.some((r) => r.total)) { el.innerHTML = `<p class="empty">No EF proposals yet.</p>`; return; }
+  el.innerHTML = rows.map((r) => `
+    <div style="margin-bottom:16px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px;gap:10px">
+        <strong style="font-size:12.5px">${r.type}</strong>
+        <span class="caption" style="white-space:nowrap">${r.ingested} ingested · ${r.total} total</span>
+      </div>
+      <div style="display:flex;height:8px;border-radius:6px;overflow:hidden;background:var(--gray-bg)">
+        ${r.total ? r.stageCounts.map((s) => s.count ? `<div style="width:${(s.count / r.total) * 100}%;background:${stageColor(s.code)}" title="${s.label}: ${s.count}"></div>` : "").join("") : ""}
+      </div>
+    </div>`).join("");
+}
+
+function fmtTonnes(v) {
+  return v === null || v === undefined || isNaN(v) ? "—" : `${Number(v).toFixed(1)}t CO2e`;
+}
+
+// Ranks materials by their most recent year's Scope 3-1a emissions
+// (Carbon App Export's own co2e_mt) - a leaderboard of where the biggest
+// impact opportunity is, using the same trusted-export values the EF Entry
+// impact panel is built on (see resolveCurrentEfTier).
+function renderTopMaterials() {
+  const el = document.getElementById("topMaterialsLeaderboard");
+  if (!el) return;
+  if (!store.carbonAppExport.length) { el.innerHTML = `<p class="empty">No Carbon App Export data loaded.</p>`; return; }
+  const latestYear = Math.max(...store.carbonAppExport.map((r) => Number(r.year)));
+  const rows = store.carbonAppExport
+    .filter((r) => Number(r.year) === latestYear)
+    .slice()
+    .sort((a, b) => Number(b.co2e_mt || 0) - Number(a.co2e_mt || 0))
+    .slice(0, 8);
+  const maxEmissions = Number(rows[0]?.co2e_mt || 0) || 1;
+  el.innerHTML = rows.map((r) => {
+    const tier = resolveCurrentEfTier(r.co2_factor_name_final);
+    const pct = (Number(r.co2e_mt || 0) / maxEmissions) * 100;
+    return `
+      <div style="margin-bottom:12px">
+        <div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:3px;gap:10px">
+          <span>${r.material || r.indicator_name} <span class="caption">(${r.material_code})</span></span>
+          <strong style="white-space:nowrap">${fmtTonnes(r.co2e_mt)}</strong>
+        </div>
+        <div style="background:var(--gray-bg);border-radius:6px;height:8px;overflow:hidden"><div style="width:${pct}%;background:var(--primary);height:100%"></div></div>
+        <span class="caption">${tier?.tier || "—"} · ${r.supplier_name || "—"}</span>
       </div>`;
   }).join("");
 }

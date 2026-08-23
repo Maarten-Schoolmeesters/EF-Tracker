@@ -185,10 +185,11 @@ create table ef_proposals (
   approver_id text references users(user_id),
   on_hold_from_status text,            -- remembers which stage to return to after On Hold
   fields jsonb not null default '{}',       -- type-specific input fields (material codes, GPLT, common id, eeio class, new EF value, unit, mass...)
-  common_fields jsonb not null default '{}',-- source/methodology/assurance/evidence/comment
+  common_fields jsonb not null default '{}',-- source/methodology/assurance/evidence (storage path+filename)/comment
   derived jsonb not null default '{}',      -- computed: new_ef_name, review_route, % change, impact, product brand...
   review_steps jsonb not null default '[]', -- checklist state for E2
   approval_notes text,
+  ingested_at timestamptz,             -- set when marked as ingested into the Carbon App at E4; same field a future real integration would set automatically
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
@@ -270,3 +271,18 @@ create policy "public demo - full access" on ef_proposals for all using (true) w
 create policy "public demo - full access" on ef_proposal_versions for all using (true) with check (true);
 create policy "public demo - full access" on audit_log for all using (true) with check (true);
 create policy "public demo - full access" on notifications for all using (true) with check (true);
+
+-- ============================================================
+-- STORAGE (evidence file uploads for EF proposals)
+-- Small demo-purpose files only (screenshot / short PDF) - well within
+-- Supabase's free-tier storage limits. Public bucket so uploaded files can
+-- be viewed via a plain public URL without a signed-URL round trip.
+-- ============================================================
+insert into storage.buckets (id, name, public)
+values ('evidence', 'evidence', true)
+on conflict (id) do nothing;
+
+create policy "public demo - full access" on storage.objects
+  for all to public
+  using (bucket_id = 'evidence')
+  with check (bucket_id = 'evidence');

@@ -427,7 +427,81 @@ write_csv("product_mapping_raw",
            "business_division", "site"], pmr_rows)
 
 # ---- carbon_app_export (hub table). Two consecutive years per material so the
-# EF Entry screen can show genuine YoY emissions trend + % change, per slide 13. ----
+# EF Entry screen can show genuine YoY emissions trend + % change, per slide 13.
+#
+# co2_factor_final / co2_factor_name_final are NOT independently randomized -
+# each material is assigned exactly ONE authoritative tier (mirroring what the
+# real Carbon App's own priority cascade would have resolved), and that tier's
+# actual value/name is copied in verbatim. This is what makes the app's
+# "trust the export, identify the tier by name-matching against the reference
+# tables" approach valid - the name it name-matches against is a name that
+# genuinely exists in one of those tables, not a coincidence.
+#
+# Materials whose tier is spend-based (Supplier Spend EF or CEDA/EEIO) get
+# tonnage AND both quantity fields left blank together - a spend-tracked
+# transaction never captured a physical quantity dimension at all, not just
+# a missing tonnage figure. ----
+
+msf_by_material = {}
+for r in msf_rows:
+    msf_by_material.setdefault(r["material_code"], []).append(r)
+
+ccf_by_supplier = {}
+for r in ccf_rows:
+    ccf_by_supplier.setdefault(r["supplier_number"], []).append(r)
+
+common_id1_by_material = {r["material_id"]: r["common_id1"] for r in common_id_rows}
+
+gfi_by_common_id1 = {}
+for r in gfi_rows:
+    gfi_by_common_id1.setdefault(r["common_id1"], []).append(r)
+
+eeio_ef_by_classification = {}
+for r in eeio_ef_rows:
+    eeio_ef_by_classification.setdefault(r["enriched_l1l2l3_classification"], []).append(r)
+
+
+def resolve_authoritative_tier(material, supplier):
+    """Picks ONE tier for this material (weighted, but only among tiers that
+    actually have matching reference data) and returns
+    (tier_label, value, name, unit, is_mass_based)."""
+    has_msf = material["material_code"] in msf_by_material
+    has_ccf = supplier["supplier_number"] in ccf_by_supplier
+    classification = classification_for_leaf.get(
+        (material["category_level_1_enriched"], material["category_level_2_enriched"], material["category_level_3_enriched"]))
+    has_eeio_ef = classification in eeio_ef_by_classification if classification else False
+    common_id1 = common_id1_by_material.get(material["material_code"])
+    gfi_candidates = gfi_by_common_id1.get(common_id1, []) if common_id1 else []
+    has_gfi = bool(gfi_candidates)
+
+    # Weighted pick among whichever tiers actually resolve for this material -
+    # Material Specific favored when available (~85%), otherwise spread
+    # across the remaining three so the demo exercises every tier.
+    candidates = []
+    if has_msf:
+        candidates.append(("msf", 0.85))
+    if has_ccf:
+        candidates.append(("ccf", 0.5 if has_msf else 0.5))
+    if has_gfi:
+        candidates.append(("gfi", 0.35 if has_msf else 0.35))
+    if has_eeio_ef:
+        candidates.append(("eeio", 0.15 if has_msf else 0.15))
+    tiers, weights = zip(*candidates)
+    tier = random.choices(tiers, weights=weights, k=1)[0]
+
+    if tier == "msf":
+        row = random.choice(msf_by_material[material["material_code"]])
+        return ("Material Specific EF", float(row["ef_kgco2e_per_unit"]), row["emission_factor_name"], "kg CO2e / unit", True)
+    if tier == "ccf":
+        row = random.choice(ccf_by_supplier[supplier["supplier_number"]])
+        return ("Supplier Spend EF (CCF index)", float(row["ef_per_1000_gbp"]), row["emission_factor_name"], "kg CO2e / £1,000 GBP", False)
+    if tier == "gfi":
+        row = random.choice(gfi_candidates)
+        return ("Global EF (Common ID)", float(row["co2_emission_factor_current"]), row["emission_factor_name_historic"], "kg CO2e / kg", True)
+    row = random.choice(eeio_ef_by_classification[classification])
+    return ("CEDA EF (EEIO mapping)", float(row["eeio_factor_kgco2e_gbp"]), row["emission_factor_name"], "kg CO2e / GBP", False)
+
+
 cae_material_years = 2
 n_cae_materials = max(1, N_CAE_ROWS // cae_material_years)
 cae_materials = random.sample(materials, min(n_cae_materials, len(materials)))
@@ -436,14 +510,25 @@ cae_rows = []
 for m in cae_materials:
     supplier = random.choice(suppliers)
     gplt_leaf = random.choice(GPLT_LEAVES)
-    base_co2_factor = rand_float(0.1, 900, 4)
     base_tonnage = rand_float(0.5, 500, 3)
+    base_co2e_mt = rand_float(5, 400, 3)  # used only for spend-based tiers, which have no tonnage to derive from
     drift = random.uniform(-0.15, 0.15)  # YoY drift, same material/supplier across years
+    # Resolved ONCE per material, not per year - the authoritative tier a material
+    # resolves to doesn't flip year to year on its own; only a newly-approved
+    # proposal changes it, which is a forward-looking event this export can't see yet.
+    tier_label, ef_value, ef_name, ef_unit, is_mass_based = resolve_authoritative_tier(m, supplier)
     for i, year in enumerate(cae_years):
         factor_mult = (1 + drift) ** i
-        co2_factor = round(base_co2_factor * factor_mult, 4)
-        tonnage = round(base_tonnage * random.uniform(0.9, 1.1), 3)
-        co2e_mt = round(co2_factor * tonnage / 1000, 4)
+        if is_mass_based:
+            tonnage = round(base_tonnage * random.uniform(0.9, 1.1) * factor_mult, 3)
+            co2e_mt = round(ef_value * tonnage, 4)
+            invoice_quantity = round(tonnage * random.uniform(900, 1100), 2)
+            quantity_corrected = round(tonnage * random.uniform(900, 1100), 2)
+        else:
+            tonnage = ""
+            co2e_mt = round(base_co2e_mt * random.uniform(0.9, 1.1) * factor_mult, 4)
+            invoice_quantity = ""
+            quantity_corrected = ""
         cae_rows.append({
             "ghg_category": random.choice(GHG_CATEGORIES),
             "source_system": random.choice(SOURCE_SYSTEMS),
@@ -464,9 +549,9 @@ for m in cae_materials:
             "category_level_2_enriched": m["category_level_2_enriched"],
             "category_level_3_enriched": m["category_level_3_enriched"],
             "category_level_4_enriched": m["category_level_4_enriched"],
-            "co2_factor": co2_factor,
-            "co2_factor_final": co2_factor,
-            "co2_factor_name_final": f"{m['material_description']} Current EF",
+            "co2_factor": ef_value,
+            "co2_factor_final": ef_value,
+            "co2_factor_name_final": ef_name,
             "co2_factor_name_supplier_submissions": f"{m['material_description']} Supplier Submission",
             "gplt": gplt_leaf[0],
             "gplt1": gplt_leaf[1],
@@ -475,9 +560,9 @@ for m in cae_materials:
             "material_code": m["material_code"],
             "co2e_mt": co2e_mt,
             "tonnage": tonnage,
-            "uom": random.choice(UOM_CHOICES),
-            "quantity_corrected": round(tonnage * random.uniform(900, 1100), 2),
-            "invoice_quantity": round(tonnage * random.uniform(900, 1100), 2),
+            "uom": random.choice(UOM_CHOICES) if is_mass_based else "",
+            "quantity_corrected": quantity_corrected,
+            "invoice_quantity": invoice_quantity,
         })
 write_csv("carbon_app_export",
           ["ghg_category", "source_system", "data_source", "company_code", "indicator_name", "business_division",

@@ -3,7 +3,19 @@ import { openProposalById } from "./efEntry.js";
 
 let statusFilter = "";
 let typeFilter = "";
+let materialFilter = "";
 let searchTerm = "";
+
+// Material codes on a proposal only apply to the "Supplier Materials EF"
+// type (the only type with a Material Code facet) - looked up against
+// Carbon App Export for a human-readable name alongside the code.
+function materialsForProposal(p) {
+  const codes = p.fields?.facets?.material_code || [];
+  return codes.map((code) => {
+    const row = store.carbonAppExport.find((r) => r.material_code === code);
+    return { code, name: row?.material || row?.indicator_name || null };
+  });
+}
 
 export function mountEfLog() {
   document.getElementById("efLogSearch").addEventListener("input", (e) => {
@@ -34,45 +46,61 @@ export function renderEfLog() {
 
   const statuses = [...new Set(store.efProposals.map((p) => p.status))];
   const types = [...new Set(store.efProposals.map((p) => p.ef_type))];
+  const materialCodes = [...new Set(store.efProposals.flatMap((p) => (p.fields?.facets?.material_code || [])))].sort();
 
   let rows = store.efProposals;
   if (statusFilter) rows = rows.filter((p) => p.status === statusFilter);
   if (typeFilter) rows = rows.filter((p) => p.ef_type === typeFilter);
+  if (materialFilter) rows = rows.filter((p) => (p.fields?.facets?.material_code || []).includes(materialFilter));
   if (searchTerm) {
-    rows = rows.filter((p) =>
-      [p.change_id, p.derived?.newEfName, p.ef_type].join(" ").toLowerCase().includes(searchTerm)
-    );
+    rows = rows.filter((p) => {
+      const materials = materialsForProposal(p);
+      return [
+        p.change_id, p.derived?.newEfName, p.ef_type,
+        ...materials.map((m) => m.code), ...materials.map((m) => m.name),
+      ].join(" ").toLowerCase().includes(searchTerm);
+    });
   }
 
   filterBarEl.innerHTML = `
-    <div style="display:flex;gap:8px;margin-bottom:10px">
+    <div style="display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap">
       <select id="statusFilterSel" class="col-filter"><option value="">All statuses</option>${statuses.map((s) => `<option ${s === statusFilter ? "selected" : ""}>${s}</option>`).join("")}</select>
       <select id="typeFilterSel" class="col-filter"><option value="">All EF types</option>${types.map((t) => `<option ${t === typeFilter ? "selected" : ""}>${t}</option>`).join("")}</select>
+      <select id="materialFilterSel" class="col-filter"><option value="">All material codes</option>${materialCodes.map((m) => `<option ${m === materialFilter ? "selected" : ""}>${m}</option>`).join("")}</select>
     </div>`;
   filterBarEl.querySelector("#statusFilterSel").addEventListener("change", (e) => { statusFilter = e.target.value; renderEfLog(); });
   filterBarEl.querySelector("#typeFilterSel").addEventListener("change", (e) => { typeFilter = e.target.value; renderEfLog(); });
+  filterBarEl.querySelector("#materialFilterSel").addEventListener("change", (e) => { materialFilter = e.target.value; renderEfLog(); });
 
   table.innerHTML = `
     <thead><tr>
-      <th>Change ID</th><th>Status</th><th>EF Type</th><th>New EF Name</th><th>Proposer</th><th>Reviewer</th>
-      <th>Approver</th><th>Last Updated</th><th></th>
+      <th>Change ID</th><th>Status</th><th>EF Type</th><th>New EF Name</th><th>Material</th><th>Material Code</th>
+      <th>Proposer</th><th>Reviewer</th><th>Approver</th><th>Ingested</th><th>Last Updated</th><th></th>
     </tr></thead>
     <tbody>
-      ${rows.map((p) => `
+      ${rows.map((p) => {
+        const materials = materialsForProposal(p);
+        const materialNames = materials.map((m) => m.name).filter(Boolean).join(", ") || "—";
+        const materialCodesTxt = materials.map((m) => m.code).join(", ") || "—";
+        return `
         <tr>
           <td>${p.change_id}</td>
           <td><span class="pill ${stagePillClass(p.status)}">${p.status}</span></td>
           <td>${p.ef_type}</td>
           <td>${p.derived?.newEfName || "—"}</td>
+          <td>${materialNames}</td>
+          <td>${materialCodesTxt}</td>
           <td>${p.derived?.proposerName || "—"}</td>
           <td>${p.derived?.reviewerName || "—"}</td>
           <td>${p.derived?.approverName || "—"}</td>
+          <td>${p.ingested_at ? `<span class="ingested-badge" title="Ingested ${new Date(p.ingested_at).toLocaleDateString()}">✓</span>` : "—"}</td>
           <td>${new Date(p.updated_at).toLocaleString()}</td>
           <td style="display:flex;gap:6px">
             <button class="btn" data-open="${p.change_id}" data-stage="${p.status}">Open</button>
             <button class="btn" data-history="${p.change_id}">History</button>
           </td>
-        </tr>`).join("")}
+        </tr>`;
+      }).join("")}
     </tbody>`;
 
   table.querySelectorAll("[data-open]").forEach((btn) => {
@@ -107,7 +135,7 @@ function flattenSnapshot(s) {
   if (s.common_fields?.source) out["Source"] = s.common_fields.source;
   if (s.common_fields?.methodology) out["Methodology"] = s.common_fields.methodology;
   if (s.common_fields?.assurance) out["Assurance"] = s.common_fields.assurance;
-  if (s.common_fields?.evidence) out["Evidence"] = s.common_fields.evidence;
+  if (s.common_fields?.evidence?.filename) out["Evidence"] = s.common_fields.evidence.filename;
   if (s.common_fields?.comment) out["Proposer comment"] = s.common_fields.comment;
   if (s.derived?.newEfName) out["New EF Name"] = s.derived.newEfName;
   if (s.derived?.reviewerName) out["Reviewer"] = s.derived.reviewerName;
@@ -142,7 +170,9 @@ function showVersionHistory(changeId) {
     }
     const v = versions[idx];
     const prev = versions[idx - 1] || null;
-    const changed = diffKeys(prev?.snapshot, v.snapshot);
+    // v1 has no prior version to have changed from - diffing against nothing
+    // would otherwise mark every field "changed", which is misleading.
+    const changed = idx === 0 ? [] : diffKeys(prev?.snapshot, v.snapshot);
     const prevFlat = prev ? flattenSnapshot(prev.snapshot) : {};
     const curFlat = flattenSnapshot(v.snapshot);
 
