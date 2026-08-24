@@ -55,7 +55,7 @@
         <div class="grid kpis" id="dashboardKpis"></div>
         <div class="grid two-col" style="margin-top:20px">
           <div class="card">
-            <div class="card-head"><div><h3>EF proposals by stage</h3><p>Across all open and closed proposals</p></div></div>
+            <div class="card-head"><div><h3>EF proposals by stage</h3><p>Historical tCO2e impact if new EFs replaced current ones, per stage</p></div></div>
             <div id="stageBreakdown"></div>
           </div>
           <div class="card">
@@ -63,14 +63,30 @@
             <div id="recentActivity"></div>
           </div>
         </div>
-        <div class="grid two-col" style="margin-top:20px">
+        <div class="grid two-col rev" style="margin-top:20px">
           <div class="card">
-            <div class="card-head"><div><h3>EF proposals by type</h3><p>Ingested-into-Carbon-App count and stage mix per EF type</p></div></div>
-            <div id="efTypeBreakdown"></div>
+            <div class="card-head"><div><h3>EF Type distribution</h3><p>Carbon App Export, current assignment</p></div></div>
+            <div class="seg" id="efTypeMetricToggle">
+              <button data-metric="number" class="active">Number</button>
+              <button data-metric="emissions">Emissions</button>
+            </div>
+            <div id="efTypeDistribution"></div>
+            <div class="switch-row">
+              <div class="switch" id="top75Switch"></div>
+              <span id="top75Label">Only top 75% CO2-emitting materials</span>
+            </div>
+            <div class="limitation">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01"/></svg>
+              Current EF Type is identified by name-matching against the reference tables (same logic as EF Entry) - a small number of rows may not resolve and show as "Unrecognized." Reflects each material's most recent year only.
+            </div>
           </div>
           <div class="card">
-            <div class="card-head"><div><h3>Top emitting materials</h3><p>By most recent year's Scope 3-1a emissions</p></div></div>
-            <div id="topMaterialsLeaderboard"></div>
+            <div class="card-head"><div><h3>Top emitting materials</h3><p id="topMaterialsCaption">By most recent year's Scope 3-1a emissions</p></div></div>
+            <div id="topMaterialsLeaderboard" class="mat-list"></div>
+            <div class="limitation">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01"/></svg>
+              "In pipeline" reflects any non-cancelled proposal referencing this material code, at its current stage. A material with more than one active proposal shows the furthest-along stage.
+            </div>
           </div>
         </div>
       </section>

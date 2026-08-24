@@ -102,6 +102,31 @@ export function resolveCurrentEfTier(nameFinal) {
   return { tier: "Unrecognized (no reference match)", unit: null };
 }
 
+// Converts a proposed New EF Value into kg CO2e/kg, the one basis that can be
+// multiplied by tonnage regardless of which unit the proposer picked. Unit
+// Mass (kg per unit) is what makes the "per unit" case convertible at all -
+// it's collected for exactly this purpose. Shared by the EF Entry impact
+// panel and the Dashboard's per-stage impact aggregation, so the same
+// conversion rule applies everywhere a proposed value needs comparing
+// against a resolved co2e_mt figure.
+export function newEfPerKg(newVal, newEfUnit, unitMass) {
+  if (newVal === null || newVal === undefined || isNaN(newVal)) return null;
+  if (newEfUnit === "kg CO2e / kg") return newVal;
+  if (newEfUnit === "kg CO2e / tonne") return newVal / 1000;
+  if (newEfUnit === "kg CO2e / unit") return unitMass ? newVal / unitMass : null;
+  return null;
+}
+
+// tCO2e delta for one Carbon App Export row (one material, one year) if
+// newPerKg replaced its current, already-resolved co2e_mt. Returns null
+// (not zero) when the row has no tonnage on record - a spend-based current
+// EF never captured a mass dimension, so there's nothing to multiply by;
+// this must read as "cannot estimate," not "no change."
+export function materialDeltaForRow(row, newPerKg) {
+  if (!row || newPerKg === null || row.tonnage === null || row.tonnage === undefined || row.tonnage === "") return null;
+  return (newPerKg * Number(row.tonnage)) - Number(row.co2e_mt || 0);
+}
+
 // Total company-wide emissions for a given year, used as the denominator for
 // "% change vs baseline" impact metrics (an emissions-swing-vs-total-footprint
 // view, as opposed to a plain before/after EF-value percentage which doesn't

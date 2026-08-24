@@ -7,7 +7,7 @@ import { toast } from "../toast.js";
 import {
   STAGES, EF_TYPES, REVIEW_STEPS, generateChangeId, lookupCurrentEf, pctChange, yearlyEmissionsBaseline,
   productForMaterial, reviewRouteForAssurance, pickReviewer, pickApprover, deriveEfName,
-  reviewGatingMessage, approvalGatingMessage, resolveCurrentEfTier,
+  reviewGatingMessage, approvalGatingMessage, resolveCurrentEfTier, newEfPerKg, materialDeltaForRow,
 } from "../efLogic.js";
 
 let draft = null; // in-memory proposal being edited/viewed
@@ -275,12 +275,15 @@ function renderE1(el) {
     numericContainer.style.marginTop = "12px";
     area.appendChild(numericContainer);
 
+    // Product Name isn't a column on carbon_app_export itself (its own
+    // "Product Brand" column exists in the real source data but is currently
+    // unreliable and not to be used, per the user) - joined in here from the
+    // Product Mapping table instead so it can participate as a facet like
+    // every other box, via the same cross-facet pruning mechanism. This join
+    // is the permanent, intentional source, not a stopgap.
+    const rowsWithProduct = store.carbonAppExport.map((r) => ({ ...r, product_name: productForMaterial(r.material_code) || "—" }));
+
     if (draft.ef_type === "Material Specific EF") {
-      // Product Name isn't a column on carbon_app_export itself yet (the real
-      // export is expected to carry it natively eventually) - joined in here
-      // from the Product Mapping table so it can participate as a facet like
-      // every other box, via the same cross-facet pruning mechanism.
-      const rowsWithProduct = store.carbonAppExport.map((r) => ({ ...r, product_name: productForMaterial(r.material_code) || "—" }));
       facetGroup = createFacetFilterGroup({
         container: facetContainer,
         rows: rowsWithProduct,
@@ -308,10 +311,11 @@ function renderE1(el) {
     } else if (draft.ef_type === "Supplier Spend EF / CCF index") {
       facetGroup = createFacetFilterGroup({
         container: facetContainer,
-        rows: store.carbonAppExport,
+        rows: rowsWithProduct,
         facets: [
           { key: "supplier_name", label: "Supplier Name", required: true },
           { key: "supplier_number", label: "Supplier Number", required: true },
+          { key: "product_name", label: "Product Name" },
         ],
         initialSelections: draft.fields.facets,
         onChange: () => updateDerivedAndImpact(),
@@ -538,6 +542,7 @@ function updateDerivedAndImpact() {
     ${derivedRow("Approver (auto-assigned)" + infoIcon("The EF Approver with the fewest current open approvals. Ties break alphabetically by name."), draft.derived.approverName)}
     ${derivedRow("Change Proposer", draft.derived.proposerName)}
     ${derivedRow("Linked Product", draft.derived.productBrand)}
+    ${(facets.product_name || []).length ? derivedRow("Selected Product Name", facets.product_name.join(", ")) : ""}
   `;
 
   renderImpact({ materialCodes, supplierNumber, commonId1s, classifications, matchingRows });
@@ -547,24 +552,12 @@ function updateDerivedAndImpact() {
   if (submitBtn) submitBtn.disabled = draft.frozen || validateMandatory().length > 0;
 }
 
-function derivedRow(k, v) {
-  return `<div class="derived-row"><div class="k">${k}</div><div class="v">${v}</div></div>`;
+function derivedRow(k, v, span) {
+  return `<div class="derived-row${span ? " span-2" : ""}"><div class="k">${k}</div><div class="v">${v}</div></div>`;
 }
 
 function isBlank(v) {
   return v === null || v === undefined || v === "";
-}
-
-// Converts the proposed New EF Value into kg CO2e/kg, the one basis that can
-// be multiplied by tonnage regardless of which unit the proposer picked.
-// Unit Mass (kg per unit) is what makes the "per unit" case convertible at
-// all - it's collected for exactly this purpose.
-function newEfPerKg(newVal, newEfUnit, unitMass) {
-  if (newVal === null || newVal === undefined || isNaN(newVal)) return null;
-  if (newEfUnit === "kg CO2e / kg") return newVal;
-  if (newEfUnit === "kg CO2e / tonne") return newVal / 1000;
-  if (newEfUnit === "kg CO2e / unit") return unitMass ? newVal / unitMass : null;
-  return null;
 }
 
 // Shared per-material computation used by both the impact table and the
@@ -593,8 +586,8 @@ function computeMaterialImpactRows(materialCodes, newVal, newEfUnit, unitMass) {
     const baselineYtd = latest ? yearlyEmissionsBaseline(latest.year) : 0;
     const baselinePrev = previous ? yearlyEmissionsBaseline(previous.year) : 0;
 
-    const deltaYtd = tonnageYtdOk && newPerKg !== null ? (newPerKg * Number(latest.tonnage)) - Number(latest.co2e_mt || 0) : null;
-    const deltaPrev = tonnagePrevOk && newPerKg !== null ? (newPerKg * Number(previous.tonnage)) - Number(previous.co2e_mt || 0) : null;
+    const deltaYtd = materialDeltaForRow(latest, newPerKg);
+    const deltaPrev = materialDeltaForRow(previous, newPerKg);
     const pctChangeYtd = deltaYtd !== null && baselineYtd ? (deltaYtd / baselineYtd) * 100 : null;
     const pctChangePrev = deltaPrev !== null && baselinePrev ? (deltaPrev / baselinePrev) * 100 : null;
 
@@ -919,7 +912,17 @@ function summaryRows(p) {
     ["Assurance", p.common_fields.assurance], ["Evidence", evidenceHtml],
     ["New EF Name", p.derived.newEfName], ["Reviewer", p.derived.reviewerName], ["Approver", p.derived.approverName],
     ["Proposer", p.derived.proposerName]);
-  return rows.map(([k, v]) => derivedRow(k, v ?? "—")).join("");
+  // Packed into a 2-column grid instead of one field per full-width row -
+  // the field list was running much taller than the checklist pane beside
+  // it on E2, mostly empty space next to each short value. A row spans both
+  // columns when its value is long (New EF Name, Evidence, a multi-value
+  // facet), rather than wrapping awkwardly in a half-width cell.
+  const html = rows.map(([k, v]) => {
+    const val = v ?? "—";
+    const long = String(val).replace(/<[^>]+>/g, "").length > 38;
+    return derivedRow(k, val, long);
+  }).join("");
+  return `<div class="summary-grid">${html}</div>`;
 }
 
 function checklistPieSvg(doneCount, total) {
