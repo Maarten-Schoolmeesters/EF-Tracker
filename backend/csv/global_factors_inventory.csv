@@ -1,167 +1,106 @@
 common_id1,emission_factor_name_historic,co2_emission_factor_current
-CID-0500,Prior Year EF - CID-0500,758.7986
-CID-0500,Legacy EF v1 - CID-0500,796.7385
-CID-0500,Database Default - CID-0500,834.6785
-CID-0500,Industry Average - CID-0500,872.6184
-CID-0501,Prior Year EF - CID-0501,426.3501
-CID-0501,Database Default - CID-0501,447.6676
-CID-0501,Legacy EF v1 - CID-0501,468.9851
-CID-0501,Industry Average - CID-0501,490.3026
-CID-0502,Database Default - CID-0502,707.6385
-CID-0502,Legacy EF v2 - CID-0502,743.0204
-CID-0502,Industry Average - CID-0502,778.4024
-CID-0502,Prior Year EF - CID-0502,813.7843
-CID-0503,Legacy EF v1 - CID-0503,264.4595
-CID-0503,Database Default - CID-0503,277.6825
-CID-0504,Database Default - CID-0504,598.5089
-CID-0504,Industry Average - CID-0504,628.4343
-CID-0505,Database Default - CID-0505,899.353
-CID-0505,Industry Average - CID-0505,944.3207
-CID-0505,Legacy EF v1 - CID-0505,989.2883
-CID-0506,Legacy EF v1 - CID-0506,877.629
-CID-0506,Industry Average - CID-0506,921.5105
-CID-0506,Legacy EF v2 - CID-0506,965.3919
-CID-0507,Legacy EF v1 - CID-0507,664.8962
-CID-0507,Prior Year EF - CID-0507,698.141
-CID-0507,Legacy EF v2 - CID-0507,731.3858
-CID-0508,Legacy EF v1 - CID-0508,295.3146
-CID-0508,Legacy EF v2 - CID-0508,310.0803
-CID-0508,Database Default - CID-0508,324.8461
-CID-0508,Prior Year EF - CID-0508,339.6118
-CID-0509,Database Default - CID-0509,326.5977
-CID-0509,Prior Year EF - CID-0509,342.9276
-CID-0510,Legacy EF v2 - CID-0510,286.8214
-CID-0510,Prior Year EF - CID-0510,301.1625
-CID-0511,Legacy EF v2 - CID-0511,524.2143
-CID-0511,Legacy EF v1 - CID-0511,550.425
-CID-0512,Prior Year EF - CID-0512,249.2252
-CID-0512,Legacy EF v1 - CID-0512,261.6865
-CID-0512,Database Default - CID-0512,274.1477
-CID-0512,Legacy EF v2 - CID-0512,286.609
-CID-0513,Database Default - CID-0513,815.7343
-CID-0513,Legacy EF v1 - CID-0513,856.521
-CID-0513,Legacy EF v2 - CID-0513,897.3077
-CID-0513,Industry Average - CID-0513,938.0944
-CID-0514,Legacy EF v1 - CID-0514,281.047
-CID-0514,Database Default - CID-0514,295.0994
-CID-0514,Legacy EF v2 - CID-0514,309.1517
-CID-0515,Legacy EF v1 - CID-0515,667.1143
-CID-0515,Prior Year EF - CID-0515,700.47
-CID-0516,Legacy EF v1 - CID-0516,854.111
-CID-0516,Prior Year EF - CID-0516,896.8166
-CID-0516,Legacy EF v2 - CID-0516,939.5221
-CID-0516,Industry Average - CID-0516,982.2276
-CID-0517,Industry Average - CID-0517,422.5662
-CID-0517,Legacy EF v1 - CID-0517,443.6945
-CID-0517,Legacy EF v2 - CID-0517,464.8228
-CID-0518,Legacy EF v2 - CID-0518,143.3468
-CID-0518,Legacy EF v1 - CID-0518,150.5141
-CID-0518,Prior Year EF - CID-0518,157.6815
-CID-0518,Industry Average - CID-0518,164.8488
-CID-0519,Legacy EF v1 - CID-0519,167.0237
-CID-0519,Prior Year EF - CID-0519,175.3749
-CID-0519,Legacy EF v2 - CID-0519,183.7261
-CID-0519,Industry Average - CID-0519,192.0773
-CID-0520,Legacy EF v2 - CID-0520,656.0094
-CID-0520,Prior Year EF - CID-0520,688.8099
-CID-0521,Prior Year EF - CID-0521,890.6873
-CID-0521,Database Default - CID-0521,935.2217
-CID-0522,Legacy EF v2 - CID-0522,519.2333
-CID-0522,Industry Average - CID-0522,545.195
-CID-0522,Database Default - CID-0522,571.1566
-CID-0522,Legacy EF v1 - CID-0522,597.1183
-CID-0523,Prior Year EF - CID-0523,53.9048
-CID-0523,Industry Average - CID-0523,56.6
-CID-0524,Database Default - CID-0524,173.6284
-CID-0524,Prior Year EF - CID-0524,182.3098
-CID-0524,Legacy EF v1 - CID-0524,190.9912
-CID-0524,Legacy EF v2 - CID-0524,199.6727
-CID-0525,Prior Year EF - CID-0525,876.3625
-CID-0525,Database Default - CID-0525,920.1806
-CID-0525,Legacy EF v2 - CID-0525,963.9987
-CID-0526,Industry Average - CID-0526,224.5031
-CID-0526,Database Default - CID-0526,235.7283
-CID-0527,Legacy EF v1 - CID-0527,583.6797
-CID-0527,Prior Year EF - CID-0527,612.8637
-CID-0527,Legacy EF v2 - CID-0527,642.0477
-CID-0528,Database Default - CID-0528,531.8683
-CID-0528,Legacy EF v2 - CID-0528,558.4617
-CID-0528,Prior Year EF - CID-0528,585.0551
-CID-0528,Legacy EF v1 - CID-0528,611.6485
-CID-0529,Legacy EF v1 - CID-0529,733.0944
-CID-0529,Legacy EF v2 - CID-0529,769.7491
-CID-0529,Prior Year EF - CID-0529,806.4038
-CID-0529,Database Default - CID-0529,843.0586
-CID-0530,Legacy EF v1 - CID-0530,208.1547
-CID-0530,Prior Year EF - CID-0530,218.5624
-CID-0531,Legacy EF v2 - CID-0531,615.8193
-CID-0531,Database Default - CID-0531,646.6103
-CID-0532,Legacy EF v1 - CID-0532,863.4801
-CID-0532,Legacy EF v2 - CID-0532,906.6541
-CID-0532,Database Default - CID-0532,949.8281
-CID-0532,Prior Year EF - CID-0532,993.0021
-CID-0533,Industry Average - CID-0533,747.0587
-CID-0533,Legacy EF v1 - CID-0533,784.4116
-CID-0534,Legacy EF v2 - CID-0534,307.5506
-CID-0534,Prior Year EF - CID-0534,322.9281
-CID-0534,Database Default - CID-0534,338.3057
-CID-0535,Database Default - CID-0535,583.343
-CID-0535,Prior Year EF - CID-0535,612.5101
-CID-0536,Prior Year EF - CID-0536,879.5364
-CID-0536,Database Default - CID-0536,923.5132
-CID-0536,Legacy EF v2 - CID-0536,967.49
-CID-0537,Legacy EF v2 - CID-0537,596.9762
-CID-0537,Prior Year EF - CID-0537,626.825
-CID-0537,Industry Average - CID-0537,656.6738
-CID-0537,Database Default - CID-0537,686.5226
-CID-0538,Legacy EF v2 - CID-0538,169.6066
-CID-0538,Industry Average - CID-0538,178.0869
-CID-0538,Prior Year EF - CID-0538,186.5673
-CID-0538,Database Default - CID-0538,195.0476
-CID-0539,Legacy EF v1 - CID-0539,393.987
-CID-0539,Industry Average - CID-0539,413.6864
-CID-0539,Legacy EF v2 - CID-0539,433.3857
-CID-0540,Industry Average - CID-0540,143.1653
-CID-0540,Database Default - CID-0540,150.3236
-CID-0541,Database Default - CID-0541,183.854
-CID-0541,Legacy EF v2 - CID-0541,193.0467
-CID-0542,Industry Average - CID-0542,255.4598
-CID-0542,Legacy EF v1 - CID-0542,268.2328
-CID-0543,Legacy EF v1 - CID-0543,426.174
-CID-0543,Industry Average - CID-0543,447.4827
-CID-0543,Legacy EF v2 - CID-0543,468.7914
-CID-0543,Database Default - CID-0543,490.1001
-CID-0544,Legacy EF v2 - CID-0544,580.0029
-CID-0544,Database Default - CID-0544,609.003
-CID-0544,Prior Year EF - CID-0544,638.0032
-CID-0545,Legacy EF v2 - CID-0545,867.1756
-CID-0545,Industry Average - CID-0545,910.5344
-CID-0545,Legacy EF v1 - CID-0545,953.8932
-CID-0546,Legacy EF v1 - CID-0546,394.5973
-CID-0546,Legacy EF v2 - CID-0546,414.3272
-CID-0547,Legacy EF v2 - CID-0547,580.8757
-CID-0547,Prior Year EF - CID-0547,609.9195
-CID-0547,Legacy EF v1 - CID-0547,638.9633
-CID-0548,Prior Year EF - CID-0548,241.2744
-CID-0548,Database Default - CID-0548,253.3381
-CID-0548,Industry Average - CID-0548,265.4018
-CID-0549,Prior Year EF - CID-0549,89.4017
-CID-0549,Database Default - CID-0549,93.8718
-CID-0549,Industry Average - CID-0549,98.3419
-CID-0549,Legacy EF v2 - CID-0549,102.812
-CID-0550,Legacy EF v1 - CID-0550,18.7595
-CID-0550,Legacy EF v2 - CID-0550,19.6975
-CID-0550,Industry Average - CID-0550,20.6355
-CID-0550,Database Default - CID-0550,21.5734
-CID-0551,Prior Year EF - CID-0551,728.8343
-CID-0551,Legacy EF v2 - CID-0551,765.276
-CID-0551,Database Default - CID-0551,801.7177
-CID-0551,Industry Average - CID-0551,838.1594
-CID-0552,Legacy EF v2 - CID-0552,879.7178
-CID-0552,Legacy EF v1 - CID-0552,923.7037
-CID-0553,Prior Year EF - CID-0553,294.9753
-CID-0553,Industry Average - CID-0553,309.7241
-CID-0553,Database Default - CID-0553,324.4728
-CID-0553,Legacy EF v2 - CID-0553,339.2216
-CID-0554,Legacy EF v2 - CID-0554,1.8137
-CID-0554,Legacy EF v1 - CID-0554,1.9044
+CID-0500,Air Freight - Industry Average EF,2.1154
+CID-0500,Air Freight - Database Default EF,2.2212
+CID-0500,Air Freight - Legacy Supplier EF,2.3269
+CID-0500,Air Freight - Prior Year EF,2.4327
+CID-0501,Analytical Instruments - Database Default EF,7.4491
+CID-0501,Analytical Instruments - Industry Average EF,7.8216
+CID-0501,Analytical Instruments - Legacy Supplier EF,8.194
+CID-0501,Analytical Instruments - Prior Year EF,8.5665
+CID-0502,Aqueous Solvents - Legacy Supplier EF,17.1034
+CID-0502,Aqueous Solvents - Prior Year EF,17.9586
+CID-0502,Aqueous Solvents - Industry Average EF,18.8137
+CID-0502,Aqueous Solvents - Database Default EF,19.6689
+CID-0503,Binders & Fillers - Prior Year EF,10.0318
+CID-0503,Binders & Fillers - Database Default EF,10.5334
+CID-0503,Binders & Fillers - Legacy Supplier EF,11.035
+CID-0504,Biologic API - Database Default EF,38.1807
+CID-0504,Biologic API - Prior Year EF,40.0897
+CID-0505,Blister Packs - Database Default EF,3.944
+CID-0505,Blister Packs - Industry Average EF,4.1412
+CID-0506,Bottles - Database Default EF,2.6437
+CID-0506,Bottles - Prior Year EF,2.7759
+CID-0506,Bottles - Industry Average EF,2.9081
+CID-0506,Bottles - Legacy Supplier EF,3.0403
+CID-0507,Cartons - Prior Year EF,4.4306
+CID-0507,Cartons - Database Default EF,4.6521
+CID-0507,Cartons - Industry Average EF,4.8737
+CID-0508,Coatings - Industry Average EF,40.1717
+CID-0508,Coatings - Prior Year EF,42.1803
+CID-0508,Coatings - Legacy Supplier EF,44.1889
+CID-0508,Coatings - Database Default EF,46.1975
+CID-0509,Cold Storage - Database Default EF,2.4379
+CID-0509,Cold Storage - Industry Average EF,2.5598
+CID-0509,Cold Storage - Legacy Supplier EF,2.6817
+CID-0510,Comparator Drugs - Industry Average EF,4.0939
+CID-0510,Comparator Drugs - Legacy Supplier EF,4.2986
+CID-0510,Comparator Drugs - Database Default EF,4.5033
+CID-0510,Comparator Drugs - Prior Year EF,4.708
+CID-0511,Fermentation Services - Industry Average EF,1.2787
+CID-0511,Fermentation Services - Database Default EF,1.3426
+CID-0511,Fermentation Services - Prior Year EF,1.4066
+CID-0511,Fermentation Services - Legacy Supplier EF,1.4705
+CID-0512,Fill & Finish - Industry Average EF,0.7511
+CID-0512,Fill & Finish - Prior Year EF,0.7887
+CID-0512,Fill & Finish - Database Default EF,0.8262
+CID-0513,Filling Lines - Database Default EF,3.8367
+CID-0513,Filling Lines - Legacy Supplier EF,4.0285
+CID-0513,Filling Lines - Industry Average EF,4.2204
+CID-0514,Glass Vials - Industry Average EF,1.3065
+CID-0514,Glass Vials - Legacy Supplier EF,1.3718
+CID-0515,Labels - Legacy Supplier EF,4.0982
+CID-0515,Labels - Prior Year EF,4.3031
+CID-0516,Leaflets - Database Default EF,2.3022
+CID-0516,Leaflets - Industry Average EF,2.4173
+CID-0517,Ocean Freight - Prior Year EF,1.4976
+CID-0517,Ocean Freight - Industry Average EF,1.5725
+CID-0517,Ocean Freight - Legacy Supplier EF,1.6474
+CID-0517,Ocean Freight - Database Default EF,1.7222
+CID-0518,Organic Solvents - Industry Average EF,14.8498
+CID-0518,Organic Solvents - Database Default EF,15.5923
+CID-0518,Organic Solvents - Legacy Supplier EF,16.3348
+CID-0518,Organic Solvents - Prior Year EF,17.0773
+CID-0519,Packaging Services - Prior Year EF,1.046
+CID-0519,Packaging Services - Industry Average EF,1.0983
+CID-0519,Packaging Services - Database Default EF,1.1506
+CID-0519,Packaging Services - Legacy Supplier EF,1.2029
+CID-0520,Pallet Wrap - Database Default EF,0.8196
+CID-0520,Pallet Wrap - Legacy Supplier EF,0.8606
+CID-0520,Pallet Wrap - Industry Average EF,0.9016
+CID-0520,Pallet Wrap - Prior Year EF,0.9425
+CID-0521,Peptide API - Legacy Supplier EF,28.2599
+CID-0521,Peptide API - Industry Average EF,29.6729
+CID-0522,Prefilled Syringes - Prior Year EF,3.0691
+CID-0522,Prefilled Syringes - Database Default EF,3.2226
+CID-0522,Prefilled Syringes - Legacy Supplier EF,3.376
+CID-0523,Preservatives - Legacy Supplier EF,20.7379
+CID-0523,Preservatives - Database Default EF,21.7748
+CID-0523,Preservatives - Prior Year EF,22.8117
+CID-0524,Reactors & Vessels - Industry Average EF,5.4242
+CID-0524,Reactors & Vessels - Database Default EF,5.6954
+CID-0524,Reactors & Vessels - Prior Year EF,5.9666
+CID-0524,Reactors & Vessels - Legacy Supplier EF,6.2378
+CID-0525,Reagents - Industry Average EF,4.4175
+CID-0525,Reagents - Legacy Supplier EF,4.6384
+CID-0525,Reagents - Prior Year EF,4.8593
+CID-0526,Refrigerated Transport - Database Default EF,1.4973
+CID-0526,Refrigerated Transport - Legacy Supplier EF,1.5722
+CID-0526,Refrigerated Transport - Industry Average EF,1.647
+CID-0526,Refrigerated Transport - Prior Year EF,1.7219
+CID-0527,Road Freight - Industry Average EF,2.0454
+CID-0527,Road Freight - Database Default EF,2.1477
+CID-0527,Road Freight - Legacy Supplier EF,2.2499
+CID-0527,Road Freight - Prior Year EF,2.3522
+CID-0528,Shipping Cases - Prior Year EF,3.431
+CID-0528,Shipping Cases - Database Default EF,3.6026
+CID-0529,Single-use Plasticware - Legacy Supplier EF,1.7095
+CID-0529,Single-use Plasticware - Industry Average EF,1.795
+CID-0530,Small Molecule API - Industry Average EF,43.7131
+CID-0530,Small Molecule API - Database Default EF,45.8988
+CID-0530,Small Molecule API - Legacy Supplier EF,48.0844
+CID-0531,Synthesis Services - Industry Average EF,2.1296
+CID-0531,Synthesis Services - Database Default EF,2.2361
+CID-0531,Synthesis Services - Legacy Supplier EF,2.3426
+CID-0531,Synthesis Services - Prior Year EF,2.449
+CID-0532,Trial Kits - Legacy Supplier EF,1.9813
+CID-0532,Trial Kits - Industry Average EF,2.0804

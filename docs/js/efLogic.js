@@ -11,7 +11,7 @@ export const STAGES = [
 ];
 
 export const EF_TYPES = [
-  "Supplier Materials EF",
+  "Material Specific EF",
   "Supplier Spend EF / CCF index",
   "Global EF - Material to Common ID mapping",
   "CEDA EF - L1/L2/L3 to EEIO mapping",
@@ -79,7 +79,7 @@ export function lookupCurrentEf({ materialCode, supplierNumber, categoryL1, cate
 }
 
 // Carbon App Export's own co2_factor_final / co2_factor_name_final are
-// trusted directly for Type 1 (Supplier Materials EF) - in reality this
+// trusted directly for Type 1 (Material Specific EF) - in reality this
 // arrives pre-resolved from the real Carbon App, so it is never recomputed
 // via the cascade above. To recover WHICH tier it came from (display only -
 // "Current EF Type" / "Current EF Unit"), match co2_factor_name_final

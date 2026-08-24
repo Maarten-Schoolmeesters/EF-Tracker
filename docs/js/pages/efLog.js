@@ -1,12 +1,14 @@
 import { store } from "../dataStore.js";
 import { openProposalById } from "./efEntry.js";
+import { wireScrollTableTooltips } from "../tooltip.js";
 
 let statusFilter = "";
 let typeFilter = "";
 let materialFilter = "";
 let searchTerm = "";
+let lastFilteredRows = []; // kept in sync with the currently-rendered (filtered) table, for Export CSV
 
-// Material codes on a proposal only apply to the "Supplier Materials EF"
+// Material codes on a proposal only apply to the "Material Specific EF"
 // type (the only type with a Material Code facet) - looked up against
 // Carbon App Export for a human-readable name alongside the code.
 function materialsForProposal(p) {
@@ -17,11 +19,88 @@ function materialsForProposal(p) {
   });
 }
 
+function escapeAttr(s) {
+  return String(s ?? "").replace(/"/g, "&quot;");
+}
+
+function relativeTime(dateStr) {
+  const mins = Math.round((Date.now() - new Date(dateStr).getTime()) / 60000);
+  if (mins < 1) return "just now";
+  if (mins < 60) return `${mins}m ago`;
+  const hours = Math.round(mins / 60);
+  if (hours < 24) return `${hours}h ago`;
+  return `${Math.round(hours / 24)}d ago`;
+}
+
+function truncatedCell(text) {
+  return `<span class="log-truncate" tabindex="0" data-tooltip="${escapeAttr(text)}">${text}</span>`;
+}
+
+function relativeTimeCell(dateStr) {
+  return `<span class="log-truncate" tabindex="0" data-tooltip="${escapeAttr(new Date(dateStr).toLocaleString())}">${relativeTime(dateStr)}</span>`;
+}
+
+function materialCell(materials) {
+  if (!materials.length) return "—";
+  const [first, ...rest] = materials;
+  const restTooltip = rest.map((m) => `${m.code} - ${m.name || "—"}`).join(", ");
+  return `<div class="mat-cell">
+    <span class="code">${first.code}</span>
+    <span class="name">${first.name || "—"}</span>
+    ${rest.length ? `<span class="more" tabindex="0" data-tooltip="${escapeAttr(restTooltip)}">+${rest.length} more</span>` : ""}
+  </div>`;
+}
+
+function peopleCell(p) {
+  return `<div class="people-cell">
+    <div class="row"><span class="role">P</span> ${p.derived?.proposerName || "—"}</div>
+    <div class="row"><span class="role">R</span> ${p.derived?.reviewerName || "—"}</div>
+    <div class="row"><span class="role">A</span> ${p.derived?.approverName || "—"}</div>
+  </div>`;
+}
+
+function csvEscape(v) {
+  const s = String(v ?? "");
+  return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+}
+
+// Denormalized to one row per material code, not per proposal - a proposal
+// covering N material codes becomes N export rows with the proposal-level
+// columns repeated, so the CSV can actually be pivoted/filtered at
+// material-code level in a spreadsheet (a comma-joined code list in one cell
+// can't be). Uses full un-truncated text throughout, not the on-screen
+// truncated/relative versions.
+function exportEfLogCsv(rows) {
+  const header = ["Change ID", "Status", "EF Type", "New EF Name", "Material Code", "Material",
+    "Proposer", "Reviewer", "Approver", "Ingested", "Last Updated"];
+  const lines = [header.map(csvEscape).join(",")];
+  rows.forEach((p) => {
+    const materials = materialsForProposal(p);
+    const base = [p.change_id, p.status, p.ef_type, p.derived?.newEfName || ""];
+    const tail = [
+      p.derived?.proposerName || "", p.derived?.reviewerName || "", p.derived?.approverName || "",
+      p.ingested_at ? "Yes" : "No", new Date(p.updated_at).toLocaleString(),
+    ];
+    const materialRows = materials.length ? materials.map((m) => [m.code, m.name || ""]) : [["", ""]];
+    materialRows.forEach((mat) => lines.push([...base, ...mat, ...tail].map(csvEscape).join(",")));
+  });
+  const blob = new Blob([lines.join("\r\n")], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `ef-log-export-${new Date().toISOString().slice(0, 10)}.csv`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+}
+
 export function mountEfLog() {
   document.getElementById("efLogSearch").addEventListener("input", (e) => {
     searchTerm = e.target.value.toLowerCase();
     renderEfLog();
   });
+  document.getElementById("efLogExportBtn").addEventListener("click", () => exportEfLogCsv(lastFilteredRows));
   renderEfLog();
 }
 
@@ -72,29 +151,26 @@ export function renderEfLog() {
   filterBarEl.querySelector("#typeFilterSel").addEventListener("change", (e) => { typeFilter = e.target.value; renderEfLog(); });
   filterBarEl.querySelector("#materialFilterSel").addEventListener("change", (e) => { materialFilter = e.target.value; renderEfLog(); });
 
+  lastFilteredRows = rows;
+
   table.innerHTML = `
     <thead><tr>
-      <th>Change ID</th><th>Status</th><th>EF Type</th><th>New EF Name</th><th>Material</th><th>Material Code</th>
-      <th>Proposer</th><th>Reviewer</th><th>Approver</th><th>Ingested</th><th>Last Updated</th><th></th>
+      <th>Change ID</th><th>Status</th><th>EF Type</th><th>New EF Name</th><th>Material</th>
+      <th>People</th><th>Ingested</th><th>Updated</th><th></th>
     </tr></thead>
     <tbody>
       ${rows.map((p) => {
         const materials = materialsForProposal(p);
-        const materialNames = materials.map((m) => m.name).filter(Boolean).join(", ") || "—";
-        const materialCodesTxt = materials.map((m) => m.code).join(", ") || "—";
         return `
         <tr>
           <td>${p.change_id}</td>
           <td><span class="pill ${stagePillClass(p.status)}">${p.status}</span></td>
-          <td>${p.ef_type}</td>
-          <td>${p.derived?.newEfName || "—"}</td>
-          <td>${materialNames}</td>
-          <td>${materialCodesTxt}</td>
-          <td>${p.derived?.proposerName || "—"}</td>
-          <td>${p.derived?.reviewerName || "—"}</td>
-          <td>${p.derived?.approverName || "—"}</td>
-          <td>${p.ingested_at ? `<span class="ingested-badge" title="Ingested ${new Date(p.ingested_at).toLocaleDateString()}">✓</span>` : "—"}</td>
-          <td>${new Date(p.updated_at).toLocaleString()}</td>
+          <td>${truncatedCell(p.ef_type)}</td>
+          <td>${truncatedCell(p.derived?.newEfName || "—")}</td>
+          <td>${materialCell(materials)}</td>
+          <td>${peopleCell(p)}</td>
+          <td>${p.ingested_at ? `<span class="ingested-badge" tabindex="0" data-tooltip="Ingested ${new Date(p.ingested_at).toLocaleDateString()}">✓</span>` : "—"}</td>
+          <td>${relativeTimeCell(p.updated_at)}</td>
           <td style="display:flex;gap:6px">
             <button class="btn" data-open="${p.change_id}" data-stage="${p.status}">Open</button>
             <button class="btn" data-history="${p.change_id}">History</button>
@@ -102,6 +178,8 @@ export function renderEfLog() {
         </tr>`;
       }).join("")}
     </tbody>`;
+
+  wireScrollTableTooltips(table);
 
   table.querySelectorAll("[data-open]").forEach((btn) => {
     btn.addEventListener("click", () => openProposalById(btn.dataset.open, btn.dataset.stage));
@@ -135,11 +213,18 @@ function flattenSnapshot(s) {
   if (s.common_fields?.source) out["Source"] = s.common_fields.source;
   if (s.common_fields?.methodology) out["Methodology"] = s.common_fields.methodology;
   if (s.common_fields?.assurance) out["Assurance"] = s.common_fields.assurance;
-  if (s.common_fields?.evidence?.filename) out["Evidence"] = s.common_fields.evidence.filename;
+  // Defensive against legacy (pre-round-4) evidence shapes: a plain URL
+  // string, a single {path,filename} object, or the current array.
+  const ev = s.common_fields?.evidence;
+  if (Array.isArray(ev) && ev.length) out["Evidence"] = ev.map((e) => e.filename).join(", ");
+  else if (typeof ev === "string" && ev) out["Evidence"] = ev;
+  else if (ev && typeof ev === "object" && ev.filename) out["Evidence"] = ev.filename;
   if (s.common_fields?.comment) out["Proposer comment"] = s.common_fields.comment;
   if (s.derived?.newEfName) out["New EF Name"] = s.derived.newEfName;
+  if (s.derived?.proposerName) out["Proposer"] = s.derived.proposerName;
   if (s.derived?.reviewerName) out["Reviewer"] = s.derived.reviewerName;
   if (s.derived?.approverName) out["Approver"] = s.derived.approverName;
+  if (s.derived?.lastReturnComment) out["Return comment"] = s.derived.lastReturnComment;
   if (s.review_steps?.length) out["Checklist progress"] = `${s.review_steps.filter((r) => r.done).length}/${s.review_steps.length}`;
   return out;
 }

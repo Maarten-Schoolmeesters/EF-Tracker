@@ -28,7 +28,6 @@ N_SUPPLIERS = 40
 N_CAE_ROWS = 80               # Carbon App Export (orig sample: 70)
 N_MSF_COVERAGE = 0.6          # fraction of materials that get a Material Specific Factor
 N_CCF_HISTORIC_PER_SUPPLIER = 7   # -> ~280 rows (orig: 1517, scaled down)
-N_COMMON_ID_BUCKETS = 55
 N_COMMON_ID_ROWS = 3000       # orig: 62613, scaled down heavily - see README
 N_EEIO_ROWS = 500             # orig: 2170, scaled down
 N_EEIO_EF_ROWS = 120          # orig: 159
@@ -277,48 +276,86 @@ esma = [{"category": c, "option_no": o, "option_label": l, "includes_text": inc,
 write_csv("ef_sources_methods_assurance", ["category", "option_no", "option_label", "includes_text", "review_route"], esma)
 
 # ---- common_id + global_factors_inventory ----
-# partition ALL materials plus extra background materials into common_id1 buckets
+# Common ID buckets now group materials that are plausibly the SAME underlying
+# commodity across different suppliers/packaging variants - one bucket per
+# category_level_3_enriched leaf (e.g. every "Blister Packs" material lands in
+# the same bucket) - rather than the earlier mechanical round-robin assignment,
+# which grouped unrelated materials together for no reason a reader could see.
+l1_for_leaf3 = {l3: l1 for l1, l2s in CATEGORY_TREE.items() for l2, l3s in l2s.items() for l3 in l3s}
+leaf3_list = sorted(MATERIAL_DESC_BY_LEVEL3.keys())
+bucket_for_leaf3 = {leaf3: f"CID-{500 + i:04d}" for i, leaf3 in enumerate(leaf3_list)}
+common_id1_list = list(bucket_for_leaf3.values())
+
+# Plausible kg CO2e/kg ranges per top-level category - differentiated so a
+# packaging bucket and an API bucket don't share one flat random range that
+# means nothing about what's actually being measured.
+GFI_VALUE_RANGE_BY_L1 = {
+    "Raw Materials": (8, 45),
+    "Packaging Materials": (0.8, 4.5),
+    "Contract Manufacturing": (0.5, 3),
+    "Logistics": (0.05, 2.5),
+    "Capital Equipment": (3, 12),
+    "Lab & Clinical Supplies": (1.5, 6),
+}
+GFI_VARIANT_LABELS = ["Industry Average EF", "Prior Year EF", "Database Default EF", "Legacy Supplier EF"]
+
 extra_bg_materials = [f"MAT-{29000 + i:05d}" for i in range(max(0, N_COMMON_ID_ROWS - N_MATERIALS))]
-all_material_ids = [m["material_code"] for m in materials] + extra_bg_materials
-common_id1_list = [f"CID-{500 + i:04d}" for i in range(N_COMMON_ID_BUCKETS)]
 
 common_id_rows = []
 material_to_bucket = {}
-bucket_cycle = 0
-for mid in all_material_ids:
-    bucket = common_id1_list[bucket_cycle % len(common_id1_list)]
-    bucket_cycle += 1
-    material_to_bucket[mid] = bucket
-    desc = next((m["material_description"] for m in materials if m["material_code"] == mid), "Background Material")
+for m in materials:
+    bucket = bucket_for_leaf3[m["category_level_3_enriched"]]
+    material_to_bucket[m["material_code"]] = bucket
     common_id_rows.append({
-        "material_id": mid,
-        "material_description": desc,
+        "material_id": m["material_code"],
+        "material_description": m["material_description"],
         "common_id1": bucket,
         "primary_material_weight_g": rand_float(1, 5000, 2),
         "comment": random.choice(["", "", "legacy mapping", "confirmed 2025 review"]),
         "invoice_paid_date": f"{random.choice(YEARS)}-{random.randint(1,12):02d}-{random.randint(1,28):02d}",
         "year": random.choice(YEARS),
     })
+# Background materials have no real category, so they're distributed round-robin
+# across the same bucket list purely to pad common_id up to N_COMMON_ID_ROWS -
+# they're not individually inspected, unlike the real 150-material pool above.
+bucket_cycle = 0
+for mid in extra_bg_materials:
     if len(common_id_rows) >= N_COMMON_ID_ROWS:
         break
+    bucket = common_id1_list[bucket_cycle % len(common_id1_list)]
+    bucket_cycle += 1
+    material_to_bucket[mid] = bucket
+    common_id_rows.append({
+        "material_id": mid,
+        "material_description": "Background Material",
+        "common_id1": bucket,
+        "primary_material_weight_g": rand_float(1, 5000, 2),
+        "comment": random.choice(["", "", "legacy mapping", "confirmed 2025 review"]),
+        "invoice_paid_date": f"{random.choice(YEARS)}-{random.randint(1,12):02d}-{random.randint(1,28):02d}",
+        "year": random.choice(YEARS),
+    })
 write_csv("common_id", ["material_id", "material_description", "common_id1", "primary_material_weight_g",
                          "comment", "invoice_paid_date", "year"], common_id_rows)
 
 gfi_rows = []
-for bucket in common_id1_list:
-    base_value = rand_float(0.5, 900, 4)
-    for j, hist_name in enumerate(random.sample(
-            ["Legacy EF v1", "Legacy EF v2", "Database Default", "Industry Average", "Prior Year EF"],
-            k=random.randint(2, 4))):
+for leaf3, bucket in bucket_for_leaf3.items():
+    lo, hi = GFI_VALUE_RANGE_BY_L1[l1_for_leaf3[leaf3]]
+    base_value = rand_float(lo, hi, 4)
+    for j, variant in enumerate(random.sample(GFI_VARIANT_LABELS, k=random.randint(2, 4))):
         gfi_rows.append({
             "common_id1": bucket,
-            "emission_factor_name_historic": f"{hist_name} - {bucket}",
+            "emission_factor_name_historic": f"{leaf3} - {variant}",
             "co2_emission_factor_current": round(base_value * (1 + j * 0.05), 4),
         })
 write_csv("global_factors_inventory", ["common_id1", "emission_factor_name_historic", "co2_emission_factor_current"], gfi_rows)
 
 # ---- eeio + eeio_ef ----
-classification_for_leaf = {leaf: f"EEIO-{i+1:03d}" for i, leaf in enumerate(CATEGORY_LEAVES)}
+# Classification is now L1-level (6 distinct values), not one per fine-grained
+# leaf (32) - matches how spend-based/EEIO methodology actually works in
+# practice: it's the coarse fallback used specifically when detailed
+# material-level data isn't available, so sector-level granularity is more
+# realistic than the earlier per-leaf index labels (EEIO-014 etc.).
+classification_for_leaf = {leaf: f"{leaf[0]} - Spend-Based (EEIO)" for leaf in CATEGORY_LEAVES}
 eeio_rows = []
 for leaf, classification in classification_for_leaf.items():
     l1, l2, l3 = leaf
@@ -345,24 +382,36 @@ while len(eeio_rows) < N_EEIO_ROWS:
 write_csv("eeio", ["ghg_scope3_category", "enriched_l1l2l3_classification", "category_level_1_enriched",
                     "category_level_2_enriched", "category_level_3_enriched", "year"], eeio_rows)
 
+EEIO_VALUE_RANGE_BY_L1 = {
+    "Raw Materials": (0.15, 0.55),
+    "Packaging Materials": (0.08, 0.35),
+    "Contract Manufacturing": (0.05, 0.25),
+    "Logistics": (0.10, 0.45),
+    "Capital Equipment": (0.12, 0.40),
+    "Lab & Clinical Supplies": (0.06, 0.30),
+}
+l1_for_classification = {f"{l1} - Spend-Based (EEIO)": l1 for l1 in CATEGORY_TREE}
+
 eeio_ef_rows = []
-classifications = list(classification_for_leaf.values())
+classifications = sorted(set(classification_for_leaf.values()))
 for classification in classifications:
-    base = rand_float(0.02, 0.6, 4)
+    lo, hi = EEIO_VALUE_RANGE_BY_L1[l1_for_classification[classification]]
+    base = rand_float(lo, hi, 4)
     for year in YEARS[-2:]:
         eeio_ef_rows.append({
             "enriched_l1l2l3_classification": classification,
-            "emission_factor_name": f"EEIO EF {classification} {year}",
+            "emission_factor_name": f"{classification} {year}",
             "eeio_factor_kgco2e_gbp": round(base * (1.03 if year == YEARS[-1] else 1.0), 4),
             "year": year,
         })
 while len(eeio_ef_rows) < N_EEIO_EF_ROWS:
     classification = random.choice(classifications)
     year = random.choice(YEARS)
+    lo, hi = EEIO_VALUE_RANGE_BY_L1[l1_for_classification[classification]]
     eeio_ef_rows.append({
         "enriched_l1l2l3_classification": classification,
-        "emission_factor_name": f"EEIO EF {classification} {year} alt",
-        "eeio_factor_kgco2e_gbp": rand_float(0.02, 0.6, 4),
+        "emission_factor_name": f"{classification} {year} (Alt Method)",
+        "eeio_factor_kgco2e_gbp": rand_float(lo, hi, 4),
         "year": year,
     })
 write_csv("eeio_ef", ["enriched_l1l2l3_classification", "emission_factor_name", "eeio_factor_kgco2e_gbp", "year"], eeio_ef_rows)

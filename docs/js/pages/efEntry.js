@@ -1,7 +1,7 @@
 import { store, currentUser, insertRow, updateRow, logAudit, notify, loadTransactionalData, adjustUserCount, maybeInsertVersion, stableStringify, uploadEvidenceFile, deleteEvidenceFile, evidencePublicUrl } from "../dataStore.js";
 import { createFacetFilterGroup } from "../facetFilter.js";
 import { createStyledDropdown } from "../styledDropdown.js";
-import { infoIcon } from "../tooltip.js";
+import { infoIcon, wireScrollTableTooltips } from "../tooltip.js";
 import { goToPage } from "../nav.js";
 import { toast } from "../toast.js";
 import {
@@ -31,7 +31,7 @@ function blankDraft() {
     approver_id: null,
     on_hold_from_status: null,
     fields: {},
-    common_fields: { source: "", methodology: "", assurance: "", evidence: null, comment: "" },
+    common_fields: { source: "", methodology: "", assurance: "", evidence: [], comment: "" },
     derived: {},
     review_steps: REVIEW_STEPS.map((s) => ({ text: s, done: false })),
     approval_notes: "",
@@ -197,6 +197,9 @@ function renderE1(el) {
   if (frozen) {
     card.innerHTML += `<div class="notice lock-notice">This proposal is frozen at ${draft.status}. Use the stage's Return action to reopen editing.</div>`;
   }
+  if (draft.status === "E1-Draft" && draft.derived?.lastReturnComment) {
+    card.innerHTML += `<div class="notice warn"><strong>Returned for revision:</strong> ${draft.derived.lastReturnComment}</div>`;
+  }
 
   const topRow = document.createElement("div");
   topRow.className = "ef1-top-row";
@@ -218,7 +221,7 @@ function renderE1(el) {
   sideCol.className = "ef1-side-col";
   sideCol.innerHTML = `
     <div class="card" id="derivedCard"><h3>Derived info</h3><div id="derivedRows"></div></div>
-    <div class="card summary-panel" id="summaryCard"><h3>Impact summary</h3><div id="summaryRows"></div></div>
+    <div class="card summary-panel" id="summaryCard"><h3>Historical Impact - Summary</h3><div id="summaryRows"></div></div>
   `;
 
   topRow.appendChild(formCol);
@@ -272,10 +275,15 @@ function renderE1(el) {
     numericContainer.style.marginTop = "12px";
     area.appendChild(numericContainer);
 
-    if (draft.ef_type === "Supplier Materials EF") {
+    if (draft.ef_type === "Material Specific EF") {
+      // Product Name isn't a column on carbon_app_export itself yet (the real
+      // export is expected to carry it natively eventually) - joined in here
+      // from the Product Mapping table so it can participate as a facet like
+      // every other box, via the same cross-facet pruning mechanism.
+      const rowsWithProduct = store.carbonAppExport.map((r) => ({ ...r, product_name: productForMaterial(r.material_code) || "—" }));
       facetGroup = createFacetFilterGroup({
         container: facetContainer,
-        rows: store.carbonAppExport,
+        rows: rowsWithProduct,
         facets: [
           { key: "gplt", label: "GPLT" },
           { key: "gplt1", label: "GPLT1" },
@@ -284,6 +292,7 @@ function renderE1(el) {
           { key: "supplier_name", label: "Supplier Name" },
           { key: "material", label: "Material" },
           { key: "material_code", label: "Material Code", required: true },
+          { key: "product_name", label: "Product Name" },
         ],
         initialSelections: draft.fields.facets,
         onChange: () => updateDerivedAndImpact(),
@@ -337,13 +346,19 @@ function renderE1(el) {
       const node = document.getElementById(id);
       if (node) node.addEventListener("input", () => updateDerivedAndImpact());
     });
-    if (frozen) area.querySelectorAll("input,select").forEach((n) => (n.disabled = true));
+    if (frozen) area.querySelectorAll("input,select,button").forEach((n) => (n.disabled = true));
     updateDerivedAndImpact();
   }
 
   function renderAlwaysFields() {
     const area = document.getElementById("alwaysFieldsArea");
-    const ev = draft.common_fields.evidence;
+    // isArrayShape guards the Remove button/index wiring below - only
+    // meaningful once evidence is genuinely the current array shape; a
+    // legacy (pre-round-4) proposal's evidence can only be viewed here, not
+    // edited, and it's always frozen anyway when it's in a legacy shape.
+    const rawEvidence = draft.common_fields.evidence;
+    const isArrayShape = Array.isArray(rawEvidence);
+    const evList = normalizeEvidenceList(rawEvidence);
     area.innerHTML = `
       <div class="section-title"><h4>Source, methodology & evidence</h4></div>
       <div class="field-grid">
@@ -351,14 +366,15 @@ function renderE1(el) {
         <div class="field"><label>Methodology standard <span class="req">*</span></label><div id="methodDropdownMount"></div></div>
         <div class="field"><label>Assurance <span class="req">*</span></label><div id="assuranceDropdownMount"></div></div>
         <div class="field span-2">
-          <label>Evidence file <span class="req">*</span>${infoIcon("Small demo-purpose files only (screenshot or short PDF), up to 5MB, stored in Supabase Storage.")}</label>
+          <label>Evidence files <span class="req">*</span>${infoIcon("Small demo-purpose files only (screenshot or short PDF), up to 5MB each, stored in Supabase Storage. Multiple files can be attached.")}</label>
           <div class="evidence-upload">
-            ${ev?.path ? `
-              <span class="evidence-current">📎 ${ev.filename}</span>
-              <a class="btn ghost small" href="${evidencePublicUrl(ev.path)}" target="_blank" rel="noopener">View</a>
-              <button type="button" class="btn ghost small danger" id="evidenceRemoveBtn" ${frozen ? "disabled" : ""}>Remove</button>
-            ` : `<span class="evidence-current empty">No file uploaded yet</span>`}
-            <input type="file" id="evidenceInput" accept="image/*,.pdf" ${frozen ? "disabled" : ""} style="${ev?.path ? "display:none" : ""}">
+            ${evList.length ? `<ul class="evidence-list">${evList.map((ev, i) => `
+              <li>
+                <span class="evidence-current">📎 ${ev.filename}</span>
+                <a class="btn ghost small" href="${ev.url}" target="_blank" rel="noopener">View</a>
+                ${isArrayShape ? `<button type="button" class="btn ghost small danger" data-remove-evidence="${i}" ${frozen ? "disabled" : ""}>Remove</button>` : ""}
+              </li>`).join("")}</ul>` : `<span class="evidence-current empty">No files uploaded yet</span>`}
+            <input type="file" id="evidenceInput" accept="image/*,.pdf" ${frozen ? "disabled" : ""}>
           </div>
         </div>
         <div class="field span-2"><label>Proposer comment</label><textarea id="commentInput">${draft.common_fields.comment || ""}</textarea></div>
@@ -393,11 +409,14 @@ function renderE1(el) {
     evidenceInput.addEventListener("change", async () => {
       const file = evidenceInput.files[0];
       if (!file) return;
-      const priorPath = draft.common_fields.evidence?.path;
       try {
         const uploaded = await uploadEvidenceFile(draft.change_id || (draft._tempEvidenceId ??= `temp-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`), file);
-        draft.common_fields.evidence = uploaded;
-        if (priorPath) deleteEvidenceFile(priorPath);
+        // A proposal returned for revision could still carry a legacy
+        // (pre-round-4, non-array) evidence value - start fresh with the
+        // current array format rather than trying to merge into it; the
+        // legacy value is still visible in its old version-history snapshots.
+        const existing = Array.isArray(draft.common_fields.evidence) ? draft.common_fields.evidence : [];
+        draft.common_fields.evidence = [...existing, uploaded];
         toast(`Uploaded ${uploaded.filename}`, "success");
       } catch (e) {
         console.error(e);
@@ -406,12 +425,15 @@ function renderE1(el) {
       renderAlwaysFields();
       updateDerivedAndImpact();
     });
-    document.getElementById("evidenceRemoveBtn")?.addEventListener("click", () => {
-      const priorPath = draft.common_fields.evidence?.path;
-      draft.common_fields.evidence = null;
-      if (priorPath) deleteEvidenceFile(priorPath);
-      renderAlwaysFields();
-      updateDerivedAndImpact();
+    area.querySelectorAll("[data-remove-evidence]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const idx = Number(btn.dataset.removeEvidence);
+        const removed = draft.common_fields.evidence[idx];
+        draft.common_fields.evidence = draft.common_fields.evidence.filter((_, i) => i !== idx);
+        if (removed) deleteEvidenceFile(removed.path);
+        renderAlwaysFields();
+        updateDerivedAndImpact();
+      });
     });
 
     if (frozen) area.querySelectorAll("input,textarea").forEach((n) => (n.disabled = true));
@@ -446,7 +468,7 @@ function updateDerivedAndImpact() {
   let commonId1s = [];
   let classifications = [];
 
-  if (draft.ef_type === "Supplier Materials EF") {
+  if (draft.ef_type === "Material Specific EF") {
     materialCodes = facets.material_code || [];
   } else if (draft.ef_type === "Supplier Spend EF / CCF index") {
     supplierNumber = (facets.supplier_number || [])[0] || null;
@@ -456,38 +478,56 @@ function updateDerivedAndImpact() {
     classifications = facets.enriched_l1l2l3_classification || [];
   }
 
-  const route = reviewRouteForAssurance(draft.common_fields.assurance);
-  const reviewer = route ? pickReviewer(route) : null;
-  const approver = pickApprover();
-  const proposer = currentUser();
+  // Only recompute-and-overwrite the auto-assignment preview while the
+  // proposal is genuinely editable. Recomputing this against LIVE workload
+  // counts/current-user for an already-submitted (frozen) proposal was a
+  // real bug: simply viewing its E1 tab could silently show a different
+  // reviewer/approver/proposer than who was actually assigned, since the
+  // "fewest open reviews" comparison shifts over time (including as a side
+  // effect of the proposal's own real assignment). When frozen, draft.derived
+  // already holds the correct persisted values - displayed read-only below.
+  if (!draft.frozen) {
+    const route = reviewRouteForAssurance(draft.common_fields.assurance);
+    const reviewer = route ? pickReviewer(route) : null;
+    const approver = pickApprover();
+    // Proposer locks at first submission (proposer_id becomes non-null) and
+    // must display as that locked person from then on, even while genuinely
+    // editable again after a Return for Revision - otherwise reopening a
+    // returned draft as a different acting-as user would show THAT user as
+    // proposer, defeating the lock. Only a truly new, never-submitted draft
+    // (proposer_id still null) previews whoever is currently editing.
+    const proposer = draft.proposer_id
+      ? store.users.find((u) => u.user_id === draft.proposer_id) || null
+      : currentUser();
 
-  let efName = "";
-  let productBrand = "—";
-  if (draft.ef_type === "Supplier Materials EF" && materialCodes.length) {
-    const latestRow = store.carbonAppExport
-      .filter((r) => r.material_code === materialCodes[0])
-      .sort((a, b) => a.year - b.year)
-      .pop();
-    efName = deriveEfName({ efType: draft.ef_type, materialDescription: latestRow?.material, supplierName: latestRow?.supplier_name, year: latestRow?.year });
-    const brands = [...new Set(materialCodes.map((mc) => productForMaterial(mc)).filter(Boolean))];
-    productBrand = brands.length === 1 ? brands[0] : brands.length > 1 ? "Multiple products" : "No linked product";
-  } else if (draft.ef_type === "Supplier Spend EF / CCF index" && matchingRows.length) {
-    efName = deriveEfName({ efType: draft.ef_type, supplierName: matchingRows[0].supplier_name, year: matchingRows[0].year });
-  } else if (commonId1s.length) {
-    efName = deriveEfName({ efType: draft.ef_type, materialDescription: commonId1s[0] });
-  } else if (classifications.length) {
-    efName = deriveEfName({ efType: draft.ef_type, materialDescription: classifications[0] });
+    let efName = "";
+    let productBrand = "—";
+    if (draft.ef_type === "Material Specific EF" && materialCodes.length) {
+      const latestRow = store.carbonAppExport
+        .filter((r) => r.material_code === materialCodes[0])
+        .sort((a, b) => a.year - b.year)
+        .pop();
+      efName = deriveEfName({ efType: draft.ef_type, materialDescription: latestRow?.material, supplierName: latestRow?.supplier_name, year: latestRow?.year });
+      const brands = [...new Set(materialCodes.map((mc) => productForMaterial(mc)).filter(Boolean))];
+      productBrand = brands.length === 1 ? brands[0] : brands.length > 1 ? "Multiple products" : "No linked product";
+    } else if (draft.ef_type === "Supplier Spend EF / CCF index" && matchingRows.length) {
+      efName = deriveEfName({ efType: draft.ef_type, supplierName: matchingRows[0].supplier_name, year: matchingRows[0].year });
+    } else if (commonId1s.length) {
+      efName = deriveEfName({ efType: draft.ef_type, materialDescription: commonId1s[0] });
+    } else if (classifications.length) {
+      efName = deriveEfName({ efType: draft.ef_type, materialDescription: classifications[0] });
+    }
+
+    draft.derived = {
+      changeId: draft.change_id || "Assigned on first save",
+      newEfName: efName || "—",
+      reviewRoute: route || "—",
+      reviewerName: reviewer ? reviewer.name : "—",
+      approverName: approver ? approver.name : "—",
+      proposerName: proposer ? proposer.name : "—",
+      productBrand,
+    };
   }
-
-  draft.derived = {
-    changeId: draft.change_id || "Assigned on first save",
-    newEfName: efName || "—",
-    reviewRoute: route || "—",
-    reviewerName: reviewer ? reviewer.name : "—",
-    approverName: approver ? approver.name : "—",
-    proposerName: proposer ? proposer.name : "—",
-    productBrand,
-  };
 
   document.getElementById("derivedRows").innerHTML = `
     ${derivedRow("Project ID", "Non-project (no linked project)")}
@@ -570,7 +610,7 @@ function renderImpact({ materialCodes, supplierNumber, commonId1s, classificatio
   const area = document.getElementById("impactArea");
   const newVal = draft.fields.newEfValue;
 
-  if (draft.ef_type === "Supplier Materials EF") {
+  if (draft.ef_type === "Material Specific EF") {
     if (!materialCodes.length) { area.innerHTML = `<p class="empty">Select at least one Material Code.</p>`; return; }
     const rows = computeMaterialImpactRows(materialCodes, newVal, draft.fields.newEfUnit, draft.fields.unitMass);
     const totals = rows.reduce((acc, r) => {
@@ -625,6 +665,7 @@ function renderImpact({ materialCodes, supplierNumber, commonId1s, classificatio
         <td>${totals.pctYtd.toFixed(3)}%</td><td>${totals.pctPrev.toFixed(3)}%</td>
       </tr></tfoot>
     </table></div>`;
+    wireScrollTableTooltips(area);
   } else if (draft.ef_type === "Supplier Spend EF / CCF index") {
     if (!supplierNumber) { area.innerHTML = `<p class="empty">Select a Supplier Name / Number.</p>`; return; }
     const current = lookupCurrentEf({ supplierNumber });
@@ -684,7 +725,7 @@ function renderSummaryPanel({ materialCodes, supplierNumber, commonId1s, classif
   const area = document.getElementById("summaryRows");
   const newVal = draft.fields.newEfValue;
 
-  if (draft.ef_type === "Supplier Materials EF") {
+  if (draft.ef_type === "Material Specific EF") {
     if (!materialCodes.length) { area.innerHTML = `<p class="empty">Select at least one Material Code to see the impact summary.</p>`; return; }
     const rows = computeMaterialImpactRows(materialCodes, newVal, draft.fields.newEfUnit, draft.fields.unitMass);
     const inputsComplete = newEfPerKg(newVal, draft.fields.newEfUnit, draft.fields.unitMass) !== null;
@@ -756,7 +797,7 @@ function renderSummaryPanel({ materialCodes, supplierNumber, commonId1s, classif
 function validateMandatory() {
   const missing = [];
   const facets = draft.fields.facets || {};
-  if (draft.ef_type === "Supplier Materials EF") {
+  if (draft.ef_type === "Material Specific EF") {
     if (!(facets.material_code || []).length) missing.push("Material Code");
     if (!draft.fields.newEfValue) missing.push("New EF Value");
     if (!draft.fields.newEfUnit) missing.push("New EF Unit");
@@ -775,7 +816,7 @@ function validateMandatory() {
   if (!draft.common_fields.source) missing.push("Source of new EF");
   if (!draft.common_fields.methodology) missing.push("Methodology standard");
   if (!draft.common_fields.assurance) missing.push("Assurance");
-  if (!draft.common_fields.evidence?.path) missing.push("Evidence file");
+  if (!(draft.common_fields.evidence || []).length) missing.push("Evidence file");
   return missing;
 }
 
@@ -850,6 +891,19 @@ async function saveDraft(submitForReview) {
 // E2 - REVIEW / E3 - APPROVAL / E4 - READY / E5 - ON HOLD / E6 - CANCELLED
 // ============================================================
 
+// Defensive against legacy evidence shapes from before this round's
+// multi-file rework: a plain URL string (pre-round-3, free-text link field),
+// a single {path,filename} object (round-3, single-file), or the current
+// array of {path,filename}. Always normalizes to an array of
+// {filename, url} so rendering code only ever has one shape to handle.
+function normalizeEvidenceList(evidence) {
+  if (!evidence) return [];
+  if (Array.isArray(evidence)) return evidence.map((ev) => ({ filename: ev.filename, url: ev.path ? evidencePublicUrl(ev.path) : ev.url }));
+  if (typeof evidence === "string") return [{ filename: evidence, url: evidence }];
+  if (typeof evidence === "object" && evidence.path) return [{ filename: evidence.filename, url: evidencePublicUrl(evidence.path) }];
+  return [];
+}
+
 function summaryRows(p) {
   const facets = p.fields.facets || {};
   const rows = [
@@ -857,8 +911,9 @@ function summaryRows(p) {
     ["New EF Value", p.fields.newEfValue], ["New EF Unit", p.fields.newEfUnit || "—"],
   ];
   Object.entries(facets).forEach(([k, v]) => rows.push([k, (v || []).join(", ") || "—"]));
-  const evidenceHtml = p.common_fields.evidence?.path
-    ? `<a href="${evidencePublicUrl(p.common_fields.evidence.path)}" target="_blank" rel="noopener">📎 ${p.common_fields.evidence.filename}</a>`
+  const evList = normalizeEvidenceList(p.common_fields.evidence);
+  const evidenceHtml = evList.length
+    ? evList.map((ev) => `<a href="${ev.url}" target="_blank" rel="noopener">📎 ${ev.filename}</a>`).join("<br>")
     : "—";
   rows.push(["Source", p.common_fields.source], ["Methodology", p.common_fields.methodology],
     ["Assurance", p.common_fields.assurance], ["Evidence", evidenceHtml],
@@ -891,6 +946,7 @@ function renderE2(el) {
   card.innerHTML = `
     <div class="card-head"><div><h2>EF Entry · E2 Review<span class="tbd-tag">Details TBD w/ LCA team</span></h2><p>Reviewer validates the proposal against EF Expert Guidance before it can move to Approval.</p></div></div>
     ${gatingMsg ? `<div class="notice warn">${gatingMsg} You can view this proposal but not act on it.</div>` : ""}
+    ${p.status === "E2-Review" && p.derived?.lastReturnComment ? `<div class="notice warn"><strong>Returned for review:</strong> ${p.derived.lastReturnComment}</div>` : ""}
     <div class="grid two-col">
       <div>${summaryRows(p)}</div>
       <div>
@@ -920,7 +976,18 @@ function renderE2(el) {
       document.getElementById("submitApprovalBtn").disabled = !(canAct && doneCount() === total);
     });
   });
-  document.getElementById("returnDraftBtn").addEventListener("click", () => transitionStage("E1-Draft", { frozen: false }, "Return for revision", [[p.reviewer_id, "open_ef_reviews", -1]]));
+  document.getElementById("returnDraftBtn").addEventListener("click", () => {
+    showCommentModal(
+      "Return for Revision?",
+      "The proposer will need to address your comment before resubmitting.",
+      (comment) => transitionStage(
+        "E1-Draft",
+        { frozen: false, derived: { ...p.derived, lastReturnComment: comment } },
+        "Return for revision",
+        [[p.reviewer_id, "open_ef_reviews", -1]]
+      )
+    );
+  });
   document.getElementById("submitApprovalBtn").addEventListener("click", () => {
     if (!p.review_steps.every((s) => s.done)) { toast("Complete every checklist step before sending for approval", "error"); return; }
     transitionStage("E3-Approval", { frozen: true }, "Submit for approval", [[p.reviewer_id, "open_ef_reviews", -1], [p.approver_id, "open_ef_approvals", 1]]);
@@ -947,7 +1014,18 @@ function renderE3(el) {
     </div>
   `;
   el.appendChild(card);
-  document.getElementById("returnReviewBtn").addEventListener("click", () => transitionStage("E2-Review", { frozen: true }, "Return for review", [[p.approver_id, "open_ef_approvals", -1], [p.reviewer_id, "open_ef_reviews", 1]]));
+  document.getElementById("returnReviewBtn").addEventListener("click", () => {
+    showCommentModal(
+      "Return for Review?",
+      "The reviewer will need to address your comment before resubmitting for approval.",
+      (comment) => transitionStage(
+        "E2-Review",
+        { frozen: true, derived: { ...p.derived, lastReturnComment: comment } },
+        "Return for review",
+        [[p.approver_id, "open_ef_approvals", -1], [p.reviewer_id, "open_ef_reviews", 1]]
+      )
+    );
+  });
   document.getElementById("submitIngestionBtn").addEventListener("click", () => transitionStage("E4-Ready", { frozen: true }, "Submit for ingestion", [[p.approver_id, "open_ef_approvals", -1]]));
   if (canAct) wireOnHoldCancel(el);
 }
@@ -1062,6 +1140,28 @@ async function transitionStage(newStatus, patch, actionLabel, countAdjustments =
     activeStageView = newStatus;
     renderAll();
   } catch (e) { console.error(e); }
+}
+
+function showCommentModal(title, body, onConfirm) {
+  const root = document.getElementById("modalRoot");
+  root.innerHTML = `
+    <div class="modal-backdrop"><div class="modal">
+      <div class="modal-head"><h3>${title}</h3><button class="icon-btn" id="modalClose">✕</button></div>
+      <p>${body}</p>
+      <div class="field"><label>Comment <span class="req">*</span></label><textarea id="returnCommentInput" placeholder="Explain what needs to change…"></textarea></div>
+      <div class="actions"><button class="btn" id="modalCancel">Keep proposal</button><button class="btn primary" id="modalConfirm" disabled>Confirm</button></div>
+    </div></div>`;
+  const close = () => { root.innerHTML = ""; };
+  const textarea = document.getElementById("returnCommentInput");
+  const confirmBtn = document.getElementById("modalConfirm");
+  textarea.addEventListener("input", () => { confirmBtn.disabled = !textarea.value.trim(); });
+  document.getElementById("modalClose").addEventListener("click", close);
+  document.getElementById("modalCancel").addEventListener("click", close);
+  confirmBtn.addEventListener("click", () => {
+    const comment = textarea.value.trim();
+    close();
+    onConfirm(comment);
+  });
 }
 
 function showConfirmModal(title, body, onConfirm) {

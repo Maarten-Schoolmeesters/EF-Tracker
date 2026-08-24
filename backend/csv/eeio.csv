@@ -1,501 +1,501 @@
 ghg_scope3_category,enriched_l1l2l3_classification,category_level_1_enriched,category_level_2_enriched,category_level_3_enriched,year
-Category 4 - Upstream Transportation and Distribution,EEIO-001,Raw Materials,Active Pharmaceutical Ingredients,Small Molecule API,2024
-Category 5 - Waste Generated in Operations,EEIO-001,Raw Materials,Active Pharmaceutical Ingredients,Small Molecule API,2025
-Category 4 - Upstream Transportation and Distribution,EEIO-001,Raw Materials,Active Pharmaceutical Ingredients,Small Molecule API,2026
-Category 4 - Upstream Transportation and Distribution,EEIO-002,Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2024
-Category 12 - End of Life Treatment of Sold Products,EEIO-002,Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2025
-Category 2 - Capital Goods,EEIO-002,Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2026
-Category 5 - Waste Generated in Operations,EEIO-003,Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2024
-Category 12 - End of Life Treatment of Sold Products,EEIO-003,Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-003,Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-004,Raw Materials,Excipients,Binders & Fillers,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-004,Raw Materials,Excipients,Binders & Fillers,2025
-Category 1 - Purchased Goods and Services,EEIO-004,Raw Materials,Excipients,Binders & Fillers,2026
-Category 5 - Waste Generated in Operations,EEIO-005,Raw Materials,Excipients,Coatings,2024
-Category 5 - Waste Generated in Operations,EEIO-005,Raw Materials,Excipients,Coatings,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-005,Raw Materials,Excipients,Coatings,2026
-Category 2 - Capital Goods,EEIO-006,Raw Materials,Excipients,Preservatives,2024
-Category 2 - Capital Goods,EEIO-006,Raw Materials,Excipients,Preservatives,2025
-Category 4 - Upstream Transportation and Distribution,EEIO-006,Raw Materials,Excipients,Preservatives,2026
-Category 1 - Purchased Goods and Services,EEIO-007,Raw Materials,Solvents,Organic Solvents,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-007,Raw Materials,Solvents,Organic Solvents,2025
-Category 4 - Upstream Transportation and Distribution,EEIO-007,Raw Materials,Solvents,Organic Solvents,2026
-Category 5 - Waste Generated in Operations,EEIO-008,Raw Materials,Solvents,Aqueous Solvents,2024
-Category 2 - Capital Goods,EEIO-008,Raw Materials,Solvents,Aqueous Solvents,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-008,Raw Materials,Solvents,Aqueous Solvents,2026
-Category 4 - Upstream Transportation and Distribution,EEIO-009,Packaging Materials,Primary Packaging,Glass Vials,2024
-Category 5 - Waste Generated in Operations,EEIO-009,Packaging Materials,Primary Packaging,Glass Vials,2025
-Category 2 - Capital Goods,EEIO-009,Packaging Materials,Primary Packaging,Glass Vials,2026
-Category 5 - Waste Generated in Operations,EEIO-010,Packaging Materials,Primary Packaging,Blister Packs,2024
-Category 12 - End of Life Treatment of Sold Products,EEIO-010,Packaging Materials,Primary Packaging,Blister Packs,2025
-Category 1 - Purchased Goods and Services,EEIO-010,Packaging Materials,Primary Packaging,Blister Packs,2026
-Category 1 - Purchased Goods and Services,EEIO-011,Packaging Materials,Primary Packaging,Prefilled Syringes,2024
-Category 1 - Purchased Goods and Services,EEIO-011,Packaging Materials,Primary Packaging,Prefilled Syringes,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-011,Packaging Materials,Primary Packaging,Prefilled Syringes,2026
-Category 2 - Capital Goods,EEIO-012,Packaging Materials,Primary Packaging,Bottles,2024
-Category 2 - Capital Goods,EEIO-012,Packaging Materials,Primary Packaging,Bottles,2025
-Category 5 - Waste Generated in Operations,EEIO-012,Packaging Materials,Primary Packaging,Bottles,2026
-Category 1 - Purchased Goods and Services,EEIO-013,Packaging Materials,Secondary Packaging,Cartons,2024
-Category 2 - Capital Goods,EEIO-013,Packaging Materials,Secondary Packaging,Cartons,2025
-Category 5 - Waste Generated in Operations,EEIO-013,Packaging Materials,Secondary Packaging,Cartons,2026
-Category 5 - Waste Generated in Operations,EEIO-014,Packaging Materials,Secondary Packaging,Leaflets,2024
-Category 12 - End of Life Treatment of Sold Products,EEIO-014,Packaging Materials,Secondary Packaging,Leaflets,2025
-Category 1 - Purchased Goods and Services,EEIO-014,Packaging Materials,Secondary Packaging,Leaflets,2026
-Category 1 - Purchased Goods and Services,EEIO-015,Packaging Materials,Secondary Packaging,Labels,2024
-Category 12 - End of Life Treatment of Sold Products,EEIO-015,Packaging Materials,Secondary Packaging,Labels,2025
-Category 5 - Waste Generated in Operations,EEIO-015,Packaging Materials,Secondary Packaging,Labels,2026
-Category 2 - Capital Goods,EEIO-016,Packaging Materials,Tertiary Packaging,Shipping Cases,2024
-Category 2 - Capital Goods,EEIO-016,Packaging Materials,Tertiary Packaging,Shipping Cases,2025
-Category 2 - Capital Goods,EEIO-016,Packaging Materials,Tertiary Packaging,Shipping Cases,2026
-Category 2 - Capital Goods,EEIO-017,Packaging Materials,Tertiary Packaging,Pallet Wrap,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-017,Packaging Materials,Tertiary Packaging,Pallet Wrap,2025
-Category 1 - Purchased Goods and Services,EEIO-017,Packaging Materials,Tertiary Packaging,Pallet Wrap,2026
-Category 1 - Purchased Goods and Services,EEIO-018,Contract Manufacturing,Drug Substance CMO,Fermentation Services,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-018,Contract Manufacturing,Drug Substance CMO,Fermentation Services,2025
-Category 1 - Purchased Goods and Services,EEIO-018,Contract Manufacturing,Drug Substance CMO,Fermentation Services,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-019,Contract Manufacturing,Drug Substance CMO,Synthesis Services,2024
-Category 5 - Waste Generated in Operations,EEIO-019,Contract Manufacturing,Drug Substance CMO,Synthesis Services,2025
-Category 1 - Purchased Goods and Services,EEIO-019,Contract Manufacturing,Drug Substance CMO,Synthesis Services,2026
-Category 4 - Upstream Transportation and Distribution,EEIO-020,Contract Manufacturing,Drug Product CMO,Fill & Finish,2024
-Category 12 - End of Life Treatment of Sold Products,EEIO-020,Contract Manufacturing,Drug Product CMO,Fill & Finish,2025
-Category 5 - Waste Generated in Operations,EEIO-020,Contract Manufacturing,Drug Product CMO,Fill & Finish,2026
-Category 2 - Capital Goods,EEIO-021,Contract Manufacturing,Drug Product CMO,Packaging Services,2024
-Category 1 - Purchased Goods and Services,EEIO-021,Contract Manufacturing,Drug Product CMO,Packaging Services,2025
-Category 4 - Upstream Transportation and Distribution,EEIO-021,Contract Manufacturing,Drug Product CMO,Packaging Services,2026
-Category 2 - Capital Goods,EEIO-022,Logistics,Inbound Freight,Road Freight,2024
-Category 12 - End of Life Treatment of Sold Products,EEIO-022,Logistics,Inbound Freight,Road Freight,2025
-Category 1 - Purchased Goods and Services,EEIO-022,Logistics,Inbound Freight,Road Freight,2026
-Category 1 - Purchased Goods and Services,EEIO-023,Logistics,Inbound Freight,Air Freight,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-023,Logistics,Inbound Freight,Air Freight,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-023,Logistics,Inbound Freight,Air Freight,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-024,Logistics,Inbound Freight,Ocean Freight,2024
-Category 2 - Capital Goods,EEIO-024,Logistics,Inbound Freight,Ocean Freight,2025
-Category 1 - Purchased Goods and Services,EEIO-024,Logistics,Inbound Freight,Ocean Freight,2026
-Category 5 - Waste Generated in Operations,EEIO-025,Logistics,Cold Chain,Refrigerated Transport,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-025,Logistics,Cold Chain,Refrigerated Transport,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-025,Logistics,Cold Chain,Refrigerated Transport,2026
-Category 2 - Capital Goods,EEIO-026,Logistics,Cold Chain,Cold Storage,2024
-Category 1 - Purchased Goods and Services,EEIO-026,Logistics,Cold Chain,Cold Storage,2025
-Category 5 - Waste Generated in Operations,EEIO-026,Logistics,Cold Chain,Cold Storage,2026
-Category 2 - Capital Goods,EEIO-027,Capital Equipment,Process Equipment,Reactors & Vessels,2024
-Category 5 - Waste Generated in Operations,EEIO-027,Capital Equipment,Process Equipment,Reactors & Vessels,2025
-Category 4 - Upstream Transportation and Distribution,EEIO-027,Capital Equipment,Process Equipment,Reactors & Vessels,2026
-Category 1 - Purchased Goods and Services,EEIO-028,Capital Equipment,Process Equipment,Filling Lines,2024
-Category 1 - Purchased Goods and Services,EEIO-028,Capital Equipment,Process Equipment,Filling Lines,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-028,Capital Equipment,Process Equipment,Filling Lines,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-029,Capital Equipment,Lab Equipment,Analytical Instruments,2024
-Category 2 - Capital Goods,EEIO-029,Capital Equipment,Lab Equipment,Analytical Instruments,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-029,Capital Equipment,Lab Equipment,Analytical Instruments,2026
-Category 4 - Upstream Transportation and Distribution,EEIO-030,Lab & Clinical Supplies,Lab Consumables,Reagents,2024
-Category 1 - Purchased Goods and Services,EEIO-030,Lab & Clinical Supplies,Lab Consumables,Reagents,2025
-Category 5 - Waste Generated in Operations,EEIO-030,Lab & Clinical Supplies,Lab Consumables,Reagents,2026
-Category 4 - Upstream Transportation and Distribution,EEIO-031,Lab & Clinical Supplies,Lab Consumables,Single-use Plasticware,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-031,Lab & Clinical Supplies,Lab Consumables,Single-use Plasticware,2025
-Category 5 - Waste Generated in Operations,EEIO-031,Lab & Clinical Supplies,Lab Consumables,Single-use Plasticware,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-032,Lab & Clinical Supplies,Clinical Trial Materials,Comparator Drugs,2024
-Category 2 - Capital Goods,EEIO-032,Lab & Clinical Supplies,Clinical Trial Materials,Comparator Drugs,2025
-Category 1 - Purchased Goods and Services,EEIO-032,Lab & Clinical Supplies,Clinical Trial Materials,Comparator Drugs,2026
-Category 1 - Purchased Goods and Services,EEIO-033,Lab & Clinical Supplies,Clinical Trial Materials,Trial Kits,2024
-Category 12 - End of Life Treatment of Sold Products,EEIO-033,Lab & Clinical Supplies,Clinical Trial Materials,Trial Kits,2025
-Category 1 - Purchased Goods and Services,EEIO-033,Lab & Clinical Supplies,Clinical Trial Materials,Trial Kits,2026
-Category 2 - Capital Goods,EEIO-018,Contract Manufacturing,Drug Substance CMO,Fermentation Services,2024
-Category 2 - Capital Goods,EEIO-011,Packaging Materials,Primary Packaging,Prefilled Syringes,2026
-Category 2 - Capital Goods,EEIO-003,Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2024
-Category 2 - Capital Goods,EEIO-014,Packaging Materials,Secondary Packaging,Leaflets,2024
-Category 5 - Waste Generated in Operations,EEIO-019,Contract Manufacturing,Drug Substance CMO,Synthesis Services,2024
-Category 2 - Capital Goods,EEIO-029,Capital Equipment,Lab Equipment,Analytical Instruments,2026
-Category 1 - Purchased Goods and Services,EEIO-009,Packaging Materials,Primary Packaging,Glass Vials,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-014,Packaging Materials,Secondary Packaging,Leaflets,2026
-Category 5 - Waste Generated in Operations,EEIO-020,Contract Manufacturing,Drug Product CMO,Fill & Finish,2024
-Category 2 - Capital Goods,EEIO-005,Raw Materials,Excipients,Coatings,2025
-Category 1 - Purchased Goods and Services,EEIO-025,Logistics,Cold Chain,Refrigerated Transport,2024
-Category 1 - Purchased Goods and Services,EEIO-024,Logistics,Inbound Freight,Ocean Freight,2026
-Category 5 - Waste Generated in Operations,EEIO-012,Packaging Materials,Primary Packaging,Bottles,2024
-Category 2 - Capital Goods,EEIO-006,Raw Materials,Excipients,Preservatives,2024
-Category 2 - Capital Goods,EEIO-005,Raw Materials,Excipients,Coatings,2025
-Category 5 - Waste Generated in Operations,EEIO-007,Raw Materials,Solvents,Organic Solvents,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-011,Packaging Materials,Primary Packaging,Prefilled Syringes,2026
-Category 5 - Waste Generated in Operations,EEIO-022,Logistics,Inbound Freight,Road Freight,2024
-Category 5 - Waste Generated in Operations,EEIO-014,Packaging Materials,Secondary Packaging,Leaflets,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-012,Packaging Materials,Primary Packaging,Bottles,2025
-Category 4 - Upstream Transportation and Distribution,EEIO-018,Contract Manufacturing,Drug Substance CMO,Fermentation Services,2025
-Category 1 - Purchased Goods and Services,EEIO-014,Packaging Materials,Secondary Packaging,Leaflets,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-026,Logistics,Cold Chain,Cold Storage,2025
-Category 1 - Purchased Goods and Services,EEIO-030,Lab & Clinical Supplies,Lab Consumables,Reagents,2026
-Category 2 - Capital Goods,EEIO-008,Raw Materials,Solvents,Aqueous Solvents,2024
-Category 12 - End of Life Treatment of Sold Products,EEIO-015,Packaging Materials,Secondary Packaging,Labels,2024
-Category 5 - Waste Generated in Operations,EEIO-031,Lab & Clinical Supplies,Lab Consumables,Single-use Plasticware,2026
-Category 1 - Purchased Goods and Services,EEIO-009,Packaging Materials,Primary Packaging,Glass Vials,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-012,Packaging Materials,Primary Packaging,Bottles,2024
-Category 2 - Capital Goods,EEIO-009,Packaging Materials,Primary Packaging,Glass Vials,2024
-Category 12 - End of Life Treatment of Sold Products,EEIO-033,Lab & Clinical Supplies,Clinical Trial Materials,Trial Kits,2026
-Category 2 - Capital Goods,EEIO-005,Raw Materials,Excipients,Coatings,2026
-Category 4 - Upstream Transportation and Distribution,EEIO-006,Raw Materials,Excipients,Preservatives,2026
-Category 4 - Upstream Transportation and Distribution,EEIO-006,Raw Materials,Excipients,Preservatives,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-022,Logistics,Inbound Freight,Road Freight,2024
-Category 1 - Purchased Goods and Services,EEIO-012,Packaging Materials,Primary Packaging,Bottles,2025
-Category 2 - Capital Goods,EEIO-032,Lab & Clinical Supplies,Clinical Trial Materials,Comparator Drugs,2024
-Category 1 - Purchased Goods and Services,EEIO-015,Packaging Materials,Secondary Packaging,Labels,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-010,Packaging Materials,Primary Packaging,Blister Packs,2025
-Category 5 - Waste Generated in Operations,EEIO-005,Raw Materials,Excipients,Coatings,2026
-Category 4 - Upstream Transportation and Distribution,EEIO-006,Raw Materials,Excipients,Preservatives,2025
-Category 4 - Upstream Transportation and Distribution,EEIO-011,Packaging Materials,Primary Packaging,Prefilled Syringes,2025
-Category 1 - Purchased Goods and Services,EEIO-002,Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2024
-Category 1 - Purchased Goods and Services,EEIO-002,Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2026
-Category 1 - Purchased Goods and Services,EEIO-002,Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-011,Packaging Materials,Primary Packaging,Prefilled Syringes,2024
-Category 2 - Capital Goods,EEIO-006,Raw Materials,Excipients,Preservatives,2025
-Category 5 - Waste Generated in Operations,EEIO-007,Raw Materials,Solvents,Organic Solvents,2026
-Category 1 - Purchased Goods and Services,EEIO-024,Logistics,Inbound Freight,Ocean Freight,2026
-Category 2 - Capital Goods,EEIO-002,Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2025
-Category 5 - Waste Generated in Operations,EEIO-021,Contract Manufacturing,Drug Product CMO,Packaging Services,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-008,Raw Materials,Solvents,Aqueous Solvents,2026
-Category 4 - Upstream Transportation and Distribution,EEIO-019,Contract Manufacturing,Drug Substance CMO,Synthesis Services,2025
-Category 1 - Purchased Goods and Services,EEIO-011,Packaging Materials,Primary Packaging,Prefilled Syringes,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-010,Packaging Materials,Primary Packaging,Blister Packs,2026
-Category 4 - Upstream Transportation and Distribution,EEIO-031,Lab & Clinical Supplies,Lab Consumables,Single-use Plasticware,2025
-Category 2 - Capital Goods,EEIO-005,Raw Materials,Excipients,Coatings,2024
-Category 12 - End of Life Treatment of Sold Products,EEIO-019,Contract Manufacturing,Drug Substance CMO,Synthesis Services,2026
-Category 4 - Upstream Transportation and Distribution,EEIO-003,Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2025
-Category 1 - Purchased Goods and Services,EEIO-031,Lab & Clinical Supplies,Lab Consumables,Single-use Plasticware,2026
-Category 5 - Waste Generated in Operations,EEIO-028,Capital Equipment,Process Equipment,Filling Lines,2024
-Category 12 - End of Life Treatment of Sold Products,EEIO-003,Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-001,Raw Materials,Active Pharmaceutical Ingredients,Small Molecule API,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-025,Logistics,Cold Chain,Refrigerated Transport,2026
-Category 1 - Purchased Goods and Services,EEIO-022,Logistics,Inbound Freight,Road Freight,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-018,Contract Manufacturing,Drug Substance CMO,Fermentation Services,2024
-Category 5 - Waste Generated in Operations,EEIO-026,Logistics,Cold Chain,Cold Storage,2026
-Category 2 - Capital Goods,EEIO-008,Raw Materials,Solvents,Aqueous Solvents,2025
-Category 4 - Upstream Transportation and Distribution,EEIO-010,Packaging Materials,Primary Packaging,Blister Packs,2026
-Category 4 - Upstream Transportation and Distribution,EEIO-015,Packaging Materials,Secondary Packaging,Labels,2025
-Category 4 - Upstream Transportation and Distribution,EEIO-004,Raw Materials,Excipients,Binders & Fillers,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-011,Packaging Materials,Primary Packaging,Prefilled Syringes,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-003,Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2026
-Category 5 - Waste Generated in Operations,EEIO-003,Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2024
-Category 2 - Capital Goods,EEIO-027,Capital Equipment,Process Equipment,Reactors & Vessels,2024
-Category 12 - End of Life Treatment of Sold Products,EEIO-027,Capital Equipment,Process Equipment,Reactors & Vessels,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-030,Lab & Clinical Supplies,Lab Consumables,Reagents,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-002,Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2026
-Category 2 - Capital Goods,EEIO-012,Packaging Materials,Primary Packaging,Bottles,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-004,Raw Materials,Excipients,Binders & Fillers,2024
-Category 5 - Waste Generated in Operations,EEIO-008,Raw Materials,Solvents,Aqueous Solvents,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-008,Raw Materials,Solvents,Aqueous Solvents,2026
-Category 4 - Upstream Transportation and Distribution,EEIO-001,Raw Materials,Active Pharmaceutical Ingredients,Small Molecule API,2026
-Category 2 - Capital Goods,EEIO-017,Packaging Materials,Tertiary Packaging,Pallet Wrap,2026
-Category 5 - Waste Generated in Operations,EEIO-031,Lab & Clinical Supplies,Lab Consumables,Single-use Plasticware,2024
-Category 5 - Waste Generated in Operations,EEIO-013,Packaging Materials,Secondary Packaging,Cartons,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-013,Packaging Materials,Secondary Packaging,Cartons,2026
-Category 5 - Waste Generated in Operations,EEIO-005,Raw Materials,Excipients,Coatings,2025
-Category 2 - Capital Goods,EEIO-016,Packaging Materials,Tertiary Packaging,Shipping Cases,2026
-Category 2 - Capital Goods,EEIO-005,Raw Materials,Excipients,Coatings,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-026,Logistics,Cold Chain,Cold Storage,2026
-Category 2 - Capital Goods,EEIO-019,Contract Manufacturing,Drug Substance CMO,Synthesis Services,2026
-Category 5 - Waste Generated in Operations,EEIO-020,Contract Manufacturing,Drug Product CMO,Fill & Finish,2025
-Category 1 - Purchased Goods and Services,EEIO-011,Packaging Materials,Primary Packaging,Prefilled Syringes,2024
-Category 2 - Capital Goods,EEIO-027,Capital Equipment,Process Equipment,Reactors & Vessels,2025
-Category 2 - Capital Goods,EEIO-028,Capital Equipment,Process Equipment,Filling Lines,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-020,Contract Manufacturing,Drug Product CMO,Fill & Finish,2024
-Category 1 - Purchased Goods and Services,EEIO-030,Lab & Clinical Supplies,Lab Consumables,Reagents,2025
-Category 5 - Waste Generated in Operations,EEIO-019,Contract Manufacturing,Drug Substance CMO,Synthesis Services,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-023,Logistics,Inbound Freight,Air Freight,2025
-Category 2 - Capital Goods,EEIO-003,Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2025
-Category 4 - Upstream Transportation and Distribution,EEIO-015,Packaging Materials,Secondary Packaging,Labels,2025
-Category 4 - Upstream Transportation and Distribution,EEIO-012,Packaging Materials,Primary Packaging,Bottles,2024
-Category 1 - Purchased Goods and Services,EEIO-002,Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2025
-Category 4 - Upstream Transportation and Distribution,EEIO-025,Logistics,Cold Chain,Refrigerated Transport,2025
-Category 4 - Upstream Transportation and Distribution,EEIO-018,Contract Manufacturing,Drug Substance CMO,Fermentation Services,2026
-Category 1 - Purchased Goods and Services,EEIO-033,Lab & Clinical Supplies,Clinical Trial Materials,Trial Kits,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-007,Raw Materials,Solvents,Organic Solvents,2024
-Category 12 - End of Life Treatment of Sold Products,EEIO-033,Lab & Clinical Supplies,Clinical Trial Materials,Trial Kits,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-018,Contract Manufacturing,Drug Substance CMO,Fermentation Services,2026
-Category 5 - Waste Generated in Operations,EEIO-009,Packaging Materials,Primary Packaging,Glass Vials,2026
-Category 4 - Upstream Transportation and Distribution,EEIO-004,Raw Materials,Excipients,Binders & Fillers,2024
-Category 1 - Purchased Goods and Services,EEIO-019,Contract Manufacturing,Drug Substance CMO,Synthesis Services,2025
-Category 2 - Capital Goods,EEIO-016,Packaging Materials,Tertiary Packaging,Shipping Cases,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-014,Packaging Materials,Secondary Packaging,Leaflets,2024
-Category 12 - End of Life Treatment of Sold Products,EEIO-017,Packaging Materials,Tertiary Packaging,Pallet Wrap,2025
-Category 5 - Waste Generated in Operations,EEIO-008,Raw Materials,Solvents,Aqueous Solvents,2026
-Category 2 - Capital Goods,EEIO-015,Packaging Materials,Secondary Packaging,Labels,2024
-Category 1 - Purchased Goods and Services,EEIO-006,Raw Materials,Excipients,Preservatives,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-030,Lab & Clinical Supplies,Lab Consumables,Reagents,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-008,Raw Materials,Solvents,Aqueous Solvents,2024
-Category 2 - Capital Goods,EEIO-013,Packaging Materials,Secondary Packaging,Cartons,2026
-Category 2 - Capital Goods,EEIO-006,Raw Materials,Excipients,Preservatives,2025
-Category 2 - Capital Goods,EEIO-014,Packaging Materials,Secondary Packaging,Leaflets,2025
-Category 2 - Capital Goods,EEIO-021,Contract Manufacturing,Drug Product CMO,Packaging Services,2024
-Category 1 - Purchased Goods and Services,EEIO-027,Capital Equipment,Process Equipment,Reactors & Vessels,2026
-Category 1 - Purchased Goods and Services,EEIO-005,Raw Materials,Excipients,Coatings,2026
-Category 5 - Waste Generated in Operations,EEIO-033,Lab & Clinical Supplies,Clinical Trial Materials,Trial Kits,2025
-Category 1 - Purchased Goods and Services,EEIO-025,Logistics,Cold Chain,Refrigerated Transport,2025
-Category 5 - Waste Generated in Operations,EEIO-033,Lab & Clinical Supplies,Clinical Trial Materials,Trial Kits,2026
-Category 1 - Purchased Goods and Services,EEIO-001,Raw Materials,Active Pharmaceutical Ingredients,Small Molecule API,2024
-Category 1 - Purchased Goods and Services,EEIO-014,Packaging Materials,Secondary Packaging,Leaflets,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-007,Raw Materials,Solvents,Organic Solvents,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-008,Raw Materials,Solvents,Aqueous Solvents,2024
-Category 2 - Capital Goods,EEIO-001,Raw Materials,Active Pharmaceutical Ingredients,Small Molecule API,2026
-Category 4 - Upstream Transportation and Distribution,EEIO-025,Logistics,Cold Chain,Refrigerated Transport,2025
-Category 4 - Upstream Transportation and Distribution,EEIO-032,Lab & Clinical Supplies,Clinical Trial Materials,Comparator Drugs,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-019,Contract Manufacturing,Drug Substance CMO,Synthesis Services,2024
-Category 1 - Purchased Goods and Services,EEIO-027,Capital Equipment,Process Equipment,Reactors & Vessels,2026
-Category 5 - Waste Generated in Operations,EEIO-014,Packaging Materials,Secondary Packaging,Leaflets,2025
-Category 2 - Capital Goods,EEIO-023,Logistics,Inbound Freight,Air Freight,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-005,Raw Materials,Excipients,Coatings,2026
-Category 1 - Purchased Goods and Services,EEIO-005,Raw Materials,Excipients,Coatings,2026
-Category 1 - Purchased Goods and Services,EEIO-019,Contract Manufacturing,Drug Substance CMO,Synthesis Services,2026
-Category 2 - Capital Goods,EEIO-019,Contract Manufacturing,Drug Substance CMO,Synthesis Services,2024
-Category 12 - End of Life Treatment of Sold Products,EEIO-026,Logistics,Cold Chain,Cold Storage,2025
-Category 1 - Purchased Goods and Services,EEIO-022,Logistics,Inbound Freight,Road Freight,2026
-Category 5 - Waste Generated in Operations,EEIO-009,Packaging Materials,Primary Packaging,Glass Vials,2024
-Category 2 - Capital Goods,EEIO-011,Packaging Materials,Primary Packaging,Prefilled Syringes,2024
-Category 2 - Capital Goods,EEIO-033,Lab & Clinical Supplies,Clinical Trial Materials,Trial Kits,2024
-Category 5 - Waste Generated in Operations,EEIO-016,Packaging Materials,Tertiary Packaging,Shipping Cases,2025
-Category 4 - Upstream Transportation and Distribution,EEIO-022,Logistics,Inbound Freight,Road Freight,2025
-Category 1 - Purchased Goods and Services,EEIO-005,Raw Materials,Excipients,Coatings,2025
-Category 4 - Upstream Transportation and Distribution,EEIO-003,Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2024
-Category 1 - Purchased Goods and Services,EEIO-027,Capital Equipment,Process Equipment,Reactors & Vessels,2025
-Category 4 - Upstream Transportation and Distribution,EEIO-002,Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2024
-Category 5 - Waste Generated in Operations,EEIO-032,Lab & Clinical Supplies,Clinical Trial Materials,Comparator Drugs,2025
-Category 1 - Purchased Goods and Services,EEIO-028,Capital Equipment,Process Equipment,Filling Lines,2026
-Category 1 - Purchased Goods and Services,EEIO-007,Raw Materials,Solvents,Organic Solvents,2026
-Category 5 - Waste Generated in Operations,EEIO-009,Packaging Materials,Primary Packaging,Glass Vials,2024
-Category 2 - Capital Goods,EEIO-003,Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-014,Packaging Materials,Secondary Packaging,Leaflets,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-026,Logistics,Cold Chain,Cold Storage,2024
-Category 5 - Waste Generated in Operations,EEIO-002,Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2024
-Category 1 - Purchased Goods and Services,EEIO-030,Lab & Clinical Supplies,Lab Consumables,Reagents,2025
-Category 1 - Purchased Goods and Services,EEIO-014,Packaging Materials,Secondary Packaging,Leaflets,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-014,Packaging Materials,Secondary Packaging,Leaflets,2025
-Category 1 - Purchased Goods and Services,EEIO-023,Logistics,Inbound Freight,Air Freight,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-033,Lab & Clinical Supplies,Clinical Trial Materials,Trial Kits,2024
-Category 12 - End of Life Treatment of Sold Products,EEIO-028,Capital Equipment,Process Equipment,Filling Lines,2024
-Category 5 - Waste Generated in Operations,EEIO-032,Lab & Clinical Supplies,Clinical Trial Materials,Comparator Drugs,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-010,Packaging Materials,Primary Packaging,Blister Packs,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-017,Packaging Materials,Tertiary Packaging,Pallet Wrap,2026
-Category 1 - Purchased Goods and Services,EEIO-003,Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2024
-Category 12 - End of Life Treatment of Sold Products,EEIO-020,Contract Manufacturing,Drug Product CMO,Fill & Finish,2024
-Category 2 - Capital Goods,EEIO-029,Capital Equipment,Lab Equipment,Analytical Instruments,2025
-Category 2 - Capital Goods,EEIO-020,Contract Manufacturing,Drug Product CMO,Fill & Finish,2025
-Category 5 - Waste Generated in Operations,EEIO-009,Packaging Materials,Primary Packaging,Glass Vials,2024
-Category 2 - Capital Goods,EEIO-014,Packaging Materials,Secondary Packaging,Leaflets,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-024,Logistics,Inbound Freight,Ocean Freight,2026
-Category 1 - Purchased Goods and Services,EEIO-008,Raw Materials,Solvents,Aqueous Solvents,2024
-Category 5 - Waste Generated in Operations,EEIO-024,Logistics,Inbound Freight,Ocean Freight,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-002,Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-033,Lab & Clinical Supplies,Clinical Trial Materials,Trial Kits,2026
-Category 4 - Upstream Transportation and Distribution,EEIO-005,Raw Materials,Excipients,Coatings,2025
-Category 1 - Purchased Goods and Services,EEIO-012,Packaging Materials,Primary Packaging,Bottles,2026
-Category 4 - Upstream Transportation and Distribution,EEIO-029,Capital Equipment,Lab Equipment,Analytical Instruments,2026
-Category 5 - Waste Generated in Operations,EEIO-011,Packaging Materials,Primary Packaging,Prefilled Syringes,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-027,Capital Equipment,Process Equipment,Reactors & Vessels,2026
-Category 4 - Upstream Transportation and Distribution,EEIO-025,Logistics,Cold Chain,Refrigerated Transport,2026
-Category 1 - Purchased Goods and Services,EEIO-030,Lab & Clinical Supplies,Lab Consumables,Reagents,2026
-Category 2 - Capital Goods,EEIO-019,Contract Manufacturing,Drug Substance CMO,Synthesis Services,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-024,Logistics,Inbound Freight,Ocean Freight,2025
-Category 2 - Capital Goods,EEIO-016,Packaging Materials,Tertiary Packaging,Shipping Cases,2025
-Category 4 - Upstream Transportation and Distribution,EEIO-007,Raw Materials,Solvents,Organic Solvents,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-033,Lab & Clinical Supplies,Clinical Trial Materials,Trial Kits,2026
-Category 2 - Capital Goods,EEIO-013,Packaging Materials,Secondary Packaging,Cartons,2024
-Category 2 - Capital Goods,EEIO-007,Raw Materials,Solvents,Organic Solvents,2024
-Category 2 - Capital Goods,EEIO-019,Contract Manufacturing,Drug Substance CMO,Synthesis Services,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-026,Logistics,Cold Chain,Cold Storage,2026
-Category 5 - Waste Generated in Operations,EEIO-004,Raw Materials,Excipients,Binders & Fillers,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-002,Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2025
-Category 5 - Waste Generated in Operations,EEIO-010,Packaging Materials,Primary Packaging,Blister Packs,2026
-Category 5 - Waste Generated in Operations,EEIO-008,Raw Materials,Solvents,Aqueous Solvents,2025
-Category 5 - Waste Generated in Operations,EEIO-002,Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-014,Packaging Materials,Secondary Packaging,Leaflets,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-015,Packaging Materials,Secondary Packaging,Labels,2026
-Category 4 - Upstream Transportation and Distribution,EEIO-015,Packaging Materials,Secondary Packaging,Labels,2026
-Category 2 - Capital Goods,EEIO-024,Logistics,Inbound Freight,Ocean Freight,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-009,Packaging Materials,Primary Packaging,Glass Vials,2024
-Category 1 - Purchased Goods and Services,EEIO-019,Contract Manufacturing,Drug Substance CMO,Synthesis Services,2025
-Category 1 - Purchased Goods and Services,EEIO-027,Capital Equipment,Process Equipment,Reactors & Vessels,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-028,Capital Equipment,Process Equipment,Filling Lines,2024
-Category 5 - Waste Generated in Operations,EEIO-010,Packaging Materials,Primary Packaging,Blister Packs,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-023,Logistics,Inbound Freight,Air Freight,2026
-Category 5 - Waste Generated in Operations,EEIO-010,Packaging Materials,Primary Packaging,Blister Packs,2026
-Category 1 - Purchased Goods and Services,EEIO-018,Contract Manufacturing,Drug Substance CMO,Fermentation Services,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-025,Logistics,Cold Chain,Refrigerated Transport,2025
-Category 5 - Waste Generated in Operations,EEIO-023,Logistics,Inbound Freight,Air Freight,2026
-Category 2 - Capital Goods,EEIO-005,Raw Materials,Excipients,Coatings,2024
-Category 5 - Waste Generated in Operations,EEIO-031,Lab & Clinical Supplies,Lab Consumables,Single-use Plasticware,2024
-Category 2 - Capital Goods,EEIO-010,Packaging Materials,Primary Packaging,Blister Packs,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-021,Contract Manufacturing,Drug Product CMO,Packaging Services,2025
-Category 4 - Upstream Transportation and Distribution,EEIO-008,Raw Materials,Solvents,Aqueous Solvents,2024
-Category 5 - Waste Generated in Operations,EEIO-018,Contract Manufacturing,Drug Substance CMO,Fermentation Services,2026
-Category 2 - Capital Goods,EEIO-010,Packaging Materials,Primary Packaging,Blister Packs,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-020,Contract Manufacturing,Drug Product CMO,Fill & Finish,2025
-Category 1 - Purchased Goods and Services,EEIO-003,Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2024
-Category 2 - Capital Goods,EEIO-031,Lab & Clinical Supplies,Lab Consumables,Single-use Plasticware,2024
-Category 12 - End of Life Treatment of Sold Products,EEIO-001,Raw Materials,Active Pharmaceutical Ingredients,Small Molecule API,2025
-Category 5 - Waste Generated in Operations,EEIO-026,Logistics,Cold Chain,Cold Storage,2024
-Category 1 - Purchased Goods and Services,EEIO-004,Raw Materials,Excipients,Binders & Fillers,2025
-Category 2 - Capital Goods,EEIO-033,Lab & Clinical Supplies,Clinical Trial Materials,Trial Kits,2024
-Category 2 - Capital Goods,EEIO-006,Raw Materials,Excipients,Preservatives,2026
-Category 1 - Purchased Goods and Services,EEIO-022,Logistics,Inbound Freight,Road Freight,2024
-Category 5 - Waste Generated in Operations,EEIO-005,Raw Materials,Excipients,Coatings,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-004,Raw Materials,Excipients,Binders & Fillers,2026
-Category 1 - Purchased Goods and Services,EEIO-018,Contract Manufacturing,Drug Substance CMO,Fermentation Services,2025
-Category 4 - Upstream Transportation and Distribution,EEIO-005,Raw Materials,Excipients,Coatings,2024
-Category 5 - Waste Generated in Operations,EEIO-030,Lab & Clinical Supplies,Lab Consumables,Reagents,2024
-Category 12 - End of Life Treatment of Sold Products,EEIO-013,Packaging Materials,Secondary Packaging,Cartons,2025
-Category 2 - Capital Goods,EEIO-027,Capital Equipment,Process Equipment,Reactors & Vessels,2024
-Category 2 - Capital Goods,EEIO-024,Logistics,Inbound Freight,Ocean Freight,2026
-Category 4 - Upstream Transportation and Distribution,EEIO-018,Contract Manufacturing,Drug Substance CMO,Fermentation Services,2024
-Category 5 - Waste Generated in Operations,EEIO-032,Lab & Clinical Supplies,Clinical Trial Materials,Comparator Drugs,2025
-Category 5 - Waste Generated in Operations,EEIO-019,Contract Manufacturing,Drug Substance CMO,Synthesis Services,2024
-Category 5 - Waste Generated in Operations,EEIO-004,Raw Materials,Excipients,Binders & Fillers,2024
-Category 5 - Waste Generated in Operations,EEIO-026,Logistics,Cold Chain,Cold Storage,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-009,Packaging Materials,Primary Packaging,Glass Vials,2024
-Category 1 - Purchased Goods and Services,EEIO-023,Logistics,Inbound Freight,Air Freight,2026
-Category 5 - Waste Generated in Operations,EEIO-006,Raw Materials,Excipients,Preservatives,2026
-Category 5 - Waste Generated in Operations,EEIO-031,Lab & Clinical Supplies,Lab Consumables,Single-use Plasticware,2024
-Category 12 - End of Life Treatment of Sold Products,EEIO-011,Packaging Materials,Primary Packaging,Prefilled Syringes,2026
-Category 4 - Upstream Transportation and Distribution,EEIO-005,Raw Materials,Excipients,Coatings,2024
-Category 12 - End of Life Treatment of Sold Products,EEIO-026,Logistics,Cold Chain,Cold Storage,2026
-Category 1 - Purchased Goods and Services,EEIO-017,Packaging Materials,Tertiary Packaging,Pallet Wrap,2024
-Category 2 - Capital Goods,EEIO-013,Packaging Materials,Secondary Packaging,Cartons,2025
-Category 1 - Purchased Goods and Services,EEIO-015,Packaging Materials,Secondary Packaging,Labels,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-021,Contract Manufacturing,Drug Product CMO,Packaging Services,2026
-Category 2 - Capital Goods,EEIO-011,Packaging Materials,Primary Packaging,Prefilled Syringes,2025
-Category 1 - Purchased Goods and Services,EEIO-026,Logistics,Cold Chain,Cold Storage,2025
-Category 5 - Waste Generated in Operations,EEIO-006,Raw Materials,Excipients,Preservatives,2024
-Category 2 - Capital Goods,EEIO-014,Packaging Materials,Secondary Packaging,Leaflets,2026
-Category 1 - Purchased Goods and Services,EEIO-007,Raw Materials,Solvents,Organic Solvents,2026
-Category 1 - Purchased Goods and Services,EEIO-011,Packaging Materials,Primary Packaging,Prefilled Syringes,2025
-Category 2 - Capital Goods,EEIO-008,Raw Materials,Solvents,Aqueous Solvents,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-016,Packaging Materials,Tertiary Packaging,Shipping Cases,2026
-Category 2 - Capital Goods,EEIO-021,Contract Manufacturing,Drug Product CMO,Packaging Services,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-032,Lab & Clinical Supplies,Clinical Trial Materials,Comparator Drugs,2026
-Category 5 - Waste Generated in Operations,EEIO-023,Logistics,Inbound Freight,Air Freight,2024
-Category 2 - Capital Goods,EEIO-013,Packaging Materials,Secondary Packaging,Cartons,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-005,Raw Materials,Excipients,Coatings,2025
-Category 4 - Upstream Transportation and Distribution,EEIO-020,Contract Manufacturing,Drug Product CMO,Fill & Finish,2026
-Category 2 - Capital Goods,EEIO-004,Raw Materials,Excipients,Binders & Fillers,2026
-Category 1 - Purchased Goods and Services,EEIO-021,Contract Manufacturing,Drug Product CMO,Packaging Services,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-026,Logistics,Cold Chain,Cold Storage,2026
-Category 1 - Purchased Goods and Services,EEIO-003,Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2025
-Category 4 - Upstream Transportation and Distribution,EEIO-018,Contract Manufacturing,Drug Substance CMO,Fermentation Services,2024
-Category 5 - Waste Generated in Operations,EEIO-016,Packaging Materials,Tertiary Packaging,Shipping Cases,2024
-Category 1 - Purchased Goods and Services,EEIO-017,Packaging Materials,Tertiary Packaging,Pallet Wrap,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-031,Lab & Clinical Supplies,Lab Consumables,Single-use Plasticware,2024
-Category 5 - Waste Generated in Operations,EEIO-010,Packaging Materials,Primary Packaging,Blister Packs,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-032,Lab & Clinical Supplies,Clinical Trial Materials,Comparator Drugs,2024
-Category 1 - Purchased Goods and Services,EEIO-012,Packaging Materials,Primary Packaging,Bottles,2024
-Category 1 - Purchased Goods and Services,EEIO-011,Packaging Materials,Primary Packaging,Prefilled Syringes,2025
-Category 1 - Purchased Goods and Services,EEIO-012,Packaging Materials,Primary Packaging,Bottles,2026
-Category 4 - Upstream Transportation and Distribution,EEIO-013,Packaging Materials,Secondary Packaging,Cartons,2026
-Category 2 - Capital Goods,EEIO-027,Capital Equipment,Process Equipment,Reactors & Vessels,2026
-Category 5 - Waste Generated in Operations,EEIO-022,Logistics,Inbound Freight,Road Freight,2026
-Category 2 - Capital Goods,EEIO-029,Capital Equipment,Lab Equipment,Analytical Instruments,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-015,Packaging Materials,Secondary Packaging,Labels,2024
-Category 12 - End of Life Treatment of Sold Products,EEIO-008,Raw Materials,Solvents,Aqueous Solvents,2024
-Category 5 - Waste Generated in Operations,EEIO-021,Contract Manufacturing,Drug Product CMO,Packaging Services,2024
-Category 2 - Capital Goods,EEIO-022,Logistics,Inbound Freight,Road Freight,2026
-Category 1 - Purchased Goods and Services,EEIO-029,Capital Equipment,Lab Equipment,Analytical Instruments,2025
-Category 5 - Waste Generated in Operations,EEIO-028,Capital Equipment,Process Equipment,Filling Lines,2026
-Category 5 - Waste Generated in Operations,EEIO-008,Raw Materials,Solvents,Aqueous Solvents,2025
-Category 5 - Waste Generated in Operations,EEIO-004,Raw Materials,Excipients,Binders & Fillers,2025
-Category 5 - Waste Generated in Operations,EEIO-016,Packaging Materials,Tertiary Packaging,Shipping Cases,2026
-Category 1 - Purchased Goods and Services,EEIO-010,Packaging Materials,Primary Packaging,Blister Packs,2025
-Category 5 - Waste Generated in Operations,EEIO-001,Raw Materials,Active Pharmaceutical Ingredients,Small Molecule API,2026
-Category 1 - Purchased Goods and Services,EEIO-010,Packaging Materials,Primary Packaging,Blister Packs,2026
-Category 2 - Capital Goods,EEIO-011,Packaging Materials,Primary Packaging,Prefilled Syringes,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-023,Logistics,Inbound Freight,Air Freight,2026
-Category 1 - Purchased Goods and Services,EEIO-011,Packaging Materials,Primary Packaging,Prefilled Syringes,2025
-Category 1 - Purchased Goods and Services,EEIO-024,Logistics,Inbound Freight,Ocean Freight,2025
-Category 1 - Purchased Goods and Services,EEIO-029,Capital Equipment,Lab Equipment,Analytical Instruments,2026
-Category 5 - Waste Generated in Operations,EEIO-017,Packaging Materials,Tertiary Packaging,Pallet Wrap,2026
-Category 1 - Purchased Goods and Services,EEIO-010,Packaging Materials,Primary Packaging,Blister Packs,2026
-Category 1 - Purchased Goods and Services,EEIO-012,Packaging Materials,Primary Packaging,Bottles,2026
-Category 4 - Upstream Transportation and Distribution,EEIO-009,Packaging Materials,Primary Packaging,Glass Vials,2026
-Category 5 - Waste Generated in Operations,EEIO-026,Logistics,Cold Chain,Cold Storage,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-003,Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2026
-Category 2 - Capital Goods,EEIO-018,Contract Manufacturing,Drug Substance CMO,Fermentation Services,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-019,Contract Manufacturing,Drug Substance CMO,Synthesis Services,2024
-Category 2 - Capital Goods,EEIO-011,Packaging Materials,Primary Packaging,Prefilled Syringes,2024
-Category 1 - Purchased Goods and Services,EEIO-022,Logistics,Inbound Freight,Road Freight,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-015,Packaging Materials,Secondary Packaging,Labels,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-017,Packaging Materials,Tertiary Packaging,Pallet Wrap,2025
-Category 4 - Upstream Transportation and Distribution,EEIO-009,Packaging Materials,Primary Packaging,Glass Vials,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-022,Logistics,Inbound Freight,Road Freight,2026
-Category 1 - Purchased Goods and Services,EEIO-005,Raw Materials,Excipients,Coatings,2025
-Category 5 - Waste Generated in Operations,EEIO-023,Logistics,Inbound Freight,Air Freight,2026
-Category 5 - Waste Generated in Operations,EEIO-033,Lab & Clinical Supplies,Clinical Trial Materials,Trial Kits,2024
-Category 1 - Purchased Goods and Services,EEIO-029,Capital Equipment,Lab Equipment,Analytical Instruments,2025
-Category 2 - Capital Goods,EEIO-012,Packaging Materials,Primary Packaging,Bottles,2026
-Category 5 - Waste Generated in Operations,EEIO-026,Logistics,Cold Chain,Cold Storage,2025
-Category 2 - Capital Goods,EEIO-031,Lab & Clinical Supplies,Lab Consumables,Single-use Plasticware,2026
-Category 1 - Purchased Goods and Services,EEIO-012,Packaging Materials,Primary Packaging,Bottles,2026
-Category 4 - Upstream Transportation and Distribution,EEIO-029,Capital Equipment,Lab Equipment,Analytical Instruments,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-005,Raw Materials,Excipients,Coatings,2024
-Category 5 - Waste Generated in Operations,EEIO-030,Lab & Clinical Supplies,Lab Consumables,Reagents,2026
-Category 5 - Waste Generated in Operations,EEIO-032,Lab & Clinical Supplies,Clinical Trial Materials,Comparator Drugs,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-010,Packaging Materials,Primary Packaging,Blister Packs,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-028,Capital Equipment,Process Equipment,Filling Lines,2025
-Category 2 - Capital Goods,EEIO-010,Packaging Materials,Primary Packaging,Blister Packs,2025
-Category 5 - Waste Generated in Operations,EEIO-013,Packaging Materials,Secondary Packaging,Cartons,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-003,Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2025
-Category 5 - Waste Generated in Operations,EEIO-001,Raw Materials,Active Pharmaceutical Ingredients,Small Molecule API,2026
-Category 2 - Capital Goods,EEIO-012,Packaging Materials,Primary Packaging,Bottles,2025
-Category 4 - Upstream Transportation and Distribution,EEIO-004,Raw Materials,Excipients,Binders & Fillers,2024
-Category 5 - Waste Generated in Operations,EEIO-024,Logistics,Inbound Freight,Ocean Freight,2025
-Category 5 - Waste Generated in Operations,EEIO-022,Logistics,Inbound Freight,Road Freight,2026
-Category 1 - Purchased Goods and Services,EEIO-003,Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2026
-Category 2 - Capital Goods,EEIO-008,Raw Materials,Solvents,Aqueous Solvents,2025
-Category 4 - Upstream Transportation and Distribution,EEIO-012,Packaging Materials,Primary Packaging,Bottles,2025
-Category 4 - Upstream Transportation and Distribution,EEIO-018,Contract Manufacturing,Drug Substance CMO,Fermentation Services,2024
-Category 5 - Waste Generated in Operations,EEIO-026,Logistics,Cold Chain,Cold Storage,2026
-Category 2 - Capital Goods,EEIO-026,Logistics,Cold Chain,Cold Storage,2024
-Category 12 - End of Life Treatment of Sold Products,EEIO-023,Logistics,Inbound Freight,Air Freight,2025
-Category 2 - Capital Goods,EEIO-012,Packaging Materials,Primary Packaging,Bottles,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-009,Packaging Materials,Primary Packaging,Glass Vials,2026
-Category 5 - Waste Generated in Operations,EEIO-018,Contract Manufacturing,Drug Substance CMO,Fermentation Services,2024
-Category 12 - End of Life Treatment of Sold Products,EEIO-013,Packaging Materials,Secondary Packaging,Cartons,2026
-Category 4 - Upstream Transportation and Distribution,EEIO-007,Raw Materials,Solvents,Organic Solvents,2025
-Category 4 - Upstream Transportation and Distribution,EEIO-011,Packaging Materials,Primary Packaging,Prefilled Syringes,2024
-Category 2 - Capital Goods,EEIO-021,Contract Manufacturing,Drug Product CMO,Packaging Services,2026
-Category 5 - Waste Generated in Operations,EEIO-022,Logistics,Inbound Freight,Road Freight,2024
-Category 5 - Waste Generated in Operations,EEIO-022,Logistics,Inbound Freight,Road Freight,2024
-Category 5 - Waste Generated in Operations,EEIO-011,Packaging Materials,Primary Packaging,Prefilled Syringes,2026
-Category 2 - Capital Goods,EEIO-015,Packaging Materials,Secondary Packaging,Labels,2025
-Category 1 - Purchased Goods and Services,EEIO-024,Logistics,Inbound Freight,Ocean Freight,2024
-Category 1 - Purchased Goods and Services,EEIO-033,Lab & Clinical Supplies,Clinical Trial Materials,Trial Kits,2026
-Category 4 - Upstream Transportation and Distribution,EEIO-026,Logistics,Cold Chain,Cold Storage,2025
-Category 5 - Waste Generated in Operations,EEIO-002,Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2026
-Category 5 - Waste Generated in Operations,EEIO-017,Packaging Materials,Tertiary Packaging,Pallet Wrap,2026
-Category 1 - Purchased Goods and Services,EEIO-021,Contract Manufacturing,Drug Product CMO,Packaging Services,2026
-Category 5 - Waste Generated in Operations,EEIO-021,Contract Manufacturing,Drug Product CMO,Packaging Services,2026
-Category 4 - Upstream Transportation and Distribution,EEIO-019,Contract Manufacturing,Drug Substance CMO,Synthesis Services,2024
-Category 2 - Capital Goods,EEIO-001,Raw Materials,Active Pharmaceutical Ingredients,Small Molecule API,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-008,Raw Materials,Solvents,Aqueous Solvents,2026
-Category 1 - Purchased Goods and Services,EEIO-005,Raw Materials,Excipients,Coatings,2025
-Category 2 - Capital Goods,EEIO-031,Lab & Clinical Supplies,Lab Consumables,Single-use Plasticware,2024
-Category 12 - End of Life Treatment of Sold Products,EEIO-013,Packaging Materials,Secondary Packaging,Cartons,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-022,Logistics,Inbound Freight,Road Freight,2024
-Category 1 - Purchased Goods and Services,EEIO-018,Contract Manufacturing,Drug Substance CMO,Fermentation Services,2024
-Category 2 - Capital Goods,EEIO-024,Logistics,Inbound Freight,Ocean Freight,2025
-Category 1 - Purchased Goods and Services,EEIO-020,Contract Manufacturing,Drug Product CMO,Fill & Finish,2025
-Category 5 - Waste Generated in Operations,EEIO-019,Contract Manufacturing,Drug Substance CMO,Synthesis Services,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-021,Contract Manufacturing,Drug Product CMO,Packaging Services,2024
-Category 2 - Capital Goods,EEIO-007,Raw Materials,Solvents,Organic Solvents,2026
-Category 4 - Upstream Transportation and Distribution,EEIO-012,Packaging Materials,Primary Packaging,Bottles,2026
-Category 5 - Waste Generated in Operations,EEIO-014,Packaging Materials,Secondary Packaging,Leaflets,2025
-Category 2 - Capital Goods,EEIO-007,Raw Materials,Solvents,Organic Solvents,2025
-Category 4 - Upstream Transportation and Distribution,EEIO-029,Capital Equipment,Lab Equipment,Analytical Instruments,2024
-Category 12 - End of Life Treatment of Sold Products,EEIO-002,Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2025
-Category 1 - Purchased Goods and Services,EEIO-010,Packaging Materials,Primary Packaging,Blister Packs,2025
-Category 1 - Purchased Goods and Services,EEIO-006,Raw Materials,Excipients,Preservatives,2025
-Category 5 - Waste Generated in Operations,EEIO-012,Packaging Materials,Primary Packaging,Bottles,2025
-Category 12 - End of Life Treatment of Sold Products,EEIO-008,Raw Materials,Solvents,Aqueous Solvents,2026
-Category 12 - End of Life Treatment of Sold Products,EEIO-031,Lab & Clinical Supplies,Lab Consumables,Single-use Plasticware,2024
-Category 5 - Waste Generated in Operations,EEIO-009,Packaging Materials,Primary Packaging,Glass Vials,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-018,Contract Manufacturing,Drug Substance CMO,Fermentation Services,2024
-Category 12 - End of Life Treatment of Sold Products,EEIO-016,Packaging Materials,Tertiary Packaging,Shipping Cases,2026
-Category 5 - Waste Generated in Operations,EEIO-023,Logistics,Inbound Freight,Air Freight,2024
-Category 4 - Upstream Transportation and Distribution,EEIO-009,Packaging Materials,Primary Packaging,Glass Vials,2026
-Category 5 - Waste Generated in Operations,EEIO-028,Capital Equipment,Process Equipment,Filling Lines,2024
-Category 12 - End of Life Treatment of Sold Products,EEIO-021,Contract Manufacturing,Drug Product CMO,Packaging Services,2026
-Category 5 - Waste Generated in Operations,EEIO-027,Capital Equipment,Process Equipment,Reactors & Vessels,2026
-Category 4 - Upstream Transportation and Distribution,EEIO-029,Capital Equipment,Lab Equipment,Analytical Instruments,2025
-Category 2 - Capital Goods,EEIO-011,Packaging Materials,Primary Packaging,Prefilled Syringes,2025
+Category 2 - Capital Goods,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Small Molecule API,2024
+Category 1 - Purchased Goods and Services,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Small Molecule API,2025
+Category 4 - Upstream Transportation and Distribution,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Small Molecule API,2026
+Category 4 - Upstream Transportation and Distribution,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2024
+Category 5 - Waste Generated in Operations,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2025
+Category 5 - Waste Generated in Operations,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2026
+Category 12 - End of Life Treatment of Sold Products,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2024
+Category 4 - Upstream Transportation and Distribution,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2025
+Category 5 - Waste Generated in Operations,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2026
+Category 2 - Capital Goods,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Binders & Fillers,2024
+Category 2 - Capital Goods,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Binders & Fillers,2025
+Category 2 - Capital Goods,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Binders & Fillers,2026
+Category 5 - Waste Generated in Operations,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Coatings,2024
+Category 4 - Upstream Transportation and Distribution,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Coatings,2025
+Category 2 - Capital Goods,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Coatings,2026
+Category 2 - Capital Goods,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Preservatives,2024
+Category 5 - Waste Generated in Operations,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Preservatives,2025
+Category 5 - Waste Generated in Operations,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Preservatives,2026
+Category 4 - Upstream Transportation and Distribution,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Organic Solvents,2024
+Category 5 - Waste Generated in Operations,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Organic Solvents,2025
+Category 1 - Purchased Goods and Services,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Organic Solvents,2026
+Category 4 - Upstream Transportation and Distribution,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Aqueous Solvents,2024
+Category 1 - Purchased Goods and Services,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Aqueous Solvents,2025
+Category 5 - Waste Generated in Operations,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Aqueous Solvents,2026
+Category 5 - Waste Generated in Operations,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Glass Vials,2024
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Glass Vials,2025
+Category 1 - Purchased Goods and Services,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Glass Vials,2026
+Category 1 - Purchased Goods and Services,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Blister Packs,2024
+Category 5 - Waste Generated in Operations,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Blister Packs,2025
+Category 12 - End of Life Treatment of Sold Products,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Blister Packs,2026
+Category 4 - Upstream Transportation and Distribution,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Prefilled Syringes,2024
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Prefilled Syringes,2025
+Category 5 - Waste Generated in Operations,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Prefilled Syringes,2026
+Category 1 - Purchased Goods and Services,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Bottles,2024
+Category 4 - Upstream Transportation and Distribution,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Bottles,2025
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Bottles,2026
+Category 4 - Upstream Transportation and Distribution,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Cartons,2024
+Category 4 - Upstream Transportation and Distribution,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Cartons,2025
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Cartons,2026
+Category 5 - Waste Generated in Operations,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Leaflets,2024
+Category 1 - Purchased Goods and Services,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Leaflets,2025
+Category 5 - Waste Generated in Operations,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Leaflets,2026
+Category 12 - End of Life Treatment of Sold Products,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Labels,2024
+Category 1 - Purchased Goods and Services,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Labels,2025
+Category 12 - End of Life Treatment of Sold Products,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Labels,2026
+Category 5 - Waste Generated in Operations,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Tertiary Packaging,Shipping Cases,2024
+Category 4 - Upstream Transportation and Distribution,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Tertiary Packaging,Shipping Cases,2025
+Category 4 - Upstream Transportation and Distribution,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Tertiary Packaging,Shipping Cases,2026
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Tertiary Packaging,Pallet Wrap,2024
+Category 5 - Waste Generated in Operations,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Tertiary Packaging,Pallet Wrap,2025
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Tertiary Packaging,Pallet Wrap,2026
+Category 4 - Upstream Transportation and Distribution,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Fermentation Services,2024
+Category 5 - Waste Generated in Operations,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Fermentation Services,2025
+Category 5 - Waste Generated in Operations,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Fermentation Services,2026
+Category 4 - Upstream Transportation and Distribution,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Synthesis Services,2024
+Category 2 - Capital Goods,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Synthesis Services,2025
+Category 5 - Waste Generated in Operations,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Synthesis Services,2026
+Category 2 - Capital Goods,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Product CMO,Fill & Finish,2024
+Category 5 - Waste Generated in Operations,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Product CMO,Fill & Finish,2025
+Category 2 - Capital Goods,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Product CMO,Fill & Finish,2026
+Category 1 - Purchased Goods and Services,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Product CMO,Packaging Services,2024
+Category 2 - Capital Goods,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Product CMO,Packaging Services,2025
+Category 5 - Waste Generated in Operations,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Product CMO,Packaging Services,2026
+Category 5 - Waste Generated in Operations,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Road Freight,2024
+Category 2 - Capital Goods,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Road Freight,2025
+Category 12 - End of Life Treatment of Sold Products,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Road Freight,2026
+Category 12 - End of Life Treatment of Sold Products,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Air Freight,2024
+Category 2 - Capital Goods,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Air Freight,2025
+Category 1 - Purchased Goods and Services,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Air Freight,2026
+Category 4 - Upstream Transportation and Distribution,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Ocean Freight,2024
+Category 4 - Upstream Transportation and Distribution,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Ocean Freight,2025
+Category 12 - End of Life Treatment of Sold Products,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Ocean Freight,2026
+Category 4 - Upstream Transportation and Distribution,Logistics - Spend-Based (EEIO),Logistics,Cold Chain,Refrigerated Transport,2024
+Category 1 - Purchased Goods and Services,Logistics - Spend-Based (EEIO),Logistics,Cold Chain,Refrigerated Transport,2025
+Category 4 - Upstream Transportation and Distribution,Logistics - Spend-Based (EEIO),Logistics,Cold Chain,Refrigerated Transport,2026
+Category 12 - End of Life Treatment of Sold Products,Logistics - Spend-Based (EEIO),Logistics,Cold Chain,Cold Storage,2024
+Category 4 - Upstream Transportation and Distribution,Logistics - Spend-Based (EEIO),Logistics,Cold Chain,Cold Storage,2025
+Category 5 - Waste Generated in Operations,Logistics - Spend-Based (EEIO),Logistics,Cold Chain,Cold Storage,2026
+Category 1 - Purchased Goods and Services,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Process Equipment,Reactors & Vessels,2024
+Category 1 - Purchased Goods and Services,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Process Equipment,Reactors & Vessels,2025
+Category 12 - End of Life Treatment of Sold Products,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Process Equipment,Reactors & Vessels,2026
+Category 1 - Purchased Goods and Services,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Process Equipment,Filling Lines,2024
+Category 2 - Capital Goods,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Process Equipment,Filling Lines,2025
+Category 4 - Upstream Transportation and Distribution,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Process Equipment,Filling Lines,2026
+Category 4 - Upstream Transportation and Distribution,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Lab Equipment,Analytical Instruments,2024
+Category 2 - Capital Goods,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Lab Equipment,Analytical Instruments,2025
+Category 12 - End of Life Treatment of Sold Products,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Lab Equipment,Analytical Instruments,2026
+Category 12 - End of Life Treatment of Sold Products,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Lab Consumables,Reagents,2024
+Category 12 - End of Life Treatment of Sold Products,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Lab Consumables,Reagents,2025
+Category 12 - End of Life Treatment of Sold Products,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Lab Consumables,Reagents,2026
+Category 2 - Capital Goods,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Lab Consumables,Single-use Plasticware,2024
+Category 5 - Waste Generated in Operations,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Lab Consumables,Single-use Plasticware,2025
+Category 12 - End of Life Treatment of Sold Products,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Lab Consumables,Single-use Plasticware,2026
+Category 1 - Purchased Goods and Services,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Clinical Trial Materials,Comparator Drugs,2024
+Category 2 - Capital Goods,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Clinical Trial Materials,Comparator Drugs,2025
+Category 1 - Purchased Goods and Services,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Clinical Trial Materials,Comparator Drugs,2026
+Category 4 - Upstream Transportation and Distribution,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Clinical Trial Materials,Trial Kits,2024
+Category 12 - End of Life Treatment of Sold Products,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Clinical Trial Materials,Trial Kits,2025
+Category 5 - Waste Generated in Operations,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Clinical Trial Materials,Trial Kits,2026
+Category 1 - Purchased Goods and Services,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Road Freight,2025
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Cartons,2024
+Category 5 - Waste Generated in Operations,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Product CMO,Fill & Finish,2025
+Category 12 - End of Life Treatment of Sold Products,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Fermentation Services,2024
+Category 12 - End of Life Treatment of Sold Products,Logistics - Spend-Based (EEIO),Logistics,Cold Chain,Cold Storage,2026
+Category 1 - Purchased Goods and Services,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Air Freight,2025
+Category 12 - End of Life Treatment of Sold Products,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Lab Consumables,Single-use Plasticware,2024
+Category 4 - Upstream Transportation and Distribution,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Tertiary Packaging,Shipping Cases,2024
+Category 4 - Upstream Transportation and Distribution,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Road Freight,2025
+Category 12 - End of Life Treatment of Sold Products,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Tertiary Packaging,Shipping Cases,2025
+Category 2 - Capital Goods,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Clinical Trial Materials,Comparator Drugs,2025
+Category 1 - Purchased Goods and Services,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2024
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Glass Vials,2025
+Category 2 - Capital Goods,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2025
+Category 12 - End of Life Treatment of Sold Products,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Process Equipment,Reactors & Vessels,2026
+Category 1 - Purchased Goods and Services,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Coatings,2026
+Category 2 - Capital Goods,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Lab Equipment,Analytical Instruments,2024
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Leaflets,2025
+Category 1 - Purchased Goods and Services,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Organic Solvents,2025
+Category 12 - End of Life Treatment of Sold Products,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Small Molecule API,2025
+Category 4 - Upstream Transportation and Distribution,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Aqueous Solvents,2026
+Category 2 - Capital Goods,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Lab Equipment,Analytical Instruments,2024
+Category 2 - Capital Goods,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Road Freight,2026
+Category 1 - Purchased Goods and Services,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Aqueous Solvents,2025
+Category 1 - Purchased Goods and Services,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Tertiary Packaging,Shipping Cases,2025
+Category 12 - End of Life Treatment of Sold Products,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Fermentation Services,2024
+Category 5 - Waste Generated in Operations,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Small Molecule API,2024
+Category 4 - Upstream Transportation and Distribution,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Process Equipment,Reactors & Vessels,2024
+Category 12 - End of Life Treatment of Sold Products,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Preservatives,2026
+Category 12 - End of Life Treatment of Sold Products,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Labels,2025
+Category 5 - Waste Generated in Operations,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Small Molecule API,2026
+Category 4 - Upstream Transportation and Distribution,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Air Freight,2025
+Category 1 - Purchased Goods and Services,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Prefilled Syringes,2026
+Category 12 - End of Life Treatment of Sold Products,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Organic Solvents,2024
+Category 2 - Capital Goods,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Fermentation Services,2024
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Prefilled Syringes,2026
+Category 2 - Capital Goods,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2024
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Leaflets,2024
+Category 5 - Waste Generated in Operations,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Synthesis Services,2024
+Category 2 - Capital Goods,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Lab Equipment,Analytical Instruments,2026
+Category 1 - Purchased Goods and Services,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Glass Vials,2024
+Category 4 - Upstream Transportation and Distribution,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Leaflets,2026
+Category 5 - Waste Generated in Operations,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Product CMO,Fill & Finish,2024
+Category 2 - Capital Goods,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Coatings,2025
+Category 1 - Purchased Goods and Services,Logistics - Spend-Based (EEIO),Logistics,Cold Chain,Refrigerated Transport,2024
+Category 1 - Purchased Goods and Services,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Ocean Freight,2026
+Category 5 - Waste Generated in Operations,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Bottles,2024
+Category 2 - Capital Goods,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Preservatives,2024
+Category 2 - Capital Goods,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Coatings,2025
+Category 5 - Waste Generated in Operations,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Organic Solvents,2024
+Category 4 - Upstream Transportation and Distribution,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Prefilled Syringes,2026
+Category 5 - Waste Generated in Operations,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Road Freight,2024
+Category 5 - Waste Generated in Operations,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Leaflets,2025
+Category 12 - End of Life Treatment of Sold Products,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Bottles,2025
+Category 4 - Upstream Transportation and Distribution,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Fermentation Services,2025
+Category 1 - Purchased Goods and Services,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Leaflets,2024
+Category 4 - Upstream Transportation and Distribution,Logistics - Spend-Based (EEIO),Logistics,Cold Chain,Cold Storage,2025
+Category 1 - Purchased Goods and Services,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Lab Consumables,Reagents,2026
+Category 2 - Capital Goods,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Aqueous Solvents,2024
+Category 12 - End of Life Treatment of Sold Products,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Labels,2024
+Category 5 - Waste Generated in Operations,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Lab Consumables,Single-use Plasticware,2026
+Category 1 - Purchased Goods and Services,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Glass Vials,2026
+Category 12 - End of Life Treatment of Sold Products,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Bottles,2024
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Glass Vials,2024
+Category 12 - End of Life Treatment of Sold Products,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Clinical Trial Materials,Trial Kits,2026
+Category 2 - Capital Goods,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Coatings,2026
+Category 4 - Upstream Transportation and Distribution,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Preservatives,2026
+Category 4 - Upstream Transportation and Distribution,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Preservatives,2025
+Category 12 - End of Life Treatment of Sold Products,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Road Freight,2024
+Category 1 - Purchased Goods and Services,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Bottles,2025
+Category 2 - Capital Goods,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Clinical Trial Materials,Comparator Drugs,2024
+Category 1 - Purchased Goods and Services,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Labels,2026
+Category 12 - End of Life Treatment of Sold Products,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Blister Packs,2025
+Category 5 - Waste Generated in Operations,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Coatings,2026
+Category 4 - Upstream Transportation and Distribution,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Preservatives,2025
+Category 4 - Upstream Transportation and Distribution,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Prefilled Syringes,2025
+Category 1 - Purchased Goods and Services,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2024
+Category 1 - Purchased Goods and Services,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2026
+Category 1 - Purchased Goods and Services,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2025
+Category 12 - End of Life Treatment of Sold Products,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Prefilled Syringes,2024
+Category 2 - Capital Goods,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Preservatives,2025
+Category 5 - Waste Generated in Operations,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Organic Solvents,2026
+Category 1 - Purchased Goods and Services,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Ocean Freight,2026
+Category 2 - Capital Goods,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2025
+Category 5 - Waste Generated in Operations,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Product CMO,Packaging Services,2026
+Category 12 - End of Life Treatment of Sold Products,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Aqueous Solvents,2026
+Category 4 - Upstream Transportation and Distribution,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Synthesis Services,2025
+Category 1 - Purchased Goods and Services,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Prefilled Syringes,2026
+Category 12 - End of Life Treatment of Sold Products,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Blister Packs,2026
+Category 4 - Upstream Transportation and Distribution,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Lab Consumables,Single-use Plasticware,2025
+Category 2 - Capital Goods,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Coatings,2024
+Category 12 - End of Life Treatment of Sold Products,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Synthesis Services,2026
+Category 4 - Upstream Transportation and Distribution,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2025
+Category 1 - Purchased Goods and Services,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Lab Consumables,Single-use Plasticware,2026
+Category 5 - Waste Generated in Operations,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Process Equipment,Filling Lines,2024
+Category 12 - End of Life Treatment of Sold Products,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2024
+Category 4 - Upstream Transportation and Distribution,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Small Molecule API,2024
+Category 4 - Upstream Transportation and Distribution,Logistics - Spend-Based (EEIO),Logistics,Cold Chain,Refrigerated Transport,2026
+Category 1 - Purchased Goods and Services,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Road Freight,2025
+Category 12 - End of Life Treatment of Sold Products,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Fermentation Services,2024
+Category 5 - Waste Generated in Operations,Logistics - Spend-Based (EEIO),Logistics,Cold Chain,Cold Storage,2026
+Category 2 - Capital Goods,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Aqueous Solvents,2025
+Category 4 - Upstream Transportation and Distribution,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Blister Packs,2026
+Category 4 - Upstream Transportation and Distribution,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Labels,2025
+Category 4 - Upstream Transportation and Distribution,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Binders & Fillers,2025
+Category 12 - End of Life Treatment of Sold Products,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Prefilled Syringes,2025
+Category 12 - End of Life Treatment of Sold Products,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2026
+Category 5 - Waste Generated in Operations,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2024
+Category 2 - Capital Goods,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Process Equipment,Reactors & Vessels,2024
+Category 12 - End of Life Treatment of Sold Products,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Process Equipment,Reactors & Vessels,2026
+Category 12 - End of Life Treatment of Sold Products,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Lab Consumables,Reagents,2025
+Category 12 - End of Life Treatment of Sold Products,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2026
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Bottles,2024
+Category 4 - Upstream Transportation and Distribution,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Binders & Fillers,2024
+Category 5 - Waste Generated in Operations,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Aqueous Solvents,2025
+Category 12 - End of Life Treatment of Sold Products,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Aqueous Solvents,2026
+Category 4 - Upstream Transportation and Distribution,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Small Molecule API,2026
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Tertiary Packaging,Pallet Wrap,2026
+Category 5 - Waste Generated in Operations,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Lab Consumables,Single-use Plasticware,2024
+Category 5 - Waste Generated in Operations,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Cartons,2026
+Category 12 - End of Life Treatment of Sold Products,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Cartons,2026
+Category 5 - Waste Generated in Operations,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Coatings,2025
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Tertiary Packaging,Shipping Cases,2026
+Category 2 - Capital Goods,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Coatings,2026
+Category 12 - End of Life Treatment of Sold Products,Logistics - Spend-Based (EEIO),Logistics,Cold Chain,Cold Storage,2026
+Category 2 - Capital Goods,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Synthesis Services,2026
+Category 5 - Waste Generated in Operations,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Product CMO,Fill & Finish,2025
+Category 1 - Purchased Goods and Services,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Prefilled Syringes,2024
+Category 2 - Capital Goods,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Process Equipment,Reactors & Vessels,2025
+Category 2 - Capital Goods,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Process Equipment,Filling Lines,2024
+Category 4 - Upstream Transportation and Distribution,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Product CMO,Fill & Finish,2024
+Category 1 - Purchased Goods and Services,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Lab Consumables,Reagents,2025
+Category 5 - Waste Generated in Operations,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Synthesis Services,2024
+Category 4 - Upstream Transportation and Distribution,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Air Freight,2025
+Category 2 - Capital Goods,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2025
+Category 4 - Upstream Transportation and Distribution,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Labels,2025
+Category 4 - Upstream Transportation and Distribution,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Bottles,2024
+Category 1 - Purchased Goods and Services,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2025
+Category 4 - Upstream Transportation and Distribution,Logistics - Spend-Based (EEIO),Logistics,Cold Chain,Refrigerated Transport,2025
+Category 4 - Upstream Transportation and Distribution,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Fermentation Services,2026
+Category 1 - Purchased Goods and Services,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Clinical Trial Materials,Trial Kits,2024
+Category 4 - Upstream Transportation and Distribution,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Organic Solvents,2024
+Category 12 - End of Life Treatment of Sold Products,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Clinical Trial Materials,Trial Kits,2024
+Category 4 - Upstream Transportation and Distribution,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Fermentation Services,2026
+Category 5 - Waste Generated in Operations,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Glass Vials,2026
+Category 4 - Upstream Transportation and Distribution,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Binders & Fillers,2024
+Category 1 - Purchased Goods and Services,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Synthesis Services,2025
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Tertiary Packaging,Shipping Cases,2024
+Category 4 - Upstream Transportation and Distribution,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Leaflets,2024
+Category 12 - End of Life Treatment of Sold Products,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Tertiary Packaging,Pallet Wrap,2025
+Category 5 - Waste Generated in Operations,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Aqueous Solvents,2026
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Labels,2024
+Category 1 - Purchased Goods and Services,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Preservatives,2026
+Category 12 - End of Life Treatment of Sold Products,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Lab Consumables,Reagents,2025
+Category 12 - End of Life Treatment of Sold Products,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Aqueous Solvents,2024
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Cartons,2026
+Category 2 - Capital Goods,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Preservatives,2025
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Leaflets,2025
+Category 2 - Capital Goods,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Product CMO,Packaging Services,2024
+Category 1 - Purchased Goods and Services,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Process Equipment,Reactors & Vessels,2026
+Category 1 - Purchased Goods and Services,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Coatings,2026
+Category 5 - Waste Generated in Operations,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Clinical Trial Materials,Trial Kits,2025
+Category 1 - Purchased Goods and Services,Logistics - Spend-Based (EEIO),Logistics,Cold Chain,Refrigerated Transport,2025
+Category 5 - Waste Generated in Operations,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Clinical Trial Materials,Trial Kits,2026
+Category 1 - Purchased Goods and Services,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Small Molecule API,2024
+Category 1 - Purchased Goods and Services,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Leaflets,2024
+Category 4 - Upstream Transportation and Distribution,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Organic Solvents,2025
+Category 12 - End of Life Treatment of Sold Products,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Aqueous Solvents,2024
+Category 2 - Capital Goods,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Small Molecule API,2026
+Category 4 - Upstream Transportation and Distribution,Logistics - Spend-Based (EEIO),Logistics,Cold Chain,Refrigerated Transport,2025
+Category 4 - Upstream Transportation and Distribution,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Clinical Trial Materials,Comparator Drugs,2026
+Category 12 - End of Life Treatment of Sold Products,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Synthesis Services,2024
+Category 1 - Purchased Goods and Services,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Process Equipment,Reactors & Vessels,2026
+Category 5 - Waste Generated in Operations,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Leaflets,2025
+Category 2 - Capital Goods,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Air Freight,2024
+Category 4 - Upstream Transportation and Distribution,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Coatings,2026
+Category 1 - Purchased Goods and Services,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Coatings,2026
+Category 1 - Purchased Goods and Services,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Synthesis Services,2026
+Category 2 - Capital Goods,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Synthesis Services,2024
+Category 12 - End of Life Treatment of Sold Products,Logistics - Spend-Based (EEIO),Logistics,Cold Chain,Cold Storage,2025
+Category 1 - Purchased Goods and Services,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Road Freight,2026
+Category 5 - Waste Generated in Operations,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Glass Vials,2024
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Prefilled Syringes,2024
+Category 2 - Capital Goods,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Clinical Trial Materials,Trial Kits,2024
+Category 5 - Waste Generated in Operations,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Tertiary Packaging,Shipping Cases,2025
+Category 4 - Upstream Transportation and Distribution,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Road Freight,2025
+Category 1 - Purchased Goods and Services,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Coatings,2025
+Category 4 - Upstream Transportation and Distribution,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2024
+Category 1 - Purchased Goods and Services,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Process Equipment,Reactors & Vessels,2025
+Category 4 - Upstream Transportation and Distribution,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2024
+Category 5 - Waste Generated in Operations,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Clinical Trial Materials,Comparator Drugs,2025
+Category 1 - Purchased Goods and Services,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Process Equipment,Filling Lines,2026
+Category 1 - Purchased Goods and Services,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Organic Solvents,2026
+Category 5 - Waste Generated in Operations,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Glass Vials,2024
+Category 2 - Capital Goods,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2024
+Category 4 - Upstream Transportation and Distribution,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Leaflets,2025
+Category 12 - End of Life Treatment of Sold Products,Logistics - Spend-Based (EEIO),Logistics,Cold Chain,Cold Storage,2024
+Category 5 - Waste Generated in Operations,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2024
+Category 1 - Purchased Goods and Services,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Lab Consumables,Reagents,2025
+Category 1 - Purchased Goods and Services,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Leaflets,2024
+Category 4 - Upstream Transportation and Distribution,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Leaflets,2025
+Category 1 - Purchased Goods and Services,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Air Freight,2025
+Category 12 - End of Life Treatment of Sold Products,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Clinical Trial Materials,Trial Kits,2024
+Category 12 - End of Life Treatment of Sold Products,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Process Equipment,Filling Lines,2024
+Category 5 - Waste Generated in Operations,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Clinical Trial Materials,Comparator Drugs,2025
+Category 12 - End of Life Treatment of Sold Products,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Blister Packs,2024
+Category 4 - Upstream Transportation and Distribution,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Tertiary Packaging,Pallet Wrap,2026
+Category 1 - Purchased Goods and Services,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2024
+Category 12 - End of Life Treatment of Sold Products,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Product CMO,Fill & Finish,2024
+Category 2 - Capital Goods,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Lab Equipment,Analytical Instruments,2025
+Category 2 - Capital Goods,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Product CMO,Fill & Finish,2025
+Category 5 - Waste Generated in Operations,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Glass Vials,2024
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Leaflets,2026
+Category 12 - End of Life Treatment of Sold Products,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Ocean Freight,2026
+Category 1 - Purchased Goods and Services,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Aqueous Solvents,2024
+Category 5 - Waste Generated in Operations,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Ocean Freight,2026
+Category 12 - End of Life Treatment of Sold Products,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2024
+Category 4 - Upstream Transportation and Distribution,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Clinical Trial Materials,Trial Kits,2026
+Category 4 - Upstream Transportation and Distribution,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Coatings,2025
+Category 1 - Purchased Goods and Services,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Bottles,2026
+Category 4 - Upstream Transportation and Distribution,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Lab Equipment,Analytical Instruments,2026
+Category 5 - Waste Generated in Operations,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Prefilled Syringes,2026
+Category 12 - End of Life Treatment of Sold Products,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Process Equipment,Reactors & Vessels,2026
+Category 4 - Upstream Transportation and Distribution,Logistics - Spend-Based (EEIO),Logistics,Cold Chain,Refrigerated Transport,2026
+Category 1 - Purchased Goods and Services,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Lab Consumables,Reagents,2026
+Category 2 - Capital Goods,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Synthesis Services,2026
+Category 12 - End of Life Treatment of Sold Products,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Ocean Freight,2025
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Tertiary Packaging,Shipping Cases,2025
+Category 4 - Upstream Transportation and Distribution,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Organic Solvents,2024
+Category 4 - Upstream Transportation and Distribution,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Clinical Trial Materials,Trial Kits,2026
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Cartons,2024
+Category 2 - Capital Goods,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Organic Solvents,2024
+Category 2 - Capital Goods,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Synthesis Services,2025
+Category 12 - End of Life Treatment of Sold Products,Logistics - Spend-Based (EEIO),Logistics,Cold Chain,Cold Storage,2026
+Category 5 - Waste Generated in Operations,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Binders & Fillers,2026
+Category 12 - End of Life Treatment of Sold Products,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2025
+Category 5 - Waste Generated in Operations,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Blister Packs,2026
+Category 5 - Waste Generated in Operations,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Aqueous Solvents,2025
+Category 5 - Waste Generated in Operations,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2024
+Category 4 - Upstream Transportation and Distribution,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Leaflets,2026
+Category 12 - End of Life Treatment of Sold Products,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Labels,2026
+Category 4 - Upstream Transportation and Distribution,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Labels,2026
+Category 2 - Capital Goods,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Ocean Freight,2026
+Category 12 - End of Life Treatment of Sold Products,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Glass Vials,2024
+Category 1 - Purchased Goods and Services,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Synthesis Services,2025
+Category 1 - Purchased Goods and Services,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Process Equipment,Reactors & Vessels,2024
+Category 4 - Upstream Transportation and Distribution,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Process Equipment,Filling Lines,2024
+Category 5 - Waste Generated in Operations,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Blister Packs,2026
+Category 12 - End of Life Treatment of Sold Products,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Air Freight,2026
+Category 5 - Waste Generated in Operations,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Blister Packs,2026
+Category 1 - Purchased Goods and Services,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Fermentation Services,2026
+Category 12 - End of Life Treatment of Sold Products,Logistics - Spend-Based (EEIO),Logistics,Cold Chain,Refrigerated Transport,2025
+Category 5 - Waste Generated in Operations,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Air Freight,2026
+Category 2 - Capital Goods,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Coatings,2024
+Category 5 - Waste Generated in Operations,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Lab Consumables,Single-use Plasticware,2024
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Blister Packs,2026
+Category 12 - End of Life Treatment of Sold Products,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Product CMO,Packaging Services,2025
+Category 4 - Upstream Transportation and Distribution,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Aqueous Solvents,2024
+Category 5 - Waste Generated in Operations,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Fermentation Services,2026
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Blister Packs,2026
+Category 12 - End of Life Treatment of Sold Products,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Product CMO,Fill & Finish,2025
+Category 1 - Purchased Goods and Services,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2024
+Category 2 - Capital Goods,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Lab Consumables,Single-use Plasticware,2024
+Category 12 - End of Life Treatment of Sold Products,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Small Molecule API,2025
+Category 5 - Waste Generated in Operations,Logistics - Spend-Based (EEIO),Logistics,Cold Chain,Cold Storage,2024
+Category 1 - Purchased Goods and Services,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Binders & Fillers,2025
+Category 2 - Capital Goods,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Clinical Trial Materials,Trial Kits,2024
+Category 2 - Capital Goods,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Preservatives,2026
+Category 1 - Purchased Goods and Services,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Road Freight,2024
+Category 5 - Waste Generated in Operations,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Coatings,2026
+Category 12 - End of Life Treatment of Sold Products,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Binders & Fillers,2026
+Category 1 - Purchased Goods and Services,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Fermentation Services,2025
+Category 4 - Upstream Transportation and Distribution,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Coatings,2024
+Category 5 - Waste Generated in Operations,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Lab Consumables,Reagents,2024
+Category 12 - End of Life Treatment of Sold Products,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Cartons,2025
+Category 2 - Capital Goods,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Process Equipment,Reactors & Vessels,2024
+Category 2 - Capital Goods,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Ocean Freight,2026
+Category 4 - Upstream Transportation and Distribution,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Fermentation Services,2024
+Category 5 - Waste Generated in Operations,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Clinical Trial Materials,Comparator Drugs,2025
+Category 5 - Waste Generated in Operations,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Synthesis Services,2024
+Category 5 - Waste Generated in Operations,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Binders & Fillers,2024
+Category 5 - Waste Generated in Operations,Logistics - Spend-Based (EEIO),Logistics,Cold Chain,Cold Storage,2026
+Category 12 - End of Life Treatment of Sold Products,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Glass Vials,2024
+Category 1 - Purchased Goods and Services,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Air Freight,2026
+Category 5 - Waste Generated in Operations,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Preservatives,2026
+Category 5 - Waste Generated in Operations,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Lab Consumables,Single-use Plasticware,2024
+Category 12 - End of Life Treatment of Sold Products,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Prefilled Syringes,2026
+Category 4 - Upstream Transportation and Distribution,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Coatings,2024
+Category 12 - End of Life Treatment of Sold Products,Logistics - Spend-Based (EEIO),Logistics,Cold Chain,Cold Storage,2026
+Category 1 - Purchased Goods and Services,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Tertiary Packaging,Pallet Wrap,2024
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Cartons,2025
+Category 1 - Purchased Goods and Services,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Labels,2024
+Category 4 - Upstream Transportation and Distribution,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Product CMO,Packaging Services,2026
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Prefilled Syringes,2025
+Category 1 - Purchased Goods and Services,Logistics - Spend-Based (EEIO),Logistics,Cold Chain,Cold Storage,2025
+Category 5 - Waste Generated in Operations,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Preservatives,2024
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Leaflets,2026
+Category 1 - Purchased Goods and Services,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Organic Solvents,2026
+Category 1 - Purchased Goods and Services,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Prefilled Syringes,2025
+Category 2 - Capital Goods,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Aqueous Solvents,2025
+Category 12 - End of Life Treatment of Sold Products,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Tertiary Packaging,Shipping Cases,2026
+Category 2 - Capital Goods,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Product CMO,Packaging Services,2025
+Category 12 - End of Life Treatment of Sold Products,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Clinical Trial Materials,Comparator Drugs,2026
+Category 5 - Waste Generated in Operations,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Air Freight,2024
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Cartons,2025
+Category 12 - End of Life Treatment of Sold Products,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Coatings,2025
+Category 4 - Upstream Transportation and Distribution,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Product CMO,Fill & Finish,2026
+Category 2 - Capital Goods,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Binders & Fillers,2026
+Category 1 - Purchased Goods and Services,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Product CMO,Packaging Services,2024
+Category 4 - Upstream Transportation and Distribution,Logistics - Spend-Based (EEIO),Logistics,Cold Chain,Cold Storage,2026
+Category 1 - Purchased Goods and Services,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2025
+Category 4 - Upstream Transportation and Distribution,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Fermentation Services,2024
+Category 5 - Waste Generated in Operations,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Tertiary Packaging,Shipping Cases,2024
+Category 1 - Purchased Goods and Services,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Tertiary Packaging,Pallet Wrap,2025
+Category 12 - End of Life Treatment of Sold Products,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Lab Consumables,Single-use Plasticware,2024
+Category 5 - Waste Generated in Operations,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Blister Packs,2026
+Category 12 - End of Life Treatment of Sold Products,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Clinical Trial Materials,Comparator Drugs,2024
+Category 1 - Purchased Goods and Services,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Bottles,2024
+Category 1 - Purchased Goods and Services,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Prefilled Syringes,2025
+Category 1 - Purchased Goods and Services,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Bottles,2026
+Category 4 - Upstream Transportation and Distribution,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Cartons,2026
+Category 2 - Capital Goods,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Process Equipment,Reactors & Vessels,2026
+Category 5 - Waste Generated in Operations,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Road Freight,2026
+Category 2 - Capital Goods,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Lab Equipment,Analytical Instruments,2025
+Category 12 - End of Life Treatment of Sold Products,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Labels,2024
+Category 12 - End of Life Treatment of Sold Products,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Aqueous Solvents,2024
+Category 5 - Waste Generated in Operations,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Product CMO,Packaging Services,2024
+Category 2 - Capital Goods,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Road Freight,2026
+Category 1 - Purchased Goods and Services,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Lab Equipment,Analytical Instruments,2025
+Category 5 - Waste Generated in Operations,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Process Equipment,Filling Lines,2026
+Category 5 - Waste Generated in Operations,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Aqueous Solvents,2025
+Category 5 - Waste Generated in Operations,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Binders & Fillers,2025
+Category 5 - Waste Generated in Operations,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Tertiary Packaging,Shipping Cases,2026
+Category 1 - Purchased Goods and Services,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Blister Packs,2025
+Category 5 - Waste Generated in Operations,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Small Molecule API,2026
+Category 1 - Purchased Goods and Services,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Blister Packs,2026
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Prefilled Syringes,2024
+Category 4 - Upstream Transportation and Distribution,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Air Freight,2026
+Category 1 - Purchased Goods and Services,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Prefilled Syringes,2025
+Category 1 - Purchased Goods and Services,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Ocean Freight,2025
+Category 1 - Purchased Goods and Services,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Lab Equipment,Analytical Instruments,2026
+Category 5 - Waste Generated in Operations,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Tertiary Packaging,Pallet Wrap,2026
+Category 1 - Purchased Goods and Services,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Blister Packs,2026
+Category 1 - Purchased Goods and Services,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Bottles,2026
+Category 4 - Upstream Transportation and Distribution,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Glass Vials,2026
+Category 5 - Waste Generated in Operations,Logistics - Spend-Based (EEIO),Logistics,Cold Chain,Cold Storage,2026
+Category 12 - End of Life Treatment of Sold Products,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2026
+Category 2 - Capital Goods,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Fermentation Services,2025
+Category 12 - End of Life Treatment of Sold Products,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Synthesis Services,2024
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Prefilled Syringes,2024
+Category 1 - Purchased Goods and Services,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Road Freight,2026
+Category 12 - End of Life Treatment of Sold Products,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Labels,2025
+Category 12 - End of Life Treatment of Sold Products,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Tertiary Packaging,Pallet Wrap,2025
+Category 4 - Upstream Transportation and Distribution,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Glass Vials,2026
+Category 12 - End of Life Treatment of Sold Products,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Road Freight,2026
+Category 1 - Purchased Goods and Services,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Coatings,2025
+Category 5 - Waste Generated in Operations,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Air Freight,2026
+Category 5 - Waste Generated in Operations,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Clinical Trial Materials,Trial Kits,2024
+Category 1 - Purchased Goods and Services,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Lab Equipment,Analytical Instruments,2025
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Bottles,2026
+Category 5 - Waste Generated in Operations,Logistics - Spend-Based (EEIO),Logistics,Cold Chain,Cold Storage,2025
+Category 2 - Capital Goods,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Lab Consumables,Single-use Plasticware,2026
+Category 1 - Purchased Goods and Services,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Bottles,2026
+Category 4 - Upstream Transportation and Distribution,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Lab Equipment,Analytical Instruments,2025
+Category 12 - End of Life Treatment of Sold Products,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Coatings,2024
+Category 5 - Waste Generated in Operations,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Lab Consumables,Reagents,2026
+Category 5 - Waste Generated in Operations,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Clinical Trial Materials,Comparator Drugs,2026
+Category 12 - End of Life Treatment of Sold Products,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Blister Packs,2026
+Category 12 - End of Life Treatment of Sold Products,Capital Equipment - Spend-Based (EEIO),Capital Equipment,Process Equipment,Filling Lines,2025
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Blister Packs,2025
+Category 5 - Waste Generated in Operations,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Cartons,2026
+Category 12 - End of Life Treatment of Sold Products,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2025
+Category 5 - Waste Generated in Operations,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Small Molecule API,2026
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Bottles,2025
+Category 4 - Upstream Transportation and Distribution,Raw Materials - Spend-Based (EEIO),Raw Materials,Excipients,Binders & Fillers,2024
+Category 5 - Waste Generated in Operations,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Ocean Freight,2025
+Category 5 - Waste Generated in Operations,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Road Freight,2026
+Category 1 - Purchased Goods and Services,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Peptide API,2026
+Category 2 - Capital Goods,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Aqueous Solvents,2025
+Category 4 - Upstream Transportation and Distribution,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Bottles,2025
+Category 4 - Upstream Transportation and Distribution,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Fermentation Services,2024
+Category 5 - Waste Generated in Operations,Logistics - Spend-Based (EEIO),Logistics,Cold Chain,Cold Storage,2026
+Category 2 - Capital Goods,Logistics - Spend-Based (EEIO),Logistics,Cold Chain,Cold Storage,2024
+Category 12 - End of Life Treatment of Sold Products,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Air Freight,2025
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Bottles,2026
+Category 12 - End of Life Treatment of Sold Products,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Glass Vials,2026
+Category 5 - Waste Generated in Operations,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Substance CMO,Fermentation Services,2024
+Category 12 - End of Life Treatment of Sold Products,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Cartons,2026
+Category 4 - Upstream Transportation and Distribution,Raw Materials - Spend-Based (EEIO),Raw Materials,Solvents,Organic Solvents,2025
+Category 4 - Upstream Transportation and Distribution,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Prefilled Syringes,2024
+Category 2 - Capital Goods,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Product CMO,Packaging Services,2026
+Category 5 - Waste Generated in Operations,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Road Freight,2024
+Category 5 - Waste Generated in Operations,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Road Freight,2024
+Category 5 - Waste Generated in Operations,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Primary Packaging,Prefilled Syringes,2026
+Category 2 - Capital Goods,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Secondary Packaging,Labels,2025
+Category 1 - Purchased Goods and Services,Logistics - Spend-Based (EEIO),Logistics,Inbound Freight,Ocean Freight,2024
+Category 1 - Purchased Goods and Services,Lab & Clinical Supplies - Spend-Based (EEIO),Lab & Clinical Supplies,Clinical Trial Materials,Trial Kits,2026
+Category 4 - Upstream Transportation and Distribution,Logistics - Spend-Based (EEIO),Logistics,Cold Chain,Cold Storage,2025
+Category 5 - Waste Generated in Operations,Raw Materials - Spend-Based (EEIO),Raw Materials,Active Pharmaceutical Ingredients,Biologic API,2026
+Category 5 - Waste Generated in Operations,Packaging Materials - Spend-Based (EEIO),Packaging Materials,Tertiary Packaging,Pallet Wrap,2026
+Category 1 - Purchased Goods and Services,Contract Manufacturing - Spend-Based (EEIO),Contract Manufacturing,Drug Product CMO,Packaging Services,2026

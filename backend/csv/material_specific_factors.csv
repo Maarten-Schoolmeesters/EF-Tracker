@@ -1,118 +1,117 @@
 material_code,material_description,supplier_name,supplier_id,emission_factor_name,ef_kgco2e_per_unit,units_per_kg,weight_per_unit_kg
-MAT-20127,HPLC Consumable Kit,PharmaPak Labs,SUP-10036,HPLC Consumable Kit EF - PharmaPak Labs,701.3205,1.9672,0.1299
-MAT-20029,Lab Reagent Kit,Ridgeline Labs,SUP-10019,Lab Reagent Kit EF - Ridgeline Labs,430.2241,2.3373,
-MAT-20046,Patient Information Leaflet,NovaChem Industries,SUP-10039,Patient Information Leaflet EF - NovaChem Industries,820.4978,2.9804,
-MAT-20114,Reusable Shipping Tote,Amberline Excipients Ltd,SUP-10037,Reusable Shipping Tote EF - Amberline Excipients Ltd,83.727,0.863,
-MAT-20114,Reusable Shipping Tote,Amberline Excipients Ltd,SUP-10037,Reusable Shipping Tote EF - Amberline Excipients Ltd,135.9235,,
-MAT-20112,Patient Information Leaflet,Solara Industries,SUP-10007,Patient Information Leaflet EF - Solara Industries,369.1594,0.8491,
-MAT-20112,Patient Information Leaflet,Solara Industries,SUP-10007,Patient Information Leaflet EF - Solara Industries,694.2621,0.7898,0.5315
-MAT-20000,Paracetamol API,Ridgeline Glass Works,SUP-10011,Paracetamol API EF - Ridgeline Glass Works,108.949,1.6162,3.312
-MAT-20047,Pressure-sensitive Label,Meridian Labs,SUP-10033,Pressure-sensitive Label EF - Meridian Labs,839.1689,,3.6511
-MAT-20047,Pressure-sensitive Label,Meridian Labs,SUP-10033,Pressure-sensitive Label EF - Meridian Labs,33.417,1.5786,2.6854
-MAT-20044,HDPE Bottle 250ml,Ridgeline Glass Works,SUP-10011,HDPE Bottle 250ml EF - Ridgeline Glass Works,585.5988,1.2537,0.7567
-MAT-20044,HDPE Bottle 250ml,Ridgeline Glass Works,SUP-10011,HDPE Bottle 250ml EF - Ridgeline Glass Works,706.5224,,
-MAT-20145,Patient Information Leaflet,Cascade Labs,SUP-10001,Patient Information Leaflet EF - Cascade Labs,562.851,,0.0536
-MAT-20145,Patient Information Leaflet,Cascade Labs,SUP-10001,Patient Information Leaflet EF - Cascade Labs,598.4646,0.8753,
-MAT-20017,Fermentation Batch Service,Ferrolux Manufacturing Co.,SUP-10008,Fermentation Batch Service EF - Ferrolux Manufacturing Co.,756.0082,2.2516,4.8387
-MAT-20041,Freeze-dried Vaccine Vial,Clarion Industries,SUP-10024,Freeze-dried Vaccine Vial EF - Clarion Industries,729.4371,0.5031,3.5812
-MAT-20014,Pressure-sensitive Label,PharmaPak Labs,SUP-10036,Pressure-sensitive Label EF - PharmaPak Labs,115.4702,1.7414,
-MAT-20084,Custom Synthesis Batch,Corex Materials Ltd,SUP-10006,Custom Synthesis Batch EF - Corex Materials Ltd,872.0001,,
-MAT-20063,Single-use Bioreactor Bag,Atlas Polymer Group,SUP-10027,Single-use Bioreactor Bag EF - Atlas Polymer Group,494.7705,1.4684,0.6604
-MAT-20119,Contract Packaging Service,Cascade Labs,SUP-10001,Contract Packaging Service EF - Cascade Labs,847.3672,2.4463,
-MAT-20134,Synthetic Peptide Concentrate,Cascade Materials Ltd,SUP-10030,Synthetic Peptide Concentrate EF - Cascade Materials Ltd,380.2716,0.9049,
-MAT-20149,Fermentation Batch Service,Clarion Materials Ltd,SUP-10031,Fermentation Batch Service EF - Clarion Materials Ltd,54.372,0.6538,4.8203
-MAT-20028,HPLC Consumable Kit,Atlas Polymer Group,SUP-10027,HPLC Consumable Kit EF - Atlas Polymer Group,775.7817,,
-MAT-20028,HPLC Consumable Kit,Atlas Polymer Group,SUP-10027,HPLC Consumable Kit EF - Atlas Polymer Group,113.9219,,4.5066
-MAT-20054,Inbound Road Freight - Pallet,Cascade Glass Works,SUP-10021,Inbound Road Freight - Pallet EF - Cascade Glass Works,235.0296,2.5694,3.2138
-MAT-20125,Stainless Steel Reactor Component,Ferrolux Glass Works,SUP-10014,Stainless Steel Reactor Component EF - Ferrolux Glass Works,29.2414,,
-MAT-20083,Fermentation Batch Service,Atlas Fine Chemicals,SUP-10023,Fermentation Batch Service EF - Atlas Fine Chemicals,860.9345,2.421,2.1217
-MAT-20083,Fermentation Batch Service,Atlas Fine Chemicals,SUP-10023,Fermentation Batch Service EF - Atlas Fine Chemicals,708.1769,1.4272,3.8941
-MAT-20035,Synthetic Peptide Concentrate,Cascade Excipients Ltd,SUP-10022,Synthetic Peptide Concentrate EF - Cascade Excipients Ltd,256.6107,2.8644,
-MAT-20062,Lab Reagent Kit,Corex Materials Ltd,SUP-10006,Lab Reagent Kit EF - Corex Materials Ltd,753.1095,,0.5617
-MAT-20016,Stretch Pallet Wrap,Quantum Excipients Ltd,SUP-10035,Stretch Pallet Wrap EF - Quantum Excipients Ltd,692.2643,1.7855,
-MAT-20019,Aseptic Fill & Finish Service,Cascade Labs,SUP-10001,Aseptic Fill & Finish Service EF - Cascade Labs,498.5036,,3.8196
-MAT-20019,Aseptic Fill & Finish Service,Cascade Labs,SUP-10001,Aseptic Fill & Finish Service EF - Cascade Labs,81.0736,,2.7264
-MAT-20003,Microcrystalline Cellulose,Meridian Labs,SUP-10033,Microcrystalline Cellulose EF - Meridian Labs,731.1213,1.6194,
-MAT-20103,Enteric Coating Blend,Cascade Labs,SUP-10001,Enteric Coating Blend EF - Cascade Labs,876.7836,1.6586,
-MAT-20086,Contract Packaging Service,Ridgeline International,SUP-10002,Contract Packaging Service EF - Ridgeline International,407.7215,,1.1537
-MAT-20086,Contract Packaging Service,Ridgeline International,SUP-10002,Contract Packaging Service EF - Ridgeline International,71.8288,,1.812
-MAT-20096,Pipette Tips (case),Meridian Labs,SUP-10033,Pipette Tips (case) EF - Meridian Labs,442.8806,,0.5799
-MAT-20012,Folding Carton,Everline Industries,SUP-10012,Folding Carton EF - Everline Industries,15.7849,1.3723,3.3851
-MAT-20140,Freeze-dried Vaccine Vial,NovaChem Labs,SUP-10028,Freeze-dried Vaccine Vial EF - NovaChem Labs,633.0966,1.7404,
-MAT-20140,Freeze-dried Vaccine Vial,NovaChem Labs,SUP-10028,Freeze-dried Vaccine Vial EF - NovaChem Labs,505.1759,2.9994,3.8873
-MAT-20101,Synthetic Peptide Concentrate,Sterling Industries,SUP-10038,Synthetic Peptide Concentrate EF - Sterling Industries,141.0104,2.8469,4.1933
-MAT-20101,Synthetic Peptide Concentrate,Sterling Industries,SUP-10038,Synthetic Peptide Concentrate EF - Sterling Industries,800.6839,0.8723,0.3297
-MAT-20147,Reusable Shipping Tote,Clarion Packaging Ltd,SUP-10015,Reusable Shipping Tote EF - Clarion Packaging Ltd,629.5596,0.5802,2.0209
-MAT-20050,Fermentation Batch Service,Atlas Polymer Group,SUP-10027,Fermentation Batch Service EF - Atlas Polymer Group,279.6101,1.9733,3.9776
-MAT-20093,Filling Line Spare Parts,PharmaPak Glass Works,SUP-10003,Filling Line Spare Parts EF - PharmaPak Glass Works,529.704,0.8108,
-MAT-20093,Filling Line Spare Parts,PharmaPak Glass Works,SUP-10003,Filling Line Spare Parts EF - PharmaPak Glass Works,17.7811,1.9639,4.708
-MAT-20118,Aseptic Fill & Finish Service,Bluepeak Glass Works,SUP-10004,Aseptic Fill & Finish Service EF - Bluepeak Glass Works,516.7946,2.1693,1.5902
-MAT-20092,Stainless Steel Reactor Component,Ridgeline Glass Works,SUP-10011,Stainless Steel Reactor Component EF - Ridgeline Glass Works,230.044,0.5947,3.2365
-MAT-20110,HDPE Bottle 250ml,Sterling Industries,SUP-10038,HDPE Bottle 250ml EF - Sterling Industries,836.342,2.0153,3.198
-MAT-20110,HDPE Bottle 250ml,Sterling Industries,SUP-10038,HDPE Bottle 250ml EF - Sterling Industries,583.2594,,3.4289
-MAT-20006,Ethanol (Pharma Grade),Bluepeak Group,SUP-10026,Ethanol (Pharma Grade) EF - Bluepeak Group,542.728,0.7551,4.7777
-MAT-20006,Ethanol (Pharma Grade),Bluepeak Group,SUP-10026,Ethanol (Pharma Grade) EF - Bluepeak Group,133.681,2.8814,2.8594
-MAT-20070,Film Coating Powder,Clarion Packaging Ltd,SUP-10015,Film Coating Powder EF - Clarion Packaging Ltd,747.8417,1.5922,
-MAT-20024,Cold Chain Transport - 2-8C,Everline Glass Works,SUP-10032,Cold Chain Transport - 2-8C EF - Everline Glass Works,524.6193,2.9892,0.0832
-MAT-20022,Inbound Air Freight - Temperature Controlled,BrightLab Vial Co.,SUP-10016,Inbound Air Freight - Temperature Controlled EF - BrightLab Vial Co.,795.0942,2.8894,
-MAT-20004,Enteric Coating Blend,Quantum Vial Co.,SUP-10013,Enteric Coating Blend EF - Quantum Vial Co.,45.9776,2.7602,0.5374
-MAT-20004,Enteric Coating Blend,Quantum Vial Co.,SUP-10013,Enteric Coating Blend EF - Quantum Vial Co.,369.7267,2.1519,3.1578
-MAT-20005,Methylparaben,BrightLab Vial Co.,SUP-10016,Methylparaben EF - BrightLab Vial Co.,764.6725,1.8644,0.4276
-MAT-20033,Paracetamol API,Atlas Fine Chemicals,SUP-10023,Paracetamol API EF - Atlas Fine Chemicals,810.7591,0.7088,0.1218
-MAT-20033,Paracetamol API,Atlas Fine Chemicals,SUP-10023,Paracetamol API EF - Atlas Fine Chemicals,752.6686,1.9691,
-MAT-20097,Comparator Drug Batch,Everline Glass Works,SUP-10032,Comparator Drug Batch EF - Everline Glass Works,733.8054,2.9263,4.4719
-MAT-20141,Alu-Alu Blister Pack,Ridgeline Labs,SUP-10019,Alu-Alu Blister Pack EF - Ridgeline Labs,144.7286,,4.4184
-MAT-20133,Monoclonal Antibody Bulk,Meridian Labs,SUP-10033,Monoclonal Antibody Bulk EF - Meridian Labs,514.0218,1.7671,0.0676
-MAT-20077,HDPE Bottle 100ml,Ridgeline Glass Works,SUP-10011,HDPE Bottle 100ml EF - Ridgeline Glass Works,730.7021,,
-MAT-20087,Inbound Road Freight - Pallet,Cascade Materials Ltd,SUP-10030,Inbound Road Freight - Pallet EF - Cascade Materials Ltd,426.0004,,4.2122
-MAT-20059,Stainless Steel Reactor Component,Clarion Industries,SUP-10024,Stainless Steel Reactor Component EF - Clarion Industries,269.6701,2.4115,4.6714
-MAT-20066,Ibuprofen API,Everline Glass Works,SUP-10032,Ibuprofen API EF - Everline Glass Works,606.939,2.4787,2.1231
-MAT-20066,Ibuprofen API,Everline Glass Works,SUP-10032,Ibuprofen API EF - Everline Glass Works,813.4401,,1.9666
-MAT-20064,Comparator Drug Batch,Cascade Materials Ltd,SUP-10030,Comparator Drug Batch EF - Cascade Materials Ltd,240.4943,1.0733,
-MAT-20104,Sodium Benzoate,Amberline Logistics,SUP-10005,Sodium Benzoate EF - Amberline Logistics,101.3324,1.7359,1.2481
-MAT-20104,Sodium Benzoate,Amberline Logistics,SUP-10005,Sodium Benzoate EF - Amberline Logistics,438.8074,2.5212,1.1284
-MAT-20072,Ethanol (Pharma Grade),Clarion Industries,SUP-10024,Ethanol (Pharma Grade) EF - Clarion Industries,96.3973,1.9526,3.2966
-MAT-20056,Inbound Ocean Freight - Container,Trueform Polymer Group,SUP-10025,Inbound Ocean Freight - Container EF - Trueform Polymer Group,263.6356,,2.1139
-MAT-20142,Prefilled Syringe 1ml,Solara International,SUP-10018,Prefilled Syringe 1ml EF - Solara International,345.4192,,
-MAT-20142,Prefilled Syringe 1ml,Solara International,SUP-10018,Prefilled Syringe 1ml EF - Solara International,550.6624,,1.5688
-MAT-20100,Recombinant Protein Concentrate,Bluepeak Glass Works,SUP-10004,Recombinant Protein Concentrate EF - Bluepeak Glass Works,10.5526,0.7555,
-MAT-20100,Recombinant Protein Concentrate,Bluepeak Glass Works,SUP-10004,Recombinant Protein Concentrate EF - Bluepeak Glass Works,883.1055,2.4001,2.0391
-MAT-20026,Stainless Steel Reactor Component,Cascade Packaging Ltd,SUP-10034,Stainless Steel Reactor Component EF - Cascade Packaging Ltd,0.4089,2.9004,1.3369
-MAT-20088,Inbound Air Freight - Temperature Controlled,Trueform Polymer Group,SUP-10025,Inbound Air Freight - Temperature Controlled EF - Trueform Polymer Group,552.7108,0.8436,
-MAT-20143,HDPE Bottle 250ml,Cascade Materials Ltd,SUP-10030,HDPE Bottle 250ml EF - Cascade Materials Ltd,891.5366,1.6129,2.1303
-MAT-20085,Aseptic Fill & Finish Service,NovaChem Industries,SUP-10039,Aseptic Fill & Finish Service EF - NovaChem Industries,80.3547,,0.5736
-MAT-20065,Clinical Trial Kit,Clarion Packaging Ltd,SUP-10015,Clinical Trial Kit EF - Clarion Packaging Ltd,595.0969,2.1002,
-MAT-20045,Corrugated Shipping Box,Quantum Vial Co.,SUP-10013,Corrugated Shipping Box EF - Quantum Vial Co.,97.2536,,4.4733
-MAT-20045,Corrugated Shipping Box,Quantum Vial Co.,SUP-10013,Corrugated Shipping Box EF - Quantum Vial Co.,307.6219,0.6095,
-MAT-20023,Inbound Ocean Freight - Container,Quantum Excipients Ltd,SUP-10035,Inbound Ocean Freight - Container EF - Quantum Excipients Ltd,360.6074,2.2508,1.808
-MAT-20030,Single-use Bioreactor Bag,Solara Manufacturing Co.,SUP-10017,Single-use Bioreactor Bag EF - Solara Manufacturing Co.,446.0832,,2.1503
-MAT-20081,Corrugated Shipping Case,Ridgeline International,SUP-10002,Corrugated Shipping Case EF - Ridgeline International,627.3434,,2.0878
-MAT-20068,Synthetic Peptide Concentrate,Bluepeak Glass Works,SUP-10004,Synthetic Peptide Concentrate EF - Bluepeak Glass Works,680.0694,2.7789,3.8643
-MAT-20068,Synthetic Peptide Concentrate,Bluepeak Glass Works,SUP-10004,Synthetic Peptide Concentrate EF - Bluepeak Glass Works,114.1869,,3.7675
-MAT-20116,Fermentation Batch Service,Ridgeline International,SUP-10002,Fermentation Batch Service EF - Ridgeline International,779.6822,1.8779,
-MAT-20007,Water for Injection,Amberline Logistics,SUP-10005,Water for Injection EF - Amberline Logistics,243.856,2.9882,4.2003
-MAT-20007,Water for Injection,Amberline Logistics,SUP-10005,Water for Injection EF - Amberline Logistics,560.3305,2.0665,2.7341
-MAT-20106,Water for Injection,NovaChem Industries,SUP-10039,Water for Injection EF - NovaChem Industries,629.0228,2.2412,1.565
-MAT-20025,Cold Storage - Warehouse Pallet Slot,Everline Glass Works,SUP-10032,Cold Storage - Warehouse Pallet Slot EF - Everline Glass Works,510.5425,2.6668,2.9459
-MAT-20025,Cold Storage - Warehouse Pallet Slot,Everline Glass Works,SUP-10032,Cold Storage - Warehouse Pallet Slot EF - Everline Glass Works,881.0087,0.6233,
-MAT-20002,Synthetic Peptide Concentrate,Ferrolux Manufacturing Co.,SUP-10008,Synthetic Peptide Concentrate EF - Ferrolux Manufacturing Co.,52.8234,1.6944,3.488
-MAT-20128,Lab Reagent Kit,Clarion Industries,SUP-10024,Lab Reagent Kit EF - Clarion Industries,316.1998,,
-MAT-20038,Methylparaben,PharmaPak Glass Works,SUP-10003,Methylparaben EF - PharmaPak Glass Works,749.2884,2.4282,1.0436
-MAT-20137,Methylparaben,Vantis Packaging Ltd,SUP-10020,Methylparaben EF - Vantis Packaging Ltd,369.7696,0.8144,1.3069
-MAT-20049,Stretch Pallet Wrap,Atlas Fine Chemicals,SUP-10023,Stretch Pallet Wrap EF - Atlas Fine Chemicals,341.1467,,
-MAT-20010,Prefilled Syringe 1ml,PharmaPak Labs,SUP-10036,Prefilled Syringe 1ml EF - PharmaPak Labs,726.3135,,1.2586
-MAT-20139,Water for Injection,PharmaPak Glass Works,SUP-10003,Water for Injection EF - PharmaPak Glass Works,828.4656,2.206,
-MAT-20138,Isopropyl Alcohol,Quantum Excipients Ltd,SUP-10035,Isopropyl Alcohol EF - Quantum Excipients Ltd,388.2629,1.3172,0.8175
-MAT-20138,Isopropyl Alcohol,Quantum Excipients Ltd,SUP-10035,Isopropyl Alcohol EF - Quantum Excipients Ltd,738.1902,1.2869,2.4552
-MAT-20058,Cold Storage - Warehouse Pallet Slot,NovaChem Labs,SUP-10028,Cold Storage - Warehouse Pallet Slot EF - NovaChem Labs,483.8124,,4.7654
-MAT-20008,Glass Vial 2ml,Vantis Packaging Ltd,SUP-10020,Glass Vial 2ml EF - Vantis Packaging Ltd,173.1395,2.0215,1.2202
-MAT-20115,Stretch Pallet Wrap,Atlas Fine Chemicals,SUP-10023,Stretch Pallet Wrap EF - Atlas Fine Chemicals,719.0571,2.4582,0.9298
-MAT-20020,Contract Packaging Service,Bluepeak Group,SUP-10026,Contract Packaging Service EF - Bluepeak Group,630.5685,,1.6767
-MAT-20091,Cold Storage - Warehouse Pallet Slot,Sterling Industries,SUP-10038,Cold Storage - Warehouse Pallet Slot EF - Sterling Industries,206.089,,3.3796
-MAT-20011,HDPE Bottle 100ml,Vantis Industries,SUP-10010,HDPE Bottle 100ml EF - Vantis Industries,106.661,,
-MAT-20146,Pressure-sensitive Label,NovaChem Labs,SUP-10028,Pressure-sensitive Label EF - NovaChem Labs,867.9041,2.1416,0.6803
-MAT-20146,Pressure-sensitive Label,NovaChem Labs,SUP-10028,Pressure-sensitive Label EF - NovaChem Labs,284.4731,,
-MAT-20073,Water for Injection,Amberline Logistics,SUP-10005,Water for Injection EF - Amberline Logistics,252.9095,0.7308,4.2604
-MAT-20009,Alu-Alu Blister Pack,BrightLab Vial Co.,SUP-10016,Alu-Alu Blister Pack EF - BrightLab Vial Co.,894.0368,,2.6889
-MAT-20009,Alu-Alu Blister Pack,BrightLab Vial Co.,SUP-10016,Alu-Alu Blister Pack EF - BrightLab Vial Co.,97.6022,2.9549,2.4777
-MAT-20071,Sodium Benzoate,Quantum Excipients Ltd,SUP-10035,Sodium Benzoate EF - Quantum Excipients Ltd,176.3758,,4.4136
+MAT-20047,Pressure-sensitive Label,Amberline Excipients Ltd,SUP-10037,Pressure-sensitive Label EF - Amberline Excipients Ltd,597.6411,,
+MAT-20146,Pressure-sensitive Label,Solara Manufacturing Co.,SUP-10017,Pressure-sensitive Label EF - Solara Manufacturing Co.,51.1141,2.7791,4.961
+MAT-20044,HDPE Bottle 250ml,Amberline Logistics,SUP-10005,HDPE Bottle 250ml EF - Amberline Logistics,618.1275,2.0217,
+MAT-20112,Patient Information Leaflet,Trueform Polymer Group,SUP-10025,Patient Information Leaflet EF - Trueform Polymer Group,569.9983,0.7889,
+MAT-20017,Fermentation Batch Service,Trueform Industries,SUP-10029,Fermentation Batch Service EF - Trueform Industries,419.9509,0.6338,3.7326
+MAT-20017,Fermentation Batch Service,Trueform Industries,SUP-10029,Fermentation Batch Service EF - Trueform Industries,80.404,,0.6562
+MAT-20041,Freeze-dried Vaccine Vial,Ridgeline Glass Works,SUP-10011,Freeze-dried Vaccine Vial EF - Ridgeline Glass Works,108.949,1.6162,3.312
+MAT-20014,Pressure-sensitive Label,Meridian Labs,SUP-10033,Pressure-sensitive Label EF - Meridian Labs,839.1689,,3.6511
+MAT-20014,Pressure-sensitive Label,Meridian Labs,SUP-10033,Pressure-sensitive Label EF - Meridian Labs,33.417,1.5786,2.6854
+MAT-20084,Custom Synthesis Batch,Ridgeline Glass Works,SUP-10011,Custom Synthesis Batch EF - Ridgeline Glass Works,585.5988,1.2537,0.7567
+MAT-20084,Custom Synthesis Batch,Ridgeline Glass Works,SUP-10011,Custom Synthesis Batch EF - Ridgeline Glass Works,706.5224,,
+MAT-20063,Single-use Bioreactor Bag,Cascade Labs,SUP-10001,Single-use Bioreactor Bag EF - Cascade Labs,562.851,,0.0536
+MAT-20063,Single-use Bioreactor Bag,Cascade Labs,SUP-10001,Single-use Bioreactor Bag EF - Cascade Labs,598.4646,0.8753,
+MAT-20119,Contract Packaging Service,Ferrolux Manufacturing Co.,SUP-10008,Contract Packaging Service EF - Ferrolux Manufacturing Co.,756.0082,2.2516,4.8387
+MAT-20134,Synthetic Peptide Concentrate,Clarion Industries,SUP-10024,Synthetic Peptide Concentrate EF - Clarion Industries,729.4371,0.5031,3.5812
+MAT-20127,HPLC Consumable Kit,PharmaPak Labs,SUP-10036,HPLC Consumable Kit EF - PharmaPak Labs,115.4702,1.7414,
+MAT-20028,HPLC Consumable Kit,Corex Materials Ltd,SUP-10006,HPLC Consumable Kit EF - Corex Materials Ltd,872.0001,,
+MAT-20054,Inbound Road Freight - Pallet,Atlas Polymer Group,SUP-10027,Inbound Road Freight - Pallet EF - Atlas Polymer Group,494.7705,1.4684,0.6604
+MAT-20125,Stainless Steel Reactor Component,Cascade Labs,SUP-10001,Stainless Steel Reactor Component EF - Cascade Labs,847.3672,2.4463,
+MAT-20083,Fermentation Batch Service,Cascade Materials Ltd,SUP-10030,Fermentation Batch Service EF - Cascade Materials Ltd,380.2716,0.9049,
+MAT-20035,Synthetic Peptide Concentrate,Clarion Materials Ltd,SUP-10031,Synthetic Peptide Concentrate EF - Clarion Materials Ltd,54.372,0.6538,4.8203
+MAT-20132,Paracetamol API,Atlas Polymer Group,SUP-10027,Paracetamol API EF - Atlas Polymer Group,775.7817,,
+MAT-20132,Paracetamol API,Atlas Polymer Group,SUP-10027,Paracetamol API EF - Atlas Polymer Group,113.9219,,4.5066
+MAT-20062,Lab Reagent Kit,Cascade Glass Works,SUP-10021,Lab Reagent Kit EF - Cascade Glass Works,235.0296,2.5694,3.2138
+MAT-20033,Paracetamol API,Ferrolux Glass Works,SUP-10014,Paracetamol API EF - Ferrolux Glass Works,29.2414,,
+MAT-20038,Methylparaben,Atlas Fine Chemicals,SUP-10023,Methylparaben EF - Atlas Fine Chemicals,860.9345,2.421,2.1217
+MAT-20038,Methylparaben,Atlas Fine Chemicals,SUP-10023,Methylparaben EF - Atlas Fine Chemicals,708.1769,1.4272,3.8941
+MAT-20007,Water for Injection,Cascade Excipients Ltd,SUP-10022,Water for Injection EF - Cascade Excipients Ltd,256.6107,2.8644,
+MAT-20025,Cold Storage - Warehouse Pallet Slot,Corex Materials Ltd,SUP-10006,Cold Storage - Warehouse Pallet Slot EF - Corex Materials Ltd,753.1095,,0.5617
+MAT-20145,Patient Information Leaflet,Quantum Excipients Ltd,SUP-10035,Patient Information Leaflet EF - Quantum Excipients Ltd,692.2643,1.7855,
+MAT-20101,Synthetic Peptide Concentrate,Cascade Labs,SUP-10001,Synthetic Peptide Concentrate EF - Cascade Labs,498.5036,,3.8196
+MAT-20101,Synthetic Peptide Concentrate,Cascade Labs,SUP-10001,Synthetic Peptide Concentrate EF - Cascade Labs,81.0736,,2.7264
+MAT-20046,Patient Information Leaflet,Meridian Labs,SUP-10033,Patient Information Leaflet EF - Meridian Labs,731.1213,1.6194,
+MAT-20050,Fermentation Batch Service,Cascade Labs,SUP-10001,Fermentation Batch Service EF - Cascade Labs,876.7836,1.6586,
+MAT-20093,Filling Line Spare Parts,Ridgeline International,SUP-10002,Filling Line Spare Parts EF - Ridgeline International,407.7215,,1.1537
+MAT-20093,Filling Line Spare Parts,Ridgeline International,SUP-10002,Filling Line Spare Parts EF - Ridgeline International,71.8288,,1.812
+MAT-20135,Microcrystalline Cellulose,Meridian Labs,SUP-10033,Microcrystalline Cellulose EF - Meridian Labs,442.8806,,0.5799
+MAT-20092,Stainless Steel Reactor Component,Everline Industries,SUP-10012,Stainless Steel Reactor Component EF - Everline Industries,15.7849,1.3723,3.3851
+MAT-20110,HDPE Bottle 250ml,NovaChem Labs,SUP-10028,HDPE Bottle 250ml EF - NovaChem Labs,633.0966,1.7404,
+MAT-20110,HDPE Bottle 250ml,NovaChem Labs,SUP-10028,HDPE Bottle 250ml EF - NovaChem Labs,505.1759,2.9994,3.8873
+MAT-20006,Ethanol (Pharma Grade),Sterling Industries,SUP-10038,Ethanol (Pharma Grade) EF - Sterling Industries,141.0104,2.8469,4.1933
+MAT-20006,Ethanol (Pharma Grade),Sterling Industries,SUP-10038,Ethanol (Pharma Grade) EF - Sterling Industries,800.6839,0.8723,0.3297
+MAT-20070,Film Coating Powder,Clarion Packaging Ltd,SUP-10015,Film Coating Powder EF - Clarion Packaging Ltd,629.5596,0.5802,2.0209
+MAT-20024,Cold Chain Transport - 2-8C,Atlas Polymer Group,SUP-10027,Cold Chain Transport - 2-8C EF - Atlas Polymer Group,279.6101,1.9733,3.9776
+MAT-20022,Inbound Air Freight - Temperature Controlled,PharmaPak Glass Works,SUP-10003,Inbound Air Freight - Temperature Controlled EF - PharmaPak Glass Works,529.704,0.8108,
+MAT-20022,Inbound Air Freight - Temperature Controlled,PharmaPak Glass Works,SUP-10003,Inbound Air Freight - Temperature Controlled EF - PharmaPak Glass Works,17.7811,1.9639,4.708
+MAT-20004,Enteric Coating Blend,Bluepeak Glass Works,SUP-10004,Enteric Coating Blend EF - Bluepeak Glass Works,516.7946,2.1693,1.5902
+MAT-20113,Pressure-sensitive Label,Ridgeline Glass Works,SUP-10011,Pressure-sensitive Label EF - Ridgeline Glass Works,230.044,0.5947,3.2365
+MAT-20005,Methylparaben,Sterling Industries,SUP-10038,Methylparaben EF - Sterling Industries,836.342,2.0153,3.198
+MAT-20005,Methylparaben,Sterling Industries,SUP-10038,Methylparaben EF - Sterling Industries,583.2594,,3.4289
+MAT-20130,Comparator Drug Batch,Bluepeak Group,SUP-10026,Comparator Drug Batch EF - Bluepeak Group,542.728,0.7551,4.7777
+MAT-20130,Comparator Drug Batch,Bluepeak Group,SUP-10026,Comparator Drug Batch EF - Bluepeak Group,133.681,2.8814,2.8594
+MAT-20097,Comparator Drug Batch,Clarion Packaging Ltd,SUP-10015,Comparator Drug Batch EF - Clarion Packaging Ltd,747.8417,1.5922,
+MAT-20117,Custom Synthesis Batch,Everline Glass Works,SUP-10032,Custom Synthesis Batch EF - Everline Glass Works,524.6193,2.9892,0.0832
+MAT-20131,Clinical Trial Kit,BrightLab Vial Co.,SUP-10016,Clinical Trial Kit EF - BrightLab Vial Co.,795.0942,2.8894,
+MAT-20077,HDPE Bottle 100ml,Quantum Vial Co.,SUP-10013,HDPE Bottle 100ml EF - Quantum Vial Co.,45.9776,2.7602,0.5374
+MAT-20077,HDPE Bottle 100ml,Quantum Vial Co.,SUP-10013,HDPE Bottle 100ml EF - Quantum Vial Co.,369.7267,2.1519,3.1578
+MAT-20103,Enteric Coating Blend,BrightLab Vial Co.,SUP-10016,Enteric Coating Blend EF - BrightLab Vial Co.,764.6725,1.8644,0.4276
+MAT-20087,Inbound Road Freight - Pallet,Atlas Fine Chemicals,SUP-10023,Inbound Road Freight - Pallet EF - Atlas Fine Chemicals,810.7591,0.7088,0.1218
+MAT-20087,Inbound Road Freight - Pallet,Atlas Fine Chemicals,SUP-10023,Inbound Road Freight - Pallet EF - Atlas Fine Chemicals,752.6686,1.9691,
+MAT-20059,Stainless Steel Reactor Component,Everline Glass Works,SUP-10032,Stainless Steel Reactor Component EF - Everline Glass Works,733.8054,2.9263,4.4719
+MAT-20066,Ibuprofen API,Ridgeline Labs,SUP-10019,Ibuprofen API EF - Ridgeline Labs,144.7286,,4.4184
+MAT-20064,Comparator Drug Batch,Meridian Labs,SUP-10033,Comparator Drug Batch EF - Meridian Labs,514.0218,1.7671,0.0676
+MAT-20102,Lactose Monohydrate,Ridgeline Glass Works,SUP-10011,Lactose Monohydrate EF - Ridgeline Glass Works,730.7021,,
+MAT-20072,Ethanol (Pharma Grade),Cascade Materials Ltd,SUP-10030,Ethanol (Pharma Grade) EF - Cascade Materials Ltd,426.0004,,4.2122
+MAT-20056,Inbound Ocean Freight - Container,Clarion Industries,SUP-10024,Inbound Ocean Freight - Container EF - Clarion Industries,269.6701,2.4115,4.6714
+MAT-20147,Reusable Shipping Tote,Everline Glass Works,SUP-10032,Reusable Shipping Tote EF - Everline Glass Works,606.939,2.4787,2.1231
+MAT-20147,Reusable Shipping Tote,Everline Glass Works,SUP-10032,Reusable Shipping Tote EF - Everline Glass Works,813.4401,,1.9666
+MAT-20105,Isopropyl Alcohol,Cascade Materials Ltd,SUP-10030,Isopropyl Alcohol EF - Cascade Materials Ltd,240.4943,1.0733,
+MAT-20026,Stainless Steel Reactor Component,Amberline Logistics,SUP-10005,Stainless Steel Reactor Component EF - Amberline Logistics,101.3324,1.7359,1.2481
+MAT-20026,Stainless Steel Reactor Component,Amberline Logistics,SUP-10005,Stainless Steel Reactor Component EF - Amberline Logistics,438.8074,2.5212,1.1284
+MAT-20088,Inbound Air Freight - Temperature Controlled,Clarion Industries,SUP-10024,Inbound Air Freight - Temperature Controlled EF - Clarion Industries,96.3973,1.9526,3.2966
+MAT-20094,HPLC Consumable Kit,Trueform Polymer Group,SUP-10025,HPLC Consumable Kit EF - Trueform Polymer Group,263.6356,,2.1139
+MAT-20120,Inbound Road Freight - Pallet,Solara International,SUP-10018,Inbound Road Freight - Pallet EF - Solara International,345.4192,,
+MAT-20120,Inbound Road Freight - Pallet,Solara International,SUP-10018,Inbound Road Freight - Pallet EF - Solara International,550.6624,,1.5688
+MAT-20090,Cold Chain Transport - 2-8C,Bluepeak Glass Works,SUP-10004,Cold Chain Transport - 2-8C EF - Bluepeak Glass Works,10.5526,0.7555,
+MAT-20090,Cold Chain Transport - 2-8C,Bluepeak Glass Works,SUP-10004,Cold Chain Transport - 2-8C EF - Bluepeak Glass Works,883.1055,2.4001,2.0391
+MAT-20149,Fermentation Batch Service,Cascade Packaging Ltd,SUP-10034,Fermentation Batch Service EF - Cascade Packaging Ltd,0.4089,2.9004,1.3369
+MAT-20085,Aseptic Fill & Finish Service,Trueform Polymer Group,SUP-10025,Aseptic Fill & Finish Service EF - Trueform Polymer Group,552.7108,0.8436,
+MAT-20065,Clinical Trial Kit,Cascade Materials Ltd,SUP-10030,Clinical Trial Kit EF - Cascade Materials Ltd,891.5366,1.6129,2.1303
+MAT-20045,Corrugated Shipping Box,NovaChem Industries,SUP-10039,Corrugated Shipping Box EF - NovaChem Industries,80.3547,,0.5736
+MAT-20023,Inbound Ocean Freight - Container,Clarion Packaging Ltd,SUP-10015,Inbound Ocean Freight - Container EF - Clarion Packaging Ltd,595.0969,2.1002,
+MAT-20030,Single-use Bioreactor Bag,Quantum Vial Co.,SUP-10013,Single-use Bioreactor Bag EF - Quantum Vial Co.,97.2536,,4.4733
+MAT-20030,Single-use Bioreactor Bag,Quantum Vial Co.,SUP-10013,Single-use Bioreactor Bag EF - Quantum Vial Co.,307.6219,0.6095,
+MAT-20081,Corrugated Shipping Case,Quantum Excipients Ltd,SUP-10035,Corrugated Shipping Case EF - Quantum Excipients Ltd,360.6074,2.2508,1.808
+MAT-20068,Synthetic Peptide Concentrate,Solara Manufacturing Co.,SUP-10017,Synthetic Peptide Concentrate EF - Solara Manufacturing Co.,446.0832,,2.1503
+MAT-20123,Cold Chain Transport - 2-8C,Ridgeline International,SUP-10002,Cold Chain Transport - 2-8C EF - Ridgeline International,627.3434,,2.0878
+MAT-20128,Lab Reagent Kit,Bluepeak Glass Works,SUP-10004,Lab Reagent Kit EF - Bluepeak Glass Works,680.0694,2.7789,3.8643
+MAT-20128,Lab Reagent Kit,Bluepeak Glass Works,SUP-10004,Lab Reagent Kit EF - Bluepeak Glass Works,114.1869,,3.7675
+MAT-20148,Stretch Pallet Wrap,Ridgeline International,SUP-10002,Stretch Pallet Wrap EF - Ridgeline International,779.6822,1.8779,
+MAT-20138,Isopropyl Alcohol,Amberline Logistics,SUP-10005,Isopropyl Alcohol EF - Amberline Logistics,243.856,2.9882,4.2003
+MAT-20138,Isopropyl Alcohol,Amberline Logistics,SUP-10005,Isopropyl Alcohol EF - Amberline Logistics,560.3305,2.0665,2.7341
+MAT-20002,Synthetic Peptide Concentrate,NovaChem Industries,SUP-10039,Synthetic Peptide Concentrate EF - NovaChem Industries,629.0228,2.2412,1.565
+MAT-20133,Monoclonal Antibody Bulk,Everline Glass Works,SUP-10032,Monoclonal Antibody Bulk EF - Everline Glass Works,510.5425,2.6668,2.9459
+MAT-20133,Monoclonal Antibody Bulk,Everline Glass Works,SUP-10032,Monoclonal Antibody Bulk EF - Everline Glass Works,881.0087,0.6233,
+MAT-20129,Pipette Tips (case),Ferrolux Manufacturing Co.,SUP-10008,Pipette Tips (case) EF - Ferrolux Manufacturing Co.,52.8234,1.6944,3.488
+MAT-20086,Contract Packaging Service,Clarion Industries,SUP-10024,Contract Packaging Service EF - Clarion Industries,316.1998,,
+MAT-20049,Stretch Pallet Wrap,PharmaPak Glass Works,SUP-10003,Stretch Pallet Wrap EF - PharmaPak Glass Works,749.2884,2.4282,1.0436
+MAT-20010,Prefilled Syringe 1ml,Vantis Packaging Ltd,SUP-10020,Prefilled Syringe 1ml EF - Vantis Packaging Ltd,369.7696,0.8144,1.3069
+MAT-20073,Water for Injection,Atlas Fine Chemicals,SUP-10023,Water for Injection EF - Atlas Fine Chemicals,341.1467,,
+MAT-20144,Folding Carton,PharmaPak Labs,SUP-10036,Folding Carton EF - PharmaPak Labs,726.3135,,1.2586
+MAT-20143,HDPE Bottle 250ml,PharmaPak Glass Works,SUP-10003,HDPE Bottle 250ml EF - PharmaPak Glass Works,828.4656,2.206,
+MAT-20058,Cold Storage - Warehouse Pallet Slot,Quantum Excipients Ltd,SUP-10035,Cold Storage - Warehouse Pallet Slot EF - Quantum Excipients Ltd,388.2629,1.3172,0.8175
+MAT-20058,Cold Storage - Warehouse Pallet Slot,Quantum Excipients Ltd,SUP-10035,Cold Storage - Warehouse Pallet Slot EF - Quantum Excipients Ltd,738.1902,1.2869,2.4552
+MAT-20008,Glass Vial 2ml,NovaChem Labs,SUP-10028,Glass Vial 2ml EF - NovaChem Labs,483.8124,,4.7654
+MAT-20098,Clinical Trial Kit,Vantis Packaging Ltd,SUP-10020,Clinical Trial Kit EF - Vantis Packaging Ltd,173.1395,2.0215,1.2202
+MAT-20020,Contract Packaging Service,Atlas Fine Chemicals,SUP-10023,Contract Packaging Service EF - Atlas Fine Chemicals,719.0571,2.4582,0.9298
+MAT-20096,Pipette Tips (case),Bluepeak Group,SUP-10026,Pipette Tips (case) EF - Bluepeak Group,630.5685,,1.6767
+MAT-20011,HDPE Bottle 100ml,Sterling Industries,SUP-10038,HDPE Bottle 100ml EF - Sterling Industries,206.089,,3.3796
+MAT-20079,Patient Information Leaflet,Vantis Industries,SUP-10010,Patient Information Leaflet EF - Vantis Industries,106.661,,
+MAT-20019,Aseptic Fill & Finish Service,NovaChem Labs,SUP-10028,Aseptic Fill & Finish Service EF - NovaChem Labs,867.9041,2.1416,0.6803
+MAT-20019,Aseptic Fill & Finish Service,NovaChem Labs,SUP-10028,Aseptic Fill & Finish Service EF - NovaChem Labs,284.4731,,
+MAT-20100,Recombinant Protein Concentrate,Amberline Logistics,SUP-10005,Recombinant Protein Concentrate EF - Amberline Logistics,252.9095,0.7308,4.2604
+MAT-20036,Microcrystalline Cellulose,BrightLab Vial Co.,SUP-10016,Microcrystalline Cellulose EF - BrightLab Vial Co.,894.0368,,2.6889
+MAT-20036,Microcrystalline Cellulose,BrightLab Vial Co.,SUP-10016,Microcrystalline Cellulose EF - BrightLab Vial Co.,97.6022,2.9549,2.4777
+MAT-20074,Glass Vial 2ml,Quantum Excipients Ltd,SUP-10035,Glass Vial 2ml EF - Quantum Excipients Ltd,176.3758,,4.4136
