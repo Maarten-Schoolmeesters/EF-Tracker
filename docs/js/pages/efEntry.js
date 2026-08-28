@@ -8,6 +8,7 @@ import {
   STAGES, EF_TYPES, REVIEW_STEPS, generateChangeId, lookupCurrentEf, pctChange, yearlyEmissionsBaseline,
   productForMaterial, reviewRouteForAssurance, pickReviewer, pickApprover, deriveEfName,
   reviewGatingMessage, approvalGatingMessage, resolveCurrentEfTier, newEfPerKg, materialDeltaForRow,
+  SNOW_STATUSES, BLOCKED_REASONS, generateSnowTicketId, pickDataSteward,
 } from "../efLogic.js";
 
 let draft = null; // in-memory proposal being edited/viewed
@@ -29,7 +30,13 @@ function blankDraft() {
     proposer_id: store.currentUserId,
     reviewer_id: null,
     approver_id: null,
-    on_hold_from_status: null,
+    data_steward_id: null,
+    blocked_from_status: null,
+    blocked_reason: null,
+    blocked_comment: null,
+    snow_ticket_id: null,
+    snow_ticket_status: null,
+    snow_ticket_raised_at: null,
     fields: {},
     common_fields: { source: "", methodology: "", assurance: "", evidence: [], comment: "" },
     derived: {},
@@ -181,8 +188,8 @@ function renderStageScreen() {
   if (activeStageView === "E1-Draft") return renderE1(el);
   if (activeStageView === "E2-Review") return renderE2(el);
   if (activeStageView === "E3-Approval") return renderE3(el);
-  if (activeStageView === "E4-Ready") return renderE4(el);
-  if (activeStageView === "E5-OnHold") return renderE5(el);
+  if (activeStageView === "E4-Ingestion") return renderE4(el);
+  if (activeStageView === "E5-Blocked") return renderE5(el);
   if (activeStageView === "E6-Cancelled") return renderE6(el);
 }
 
@@ -235,14 +242,23 @@ function renderE1(el) {
   impactCard.innerHTML = `<h3>Reference data & impact</h3><div id="impactArea"></div>`;
   el.appendChild(impactCard);
 
+  const hasEvidence = !!(draft.common_fields.evidence || []).length;
   const actions = document.createElement("div");
   actions.className = "actions";
   actions.innerHTML = `
+    <button class="btn ghost danger" id="blockedBtn" ${frozen || !hasEvidence ? "disabled" : ""}>Mark as Blocked</button>
     <button class="btn ghost danger" id="clearBtn" ${frozen ? "disabled" : ""}>Clear form</button>
     <button class="btn" id="saveDraftBtn" ${frozen ? "disabled" : ""}>Save draft</button>
     <button class="btn primary" id="submitReviewBtn" ${frozen ? "disabled" : ""}>Submit for review</button>
   `;
   el.appendChild(actions);
+  if (!frozen && !hasEvidence) {
+    const hint = document.createElement("p");
+    hint.className = "caption";
+    hint.id = "blockedHint";
+    hint.textContent = "Attach at least one Evidence file to mark this draft as Blocked.";
+    el.appendChild(hint);
+  }
 
   document.getElementById("efTypeSelect").addEventListener("change", (e) => {
     draft.ef_type = e.target.value;
@@ -260,6 +276,9 @@ function renderE1(el) {
   document.getElementById("clearBtn").addEventListener("click", () => confirmDiscardIfDirty(forceBlankDraft));
   document.getElementById("saveDraftBtn").addEventListener("click", () => saveDraft(false));
   document.getElementById("submitReviewBtn").addEventListener("click", () => saveDraft(true));
+  document.getElementById("blockedBtn").addEventListener("click", () => {
+    showBlockModal((reason, comment) => markBlockedFromE1(reason, comment));
+  });
 
   function renderTypeSpecific() {
     const area = document.getElementById("typeSpecificArea");
@@ -550,6 +569,14 @@ function updateDerivedAndImpact() {
 
   const submitBtn = document.getElementById("submitReviewBtn");
   if (submitBtn) submitBtn.disabled = draft.frozen || validateMandatory().length > 0;
+
+  const blockedBtn = document.getElementById("blockedBtn");
+  if (blockedBtn) {
+    const hasEvidence = !!(draft.common_fields.evidence || []).length;
+    blockedBtn.disabled = draft.frozen || !hasEvidence;
+    const hint = document.getElementById("blockedHint");
+    if (hint) hint.classList.toggle("hidden", draft.frozen || hasEvidence);
+  }
 }
 
 function derivedRow(k, v, span) {
@@ -880,8 +907,68 @@ async function saveDraft(submitForReview) {
   }
 }
 
+// Marks a brand-new, never-submitted E1-Draft as Blocked in one action
+// (§7.11) - since Blocked state has to persist (reason/comment/steward), an
+// unsaved draft is implicitly created first (same change-ID assignment
+// saveDraft's first-save path does), then transitions straight to
+// E5-Blocked. The user never sees a separate "save" step. Only reachable
+// once the minimum-fields gate (at least one Evidence file) has passed -
+// enforced by blockedBtn's disabled state in renderE1/updateDerivedAndImpact.
+async function markBlockedFromE1(reason, comment) {
+  readFormIntoDraft();
+  const steward = pickDataSteward();
+  const isFirstSave = draft._isNew;
+  if (isFirstSave) draft.change_id = generateChangeId();
+  draft.derived.newEfName = draft.derived.newEfName || "—";
+  draft.derived.changeId = draft.change_id;
+
+  const payload = {
+    change_id: draft.change_id,
+    ef_type: draft.ef_type,
+    status: "E5-Blocked",
+    frozen: true,
+    project_id: null,
+    proposer_id: draft.proposer_id,
+    reviewer_id: null,
+    approver_id: null,
+    data_steward_id: steward ? steward.user_id : null,
+    blocked_from_status: "E1-Draft",
+    blocked_reason: reason,
+    blocked_comment: comment,
+    fields: draft.fields,
+    common_fields: draft.common_fields,
+    // reviewer_id/approver_id are genuinely null here (never submitted) -
+    // draft.derived otherwise still carries E1's live "who would be
+    // assigned if submitted right now" PREVIEW text, which must not be
+    // persisted as if it were a real, frozen assignment.
+    derived: { ...draft.derived, reviewerName: "—", approverName: "—", dataStewardName: steward ? steward.name : null },
+    review_steps: draft.review_steps,
+  };
+
+  try {
+    if (isFirstSave) {
+      await insertRow("ef_proposals", payload);
+      await logAudit("Create draft", "ef_proposal", draft.change_id, null, payload);
+    } else {
+      await updateRow("ef_proposals", "change_id", draft.change_id, payload);
+    }
+    if (steward) await adjustUserCount(steward.user_id, "open_ef_blocked_items", 1);
+    await maybeInsertVersion(draft.change_id, "E5-Blocked", "Mark as Blocked", payload);
+    await logAudit("Mark as Blocked", "ef_proposal", draft.change_id, null, { blocked_reason: reason, blocked_comment: comment });
+    const notifyTargets = [draft.proposer_id, steward ? steward.user_id : null].filter((x, i, a) => x && a.indexOf(x) === i);
+    for (const uid of notifyTargets) await notify(uid, `${draft.change_id} was marked Blocked: ${reason}`, draft.change_id);
+    toast(`${draft.change_id}: Marked as Blocked`, "success");
+    Object.assign(draft, payload);
+    draft._isNew = false;
+    draft._lastSaved = snapshotForDirtyCheck(draft);
+    await loadTransactionalData();
+    activeStageView = "E5-Blocked";
+    renderAll();
+  } catch (e) { console.error(e); }
+}
+
 // ============================================================
-// E2 - REVIEW / E3 - APPROVAL / E4 - READY / E5 - ON HOLD / E6 - CANCELLED
+// E2 - REVIEW / E3 - APPROVAL / E4 - INGESTION / E5 - BLOCKED / E6 - CANCELLED
 // ============================================================
 
 // Defensive against legacy evidence shapes from before this round's
@@ -912,6 +999,7 @@ function summaryRows(p) {
     ["Assurance", p.common_fields.assurance], ["Evidence", evidenceHtml],
     ["New EF Name", p.derived.newEfName], ["Reviewer", p.derived.reviewerName], ["Approver", p.derived.approverName],
     ["Proposer", p.derived.proposerName]);
+  if (p.data_steward_id) rows.push(["EF Data Steward", p.derived?.dataStewardName || p.data_steward_id]);
   // Packed into a 2-column grid instead of one field per full-width row -
   // the field list was running much taller than the checklist pane beside
   // it on E2, mostly empty space next to each short value. A row spans both
@@ -964,7 +1052,7 @@ function renderE2(el) {
       </div>
     </div>
     <div class="actions">
-      <button class="btn ghost danger" id="onHoldBtn" ${canAct ? "" : "disabled"}>Put On Hold</button>
+      <button class="btn ghost danger" id="blockedBtn" ${canAct ? "" : "disabled"}>Mark as Blocked</button>
       <button class="btn ghost danger" id="cancelBtn" ${canAct ? "" : "disabled"}>Cancel</button>
       <button class="btn ghost danger" id="returnDraftBtn" ${canAct ? "" : "disabled"}>Return for Revision</button>
       <button class="btn primary" id="submitApprovalBtn" ${canAct && doneCount() === total ? "" : "disabled"}>Submit for Approval</button>
@@ -995,7 +1083,7 @@ function renderE2(el) {
     if (!p.review_steps.every((s) => s.done)) { toast("Complete every checklist step before sending for approval", "error"); return; }
     transitionStage("E3-Approval", { frozen: true }, "Submit for approval", [[p.reviewer_id, "open_ef_reviews", -1], [p.approver_id, "open_ef_approvals", 1]]);
   });
-  if (canAct) wireOnHoldCancel(el);
+  if (canAct) wireBlockedCancel(el);
 }
 
 function renderE3(el) {
@@ -1010,7 +1098,7 @@ function renderE3(el) {
     ${gatingMsg ? `<div class="notice warn">${gatingMsg} You can view this proposal but not act on it.</div>` : ""}
     ${summaryRows(p)}
     <div class="actions">
-      <button class="btn ghost danger" id="onHoldBtn" ${canAct ? "" : "disabled"}>Put On Hold</button>
+      <button class="btn ghost danger" id="blockedBtn" ${canAct ? "" : "disabled"}>Mark as Blocked</button>
       <button class="btn ghost danger" id="cancelBtn" ${canAct ? "" : "disabled"}>Cancel</button>
       <button class="btn ghost danger" id="returnReviewBtn" ${canAct ? "" : "disabled"}>Return for Review</button>
       <button class="btn primary" id="submitIngestionBtn" ${canAct ? "" : "disabled"}>Submit for Ingestion</button>
@@ -1029,8 +1117,42 @@ function renderE3(el) {
       )
     );
   });
-  document.getElementById("submitIngestionBtn").addEventListener("click", () => transitionStage("E4-Ready", { frozen: true }, "Submit for ingestion", [[p.approver_id, "open_ef_approvals", -1]]));
-  if (canAct) wireOnHoldCancel(el);
+  document.getElementById("submitIngestionBtn").addEventListener("click", () => {
+    // Both "Ready for raising" and "SNOW ticket raised" sub-stages complete
+    // instantly, in this same transition (§7.10) - there's no real SNOW API
+    // to wait on yet, so EF Tracker self-generates the ticket ID and starts
+    // its status at Draft, same as a freshly-raised real ticket would be.
+    const ticketId = generateSnowTicketId();
+    transitionStage(
+      "E4-Ingestion",
+      { frozen: true, snow_ticket_id: ticketId, snow_ticket_status: "Draft", snow_ticket_raised_at: new Date().toISOString() },
+      "Submit for ingestion",
+      [[p.approver_id, "open_ef_approvals", -1]]
+    );
+  });
+  if (canAct) wireBlockedCancel(el);
+}
+
+// Three-step visual sequence for the SNOW ticket sub-stages (§7.10). The
+// first two steps are always both "done" by the time this renders - they
+// complete together, instantly, at the E3->E4 transition (see
+// submitIngestionBtn above) - only the third step (status) genuinely
+// changes later, and only via the manual SNOW Simulator.
+function snowStepperHtml(p) {
+  const steps = [
+    { label: "Ready for raising SNOW ticket", done: true },
+    { label: "SNOW ticket raised", done: !!p.snow_ticket_id, detail: p.snow_ticket_id || null },
+    { label: "SNOW ticket status", done: !!p.snow_ticket_status, detail: p.snow_ticket_status || null },
+  ];
+  return `<div class="snow-stepper">
+    ${steps.map((s, i) => `
+      <div class="snow-step ${s.done ? "done" : "pending"}">
+        <div class="snow-step-dot">${s.done ? "✓" : i + 1}</div>
+        <div class="snow-step-label">${s.label}${s.detail ? `<span class="snow-step-detail">${s.detail}</span>` : ""}</div>
+      </div>
+      ${i < steps.length - 1 ? `<div class="snow-step-connector ${steps[i + 1].done ? "done" : ""}"></div>` : ""}
+    `).join("")}
+  </div>`;
 }
 
 function renderE4(el) {
@@ -1041,11 +1163,12 @@ function renderE4(el) {
     ? `<span class="ingested-badge">✓ Ingested on ${new Date(p.ingested_at).toLocaleDateString()}</span>`
     : "";
   card.innerHTML = `
-    <div class="card-head"><div><h2>EF Entry · E4 Ready<span class="tbd-tag">To confirm w/ LCA team</span></h2><p>Ready for ingestion into the Carbon App. ${ingestedBadge}</p></div></div>
+    <div class="card-head"><div><h2>EF Entry · E4 Ingestion<span class="tbd-tag">To confirm w/ LCA team</span></h2><p>Ready for ingestion into the Carbon App via a simulated ServiceNow ticket. ${ingestedBadge}</p></div></div>
+    ${snowStepperHtml(p)}
     ${summaryRows(p)}
     <div class="actions">
       <button class="btn primary" id="markIngestedBtn" ${p.ingested_at ? "disabled" : ""}>${p.ingested_at ? "Already marked as ingested" : "✓ Mark as ingested into Carbon App"}</button>
-      <button class="btn ghost danger" id="onHoldBtn">Put On Hold</button>
+      <button class="btn ghost danger" id="blockedBtn">Mark as Blocked</button>
       <button class="btn ghost danger" id="cancelBtn">Cancel</button>
     </div>
   `;
@@ -1065,7 +1188,7 @@ function renderE4(el) {
       renderAll();
     } catch (e) { console.error(e); }
   });
-  wireOnHoldCancel(el);
+  wireBlockedCancel(el);
 }
 
 function renderE5(el) {
@@ -1073,20 +1196,28 @@ function renderE5(el) {
   const card = document.createElement("div");
   card.className = "card";
   card.innerHTML = `
-    <div class="card-head"><div><h2>EF Entry · E5 On Hold</h2><p>Retained and viewable. Put back into ${p.on_hold_from_status || "its previous stage"} when ready to resume.</p></div></div>
+    <div class="card-head"><div><h2>EF Entry · E5 Blocked</h2><p>Retained and viewable. Put back into ${p.blocked_from_status || "its previous stage"} once whatever's blocking it is resolved.</p></div></div>
+    <div class="notice warn"><strong>Blocked - ${p.blocked_reason || "No reason recorded"}</strong><br>${p.blocked_comment || "No comment recorded"}</div>
     ${summaryRows(p)}
     <div class="actions">
       <button class="btn ghost danger" id="cancelBtn">Cancel</button>
-      <button class="btn primary" id="resumeBtn">Resume ${p.on_hold_from_status || "previous stage"}</button>
+      <button class="btn primary" id="resumeBtn">Resume ${p.blocked_from_status || "previous stage"}</button>
     </div>
   `;
   el.appendChild(card);
-  document.getElementById("resumeBtn").addEventListener("click", () => transitionStage(p.on_hold_from_status || "E1-Draft", { on_hold_from_status: null }, "Resume from On Hold"));
+  document.getElementById("resumeBtn").addEventListener("click", () => {
+    const adjustments = p.data_steward_id ? [[p.data_steward_id, "open_ef_blocked_items", -1]] : [];
+    transitionStage(p.blocked_from_status || "E1-Draft", { blocked_from_status: null }, "Resume from Blocked", adjustments);
+  });
   document.getElementById("cancelBtn").addEventListener("click", () => {
     showConfirmModal(
       "Cancel this EF proposal?",
       "This cannot be undone. The proposal will remain visible in the EF Log as Cancelled.",
-      () => transitionStage("E6-Cancelled", { frozen: true, on_hold_from_status: null }, "Cancel proposal", cancelAdjustments(p.on_hold_from_status))
+      () => {
+        const adjustments = cancelAdjustments(p.blocked_from_status);
+        if (p.data_steward_id) adjustments.push([p.data_steward_id, "open_ef_blocked_items", -1]);
+        transitionStage("E6-Cancelled", { frozen: true, blocked_from_status: null }, "Cancel proposal", adjustments);
+      }
     );
   });
 }
@@ -1099,8 +1230,11 @@ function renderE6(el) {
 }
 
 // Shared between the Cancel button (wherever it appears) and E5's own
-// Cancel-from-On-Hold path, which needs to release workload based on the
-// stage the proposal was paused FROM, not its current "E5-OnHold" status.
+// Cancel-from-Blocked path, which needs to release workload based on the
+// stage the proposal was paused FROM, not its current "E5-Blocked" status.
+// (Data Steward release is handled separately by each caller - see E5's own
+// cancelBtn handler - since it only applies when actually cancelling out of
+// Blocked, not a plain Cancel from E2/E3/E4.)
 function cancelAdjustments(fromStatus) {
   const p = draft;
   return fromStatus === "E2-Review" ? [[p.reviewer_id, "open_ef_reviews", -1]]
@@ -1108,13 +1242,23 @@ function cancelAdjustments(fromStatus) {
     : [];
 }
 
-function wireOnHoldCancel(el) {
-  document.getElementById("onHoldBtn")?.addEventListener("click", () => {
-    showConfirmModal(
-      "Put this EF proposal on hold?",
-      "It will be retained and viewable, but paused out of the active workflow. You can resume it back into its current stage whenever you're ready.",
-      () => transitionStage("E5-OnHold", { on_hold_from_status: draft.status }, "Put on hold")
-    );
+function wireBlockedCancel(el) {
+  document.getElementById("blockedBtn")?.addEventListener("click", () => {
+    showBlockModal((reason, comment) => {
+      const steward = pickDataSteward();
+      transitionStage(
+        "E5-Blocked",
+        {
+          blocked_from_status: draft.status,
+          blocked_reason: reason,
+          blocked_comment: comment,
+          data_steward_id: steward ? steward.user_id : null,
+          derived: { ...draft.derived, dataStewardName: steward ? steward.name : null },
+        },
+        "Mark as Blocked",
+        steward ? [[steward.user_id, "open_ef_blocked_items", 1]] : []
+      );
+    });
   });
   document.getElementById("cancelBtn")?.addEventListener("click", () => {
     const p = draft;
@@ -1136,7 +1280,10 @@ async function transitionStage(newStatus, patch, actionLabel, countAdjustments =
     for (const [userId, field, delta] of countAdjustments) await adjustUserCount(userId, field, delta);
     await maybeInsertVersion(p.change_id, newStatus, actionLabel, { ...p, ...updated });
     await logAudit(actionLabel, "ef_proposal", p.change_id, { status: oldStatus }, { status: newStatus });
-    const notifyTargets = [p.proposer_id, p.reviewer_id, p.approver_id].filter((x, i, a) => x && a.indexOf(x) === i);
+    // Data Steward stays a notify target for the rest of the proposal's
+    // lifecycle once assigned, same as reviewer_id/approver_id already do
+    // past their own stage.
+    const notifyTargets = [p.proposer_id, p.reviewer_id, p.approver_id, p.data_steward_id].filter((x, i, a) => x && a.indexOf(x) === i);
     for (const uid of notifyTargets) await notify(uid, `${p.change_id} moved from ${oldStatus} to ${newStatus} (${actionLabel})`, p.change_id);
     toast(`${p.change_id}: ${actionLabel}`, "success");
     await loadTransactionalData();
@@ -1164,6 +1311,42 @@ function showCommentModal(title, body, onConfirm) {
     const comment = textarea.value.trim();
     close();
     onConfirm(comment);
+  });
+}
+
+// Mandatory Reason (dropdown) + Comment modal for Mark as Blocked (§7.11) -
+// shared by every stage's block action (E1's own handler and E2/E3/E4's
+// wireBlockedCancel), same "must actually explain" treatment as the Return
+// comment modal above.
+function showBlockModal(onConfirm) {
+  const root = document.getElementById("modalRoot");
+  root.innerHTML = `
+    <div class="modal-backdrop"><div class="modal">
+      <div class="modal-head"><h3>Mark this EF proposal as Blocked?</h3><button class="icon-btn" id="modalClose">✕</button></div>
+      <p>It will be retained and viewable, but paused out of the active workflow, and routed to an EF Data Steward to resolve. You can resume it back into its current stage once whatever's blocking it is fixed.</p>
+      <div class="field"><label>Reason <span class="req">*</span></label>
+        <select id="blockReasonInput">
+          <option value="">Select a reason</option>
+          ${BLOCKED_REASONS.map((r) => `<option value="${r}">${r}</option>`).join("")}
+        </select>
+      </div>
+      <div class="field"><label>Comment <span class="req">*</span></label><textarea id="blockCommentInput" placeholder="Explain what's blocking this proposal…"></textarea></div>
+      <div class="actions"><button class="btn" id="modalCancel">Keep proposal</button><button class="btn primary" id="modalConfirm" disabled>Confirm</button></div>
+    </div></div>`;
+  const close = () => { root.innerHTML = ""; };
+  const select = document.getElementById("blockReasonInput");
+  const textarea = document.getElementById("blockCommentInput");
+  const confirmBtn = document.getElementById("modalConfirm");
+  const checkValid = () => { confirmBtn.disabled = !(select.value && textarea.value.trim()); };
+  select.addEventListener("change", checkValid);
+  textarea.addEventListener("input", checkValid);
+  document.getElementById("modalClose").addEventListener("click", close);
+  document.getElementById("modalCancel").addEventListener("click", close);
+  confirmBtn.addEventListener("click", () => {
+    const reason = select.value;
+    const comment = textarea.value.trim();
+    close();
+    onConfirm(reason, comment);
   });
 }
 

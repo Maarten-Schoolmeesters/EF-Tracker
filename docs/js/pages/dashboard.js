@@ -47,16 +47,17 @@ function renderSyncNotice() {
 
 function renderKpis() {
   const el = document.getElementById("dashboardKpis");
-  const open = store.efProposals.filter((p) => !["E4-Ready", "E6-Cancelled"].includes(p.status));
+  const open = store.efProposals.filter((p) => !["E4-Ingestion", "E6-Cancelled"].includes(p.status));
   const user = currentUser();
   const awaiting = store.efProposals.filter((p) =>
     (p.status === "E2-Review" && p.reviewer_id === user?.user_id) ||
-    (p.status === "E3-Approval" && p.approver_id === user?.user_id)
+    (p.status === "E3-Approval" && p.approver_id === user?.user_id) ||
+    (p.status === "E5-Blocked" && p.data_steward_id === user?.user_id)
   );
   const cards = [
     ["Open EF proposals", open.length, "Across E1-Draft to E3-Approval"],
     ["Awaiting your action", awaiting.length, user ? `As ${user.name}` : "—"],
-    ["Ready for ingestion", store.efProposals.filter((p) => p.status === "E4-Ready").length, "Manual step into Carbon App"],
+    ["Ready for ingestion", store.efProposals.filter((p) => p.status === "E4-Ingestion").length, "Manual step into Carbon App"],
     ["Total EF proposals", store.efProposals.length, "All statuses, all time"],
   ];
   el.innerHTML = cards.map(([label, value, caption]) => `
@@ -200,10 +201,10 @@ function fmtTonnes(v) {
 
 // Furthest-along active (non-cancelled) proposal referencing this material
 // code, if any - "furthest along" ranks toward ingestion (E4 highest), with
-// On Hold ranked below every actively-progressing stage since it's paused,
+// Blocked ranked below every actively-progressing stage since it's paused,
 // not advancing. A material can have more than one active proposal; only
 // the single most-advanced one is surfaced, kept to one glanceable pill.
-const PIPELINE_STAGE_RANK = { "E4-Ready": 4, "E3-Approval": 3, "E2-Review": 2, "E1-Draft": 1, "E5-OnHold": 0 };
+const PIPELINE_STAGE_RANK = { "E4-Ingestion": 4, "E3-Approval": 3, "E2-Review": 2, "E1-Draft": 1, "E5-Blocked": 0 };
 function pipelineStatusForMaterial(materialCode) {
   const active = store.efProposals.filter((p) =>
     p.status !== "E6-Cancelled" && (p.fields?.facets?.material_code || []).includes(materialCode)
@@ -214,7 +215,7 @@ function pipelineStatusForMaterial(materialCode) {
 
 function pipelinePillHtml(status) {
   if (!status) return `<span class="pipeline-pill none">No active proposal</span>`;
-  const cls = status === "E4-Ready" ? "ready" : status === "E5-OnHold" ? "hold" : "active";
+  const cls = status === "E4-Ingestion" ? "ready" : status === "E5-Blocked" ? "hold" : "active";
   return `<span class="pipeline-pill ${cls}">${status}</span>`;
 }
 

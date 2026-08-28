@@ -1,12 +1,13 @@
 import { store } from "./dataStore.js";
 
-// Stage metadata - text taken verbatim from the requirements deck's process diagram.
+// Stage metadata - text taken verbatim from the requirements deck's process diagram
+// (E1-E3, E6), reworked for E4/E5 in round 6 (renamed Ready->Ingestion, On Hold->Blocked).
 export const STAGES = [
   { code: "E1-Draft", label: "E1 · Draft", desc: "Proposal input" },
   { code: "E2-Review", label: "E2 · Review", desc: "Technical validation" },
   { code: "E3-Approval", label: "E3 · Approval", desc: "Business sign-off" },
-  { code: "E4-Ready", label: "E4 · Ready", desc: "Carbon App ingestion" },
-  { code: "E5-OnHold", label: "E5 · On Hold", desc: "Retained and viewable" },
+  { code: "E4-Ingestion", label: "E4 · Ingestion", desc: "Carbon App ingestion via SNOW ticket" },
+  { code: "E5-Blocked", label: "E5 · Blocked", desc: "Paused, routed to a Data Steward" },
   { code: "E6-Cancelled", label: "E6 · Cancelled", desc: "View-only" },
 ];
 
@@ -15,6 +16,51 @@ export const EF_TYPES = [
   "Supplier Spend EF / CCF index",
   "Global EF - Material to Common ID mapping",
   "CEDA EF - L1/L2/L3 to EEIO mapping",
+];
+
+// ---- E4-Ingestion: simulated ServiceNow (SNOW) ticket sub-stages (§7.10) ----
+// EF Tracker generates and progresses these itself for now - there's no real
+// SNOW API to integrate with until this tool is built internally. Ticket
+// creation (id/status/raised_at) happens automatically at E3->E4; status
+// after that only changes via the manual SNOW Simulator (Reference Data page).
+export const SNOW_STATUSES = [
+  "Draft", "Pending", "Assigned", "Accepted", "Work in Progress",
+  "Closed Complete", "Closed Incomplete", "Canceled",
+];
+
+// EF Log status-pill abbreviations - only the long ones actually shorten.
+export const SNOW_STATUS_ABBR = {
+  "Draft": "Draft",
+  "Pending": "Pending",
+  "Assigned": "Assigned",
+  "Accepted": "Accepted",
+  "Work in Progress": "WIP",
+  "Closed Complete": "Closed-C",
+  "Closed Incomplete": "Closed-I",
+  "Canceled": "Canceled",
+};
+
+export function generateSnowTicketId() {
+  const year = new Date().getFullYear();
+  const existing = store.efProposals
+    .map((p) => p.snow_ticket_id)
+    .filter((id) => id && id.startsWith(`SNOW-${year}-`))
+    .map((id) => parseInt(id.split("-")[2], 10))
+    .filter((n) => !isNaN(n));
+  const next = (existing.length ? Math.max(...existing) : 0) + 1;
+  return `SNOW-${year}-${String(next).padStart(4, "0")}`;
+}
+
+// ---- E5-Blocked: mandatory reason dropdown (§7.11) - first proposal, not
+// yet confirmed with the user (see REQUIREMENTS.md §13). ----
+export const BLOCKED_REASONS = [
+  "Missing or incorrect Material Code",
+  "Missing or incorrect Product/Supplier mapping",
+  "Carbon App data issue",
+  "Missing or insufficient evidence/documentation",
+  "Reference data issue (Common ID / EEIO / Supplier data)",
+  "Awaiting information from Supplier/Business",
+  "Other (see comment)",
 ];
 
 // Sensible EF-Expert-Guidance review checklist, since the deck marks the real
@@ -174,6 +220,12 @@ export function pickReviewer(route) {
 
 export function pickApprover() {
   return pickByLowestCount("EF Approver", "open_ef_approvals");
+}
+
+// EF Data Steward auto-assignment (§7.11) - identical algorithm to
+// Reviewer/Approver, just against open_ef_blocked_items and no route to match.
+export function pickDataSteward() {
+  return pickByLowestCount("EF Data Steward", "open_ef_blocked_items");
 }
 
 // ---- Role-based action gating (E2/E3): must be BOTH the specific person

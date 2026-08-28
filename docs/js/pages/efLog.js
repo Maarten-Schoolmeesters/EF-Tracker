@@ -1,6 +1,7 @@
 import { store } from "../dataStore.js";
 import { openProposalById } from "./efEntry.js";
 import { wireScrollTableTooltips } from "../tooltip.js";
+import { SNOW_STATUS_ABBR } from "../efLogic.js";
 
 let statusFilter = "";
 let typeFilter = "";
@@ -56,7 +57,22 @@ function peopleCell(p) {
     <div class="row"><span class="role">P</span> ${p.derived?.proposerName || "—"}</div>
     <div class="row"><span class="role">R</span> ${p.derived?.reviewerName || "—"}</div>
     <div class="row"><span class="role">A</span> ${p.derived?.approverName || "—"}</div>
+    ${p.data_steward_id ? `<div class="row"><span class="role">D</span> ${p.derived?.dataStewardName || "—"}</div>` : ""}
   </div>`;
+}
+
+// E4-Ingestion rows get an enriched status pill (§7.10/§10) rather than a
+// 10th column: `E4 · Ingestion · {abbreviated SNOW status}`, with the full
+// sub-stage/ticket breakdown on hover via the same floating-tooltip
+// mechanism already wired for this table (wireScrollTableTooltips below).
+function statusPillHtml(p) {
+  if (p.status === "E4-Ingestion" && p.snow_ticket_id) {
+    const abbr = SNOW_STATUS_ABBR[p.snow_ticket_status] || p.snow_ticket_status;
+    const tooltip = `Ready for raising: done · SNOW ticket raised: ${p.snow_ticket_id} · Status: ${p.snow_ticket_status || "—"}` +
+      (p.snow_ticket_raised_at ? ` (raised ${new Date(p.snow_ticket_raised_at).toLocaleString()})` : "");
+    return `<span class="pill ${stagePillClass(p.status)}" tabindex="0" data-tooltip="${escapeAttr(tooltip)}">E4 · Ingestion · ${abbr}</span>`;
+  }
+  return `<span class="pill ${stagePillClass(p.status)}">${p.status}</span>`;
 }
 
 function csvEscape(v) {
@@ -164,7 +180,7 @@ export function renderEfLog() {
         return `
         <tr>
           <td>${p.change_id}</td>
-          <td><span class="pill ${stagePillClass(p.status)}">${p.status}</span></td>
+          <td>${statusPillHtml(p)}</td>
           <td>${truncatedCell(p.ef_type)}</td>
           <td>${truncatedCell(p.derived?.newEfName || "—")}</td>
           <td>${materialCell(materials)}</td>
@@ -191,8 +207,8 @@ export function renderEfLog() {
 
 function stagePillClass(status) {
   if (status === "E6-Cancelled") return "red";
-  if (status === "E5-OnHold") return "amber";
-  if (status === "E4-Ready") return "green";
+  if (status === "E5-Blocked") return "amber";
+  if (status === "E4-Ingestion") return "green";
   return "gray";
 }
 
@@ -225,6 +241,11 @@ function flattenSnapshot(s) {
   if (s.derived?.reviewerName) out["Reviewer"] = s.derived.reviewerName;
   if (s.derived?.approverName) out["Approver"] = s.derived.approverName;
   if (s.derived?.lastReturnComment) out["Return comment"] = s.derived.lastReturnComment;
+  if (s.derived?.dataStewardName) out["EF Data Steward"] = s.derived.dataStewardName;
+  if (s.blocked_reason) out["Blocked reason"] = s.blocked_reason;
+  if (s.blocked_comment) out["Blocked comment"] = s.blocked_comment;
+  if (s.snow_ticket_id) out["SNOW Ticket ID"] = s.snow_ticket_id;
+  if (s.snow_ticket_status) out["SNOW Ticket Status"] = s.snow_ticket_status;
   if (s.review_steps?.length) out["Checklist progress"] = `${s.review_steps.filter((r) => r.done).length}/${s.review_steps.length}`;
   return out;
 }

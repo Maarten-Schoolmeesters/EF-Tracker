@@ -232,7 +232,7 @@ suppliers = make_supplier_pool(N_SUPPLIERS)
 materials = make_material_pool(N_MATERIALS)
 
 # ---- users ----
-ROLE_POOL = ["Expert EF Reviewer", "Standard EF Reviewer", "EF Approver",
+ROLE_POOL = ["Expert EF Reviewer", "Standard EF Reviewer", "EF Approver", "EF Data Steward",
              "Project Owner", "Project Reviewer"]
 users = []
 used_names = set()
@@ -250,8 +250,9 @@ for i in range(18):
         "roles": "{" + ",".join(f'"{r}"' for r in roles) + "}",
         "open_ef_reviews": random.randint(0, 6) if any("Reviewer" in r for r in roles) else 0,
         "open_ef_approvals": random.randint(0, 4) if "EF Approver" in roles else 0,
+        "open_ef_blocked_items": random.randint(0, 3) if "EF Data Steward" in roles else 0,
     })
-write_csv("users", ["user_id", "name", "roles", "open_ef_reviews", "open_ef_approvals"], users)
+write_csv("users", ["user_id", "name", "roles", "open_ef_reviews", "open_ef_approvals", "open_ef_blocked_items"], users)
 
 # ---- ef_sources_methods_assurance (fixed reference data from the deck's table image) ----
 esma_rows = [
